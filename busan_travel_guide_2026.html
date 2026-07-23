@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="referrer" content="no-referrer">
-  <meta name="description" content="2026 韓國釜山 6 天 5 等級 8 位成年家族慢遊行程與 Olive Young 必買好物推薦，含 Google Maps 定位地圖。">
+  <meta name="description" content="2026 韓國釜山 6 天 5 夜 8 位成年家族慢遊行程與 Olive Young 必買好物推薦，含 Google Maps 定位地圖。">
   <title>🇰🇷 韓國釜山 6 天 5 夜豪華家族慢遊行程指南</title>
   <!-- Google Fonts & FontAwesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <style>
-    /* 韓國釜山 6天5夜豪華家族慢遊 - 專屬 CSS 設計系統 */
+    /* 韓國釜山 專屬 CSS 設計系統 */
     :root {
       --primary-glow: #00d2ff;
       --secondary-glow: #3a7bd5;
@@ -249,9 +249,9 @@
     .metro-map-wrapper { background: rgba(0, 0, 0, 0.4); border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: 1rem; margin-top: 1.5rem; text-align: center; }
     .metro-map-img { width: 100%; max-height: 500px; object-fit: contain; border-radius: var(--radius-md); }
 
-    /* New: Google Maps Locations Table */
+    /* Google Maps Locations Table */
     .maps-table-wrapper {
-      margin-top: 2rem;
+      margin-top: 1.5rem;
       overflow-x: auto;
     }
     .maps-table {
@@ -306,7 +306,8 @@
     /* Food & Shopping Guides */
     .rec-flex-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
     .rec-list { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.95rem; color: var(--text-sub); }
-    .rec-list li { position: relative; padding-left: 1.5rem; }
+    .rec-list li { position: relative; padding-left: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.03); padding-bottom: 0.6rem; }
+    .rec-list li:last-child { border-bottom: none; }
     .rec-list li strong { color: #fff; }
     .rec-list li::before { content: '➔'; position: absolute; left: 0; color: var(--primary-glow); }
 
@@ -409,7 +410,7 @@
     </div>
   </header>
 
-  <!-- Sticky Navigation Tabs (Rebuilt for SPA Sections) -->
+  <!-- Sticky Navigation Tabs (SPA Sections) -->
   <nav class="sticky-nav" id="main-nav">
     <div class="nav-container">
       <div class="main-tab-group">
@@ -457,16 +458,27 @@
       <div id="timeline-container"></div>
     </section>
 
-    <!-- Section 2: 交通與景點定位地圖 (Rebuilt) -->
+    <!-- Section 2: 交通與景點定位地圖 -->
     <section id="metro-section" class="app-section">
       <div class="section-header">
-        <h2 class="section-title">🗺️ 釜山地鐵景點路線圖與所有景點定位地圖</h2>
+        <h2 class="section-title">🗺️ 釜山地鐵與每日景點路線地圖</h2>
       </div>
       
       <div class="box-card">
         <p style="color: var(--text-sub); font-size: 1rem; margin-bottom: 1.5rem;">
-          本行程精心規劃之景點皆已定位。以下提供<strong>釜山地鐵景點對照圖</strong>，以及<strong>所有景點的 Google Maps 導航定位快速清單</strong>，方便直接點選使用：
+          本行程精心規劃之景點皆已定位。以下提供<strong>每日整體路線地圖 (一次顯示整天所有景點)</strong>、<strong>地鐵路線對照圖</strong>，以及<strong>每個景點的 Google Maps 快速導航連結</strong>：
         </p>
+
+        <!-- 一鍵定位整日所有景點 -->
+        <h3 style="color: #fff; margin-bottom: 0.85rem;"><i class="fa-solid fa-route" style="color: var(--primary-glow);"></i> 每日行程景點一鍵路線地圖 (一次呈現整天所有景點軌跡)</h3>
+        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2rem;">
+          <a href="https://www.google.com/maps/dir/Toyoko+Inn+Busan+Station+No.1/Bonjeon+Dwaeji-gukbap+Busan/Arte+Museum+Busan/P.ARK+Yeongdo+Busan/Matchandeul+Wangso-geum-gui+Nampo+Busan/Yongdusan+Park+Busan" target="_blank" class="btn-map-link" style="padding: 0.55rem 1.1rem; font-size: 0.88rem;"><i class="fa-solid fa-route"></i> Day 1 全日路線地圖</a>
+          <a href="https://www.google.com/maps/dir/Busan+Station/Haeundae+Blueline+Park+Mipo+Station/Oryukdo+Skywalk+Busan/Huinnyeoul+Culture+Village+Busan/Gamcheon+Culture+Village+Busan/Songjo-3-dae+Dwaeji-gukbap+Seomyeon" target="_blank" class="btn-map-link" style="padding: 0.55rem 1.1rem; font-size: 0.88rem;"><i class="fa-solid fa-route"></i> Day 2 全日路線地圖</a>
+          <a href="https://www.google.com/maps/dir/Toyoko+Inn+Busan+Station+No.1/Songdo+Marine+Cable+Car+Busan/Jagalchi+Market+Busan/Gwangbok-ro+Fashion+Street+Busan/Lotte+Mart+Gwangbok+Busan/Hanyang+Jokbal+Nampo+Busan" target="_blank" class="btn-map-link" style="padding: 0.55rem 1.1rem; font-size: 0.88rem;"><i class="fa-solid fa-route"></i> Day 3 全日路線地圖</a>
+          <a href="https://www.google.com/maps/dir/Toyoko+Inn+Busan+Station+No.1/Haedong+Yonggungsa+Temple/Skyline+Luge+Busan/Gijang+Market+Busan/Ananti+Cove+Busan/Lotte+Premium+Outlets+Dongbusan/Gobansikdang+Gwangalli+Busan" target="_blank" class="btn-map-link" style="padding: 0.55rem 1.1rem; font-size: 0.88rem;"><i class="fa-solid fa-route"></i> Day 4 全日路線地圖</a>
+          <a href="https://www.google.com/maps/dir/Toyoko+Inn+Busan+Station+No.1/SPA+LAND+Centum+City+Busan/Shinsegae+Centum+City+Busan/Seomyeon+Underground+Shopping+Center/Gwangalli+Yacht+Tour+Busan/Clam+Gwangalli+Busan" target="_blank" class="btn-map-link" style="padding: 0.55rem 1.1rem; font-size: 0.88rem;"><i class="fa-solid fa-route"></i> Day 5 全日路線地圖</a>
+          <a href="https://www.google.com/maps/dir/Toyoko+Inn+Busan+Station+No.1/Brown+Hands+Baekje+Busan/Gimhae+International+Airport" target="_blank" class="btn-map-link" style="padding: 0.55rem 1.1rem; font-size: 0.88rem;"><i class="fa-solid fa-route"></i> Day 6 全日路線地圖</a>
+        </div>
 
         <!-- 地鐵路線對照圖 -->
         <div class="metro-map-wrapper" style="margin-bottom: 2rem;">
@@ -666,7 +678,7 @@
       </div>
     </section>
 
-    <!-- Section 3: Olive Young 必買推薦 (Rebuilt as independent tab) -->
+    <!-- Section 3: Olive Young 必買推薦 -->
     <section id="oliveyoung-section" class="app-section">
       <div class="section-header">
         <h2 class="section-title">🛍️ Olive Young 必買好物推薦 (醫師 & VIP 姐精選)</h2>
@@ -795,24 +807,28 @@
       </div>
       <div class="rec-flex-grid">
         <div class="box-card" style="margin-bottom: 0;">
-          <h3 style="color: var(--accent-gold); font-size: 1.25rem; margin-bottom: 1rem;">🍱 釜山在地美食名單</h3>
+          <h3 style="color: var(--accent-gold); font-size: 1.25rem; margin-bottom: 1rem;">🍱 釜山在地美食推薦清單</h3>
           <ul class="rec-list">
-            <li><strong>豬肉湯飯</strong>：本錢豬肉湯飯 (釜山站)、松亭3代湯飯 (西面) [約 9,000 韓元 / NT$ 216]</li>
-            <li><strong>韓式厚切燒肉</strong>：味贊王鹽烤肉 (南浦店, 專人桌邊代烤 3.5cm 豬五花) [人均約 NT$ 500]</li>
-            <li><strong>活海鮮饗宴</strong>：札嘎其市場活帝王蟹、青沙浦秀敏家烤扇貝、機張市場松葉蟹 [人均約 NT$ 800-1,600]</li>
-            <li><strong>韓式豬腳與小吃</strong>：南浦洞漢陽涼拌芥末豬腳、BIFF廣場黑糖餅 (2,000 韓元 / NT$ 48)</li>
-            <li><strong>微醺與海景餐酒</strong>：廣安里 Clam 西班牙餐酒館、Gorilla Brewing 精釀啤酒</li>
+            <li><strong>本錢豬肉湯飯 (Day 1 午餐)</strong>：釜山站必吃 30 年老字號，豬肉軟嫩無腥味，韭菜泡菜一絕。每碗約 9,000 KRW / NT$ 216。<a href="https://www.google.com/maps/search/?api=1&query=Bonjeon+Dwaeji-gukbap+Busan" target="_blank" style="color: var(--primary-glow); text-decoration: none; font-weight: bold; margin-left: 5px;"><i class="fa-solid fa-map-location-dot"></i> 導航地圖</a></li>
+            <li><strong>味贊王鹽烤肉 (Day 1 晚餐)</strong>：南浦店，3.5cm 熟成豬五花，全程專人桌邊代烤至金黃酥脆。人均約 NT$ 500。<a href="https://www.google.com/maps/search/?api=1&query=Matchandeul+Wangso-geum-gui+Nampo+Busan" target="_blank" style="color: var(--primary-glow); text-decoration: none; font-weight: bold; margin-left: 5px;"><i class="fa-solid fa-map-location-dot"></i> 導航地圖</a></li>
+            <li><strong>松亭3代豬肉湯飯 (Day 2 晚餐)</strong>：西面站豬肉湯飯街代表老店，湯頭清甜。每碗約 9,000 KRW / NT$ 216。<a href="https://www.google.com/maps/search/?api=1&query=Songjo-3-dae+Dwaeji-gukbap+Seomyeon" target="_blank" style="color: var(--primary-glow); text-decoration: none; font-weight: bold; margin-left: 5px;"><i class="fa-solid fa-map-location-dot"></i> 導航地圖</a></li>
+            <li><strong>札嘎其市場帝王蟹饗宴 (Day 3 午餐)</strong>：現挑活體帝王蟹與松葉蟹，清蒸鎖住極致鮮甜。人均約 NT$ 1,000-1,500。<a href="https://www.google.com/maps/search/?api=1&query=Jagalchi+Market+Busan" target="_blank" style="color: var(--primary-glow); text-decoration: none; font-weight: bold; margin-left: 5px;"><i class="fa-solid fa-map-location-dot"></i> 導航地圖</a></li>
+            <li><strong>漢陽豬腳 (Day 3 晚餐)</strong>：南浦洞豬腳街名店，推薦招牌涼拌芥末豬腳，爽脆解膩。大份約 45,000 KRW / NT$ 1,080。<a href="https://www.google.com/maps/search/?api=1&query=Hanyang+Jokbal+Nampo+Busan" target="_blank" style="color: var(--primary-glow); text-decoration: none; font-weight: bold; margin-left: 5px;"><i class="fa-solid fa-map-location-dot"></i> 導航地圖</a></li>
+            <li><strong>機張市場松葉蟹 (Day 4 午餐)</strong>：清蒸松葉蟹搭配極品香濃蟹膏炒飯。人均約 NT$ 1,500-2,000。<a href="https://www.google.com/maps/search/?api=1&query=Gijang+Market+Busan" target="_blank" style="color: var(--primary-glow); text-decoration: none; font-weight: bold; margin-left: 5px;"><i class="fa-solid fa-map-location-dot"></i> 導航地圖</a></li>
+            <li><strong>老宅邸燒肉 (Day 4 晚餐)</strong>：廣安里店，專人代烤精緻優質豬肉，環境時尚乾淨。人均約 NT$ 500-600。<a href="https://www.google.com/maps/search/?api=1&query=Gobansikdang+Gwangalli+Busan" target="_blank" style="color: var(--primary-glow); text-decoration: none; font-weight: bold; margin-left: 5px;"><i class="fa-solid fa-map-location-dot"></i> 導航地圖</a></li>
+            <li><strong>廣安里 Clam 餐酒館 (Day 5 晚餐)</strong>：海景第一排西班牙餐酒館，海鮮燉飯與精釀啤酒，微醺觀看廣安大橋夜景。人均約 NT$ 600-800。<a href="https://www.google.com/maps/search/?api=1&query=Clam+Gwangalli+Busan" target="_blank" style="color: var(--primary-glow); text-decoration: none; font-weight: bold; margin-left: 5px;"><i class="fa-solid fa-map-location-dot"></i> 導航地圖</a></li>
+            <li><strong>百濟醫院老建築咖啡 (Day 6 早上/下午茶)</strong>：Brown Hands 復古紅磚老宅，氛圍極具韻味的手沖咖啡。人均約 NT$ 150。<a href="https://www.google.com/maps/search/?api=1&query=Brown+Hands+Baekje+Busan" target="_blank" style="color: var(--primary-glow); text-decoration: none; font-weight: bold; margin-left: 5px;"><i class="fa-solid fa-map-location-dot"></i> 導航地圖</a></li>
           </ul>
         </div>
 
         <div class="box-card" style="margin-bottom: 0;">
           <h3 style="color: var(--accent-coral); font-size: 1.25rem; margin-bottom: 1rem;">🛍️ 購物與美妝熱點</h3>
           <ul class="rec-list">
-            <li><strong>南浦洞光復路</strong>：Olive Young 旗艦店美妝、Gentle Monster、韓系潮牌 (COVERNAT, Musinsa)</li>
-            <li><strong>樂天超市 光復店</strong>：伴手禮大採購 (HBAF堅果, 泡麵, 海苔), 現場辦理退稅免提運</li>
-            <li><strong>新世界 Centum City</strong>：金氏紀錄全球最大百貨，國際精品、韓系潮牌 (B4/4F)</li>
-            <li><strong>東釜山樂天 Outlet</strong>：希臘風格露天 Outlet，Nike/Adidas/NB 等運動品牌 3~5 折</li>
-            <li><strong>西面地下街 & 商圈</strong>：平價韓國服飾 (10,000-20,000 韓元 / NT$ 240-480)、韓系飾品</li>
+            <li><strong>南浦洞光復路</strong>：Olive Young 旗艦店美妝、Gentle Monster、韓系潮牌 (COVERNAT, Musinsa) <a href="https://www.google.com/maps/search/?api=1&query=Gwangbok-ro+Fashion+Street+Busan" target="_blank" style="color: var(--primary-glow); text-decoration: none; font-weight: bold; margin-left: 5px;"><i class="fa-solid fa-map-location-dot"></i> 地圖</a></li>
+            <li><strong>樂天超市 光復店</strong>：伴手禮大採購 (HBAF堅果, 泡麵, 海苔), 現場辦理退稅免提運 <a href="https://www.google.com/maps/search/?api=1&query=Lotte+Mart+Gwangbok+Busan" target="_blank" style="color: var(--primary-glow); text-decoration: none; font-weight: bold; margin-left: 5px;"><i class="fa-solid fa-map-location-dot"></i> 地圖</a></li>
+            <li><strong>新世界 Centum City</strong>：金氏紀錄全球最大百貨，國際精品、韓系潮牌 (B4/4F) <a href="https://www.google.com/maps/search/?api=1&query=Shinsegae+Centum+City+Busan" target="_blank" style="color: var(--primary-glow); text-decoration: none; font-weight: bold; margin-left: 5px;"><i class="fa-solid fa-map-location-dot"></i> 地圖</a></li>
+            <li><strong>東釜山樂天 Outlet</strong>：希臘風格露天 Outlet，Nike/Adidas/NB 等運動品牌 3~5 折 <a href="https://www.google.com/maps/search/?api=1&query=Lotte+Premium+Outlets+Dongbusan" target="_blank" style="color: var(--primary-glow); text-decoration: none; font-weight: bold; margin-left: 5px;"><i class="fa-solid fa-map-location-dot"></i> 地圖</a></li>
+            <li><strong>西面地下街 & 商圈</strong>：平價韓國服飾 (10,000-20,000 韓元 / NT$ 240-480)、韓系飾品 <a href="https://www.google.com/maps/search/?api=1&query=Seomyeon+Underground+Shopping+Center" target="_blank" style="color: var(--primary-glow); text-decoration: none; font-weight: bold; margin-left: 5px;"><i class="fa-solid fa-map-location-dot"></i> 地圖</a></li>
           </ul>
         </div>
       </div>
@@ -854,7 +870,7 @@
         day: 1,
         date: "8/9（日）",
         subTitle: "影島 · 藝術 · 烤肉",
-        title: "抵達釜山 ➔ 影島 Arte Museum ➔ P.ARK 海景咖啡 ➔ 南浦洞燒肉與微醺夜生活",
+        title: "抵達釜山 ➔ 影島 Arte Museum ➔ P.ARK 海景咖啡 ➔ 南浦洞味贊王燒肉與微醺夜生活",
         items: [
           {
             time: "09:55",
@@ -867,7 +883,7 @@
           {
             time: "11:00 - 11:45",
             title: "金海機場 ➔ 東橫INN 釜山站1號店",
-            desc: "叫 2 台 Kakao T Venti 大型計程車直達飯店寄放行李，避免行李塞不下。",
+            desc: "搭乘 2 台 Kakao T Venti 大型計程車直達飯店寄放行李，避免行李塞不下。",
             icon: "🚕",
             badges: ["專車接送", "行李寄放"],
             mapUrl: "https://www.google.com/maps/search/?api=1&query=Toyoko+Inn+Busan+Station+No.1"
@@ -998,7 +1014,7 @@
           {
             time: "12:30 - 14:30",
             title: "午餐：札嘎其海鮮市場 帝王蟹大餐",
-            desc: "1樓挑選帝王蟹/松葉蟹，2樓代客料理。釜山是全東亞吃帝王蟹最划算的地方，一定要爽吃一頓！（人均約 NT$ 960-1,440）。",
+            desc: "1樓挑選帝王蟹/松葉蟹，2樓代客料理。釜山是全東亞吃帝王蟹最劃算的地方，一定要爽吃一頓！（人均約 NT$ 960-1,440）。",
             icon: "🦀",
             badges: ["活帝王蟹", "海鮮大餐"],
             badgeType: "food",
@@ -1086,8 +1102,8 @@
           },
           {
             time: "19:30 - 21:30",
-            title: "【新增美食】晚餐：老宅邸燒肉 廣安里店 (고반식당)",
-            desc: "影片強推的釜山精緻燒肉！高品質豬肉有專人桌邊代烤，小菜豐富（人均約 NT$ 480-600），吃完可直接在廣安里散步看橋上夜景。",
+            title: "晚餐：老宅邸燒肉 廣安里店 (고반식당)",
+            desc: "高品質豬肉有專人桌邊代烤，小菜豐富（人均約 NT$ 480-600），吃完可直接在廣安里散步看橋上夜景。",
             icon: "🍖",
             badges: ["老宅邸燒肉", "專人代烤"],
             badgeType: "food",
@@ -1130,7 +1146,7 @@
           },
           {
             time: "18:30 - 19:30",
-            title: "【新增熱推】廣安里豪華遊艇體驗 (Yacht Tour)",
+            title: "【熱推】廣安里豪華遊艇體驗 (Yacht Tour)",
             desc: "遊艇票價 30,000 韓元（可用 PASS 兌換）。搭豪華遊艇看廣安大橋夜間點燈，並在海上欣賞施放煙火，體驗極佳！",
             icon: "⛵",
             badges: ["海上游艇", "船上煙火"],
@@ -1301,7 +1317,7 @@
           <button class="sub-tab-btn ${d.day === 1 ? 'active' : ''}" data-day="${d.day}" id="sub-tab-day-${d.day}">
             <span class="sub-tab-day">DAY 0${d.day}</span>
             <span style="font-size:0.85rem; font-weight:700; color:#fff;">8/${8+d.day}</span>
-            <span style="font-size:0.75rem; color:var(--text-muted);">${d.subTitle.split('·')[0]}</span>
+            <span style="font-size:0.75rem; color:var(--text-muted);">${d.subTitle.split('·')[0].trim()}</span>
           </button>
         `;
       });
@@ -1409,13 +1425,16 @@
     // 6. 事件監聽設定
     function setupEventListeners() {
       // 行程子 Tab 點擊
-      document.getElementById("sub-nav-container").addEventListener("click", (e) => {
-        const subBtn = e.target.closest(".sub-tab-btn");
-        if (subBtn) {
-          const day = parseInt(subBtn.dataset.day);
-          renderDayTimeline(day);
-        }
-      });
+      const subNav = document.getElementById("sub-nav-container");
+      if (subNav) {
+        subNav.addEventListener("click", (e) => {
+          const subBtn = e.target.closest(".sub-tab-btn");
+          if (subBtn) {
+            const day = parseInt(subBtn.dataset.day);
+            renderDayTimeline(day);
+          }
+        });
+      }
       
       // 試算器事件
       document.getElementById("krw-input").addEventListener("input", calculateExchange);
@@ -1452,7 +1471,7 @@
     }
 
     // === Olive Young Recommendations Logic ===
-    const oyProducts = [{"id": "mediheal", "time": "01:37", "name": "MEDIHEAL 精華面膜片", "en_name": "MEDIHEAL Essential Mask", "category": "skincare", "category_zh": "臉部護理", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1122709230_0.jpg", "features": "高濃度精華、服貼度高、高CP值", "skin_type": "所有膚質，特別是缺水肌與需要曬後鎮靜者", "reason": "金針菇姐姐強烈推薦的國民面膜。精華液含量極高，面膜紙薄且貼合度優秀。在 Olive Young 購買通常有 10 片一盒的包裝，並且常常有 1+1 (買一送一) 的促銷活動，是去韓國必囤的保濕聖品。", "tips": "建議洗完臉後敷 10-15 分鐘，取下後輕輕按摩至吸收，再擦上乳液鎖水。若有醫美術後泛紅，綠色積雪草款是很好的鎮靜選擇。"}, {"id": "biodance", "time": "03:25", "name": "Biodance 膠原蛋白深層全效面膜", "en_name": "Biodance Bio-Collagen Real Deep Mask", "category": "skincare", "category_zh": "臉部護理", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1124314457_0.jpg", "features": "水凝膠材質、敷完變透明、深層彈力", "skin_type": "乾性肌、熟齡肌、暗沉無光澤肌", "reason": "近期紅遍全球的「敷著睡覺面膜」。它是果凍般的水凝膠材質，敷上後面膜中的超低分子玻尿酸與膠原蛋白會慢慢被肌膚吸收，面膜會隨時間變為完全透明。能顯著改善毛孔與提亮膚色。", "tips": "適合在夜間保養的最後一步使用，建議敷 3-4 小時以上（甚至敷著入睡），醒來後撕下即可看見驚人的水光感與澎潤肌膚。", "badge": "熱銷斷貨王"}, {"id": "beyond", "time": "04:14", "name": "Beyond 美白乳液 / 身體乳", "en_name": "Beyond Body Emulsion", "category": "body", "category_zh": "身體保養", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1117564731_0.jpg", "features": "溫和草本、高級白麝香、深層鎖水", "skin_type": "所有膚質、身體肌膚乾燥脫屑者", "reason": "LG 生活健康旗下的環保自然品牌。這款身體乳以療癒且高級的「白麝香」香氣聞名，質地乳爽不黏膩，保濕度極佳，能修護乾燥的肌膚屏障。", "tips": "每天洗澡後，在身體微濕時塗抹，保濕與持香效果最佳。"}, {"id": "yunjac", "time": "05:27", "name": "Yunjac 然植亞保濕底霜 (Base Prep)", "en_name": "Yunjac Skin Perfecting Protective Base Prep", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1119565507_0.jpg", "features": "底妝膠水、防護隔離、透亮光澤", "skin_type": "乾性肌、混合偏乾、底妝容易浮粉起皮者", "reason": "高端草本護膚品牌推出的妝前精華。被譽為「乾皮親媽」與「化妝師的秘密武器」，質地如水般輕盈，能迅速撫平臉部角質，讓後續不論是粉底液還是氣墊粉餅都非常貼合，展現高級的水光感。", "tips": "在防曬後、底妝前，取 2-3 滴均勻塗抹於全臉，特別是易卡粉的鼻翼與兩頰，輕拍至微黏狀態再上底妝。", "badge": "美妝大賞第一"}, {"id": "obge", "time": "06:13", "name": "OBgE 自然防曬棒", "en_name": "OBgE Natural Cover Sun Stick", "category": "skincare", "category_zh": "防曬護理", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1125217431_0.jpg", "features": "不沾手、清爽控油、不泛白", "skin_type": "所有膚質、混合偏油、男士、喜愛戶外活動者", "reason": "韓國男士理容第一品牌推出的防曬棒，女生也非常愛用！具備 SPF50+/PA++++ 最高防曬規格。棒狀設計極為方便，完全不沾手，上臉後呈乾爽霧面，且完全不泛白、不黏膩，抗汗效果優秀。", "tips": "適合隨身攜帶，在戶外每 2-3 小時隨時塗抹補防曬。因其清爽度高，妝後輕拍補防曬也不易弄髒妝容。"}, {"id": "the_saem", "time": "07:12", "name": "The Saem 得鮮完美遮瑕液", "en_name": "The Saem Cover Perfection Tip Concealer", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1071477759_0.jpg", "features": "極高遮瑕力、平價戰神、多色號選擇", "skin_type": "有痘疤、黑眼圈、班點需要高度遮瑕者", "reason": "風靡亞洲的平價遮瑕天王。遮瑕力強、持妝度極佳，不論是多深的痘疤或黑眼圈，輕點一下就能完美遮蓋，CP 值高到不可思議。", "tips": "因遮瑕力極高，質地偏乾，建議局部「點」在瑕疵處，等 10 秒微乾後，再使用濕海綿或粉撲邊緣輕輕拍開。"}, {"id": "about_tone", "time": "08:40", "name": "About Tone 柔焦控油蜜粉餅", "en_name": "About Tone Blur Powder Pact", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1109968434_0.jpg", "features": "一秒磨皮、粉質極細、強效控油", "skin_type": "油性肌、混合肌、毛孔粗大者", "reason": "前身為風靡韓國的 Eglips 蜜粉餅。這款粉餅主打「空氣柔焦」效果，粉質如輕煙般細緻，能瞬間吸附皮脂，讓毛孔隱形，打造如陶瓷娃娃般的乾淨霧面妝效。", "tips": "使用附帶的粉撲，在底妝後輕壓在容易出油的 T 字部位、鼻翼，或用於眼周打底防暈染。"}, {"id": "so_natural", "time": "09:55", "name": "So Natural 經典定妝噴霧", "en_name": "So Natural All Day Tight Makeup Setting Fixer", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1066497491_0.jpg", "features": "細緻霧化、快速成膜、抗摩擦防脫妝", "skin_type": "所有膚質、混合偏油、需要長時間持妝者", "reason": "韓國定妝噴霧界的常勝冠軍，粉紅色瓶身非常具有代表性。其壓頭噴出的水霧極其細緻，不會在臉上結成水珠，能快速在底妝上形成保護膜，抗汗、抗油且防摩擦。", "tips": "化妝完成後，將噴霧距離臉部 20-30 公分，畫 'X' 和 'T' 字形噴灑全臉，靜待 1 分鐘自然風乾成膜，切勿用手拍打。"}, {"id": "canmake", "time": "10:30", "name": "Canmake 腮紅霜", "en_name": "Canmake Cream Cheek", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1053709088_0.jpg", "features": "清透血色感", "skin_type": "所有膚質，尤其是喜愛無粉感日韓系妝容者", "reason": "雖然是日系彩妝，但其極佳的自然融膚感在韓國 Olive Young 也擁有超高人氣。凝膠般的質地上臉推開後會化為乾爽的粉質，呈現如皮膚底層自然透出來 of 紅潤氣色。", "tips": "用手指沾取適量，輕點於蘋果肌處往外拍開，或是用氣墊粉撲上妝，效果更加均勻清透。"}, {"id": "fillimilli", "time": "11:38", "name": "Fillimilli 胖胖氣墊粉撲", "en_name": "Fillimilli Cushion Pang Pang Puff", "category": "tools", "category_zh": "美妝工具", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1121118128_0.jpg", "features": "厚實有彈性、上妝服貼、省時省粉底", "skin_type": "所有使用氣墊粉餅或粉底液的化妝者", "reason": "Olive Young 自有美妝配件品牌 Fillimilli 的明星產品。這款氣墊粉撲非常厚實，彈性極佳，能將粉底均勻且輕薄地拍入肌膚，大幅提升底妝的服貼度，是去 OY 必抓好幾個回台的囤貨小物。", "tips": "可用於氣墊粉餅，也適合搭配普通粉底液使用。上妝時採用「快速拍打」的方式，能讓妝效更具光澤與遮瑕力。"}, {"id": "too_cool", "time": "12:43", "name": "Too Cool for School 美術課修容/腮紅 #14", "en_name": "Too Cool for School Artclass Shading", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1097241355_0.jpg", "features": "發色自然、柔滑粉質、不易失手", "skin_type": "彩妝新手、喜愛溫柔日常妝容者", "reason": "Too Cool for School 的經典美術課系列，以極佳的發色與粉質著稱。#14 號色提供了極為溫柔、自然且符合亞洲人膚色的冷暖平衡色調，不易結塊且能完美修飾臉部輪廓。", "tips": "用修容刷或腮紅刷沾取後，在手背上稍微拍掉多餘粉末，再輕刷於臉頰或下顎線，可少量多次疊加。"}, {"id": "peripera", "time": "14:09", "name": "Peripera 水光唇釉 (Ink Mood Glowy)", "en_name": "Peripera Ink Mood Glowy Tint", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1111666874_0.jpg", "features": "玻璃水光感、滋潤修飾唇紋、持久顯色", "skin_type": "唇紋明顯、喜愛水光嘟嘟唇與純欲妝效者", "reason": "平價彩妝之王 Peripera 的明星水光唇釉。上嘴後會形成一層晶瑩剔透的水光膜，質地保濕不乾澀，且帶有輕微的染唇效果，不容易完全掉色，是打造網紅玻璃唇的首選。", "tips": "塗抹於雙唇後，**靜待 1-2 分鐘不要抿嘴**，等它自動成膜後，水光感和持久度會大幅提升。"}, {"id": "banila_co", "time": "15:14", "name": "Banila Co 緻柔卸妝膏", "en_name": "Banila Co Clean It Zero Cleansing Balm", "category": "skincare", "category_zh": "臉部清潔", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1069614769_0.jpg", "features": "雪酪質地、秒乳化、溫和不緊繃", "skin_type": "所有膚質，包括敏感肌與日常化濃妝者", "reason": "風靡全球的「國民卸妝膏」。雪酪般的固體質地，接觸體溫後會瞬間融化並乳化，能溫和、徹底地卸除所有頑固的防水彩妝與毛孔髒污，且洗後完全不熏眼、不緊繃。", "tips": "保持雙手和臉部乾燥，取適量卸妝膏塗抹於臉部輕柔按摩打圈，再沾取少量清水使其完全「乳化」變白，最後用溫水徹底沖洗乾淨。"}, {"id": "teazen", "time": "16:29", "name": "Teazen 康普茶 (Kombucha)", "en_name": "Teazen Kombucha", "category": "lifestyle", "category_zh": "健康飲品", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1105367807_0.jpg", "features": "低卡無糖、富含益生菌、清爽氣泡感", "skin_type": "注重腸道健康、想戒含糖飲料的健康追求者", "reason": "因為 BTS 成員飲用而火遍全韓的健康機能飲品。採用凍乾技術保留乳酸菌與益生元，沖泡後帶有碳酸微氣泡感，口味酸甜清爽（如檸檬、水蜜桃等），一包熱量僅 15 卡，解膩無負擔。", "tips": "用 250ml - 500ml 的冷水或冰水沖泡，氣泡感會更加強烈，喝起來就像健康的汽水，非常適合作為大餐後的消食飲料。"}];
+    const oyProducts = [{"id": "mediheal", "time": "01:37", "name": "MEDIHEAL 精華面膜片", "en_name": "MEDIHEAL Essential Mask", "category": "skincare", "category_zh": "臉部護理", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1122709230_0.jpg", "features": "高濃度精華、服貼度高、高CP值", "skin_type": "所有膚質，特別是缺水肌與需要曬後鎮靜者", "reason": "金針菇姐姐強烈推薦的國民面膜。精華液含量極高，面膜紙薄且貼合度優秀。在 Olive Young 購買通常有 10 片一盒的包裝，並且常常有 1+1 (買一送一) 的促銷活動，是去韓國必囤的保濕聖品。", "tips": "建議洗完臉後敷 10-15 分鐘，取下後輕輕按摩至吸收，再擦上乳液鎖水。若有醫美術後泛紅，綠色積雪草款是很好的鎮靜選擇。"}, {"id": "biodance", "time": "03:25", "name": "Biodance 膠原蛋白深層全效面膜", "en_name": "Biodance Bio-Collagen Real Deep Mask", "category": "skincare", "category_zh": "臉部護理", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1124314457_0.jpg", "features": "水凝膠材質、敷完變透明、深層彈力", "skin_type": "乾性肌、熟齡肌、暗沉無光澤肌", "reason": "近期紅遍全球的「敷著睡記面膜」。它是果凍般的水凝膠材質，敷上後面膜中的超低分子玻尿酸與膠原蛋白會慢慢被肌膚吸收，面膜會隨時間變為完全透明。能顯著改善毛孔與提亮膚色。", "tips": "適合在夜間保養的最後一步使用，建議敷 3-4 小時以上（甚至敷著入睡），醒來後撕下即可看見驚人的水光感與澎潤肌膚。", "badge": "熱銷斷貨王"}, {"id": "beyond", "time": "04:14", "name": "Beyond 美白乳液 / 身體乳", "en_name": "Beyond Body Emulsion", "category": "body", "category_zh": "身體保養", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1117564731_0.jpg", "features": "溫和草本、高級白麝香、深層鎖水", "skin_type": "所有膚質、身體肌膚乾燥脫屑者", "reason": "LG 生活健康旗下的環保自然品牌。這款身體乳以療癒且高級的「白麝香」香氣聞名，質地乳爽不黏膩，保濕度極佳，能修護乾燥的肌膚屏障。", "tips": "每天洗澡後，在身體微濕時塗抹，保濕與持香效果最佳。"}, {"id": "yunjac", "time": "05:27", "name": "Yunjac 然植亞保濕底霜 (Base Prep)", "en_name": "Yunjac Skin Perfecting Protective Base Prep", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1119565507_0.jpg", "features": "底妝膠水、防護隔離、透亮光澤", "skin_type": "乾性肌、混合偏乾、底妝容易浮粉起皮者", "reason": "高端草本護膚品牌推出的妝前精華。被譽為「乾皮親媽」與「化妝師的秘密武器」，質地如水般輕盈，能迅速撫平臉部角質，讓後續不論是粉底液還是氣墊粉餅都非常貼合，展現高級的水光感。", "tips": "在防曬後、底妝前，取 2-3 滴均勻塗抹於全臉，特別是易卡粉的鼻翼與兩頰，輕拍至微黏狀態再上底妝。", "badge": "美妝大賞第一"}, {"id": "obge", "time": "06:13", "name": "OBgE 自然防曬棒", "en_name": "OBgE Natural Cover Sun Stick", "category": "skincare", "category_zh": "防曬護理", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1125217431_0.jpg", "features": "不沾手、清爽控油、不泛白", "skin_type": "所有膚質、混合偏油、男士、喜愛戶外活動者", "reason": "韓國男士理容第一品牌推出的防曬棒，女生也非常愛用！具備 SPF50+/PA++++ 最高防曬規格。棒狀設計極為方便，完全不沾手，上臉後呈乾爽霧面，且完全不泛白、不黏膩，抗汗效果優秀。", "tips": "適合隨身攜帶，在戶外每 2-3 小時隨時塗抹補防曬。因其清爽度高，妝後輕拍補防曬也不易弄髒妝容。"}, {"id": "the_saem", "time": "07:12", "name": "The Saem 得鮮完美遮瑕液", "en_name": "The Saem Cover Perfection Tip Concealer", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1071477759_0.jpg", "features": "極高遮瑕力、平價戰神、多色號選擇", "skin_type": "有痘疤、黑眼圈、班點需要高度遮瑕者", "reason": "風靡亞洲的平價遮瑕天王。遮瑕力強、持妝度極佳，不論是多深的痘疤或黑眼圈，輕點一下就能完美遮蓋，CP 值高到不可思議。", "tips": "因遮瑕力極高，質地偏乾，建議局部「點」在瑕疵處，等 10 秒微乾後，再使用濕海綿或粉撲邊緣輕輕拍開。"}, {"id": "about_tone", "time": "08:40", "name": "About Tone 柔焦控油蜜粉餅", "en_name": "About Tone Blur Powder Pact", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1109968434_0.jpg", "features": "一秒磨皮、粉質極細、強效控油", "skin_type": "油性肌、混合肌、毛孔粗大者", "reason": "前身為風靡韓國的 Eglips 蜜粉餅。這款粉餅主打「空氣柔焦」效果，粉質如輕煙般細緻，能瞬間吸附皮脂，讓毛孔隱形，打造如陶瓷娃娃般的乾淨霧面妝效。", "tips": "使用附帶的粉撲，在底妝後輕壓在容易出油的 T 字部位、鼻翼，或用於眼周打底防暈染。"}, {"id": "so_natural", "time": "09:55", "name": "So Natural 經典定妝噴霧", "en_name": "So Natural All Day Tight Makeup Setting Fixer", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1066497491_0.jpg", "features": "細緻霧化、快速成膜、抗摩擦防脫妝", "skin_type": "所有膚質、混合偏油、需要長時間持妝者", "reason": "韓國定妝噴霧界的常勝冠軍，粉紅色瓶身非常具有代表性。其壓頭噴出的水霧極其細緻，不會在臉上結成水珠，能快速在底妝上形成保護膜，抗汗、抗油且防摩擦。", "tips": "化妝完成後，將噴霧距離臉部 20-30 公分，畫 'X' 和 'T' 字形噴灑全臉，靜待 1 分鐘自然風乾成膜，切勿用手拍打。"}, {"id": "canmake", "time": "10:30", "name": "Canmake 腮紅霜", "en_name": "Canmake Cream Cheek", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1053709088_0.jpg", "features": "清透血色感、凝膠轉粉質、白裡透紅", "skin_type": "所有膚質，尤其是喜愛無粉感日韓系妝容者", "reason": "雖然是日系彩妝，但其極佳的自然融膚感在韓國 Olive Young 也擁有超高人氣。凝膠般的質地上臉推開後會化為乾爽的粉質，呈現如皮膚底層自然透出來的紅潤氣色。", "tips": "用手指沾取適量，輕點於蘋果肌處往外拍開，或是用氣墊粉撲上妝，效果更加均勻清透。"}, {"id": "fillimilli", "time": "11:38", "name": "Fillimilli 胖胖氣墊粉撲", "en_name": "Fillimilli Cushion Pang Pang Puff", "category": "tools", "category_zh": "美妝工具", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1121118128_0.jpg", "features": "厚實有彈性、上妝服貼、省時省粉底", "skin_type": "所有使用氣墊粉餅或粉底液的化妝者", "reason": "Olive Young 自有美妝配件品牌 Fillimilli 的明星產品。這款氣墊粉撲非常厚實，彈性極佳，能將粉底均勻且輕薄地拍入肌膚，大幅提升底妝的服貼度，是去 OY 必抓好幾個回台的囤貨小物。", "tips": "可用於氣墊粉餅，也適合搭配普通粉底液使用。上妝時採用「快速拍打」的方式，能讓妝效更具光澤與遮瑕力。"}, {"id": "too_cool", "time": "12:43", "name": "Too Cool for School 美術課修容/腮紅 #14", "en_name": "Too Cool for School Artclass Shading", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1097241355_0.jpg", "features": "發色自然、柔滑粉質、不易失手", "skin_type": "彩妝新手、喜愛溫柔日常妝容者", "reason": "Too Cool for School 的經典美術課系列，以極佳的發色與粉質著稱。#14 號色提供了極為溫柔、自然且符合亞洲人膚色的冷暖平衡色調，不易結塊且能完美修飾臉部輪廓。", "tips": "用修容刷或腮紅刷沾取後，在手背上稍微拍掉多餘粉末，再輕刷於臉頰或下顎線，可少量多次疊加。"}, {"id": "peripera", "time": "14:09", "name": "Peripera 水光唇釉 (Ink Mood Glowy)", "en_name": "Peripera Ink Mood Glowy Tint", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1111666874_0.jpg", "features": "玻璃水光感、滋潤修飾唇紋、持久顯色", "skin_type": "唇紋明顯、喜愛水光嘟嘟唇與純欲妝效者", "reason": "平價彩妝之王 Peripera 的明星水光唇釉。上嘴後會形成一層晶瑩剔透的水光膜，質地保濕不乾澀，且帶有輕微的染唇效果，不容易完全掉色，是打造網紅玻璃唇的首選。", "tips": "塗抹於雙唇後，**靜待 1-2 分鐘不要抿嘴**，等它自動成膜後，水光感和持久度會大幅提升。"}, {"id": "banila_co", "time": "15:14", "name": "Banila Co 緻柔卸妝膏", "en_name": "Banila Co Clean It Zero Cleansing Balm", "category": "skincare", "category_zh": "臉部清潔", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1069614769_0.jpg", "features": "雪酪質地、秒乳化、溫和不緊繃", "skin_type": "所有膚質，包括敏感肌與日常化濃妝者", "reason": "風靡全球的「國民卸妝膏」。雪酪般的固體質地，接觸體溫後會瞬間融化並乳化，能溫和、徹底地卸除所有頑固的防水彩妝與毛孔髒污，且洗後完全不熏眼、不緊繃。", "tips": "保持雙手和臉部乾燥，取適量卸妝膏塗抹於臉部輕柔按摩打圈，再沾取少量清水使其完全「乳化」變白，最後用溫水徹底沖洗乾淨。"}, {"id": "teazen", "time": "16:29", "name": "Teazen 康普茶 (Kombucha)", "en_name": "Teazen Kombucha", "category": "lifestyle", "category_zh": "健康飲品", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1105367807_0.jpg", "features": "低卡無糖、富含益生菌、清爽氣泡感", "skin_type": "注重腸道健康、想戒含糖飲料的健康追求者", "reason": "因為 BTS 成員飲用而火遍全韓的健康機能飲品。採用凍乾技術保留乳酸菌與益生元，沖泡後帶有碳酸微氣泡感，口味酸甜清爽（如檸檬、水蜜桃等），一包熱量僅 15 卡，解膩無負擔。", "tips": "用 250ml - 500ml 的冷水或冰水沖泡，氣泡感會更加強烈，喝起來就像健康的汽水，非常適合作為大餐後的消食飲料。"}];
 
     function renderOliveYoung() {
       const grid = document.getElementById("oy-product-grid");
@@ -1468,7 +1487,7 @@
             <div class="oy-card-time"><i class="fa-solid fa-clock"></i> ${p.time}</div>
             ${badgeHtml}
             <div class="oy-img-container">
-              <img src="${p.img_url}" alt="${p.name}" class="oy-img" referrerpolicy="no-referrer" onerror="this.src='https://via.placeholder.com/300x300.png?text=${p.img_key.replace(/ /g, '+')}'">
+              <img src="${p.img_url}" alt="${p.name}" class="oy-img" referrerpolicy="no-referrer" onerror="this.src='https://via.placeholder.com/300x300.png?text=${p.name.replace(/ /g, '+')}'">
             </div>
             <div class="oy-card-content">
               <span class="oy-card-cat">${p.category_zh}</span>
@@ -1487,7 +1506,12 @@
     function filterOyCategory(category) {
       const buttons = document.querySelectorAll('.oy-filter-btn');
       buttons.forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
+      
+      // 使用 window.event 相容性寫法避免 strict mode 的 event 未定義問題
+      const evt = window.event || arguments.callee.caller.arguments[0];
+      if (evt && evt.target) {
+        evt.target.classList.add('active');
+      }
 
       const cards = document.querySelectorAll('.oy-card');
       cards.forEach(card => {
@@ -1519,7 +1543,7 @@
       const modalBodyHtml = `
         <div class="oy-modal-header">
           <div class="oy-modal-img-box">
-            <img src="${p.img_url}" alt="${p.name}" class="oy-modal-img" referrerpolicy="no-referrer" onerror="this.src='https://via.placeholder.com/300x300.png?text=${p.img_key.replace(/ /g, '+')}'">
+            <img src="${p.img_url}" alt="${p.name}" class="oy-modal-img" referrerpolicy="no-referrer" onerror="this.src='https://via.placeholder.com/300x300.png?text=${p.name.replace(/ /g, '+')}'">
           </div>
           <div class="oy-modal-title-info">
             <span class="oy-modal-time"><i class="fa-solid fa-clock"></i> 影片時間 ${p.time}</span>
