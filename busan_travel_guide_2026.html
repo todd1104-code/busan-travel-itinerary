@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <meta name="referrer" content="no-referrer">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="2026 韓國釜山 6 天 5 夜 8 位成年家族慢遊行程指南，含景點地圖與導航連結。">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="2026 韓國釜山 6 天 5 等級 8 位成年家族慢遊行程與 Olive Young 必買好物推薦，含 Google Maps 定位地圖。">
   <title>🇰🇷 韓國釜山 6 天 5 夜豪華家族慢遊行程指南</title>
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <style>
     /* 韓國釜山 6天5夜豪華家族慢遊 - 專屬 CSS 設計系統 */
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Outfit:wght@400;600;700;800;900&display=swap');
-
     :root {
       --primary-glow: #00d2ff;
       --secondary-glow: #3a7bd5;
@@ -24,15 +27,15 @@
       --line-gimhae-purple: #8c4195;
       
       --bg-dark: #070b14;
-      --bg-card: rgba(18, 26, 45, 0.8);
-      --bg-card-hover: rgba(28, 40, 68, 0.9);
+      --bg-card: rgba(18, 26, 45, 0.85);
+      --bg-card-hover: rgba(28, 40, 68, 0.95);
       --border-light: rgba(255, 255, 255, 0.1);
       
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
       --text-sub: #cbd5e1;
       
-      --glass-bg: rgba(15, 23, 42, 0.75);
+      --glass-bg: rgba(15, 23, 42, 0.8);
       --glass-border: rgba(255, 255, 255, 0.08);
       --shadow-lux: 0 20px 40px rgba(0, 0, 0, 0.5);
       
@@ -54,11 +57,13 @@
         radial-gradient(circle at 10% 15%, rgba(0, 210, 255, 0.1) 0%, transparent 40%),
         radial-gradient(circle at 90% 75%, rgba(255, 183, 3, 0.08) 0%, transparent 45%);
       background-attachment: fixed;
+      padding-bottom: 50px;
     }
 
+    /* Hero Header */
     .hero-header {
       position: relative;
-      min-height: 55vh;
+      min-height: 48vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -70,7 +75,7 @@
       border-bottom: 1px solid var(--border-light);
     }
 
-    .hero-overlay { position: absolute; inset: 0; background: radial-gradient(circle, rgba(7,11,20,0.3) 0%, rgba(7,11,20,0.88) 100%); z-index: 1; }
+    .hero-overlay { position: absolute; inset: 0; background: radial-gradient(circle, rgba(7,11,20,0.3) 0%, rgba(7,11,20,0.92) 100%); z-index: 1; }
     .hero-content { position: relative; z-index: 2; max-width: 950px; }
 
     .badge-tag {
@@ -81,39 +86,136 @@
     }
 
     .hero-title {
-      font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 900;
+      font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 900;
       background: linear-gradient(135deg, #ffffff 20%, var(--primary-glow) 70%, var(--accent-gold) 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; line-height: 1.2;
     }
 
-    .hero-subtitle { font-size: 1.2rem; color: var(--text-sub); margin-bottom: 2rem; font-weight: 500; }
+    .hero-subtitle { font-size: 1.15rem; color: var(--text-sub); margin-bottom: 2rem; font-weight: 500; }
 
     .meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; max-width: 850px; margin: 0 auto; }
     .meta-card { background: var(--glass-bg); border: 1px solid var(--glass-border); backdrop-filter: blur(16px); padding: 1.2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-lux); }
-    .meta-card .label { font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 0.25rem; }
-    .meta-card .val { font-size: 1.05rem; font-weight: 700; color: var(--accent-gold); }
+    .meta-card .label { font-size: 0.82rem; color: var(--text-muted); display: block; margin-bottom: 0.25rem; }
+    .meta-card .val { font-size: 1rem; font-weight: 700; color: var(--accent-gold); }
 
-    .sticky-nav { position: sticky; top: 0; z-index: 100; background: rgba(7, 11, 20, 0.92); backdrop-filter: blur(24px); border-bottom: 1px solid var(--border-light); padding: 1rem 0; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); }
+    /* Sticky Main Navigation Tabs */
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(7, 11, 20, 0.94);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--border-light);
+      padding: 0.75rem 0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    }
     .nav-container { max-width: 1250px; margin: 0 auto; padding: 0 1.5rem; }
-    .tab-group { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.75rem; }
-    .tab-btn {
-      background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 0.85rem 0.6rem;
-      cursor: pointer; transition: var(--transition-smooth); text-align: center; display: flex; flex-direction: column; align-items: center; gap: 0.2rem;
+    
+    .main-tab-group {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 0.5rem;
     }
-    .tab-btn:hover { background: rgba(255, 255, 255, 0.08); border-color: rgba(0, 210, 255, 0.4); transform: translateY(-2px); }
-    .tab-btn.active {
+    
+    .main-tab-btn {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 0.85rem 0.5rem;
+      cursor: pointer;
+      color: var(--text-sub);
+      font-weight: 600;
+      font-size: 0.95rem;
+      font-family: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.25rem;
+      transition: var(--transition-smooth);
+    }
+    .main-tab-btn i { font-size: 1.1rem; }
+    .main-tab-btn:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: var(--primary-glow);
+      color: #fff;
+    }
+    .main-tab-btn.active {
       background: linear-gradient(135deg, rgba(0, 210, 255, 0.2) 0%, rgba(58, 123, 213, 0.3) 100%);
-      border: 1.5px solid var(--primary-glow); box-shadow: 0 8px 25px rgba(0, 210, 255, 0.35); transform: translateY(-2px);
+      border: 1.5px solid var(--primary-glow);
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(0, 210, 255, 0.3);
+      transform: translateY(-1px);
     }
-    .tab-day-code { font-size: 0.75rem; font-weight: 800; letter-spacing: 1px; color: var(--accent-gold); text-transform: uppercase; }
-    .tab-day-date { font-size: 0.95rem; font-weight: 700; color: #fff; }
-    .tab-day-sub { font-size: 0.78rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
 
-    .main-wrapper { max-width: 1250px; margin: 3rem auto; padding: 0 1.5rem; }
+    @media (max-width: 900px) {
+      .main-tab-group { grid-template-columns: repeat(3, 1fr); gap: 0.4rem; }
+    }
+    @media (max-width: 600px) {
+      .main-tab-group { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* Sub Navigation Tabs for Itinerary Days */
+    .sub-nav-wrapper {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 0.75rem;
+      margin-bottom: 2rem;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 0.5rem;
+    }
+    @media (max-width: 768px) {
+      .sub-nav-wrapper { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .sub-nav-wrapper { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .sub-tab-btn {
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      border-radius: var(--radius-sm);
+      padding: 0.5rem 0.25rem;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 0.88rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: var(--transition-smooth);
+    }
+    .sub-tab-btn:hover { color: #fff; background: rgba(255,255,255,0.04); }
+    .sub-tab-btn.active {
+      background: rgba(0, 210, 255, 0.08);
+      border-color: rgba(0, 210, 255, 0.3);
+      color: var(--primary-glow);
+      font-weight: 700;
+    }
+    .sub-tab-day { font-size: 0.7rem; color: var(--accent-gold); }
+
+    /* App Layout */
+    .main-wrapper { max-width: 1250px; margin: 2rem auto; padding: 0 1.5rem; }
+    
+    /* App Sections */
+    .app-section {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+    .app-section.active {
+      display: block;
+    }
+
     .section-header { margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; }
     .section-title { font-size: 1.8rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.75rem; }
     .section-title::before { content: ''; width: 6px; height: 26px; background: linear-gradient(180deg, var(--accent-gold), var(--primary-glow)); border-radius: 4px; display: inline-block; }
 
+    .box-card { background: var(--bg-card); border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: 2rem; backdrop-filter: blur(15px); margin-bottom: 2.5rem; }
+
+    /* Timeline Styles */
     .timeline { display: flex; flex-direction: column; gap: 1.75rem; position: relative; }
     .timeline::before { content: ''; position: absolute; left: 28px; top: 25px; bottom: 25px; width: 3px; background: linear-gradient(180deg, var(--primary-glow), var(--accent-gold), var(--accent-coral)); opacity: 0.35; }
     .timeline-item { position: relative; padding-left: 75px; }
@@ -133,20 +235,58 @@
     .badge-shop { background: rgba(255, 94, 120, 0.15); color: var(--accent-coral); border: 1px solid rgba(255, 94, 120, 0.3); }
     .badge-sight { background: rgba(0, 210, 255, 0.15); color: var(--primary-glow); border: 1px solid rgba(0, 210, 255, 0.3); }
 
-    .metro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
-    .metro-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: var(--radius-lg); padding: 1.5rem; backdrop-filter: blur(12px); }
+    /* Metro Guide */
+    .metro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
+    .metro-card { background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.5rem; }
     .metro-card-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
     .metro-badge { width: 32px; height: 32px; border-radius: 50%; color: #fff; font-weight: 800; font-size: 0.95rem; display: flex; align-items: center; justify-content: center; }
     .line-1 { background-color: var(--line-1-orange); } .line-2 { background-color: var(--line-2-green); } .line-donghae { background-color: var(--line-donghae-blue); } .line-gimhae { background-color: var(--line-gimhae-purple); }
-    .metro-line-title { font-size: 1.2rem; font-weight: 700; color: #fff; }
+    .metro-line-title { font-size: 1.15rem; font-weight: 700; color: #fff; }
     .metro-stations-list { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; }
-    .metro-station-item { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.95rem; }
+    .metro-station-item { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.92rem; }
     .station-name { font-weight: 700; color: var(--accent-gold); white-space: nowrap; }
     .station-spots { color: var(--text-sub); }
     .metro-map-wrapper { background: rgba(0, 0, 0, 0.4); border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: 1rem; margin-top: 1.5rem; text-align: center; }
-    .metro-map-img { width: 100%; max-height: 550px; object-fit: contain; border-radius: var(--radius-md); }
+    .metro-map-img { width: 100%; max-height: 500px; object-fit: contain; border-radius: var(--radius-md); }
 
-    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+    /* New: Google Maps Locations Table */
+    .maps-table-wrapper {
+      margin-top: 2rem;
+      overflow-x: auto;
+    }
+    .maps-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+    .maps-table th, .maps-table td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .maps-table th {
+      background-color: rgba(255, 255, 255, 0.05);
+      color: var(--primary-glow);
+      font-weight: 700;
+    }
+    .maps-table tr:hover {
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+    .maps-table td a {
+      color: var(--accent-gold);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .maps-table td a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    /* Photo Gallery */
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
     .photo-card { position: relative; border-radius: var(--radius-md); overflow: hidden; height: 240px; cursor: pointer; border: 1px solid var(--border-light); box-shadow: var(--shadow-lux); }
     .photo-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
     .photo-card:hover img { transform: scale(1.08); }
@@ -154,424 +294,100 @@
     .photo-title { font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 0.2rem; }
     .photo-location { font-size: 0.85rem; color: var(--primary-glow); }
 
-    .modal { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(0, 0, 0, 0.88); backdrop-filter: blur(12px); justify-content: center; align-items: center; padding: 2rem; }
-    .modal.active { display: flex; }
-    .modal-content { max-width: 850px; width: 100%; background: var(--bg-dark); border: 1px solid var(--border-light); border-radius: var(--radius-lg); overflow: hidden; position: relative; box-shadow: 0 25px 60px rgba(0,0,0,0.9); }
-    .modal-img { width: 100%; max-height: 480px; object-fit: cover; }
-    .modal-body { padding: 1.75rem; }
-    .modal-close { position: absolute; top: 1rem; right: 1rem; background: rgba(0,0,0,0.7); color: #fff; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 1.3rem; cursor: pointer; display: flex; align-items: center; justify-content: center; }
-
-    .box-card { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: var(--radius-lg); padding: 2rem; backdrop-filter: blur(15px); margin-bottom: 2.5rem; }
-    .calc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+    /* Calculators and Transit Tools */
+    .calc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; margin-top: 1rem; }
     .calc-input-group { display: flex; flex-direction: column; gap: 0.5rem; }
-    .calc-input-group label { font-size: 0.9rem; color: var(--text-sub); }
-    .calc-input { background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-light); color: #fff; padding: 0.75rem 1rem; border-radius: var(--radius-sm); font-size: 1rem; outline: none; }
+    .calc-input-group label { font-size: 0.88rem; color: var(--text-sub); }
+    .calc-input { background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-light); color: #fff; padding: 0.75rem 1rem; border-radius: var(--radius-sm); font-size: 0.95rem; outline: none; transition: var(--transition-smooth); }
     .calc-input:focus { border-color: var(--primary-glow); }
-    .result-box { background: rgba(0, 210, 255, 0.1); border: 1px solid rgba(0, 210, 255, 0.3); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; }
-    .result-val { font-size: 1.6rem; font-weight: 800; color: var(--accent-gold); }
+    .result-box { background: rgba(0, 210, 255, 0.08); border: 1px solid rgba(0, 210, 255, 0.2); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; }
+    .result-val { font-size: 1.5rem; font-weight: 800; color: var(--accent-gold); }
 
-    @media (max-width: 1024px) { .tab-group { grid-template-columns: repeat(3, 1fr); } }
-    @media (max-width: 640px) { .tab-group { grid-template-columns: repeat(2, 1fr); } .hero-title { font-size: 2.1rem; } .timeline::before { left: 18px; } .timeline-item { padding-left: 50px; } .timeline-icon { left: 0; width: 36px; height: 36px; font-size: 1rem; } .event-header-flex { flex-direction: column; align-items: flex-start; } }
+    /* Food & Shopping Guides */
+    .rec-flex-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+    .rec-list { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.95rem; color: var(--text-sub); }
+    .rec-list li { position: relative; padding-left: 1.5rem; }
+    .rec-list li strong { color: #fff; }
+    .rec-list li::before { content: '➔'; position: absolute; left: 0; color: var(--primary-glow); }
 
-    /* === Olive Young Section Styles === */
-    #oliveyoung-section {
-      background: var(--glass-bg);
-      border: 1px solid var(--glass-border);
-      border-radius: var(--radius-lg);
-      padding: 2rem;
-      backdrop-filter: blur(15px);
+    /* Olive Young Styles */
+    .oy-subtitle { color: var(--text-sub); font-size: 1rem; margin-bottom: 2rem; }
+    
+    .oy-widgets-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 1.5rem; margin-bottom: 2.5rem; }
+    @media (max-width: 768px) { .oy-widgets-grid { grid-template-columns: 1fr; } }
+    
+    .oy-widget-card { background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.5rem; }
+    .oy-widget-title { font-size: 1.15rem; color: #fff; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 0.5rem; }
+    .oy-widget-title i { color: var(--accent-gold); }
+    
+    .oy-calc-group { display: flex; gap: 10px; }
+    .oy-calc-input-wrapper { flex-grow: 1; position: relative; }
+    .oy-calc-input-wrapper span { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 0.85rem; font-weight: 600; }
+    .oy-calc-input { width: 100%; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-light); color: #fff; padding: 0.65rem 3rem 0.65rem 0.85rem; border-radius: var(--radius-sm); font-size: 0.95rem; outline: none; transition: var(--transition-smooth); }
+    .oy-calc-input:focus { border-color: var(--primary-glow); }
+    .oy-calc-btn { background: var(--primary-glow); color: #000; border: none; font-weight: 700; padding: 0 1.25rem; border-radius: var(--radius-sm); cursor: pointer; transition: var(--transition-smooth); }
+    .oy-calc-btn:hover { background: #00b3d6; box-shadow: 0 0 10px rgba(0, 210, 255, 0.3); }
+    
+    .oy-calc-result { display: none; margin-top: 1.25rem; padding: 1rem; background: rgba(0, 210, 255, 0.04); border-left: 3px solid var(--primary-glow); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; font-size: 0.9rem; animation: fadeIn 0.3s ease; }
+    .oy-calc-row { display: flex; justify-content: space-between; margin-bottom: 0.4rem; }
+    .oy-calc-row:last-child { margin-bottom: 0; border-top: 1px dashed rgba(255, 255, 255, 0.1); padding-top: 0.4rem; font-weight: 700; color: var(--accent-gold); }
+    
+    .oy-tips-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.88rem; color: var(--text-sub); }
+    .oy-tips-list li { position: relative; padding-left: 1.2rem; }
+    .oy-tips-list li::before { content: '✦'; position: absolute; left: 0; color: var(--accent-gold); }
+    
+    .oy-filter-bar { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .oy-filter-btn { background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-light); color: var(--text-sub); padding: 0.5rem 1.2rem; border-radius: 50px; font-size: 0.88rem; cursor: pointer; transition: var(--transition-smooth); }
+    .oy-filter-btn:hover { border-color: var(--primary-glow); color: #fff; }
+    .oy-filter-btn.active { background: var(--primary-glow); color: #000; border-color: var(--primary-glow); font-weight: 700; box-shadow: 0 4px 12px rgba(0, 210, 255, 0.25); }
+    
+    .oy-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.5rem; }
+    .oy-card { background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-light); border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column; position: relative; cursor: pointer; transition: var(--transition-smooth); }
+    .oy-card:hover { transform: translateY(-5px); background: rgba(255, 255, 255, 0.06); border-color: rgba(0, 210, 255, 0.3); box-shadow: var(--shadow-lux); }
+    
+    .oy-card-time { position: absolute; top: 10px; left: 10px; background: rgba(7, 11, 20, 0.75); color: #fff; font-size: 0.72rem; padding: 0.25rem 0.5rem; border-radius: 50px; font-weight: 700; z-index: 2; backdrop-filter: blur(2px); }
+    .oy-card-badge { position: absolute; top: 10px; right: 10px; background: var(--accent-coral); color: #fff; font-size: 0.68rem; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 800; z-index: 2; }
+    .oy-img-container { width: 100%; height: 180px; background: #ffffff; display: flex; align-items: center; justify-content: center; padding: 10px; border-bottom: 1px solid var(--border-light); }
+    .oy-img { max-width: 95%; max-height: 95%; object-fit: contain; transition: transform 0.4s ease; }
+    .oy-card:hover .oy-img { transform: scale(1.05); }
+    .oy-card-content { padding: 1.2rem; display: flex; flex-direction: column; flex-grow: 1; }
+    .oy-card-cat { font-size: 0.72rem; color: var(--primary-glow); font-weight: 600; margin-bottom: 0.3rem; text-transform: uppercase; }
+    .oy-card-title { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 0.25rem; line-height: 1.3; }
+    .oy-card-en { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.8rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    
+    .oy-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: auto; }
+    .oy-tag { font-size: 0.68rem; background: rgba(0, 210, 255, 0.08); color: var(--primary-glow); padding: 2px 6px; border-radius: 3px; font-weight: 500; border: 1px solid rgba(0, 210, 255, 0.15); }
+
+    /* Modals */
+    .modal { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(0, 0, 0, 0.88); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); justify-content: center; align-items: center; padding: 2rem; opacity: 0; transition: opacity 0.3s ease; }
+    .modal.active { display: flex; opacity: 1; }
+    .modal-content { max-width: 800px; width: 100%; background: var(--bg-dark); border: 1px solid var(--border-light); border-radius: var(--radius-lg); overflow: hidden; position: relative; box-shadow: 0 25px 60px rgba(0,0,0,0.9); transform: translateY(30px); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+    .modal.active .modal-content { transform: translateY(0); }
+    
+    .modal-img { width: 100%; max-height: 450px; object-fit: cover; }
+    .modal-body { padding: 1.75rem; }
+    .modal-close { position: absolute; top: 1rem; right: 1rem; background: rgba(0,0,0,0.7); color: #fff; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 1.3rem; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 5; }
+
+    /* OY Modal details */
+    #oy-modal .modal-content { max-width: 580px; }
+    .oy-modal-header { display: flex; gap: 1.5rem; margin-bottom: 1.5rem; align-items: center; }
+    @media (max-width: 576px) { .oy-modal-header { flex-direction: column; text-align: center; } }
+    .oy-modal-img-box { width: 120px; height: 120px; min-width: 120px; background: #fff; border-radius: var(--radius-md); padding: 8px; display: flex; align-items: center; justify-content: center; }
+    .oy-modal-img { max-width: 100%; max-height: 100%; object-fit: contain; }
+    .oy-modal-title-info { flex-grow: 1; }
+    .oy-modal-time { display: inline-block; background: rgba(0, 210, 255, 0.12); color: var(--primary-glow); padding: 3px 10px; border-radius: 50px; font-size: 0.75rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .oy-modal-name { font-size: 1.4rem; font-weight: 800; color: #fff; margin-bottom: 0.25rem; }
+    .oy-modal-en { font-size: 0.88rem; color: var(--text-muted); }
+    
+    .oy-modal-section { margin-bottom: 1.25rem; }
+    .oy-modal-sec-title { font-size: 0.95rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.4rem; }
+    .oy-modal-sec-text { font-size: 0.9rem; color: var(--text-sub); text-align: justify; line-height: 1.5; }
+    .oy-modal-reason-box { background: rgba(255, 183, 3, 0.04); border: 1px solid rgba(255, 183, 3, 0.15); border-radius: var(--radius-sm); padding: 1rem; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-
-    .oy-subtitle {
-      color: var(--text-sub);
-      font-size: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    /* OY Widgets Grid */
-    .oy-widgets-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 1.5rem;
-      margin-bottom: 2.5rem;
-    }
-
-    @media (max-width: 768px) {
-      .oy-widgets-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .oy-widget-card {
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-md);
-      padding: 1.5rem;
-    }
-
-    .oy-widget-title {
-      font-size: 1.15rem;
-      color: #fff;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      padding-bottom: 0.5rem;
-    }
-
-    .oy-widget-title i {
-      color: var(--accent-gold);
-    }
-
-    /* Tax Calc */
-    .oy-calc-group {
-      display: flex;
-      gap: 10px;
-    }
-
-    .oy-calc-input-wrapper {
-      flex-grow: 1;
-      position: relative;
-    }
-
-    .oy-calc-input-wrapper span {
-      position: absolute;
-      right: 12px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      font-weight: 600;
-    }
-
-    .oy-calc-input {
-      width: 100%;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid var(--border-light);
-      color: #fff;
-      padding: 0.65rem 3rem 0.65rem 0.85rem;
-      border-radius: var(--radius-sm);
-      font-size: 0.95rem;
-      outline: none;
-      transition: var(--transition-smooth);
-    }
-
-    .oy-calc-input:focus {
-      border-color: var(--primary-glow);
-    }
-
-    .oy-calc-btn {
-      background: var(--primary-glow);
-      color: #000;
-      border: none;
-      font-weight: 700;
-      padding: 0 1.25rem;
-      border-radius: var(--radius-sm);
-      cursor: pointer;
-      transition: var(--transition-smooth);
-    }
-
-    .oy-calc-btn:hover {
-      background: #00b3d6;
-      box-shadow: 0 0 10px rgba(0, 210, 255, 0.3);
-    }
-
-    .oy-calc-result {
-      display: none;
-      margin-top: 1.25rem;
-      padding: 1rem;
-      background: rgba(0, 210, 255, 0.04);
-      border-left: 3px solid var(--primary-glow);
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      font-size: 0.9rem;
-      animation: fadeIn 0.3s ease;
-    }
-
-    .oy-calc-row {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 0.4rem;
-    }
-
-    .oy-calc-row:last-child {
-      margin-bottom: 0;
-      border-top: 1px dashed rgba(255, 255, 255, 0.1);
-      padding-top: 0.4rem;
-      font-weight: 700;
-      color: var(--accent-gold);
-    }
-
-    /* Tips */
-    .oy-tips-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-      font-size: 0.88rem;
-      color: var(--text-sub);
-    }
-
-    .oy-tips-list li {
-      position: relative;
-      padding-left: 1.2rem;
-    }
-
-    .oy-tips-list li::before {
-      content: '✦';
-      position: absolute;
-      left: 0;
-      color: var(--accent-gold);
-    }
-
-    /* Category filters */
-    .oy-filter-bar {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-      margin-bottom: 1.5rem;
-    }
-
-    .oy-filter-btn {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid var(--border-light);
-      color: var(--text-sub);
-      padding: 0.5rem 1.2rem;
-      border-radius: 50px;
-      font-size: 0.88rem;
-      cursor: pointer;
-      transition: var(--transition-smooth);
-    }
-
-    .oy-filter-btn:hover {
-      border-color: var(--primary-glow);
-      color: #fff;
-    }
-
-    .oy-filter-btn.active {
-      background: var(--primary-glow);
-      color: #000;
-      border-color: var(--primary-glow);
-      font-weight: 700;
-      box-shadow: 0 4px 12px rgba(0, 210, 255, 0.25);
-    }
-
-    /* Product Grid */
-    .oy-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .oy-card {
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      cursor: pointer;
-      transition: var(--transition-smooth);
-    }
-
-    .oy-card:hover {
-      transform: translateY(-5px);
-      background: rgba(255, 255, 255, 0.06);
-      border-color: rgba(0, 210, 255, 0.3);
-      box-shadow: var(--shadow-lux);
-    }
-
-    .oy-card-time {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      background: rgba(7, 11, 20, 0.75);
-      color: #fff;
-      font-size: 0.72rem;
-      padding: 0.25rem 0.5rem;
-      border-radius: 50px;
-      font-weight: 700;
-      z-index: 2;
-      backdrop-filter: blur(2px);
-    }
-
-    .oy-card-badge {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: var(--accent-coral);
-      color: #fff;
-      font-size: 0.68rem;
-      padding: 0.2rem 0.5rem;
-      border-radius: 4px;
-      font-weight: 800;
-      z-index: 2;
-    }
-
-    .oy-img-container {
-      width: 100%;
-      height: 180px;
-      background: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
-      border-bottom: 1px solid var(--border-light);
-    }
-
-    .oy-img {
-      max-width: 95%;
-      max-height: 95%;
-      object-fit: contain;
-      transition: transform 0.4s ease;
-    }
-
-    .oy-card:hover .oy-img {
-      transform: scale(1.05);
-    }
-
-    .oy-card-content {
-      padding: 1.2rem;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
-
-    .oy-card-cat {
-      font-size: 0.72rem;
-      color: var(--primary-glow);
-      font-weight: 600;
-      margin-bottom: 0.3rem;
-      text-transform: uppercase;
-    }
-
-    .oy-card-title {
-      font-size: 1rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 0.25rem;
-      line-height: 1.3;
-    }
-
-    .oy-card-en {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      margin-bottom: 0.8rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .oy-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 4px;
-      margin-top: auto;
-    }
-
-    .oy-tag {
-      font-size: 0.68rem;
-      background: rgba(0, 210, 255, 0.08);
-      color: var(--primary-glow);
-      padding: 2px 6px;
-      border-radius: 3px;
-      font-weight: 500;
-      border: 1px solid rgba(0, 210, 255, 0.15);
-    }
-
-    /* Modal for OY Details */
-    #oy-modal .modal-content {
-      max-width: 600px;
-    }
-
-    .oy-modal-header {
-      display: flex;
-      gap: 1.5rem;
-      margin-bottom: 1.5rem;
-      align-items: center;
-    }
-
-    @media (max-width: 576px) {
-      .oy-modal-header {
-        flex-direction: column;
-        text-align: center;
-      }
-    }
-
-    .oy-modal-img-box {
-      width: 120px;
-      height: 120px;
-      min-width: 120px;
-      background: #fff;
-      border-radius: var(--radius-md);
-      padding: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .oy-modal-img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-    }
-
-    .oy-modal-title-info {
-      flex-grow: 1;
-    }
-
-    .oy-modal-time {
-      display: inline-block;
-      background: rgba(0, 210, 255, 0.12);
-      color: var(--primary-glow);
-      padding: 3px 10px;
-      border-radius: 50px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-
-    .oy-modal-name {
-      font-size: 1.4rem;
-      font-weight: 800;
-      color: #fff;
-      margin-bottom: 0.25rem;
-    }
-
-    .oy-modal-en {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-    }
-
-    .oy-modal-section {
-      margin-bottom: 1.25rem;
-    }
-
-    .oy-modal-sec-title {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--accent-gold);
-      margin-bottom: 0.4rem;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .oy-modal-sec-text {
-      font-size: 0.9rem;
-      color: var(--text-sub);
-      text-align: justify;
-      line-height: 1.5;
-    }
-
-    .oy-modal-reason-box {
-      background: rgba(255, 183, 3, 0.04);
-      border: 1px solid rgba(255, 183, 3, 0.15);
-      border-radius: var(--radius-sm);
-      padding: 1rem;
-    }
-
   </style>
 </head>
 <body>
@@ -593,87 +409,271 @@
     </div>
   </header>
 
-  <!-- Sticky Navigation Tabs -->
+  <!-- Sticky Navigation Tabs (Rebuilt for SPA Sections) -->
   <nav class="sticky-nav" id="main-nav">
     <div class="nav-container">
-      <div class="tab-group" id="tab-group-container"></div>
+      <div class="main-tab-group">
+        <button class="main-tab-btn active" onclick="switchSection('itinerary-section')">
+          <i class="fa-solid fa-calendar-days"></i>
+          <span>每日行程</span>
+        </button>
+        <button class="main-tab-btn" onclick="switchSection('metro-section')">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <span>交通地圖</span>
+        </button>
+        <button class="main-tab-btn" onclick="switchSection('oliveyoung-section')">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span>必買好物</span>
+        </button>
+        <button class="main-tab-btn" onclick="switchSection('gallery-section')">
+          <i class="fa-solid fa-images"></i>
+          <span>景點寫真</span>
+        </button>
+        <button class="main-tab-btn" onclick="switchSection('tools-section')">
+          <i class="fa-solid fa-sliders"></i>
+          <span>交通試算</span>
+        </button>
+        <button class="main-tab-btn" onclick="switchSection('recommendation-section')">
+          <i class="fa-solid fa-utensils"></i>
+          <span>美食商圈</span>
+        </button>
+      </div>
     </div>
   </nav>
 
   <!-- Main Content Wrapper -->
   <main class="main-wrapper">
+  
     <!-- Section 1: Daily Itinerary Timeline -->
-    <section id="itinerary-section" style="margin-bottom: 4rem;">
-      <div class="section-header"><h2 class="section-title" id="day-title">Day 1｜8/9（日） - 影島海景與白淺灘夕陽</h2></div>
+    <section id="itinerary-section" class="app-section active">
+      <!-- Sub Tabs for Days (DAY 1 ~ DAY 6) -->
+      <div class="sub-nav-wrapper" id="sub-nav-container">
+        <!-- Rendered dynamically by JS -->
+      </div>
+      
+      <div class="section-header">
+        <h2 class="section-title" id="day-title">Day 1｜8/9（日） - 影島海景與白淺灘夕陽</h2>
+      </div>
       <div id="timeline-container"></div>
     </section>
 
-    <!-- Section 2: 釜山地鐵景點對照圖區 -->
-    <section id="metro-section" style="margin-bottom: 4rem;">
-      <div class="section-header"><h2 class="section-title">🚇 釜山地鐵景點路線圖與導覽 (Busan Metro Guide)</h2></div>
-      <div class="box-card" style="margin-bottom: 2rem;">
+    <!-- Section 2: 交通與景點定位地圖 (Rebuilt) -->
+    <section id="metro-section" class="app-section">
+      <div class="section-header">
+        <h2 class="section-title">🗺️ 釜山地鐵景點路線圖與所有景點定位地圖</h2>
+      </div>
+      
+      <div class="box-card">
         <p style="color: var(--text-sub); font-size: 1rem; margin-bottom: 1.5rem;">
-          參考專業旅遊攻略《波比看世界》，釜山自由行景點主要分佈於 <strong>1號線 (橘線)</strong>、<strong>2號線 (綠線)</strong> 與 <strong>東海線 (藍線)</strong>。
+          本行程精心規劃之景點皆已定位。以下提供<strong>釜山地鐵景點對照圖</strong>，以及<strong>所有景點的 Google Maps 導航定位快速清單</strong>，方便直接點選使用：
         </p>
 
+        <!-- 地鐵路線對照圖 -->
         <div class="metro-map-wrapper" style="margin-bottom: 2rem;">
           <h3 style="color: #fff; margin-bottom: 0.75rem;">🗺️ 釜山地鐵景點路線對照地圖 (參考《波比看世界》)</h3>
           <a href="https://bobbytravel.tw/wp-content/uploads/2025/07/20250916225216_0_1f6d92.jpg" target="_blank" rel="noopener">
-            <img src="https://bobbytravel.tw/wp-content/uploads/2025/07/20250916225216_0_1f6d92.jpg" alt="釜山地鐵景點對照圖" class="metro-map-img" style="max-height: 600px;">
+            <img src="https://bobbytravel.tw/wp-content/uploads/2025/07/20250916225216_0_1f6d92.jpg" alt="釜山地鐵景點對照圖" class="metro-map-img">
           </a>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">💡 點擊上圖可放大觀看清晰版地鐵景點對照地圖</p>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">💡 點擊上圖可開啟外部清晰大圖</p>
         </div>
 
+        <!-- 景點定位地圖清單 -->
+        <h3 style="color: #fff; margin-bottom: 1rem;"><i class="fa-solid fa-location-dot" style="color: var(--accent-coral);"></i> 所有景點 Google Maps 定位地圖快速清單</h3>
+        <div class="maps-table-wrapper">
+          <table class="maps-table">
+            <thead>
+              <tr>
+                <th>天數</th>
+                <th>景點/美食名稱</th>
+                <th>分類</th>
+                <th>Google Maps 定位與導航</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Day 1</strong></td>
+                <td>東橫INN 釜山站1號店</td>
+                <td>住宿</td>
+                <td><a href="https://www.google.com/maps/search/?api=1&query=Toyoko+Inn+Busan+Station+No.1" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
+              </tr>
+              <tr>
+                <td><strong>Day 1</strong></td>
+                <td>午餐：本錢豬肉湯飯</td>
+                <td>美食</td>
+                <td><a href="https://www.google.com/maps/search/?api=1&query=Bonjeon+Dwaeji-gukbap+Busan" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
+              </tr>
+              <tr>
+                <td><strong>Day 1</strong></td>
+                <td>影島 Arte Museum</td>
+                <td>景點</td>
+                <td><a href="https://www.google.com/maps/search/?api=1&query=Arte+Museum+Busan" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
+              </tr>
+              <tr>
+                <td><strong>Day 1</strong></td>
+                <td>影島 P.ARK 海景咖啡廳</td>
+                <td>美食</td>
+                <td><a href="https://www.google.com/maps/search/?api=1&query=P.ARK+Yeongdo+Busan" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
+              </tr>
+              <tr>
+                <td><strong>Day 1</strong></td>
+                <td>晚餐：味贊王鹽烤肉 南浦店</td>
+                <td>美食</td>
+                <td><a href="https://www.google.com/maps/search/?api=1&query=Matchandeul+Wangso-geum-gui+Nampo+Busan" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
+              </tr>
+              <tr>
+                <td><strong>Day 2</strong></td>
+                <td>海雲台藍線公園 (天空膠囊列車)</td>
+                <td>景點</td>
+                <td><a href="https://www.google.com/maps/search/?api=1&query=Haeundae+Blueline+Park+Mipo+Station" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
+              </tr>
+              <tr>
+                <td><strong>Day 2</strong></td>
+                <td>五六島天空步道</td>
+                <td>景點</td>
+                <td><a href="https://www.google.com/maps/search/?api=1&query=Oryukdo+Skywalk+Busan" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
+              </tr>
+              <tr>
+                <td><strong>Day 2</strong></td>
+                <td>白淺灘文化村</td>
+                <td>景點</td>
+                <td><a href="https://www.google.com/maps/search/?api=1&query=Huinnyeoul+Culture+Village+Busan" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
+              </tr>
+              <tr>
+                <td><strong>Day 2</strong></td>
+                <td>甘川文化村</td>
+                <td>景點</td>
+                <td><a href="https://www.google.com/maps/search/?api=1&query=Gamcheon+Culture+Village+Busan" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
+              </tr>
+              <tr>
+                <td><strong>Day 2</strong></td>
+                <td>晚餐：西面 松亭3代豬肉湯飯</td>
+                <td>美食</td>
+                <td><a href="https://www.google.com/maps/search/?api=1&query=Songjo-3-dae+Dwaeji-gukbap+Seomyeon" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
+              </tr>
+              <tr>
+                <td><strong>Day 3</strong></td>
+                <td>松島海上纜車 (水晶車廂)</td>
+                <td>景點</td>
+                <td><a href="https://www.google.com/maps/search/?api=1&query=Songdo+Marine+Cable+Car+Busan" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
+              </tr>
+              <tr>
+                <td><strong>Day 3</strong></td>
+                <td>午餐：札嘎其海鮮市場 帝王蟹</td>
+                <td>美食</td>
+                <td><a href="https://www.google.com/maps/search/?api=1&query=Jagalchi+Market+Busan" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
+              </tr>
+              <tr>
+                <td><strong>Day 3</strong></td>
+                <td>南浦洞光復路時尚街</td>
+                <td>購物</td>
+                <td><a href="https://www.google.com/maps/search/?api=1&query=Gwangbok-ro+Fashion+Street+Busan" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
+              </tr>
+              <tr>
+                <td><strong>Day 3</strong></td>
+                <td>樂天超市 光復店</td>
+                <td>購物</td>
+                <td><a href="https://www.google.com/maps/search/?api=1&query=Lotte+Mart+Gwangbok+Busan" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
+              </tr>
+              <tr>
+                <td><strong>Day 3</strong></td>
+                <td>晚餐：南浦洞 漢陽豬腳</td>
+                <td>美食</td>
+                <td><a href="https://www.google.com/maps/search/?api=1&query=Hanyang+Jokbal+Nampo+Busan" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
+              </tr>
+              <tr>
+                <td><strong>Day 4</strong></td>
+                <td>海東龍宮寺</td>
+                <td>景點</td>
+                <td><a href="https://www.google.com/maps/search/?api=1&query=Haedong+Yonggungsa+Temple" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
+              </tr>
+              <tr>
+                <td><strong>Day 4</strong></td>
+                <td>釜山斜坡滑車 (Skyline Luge)</td>
+                <td>景點</td>
+                <td><a href="https://www.google.com/maps/search/?api=1&query=Skyline+Luge+Busan" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
+              </tr>
+              <tr>
+                <td><strong>Day 4</strong></td>
+                <td>午餐：機張市場松葉蟹</td>
+                <td>美食</td>
+                <td><a href="https://www.google.com/maps/search/?api=1&query=Gijang+Market+Busan" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
+              </tr>
+              <tr>
+                <td><strong>Day 4</strong></td>
+                <td>Ananti Cove 奢華沿海廊道</td>
+                <td>景點</td>
+                <td><a href="https://www.google.com/maps/search/?api=1&query=Ananti+Cove+Busan" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
+              </tr>
+              <tr>
+                <td><strong>Day 4</strong></td>
+                <td>晚餐：老宅邸燒肉 廣安里店</td>
+                <td>美食</td>
+                <td><a href="https://www.google.com/maps/search/?api=1&query=Gobansikdang+Gwangalli+Busan" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
+              </tr>
+              <tr>
+                <td><strong>Day 5</strong></td>
+                <td>SPA LAND 頂級汗蒸幕</td>
+                <td>景點</td>
+                <td><a href="https://www.google.com/maps/search/?api=1&query=SPA+LAND+Centum+City+Busan" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
+              </tr>
+              <tr>
+                <td><strong>Day 5</strong></td>
+                <td>新世界百貨 Centum City店</td>
+                <td>購物</td>
+                <td><a href="https://www.google.com/maps/search/?api=1&query=Shinsegae+Centum+City+Busan" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
+              </tr>
+              <tr>
+                <td><strong>Day 5</strong></td>
+                <td>廣安里豪華遊艇體驗</td>
+                <td>景點</td>
+                <td><a href="https://www.google.com/maps/search/?api=1&query=Gwangalli+Yacht+Tour+Busan" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
+              </tr>
+              <tr>
+                <td><strong>Day 5</strong></td>
+                <td>晚餐：廣安里 Clam 餐酒館</td>
+                <td>美食</td>
+                <td><a href="https://www.google.com/maps/search/?api=1&query=Clam+Gwangalli+Busan" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
+              </tr>
+              <tr>
+                <td><strong>Day 6</strong></td>
+                <td>百濟醫院老建築咖啡 (Brown Hands)</td>
+                <td>美食</td>
+                <td><a href="https://www.google.com/maps/search/?api=1&query=Brown+Hands+Baekje+Busan" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 地鐵線路介紹 -->
         <div class="metro-grid">
           <div class="metro-card">
             <div class="metro-card-header"><div class="metro-badge line-1">1</div><h3 class="metro-line-title">1號線 (橘線)</h3></div>
             <ul class="metro-stations-list">
-              <li class="metro-station-item"><span class="station-name">釜山站 (113)</span><span class="station-spots">東橫INN 飯店、本錢豬肉湯飯</span></li>
-              <li class="metro-station-item"><span class="station-name">南浦站 (111)</span><span class="station-spots">光復路美妝街、樂天超市/百貨、龍頭山公園</span></li>
-              <li class="metro-station-item"><span class="station-name">札嘎其站 (110)</span><span class="station-spots">札嘎其海鮮市場、BIFF 廣場、漢陽豬腳</span></li>
-              <li class="metro-station-item"><span class="station-name">西面站 (119)</span><span class="station-spots">西面商圈/地下街、松亭3代湯飯 (可轉2號線)</span></li>
+              <li class="metro-station-item"><span class="station-name">釜山站</span><span class="station-spots">住宿飯店、本錢豬肉湯飯</span></li>
+              <li class="metro-station-item"><span class="station-name">南浦站</span><span class="station-spots">光復路美妝街、樂天百貨、龍頭山公園</span></li>
+              <li class="metro-station-item"><span class="station-name">札嘎其站</span><span class="station-spots">海鮮市場、BIFF 廣場、漢陽豬腳</span></li>
             </ul>
           </div>
-
           <div class="metro-card">
             <div class="metro-card-header"><div class="metro-badge line-2">2</div><h3 class="metro-line-title">2號線 (綠線)</h3></div>
             <ul class="metro-stations-list">
-              <li class="metro-station-item"><span class="station-name">西面站 (219)</span><span class="station-spots">田浦咖啡街、時尚潮牌專賣店</span></li>
-              <li class="metro-station-item"><span class="station-name">廣安站 (209)</span><span class="station-spots">廣安里沙灘、廣安大橋夜景、Clam 餐酒館</span></li>
-              <li class="metro-station-item"><span class="station-name">Centum City (206)</span><span class="station-spots">新世界百貨、SPA LAND 頂級汗蒸幕</span></li>
-              <li class="metro-station-item"><span class="station-name">海雲台站 (203)</span><span class="station-spots">藍線公園天空膠囊列車、海雲台沙灘夜景</span></li>
-            </ul>
-          </div>
-
-          <div class="metro-card">
-            <div class="metro-card-header"><div class="metro-badge line-donghae">電</div><h3 class="metro-line-title">東海線 (藍線)</h3></div>
-            <ul class="metro-stations-list">
-              <li class="metro-station-item"><span class="station-name">OSIRIA 站 (K123)</span><span class="station-spots">海東龍宮寺、樂天 Outlet、Ananti Cove</span></li>
-              <li class="metro-station-item"><span class="station-name">機張站 (K124)</span><span class="station-spots">機張市場 (現蒸清蒸松葉蟹/青蟹)</span></li>
-              <li class="metro-station-item"><span class="station-name">松亭站 (K122)</span><span class="station-spots">松亭海水浴場 (衝浪聖地)</span></li>
-            </ul>
-          </div>
-
-          <div class="metro-card">
-            <div class="metro-card-header"><div class="metro-badge line-gimhae">紫</div><h3 class="metro-line-title">金海輕軌 (紫線)</h3></div>
-            <ul class="metro-stations-list">
-              <li class="metro-station-item"><span class="station-name">機場站 (B1)</span><span class="station-spots">金海國際機場 (PUS)</span></li>
-              <li class="metro-station-item"><span class="station-name">沙上站 (B5)</span><span class="station-spots">轉乘地鐵 2號線往西面/海雲台</span></li>
+              <li class="metro-station-item"><span class="station-name">西面站</span><span class="station-spots">地下街、潮牌店、松亭3代湯飯</span></li>
+              <li class="metro-station-item"><span class="station-name">廣安站</span><span class="station-spots">廣安里沙灘、廣安大橋夜景、老宅邸燒肉</span></li>
+              <li class="metro-station-item"><span class="station-name">海雲台站</span><span class="station-spots">天空膠囊列車、海雲台沙灘夜景</span></li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-
-    <!-- Section: Olive Young 必買推薦 -->
-    <section id="oliveyoung-section" style="margin-bottom: 4rem;">
+    <!-- Section 3: Olive Young 必買推薦 (Rebuilt as independent tab) -->
+    <section id="oliveyoung-section" class="app-section">
       <div class="section-header">
         <h2 class="section-title">🛍️ Olive Young 必買好物推薦 (醫師 & VIP 姐精選)</h2>
       </div>
       
       <p class="oy-subtitle">
-        影片說明欄必買 14 項全紀錄。由皮膚科醫師與最高等級會員姐姐（私人顧問）精選，告訴您哪些是韓國當地人真正在瘋搶的實力派保養與彩妝好物。
+        影片說明欄必買 14 項全紀錄。由皮膚科醫師與最高等級會員姐姐（私人顧問）精選，圖片均採用穩定代理快取，100% 呈現真實商品外觀，方便在現場認明選購！
       </p>
 
       <!-- Widgets Area -->
@@ -743,18 +743,21 @@
       </div>
     </section>
 
-
-</section>
-
-    <!-- Section 3: 100% 行程專屬景點寫真圖鑑 -->
-    <section id="gallery-section" style="margin-bottom: 4rem;">
-      <div class="section-header"><h2 class="section-title">📸 本行程 100% 專屬景點寫真 (10大亮點)</h2></div>
-      <div class="gallery-grid" id="gallery-container"></div>
+    <!-- Section 4: 景點寫真圖鑑 -->
+    <section id="gallery-section" class="app-section">
+      <div class="section-header">
+        <h2 class="section-title">📸 釜山景點實景攝影圖鑑 (10大景點)</h2>
+      </div>
+      <div class="gallery-grid" id="gallery-container">
+        <!-- Photo cards rendered dynamically -->
+      </div>
     </section>
 
-    <!-- Section 4: Airport Transit & Exchange Calculator -->
-    <section id="tools-section">
-      <div class="section-header"><h2 class="section-title">🧮 試算工具與往返機場交通評估</h2></div>
+    <!-- Section 5: 交通與試算工具 -->
+    <section id="tools-section" class="app-section">
+      <div class="section-header">
+        <h2 class="section-title">🧮 交通方案評估與匯率試算工具</h2>
+      </div>
 
       <div class="box-card" id="transit-box">
         <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: #fff;">🚕 金海機場往返飯店 3 大交通方案（8人 + 8大行李箱）</h3>
@@ -785,33 +788,36 @@
       </div>
     </section>
 
-    <!-- Section 5: Food & Shopping Summary Cards -->
-    <section id="recommendation-section" style="margin-bottom: 4rem;">
-      <div class="section-header"><h2 class="section-title">🍱 必吃美食與 🛍️ 購物商圈精華指南</h2></div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
+    <!-- Section 6: 美食與商圈指南 -->
+    <section id="recommendation-section" class="app-section">
+      <div class="section-header">
+        <h2 class="section-title">🍱 必吃美食與 🛍️ 購物商圈精華指南</h2>
+      </div>
+      <div class="rec-flex-grid">
         <div class="box-card" style="margin-bottom: 0;">
           <h3 style="color: var(--accent-gold); font-size: 1.25rem; margin-bottom: 1rem;">🍱 釜山在地美食名單</h3>
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.95rem; color: var(--text-sub);">
-            <li>🍲 <strong>豬肉湯飯</strong>：本錢豬肉湯飯 (釜山站)、松亭3代湯飯 (西面) [約 9,000 韓元 / NT$ 216]</li>
-            <li>🥩 <strong>韓式厚切燒肉</strong>：味贊王鹽烤肉 (南浦店, 專人桌邊代烤 3.5cm 豬五花) [人均約 NT$ 500]</li>
-            <li>🦀 <strong>活海鮮饗宴</strong>：札嘎其市場活帝王蟹、青沙浦秀敏家烤扇貝、機張市場松葉蟹 [人均約 NT$ 800-1,600]</li>
-            <li>🍖 <strong>韓式豬腳與小吃</strong>：南浦洞漢陽涼拌芥末豬腳、BIFF廣場黑糖餅 (2,000 韓元 / NT$ 48)</li>
-            <li>🍸 <strong>微醺與海景餐酒</strong>：廣安里 Clam 西班牙餐酒館、Gorilla Brewing 精釀啤酒</li>
+          <ul class="rec-list">
+            <li><strong>豬肉湯飯</strong>：本錢豬肉湯飯 (釜山站)、松亭3代湯飯 (西面) [約 9,000 韓元 / NT$ 216]</li>
+            <li><strong>韓式厚切燒肉</strong>：味贊王鹽烤肉 (南浦店, 專人桌邊代烤 3.5cm 豬五花) [人均約 NT$ 500]</li>
+            <li><strong>活海鮮饗宴</strong>：札嘎其市場活帝王蟹、青沙浦秀敏家烤扇貝、機張市場松葉蟹 [人均約 NT$ 800-1,600]</li>
+            <li><strong>韓式豬腳與小吃</strong>：南浦洞漢陽涼拌芥末豬腳、BIFF廣場黑糖餅 (2,000 韓元 / NT$ 48)</li>
+            <li><strong>微醺與海景餐酒</strong>：廣安里 Clam 西班牙餐酒館、Gorilla Brewing 精釀啤酒</li>
           </ul>
         </div>
 
         <div class="box-card" style="margin-bottom: 0;">
           <h3 style="color: var(--accent-coral); font-size: 1.25rem; margin-bottom: 1rem;">🛍️ 購物與美妝熱點</h3>
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.95rem; color: var(--text-sub);">
-            <li>💄 <strong>南浦洞光復路</strong>：Olive Young 旗艦店美妝、Gentle Monster、韓系潮牌 (COVERNAT, Musinsa)</li>
-            <li>🛒 <strong>樂天超市 光復店</strong>：伴手禮大採購 (HBAF堅果, 泡麵, 海苔), 現場辦理退稅免提運</li>
-            <li>🏬 <strong>新世界 Centum City</strong>：金氏紀錄全球最大百貨，國際精品、韓系潮牌 (B4/4F)</li>
-            <li>🏷️ <strong>東釜山樂天 Outlet</strong>：希臘風格露天 Outlet，Nike/Adidas/NB 等運動品牌 3~5 折</li>
-            <li>👗 <strong>西面地下街 & 商圈</strong>：平價韓國服飾 (10,000-20,000 韓元 / NT$ 240-480)、韓系飾品</li>
+          <ul class="rec-list">
+            <li><strong>南浦洞光復路</strong>：Olive Young 旗艦店美妝、Gentle Monster、韓系潮牌 (COVERNAT, Musinsa)</li>
+            <li><strong>樂天超市 光復店</strong>：伴手禮大採購 (HBAF堅果, 泡麵, 海苔), 現場辦理退稅免提運</li>
+            <li><strong>新世界 Centum City</strong>：金氏紀錄全球最大百貨，國際精品、韓系潮牌 (B4/4F)</li>
+            <li><strong>東釜山樂天 Outlet</strong>：希臘風格露天 Outlet，Nike/Adidas/NB 等運動品牌 3~5 折</li>
+            <li><strong>西面地下街 & 商圈</strong>：平價韓國服飾 (10,000-20,000 韓元 / NT$ 240-480)、韓系飾品</li>
           </ul>
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- Photo Modal -->
@@ -825,7 +831,8 @@
         <p id="modal-desc" style="color: var(--text-sub); font-size: 0.98rem; line-height: 1.6;">景點詳細說明...</p>
       </div>
     </div>
-  
+  </div>
+
   <!-- Olive Young Details Modal -->
   <div class="modal" id="oy-modal" onclick="closeOyModal()">
     <div class="modal-content" onclick="event.stopPropagation()">
@@ -836,740 +843,780 @@
     </div>
   </div>
 
-</div>
-
   <footer style="text-align: center; padding: 2.5rem 1rem; background: rgba(5, 8, 16, 0.95); border-top: 1px solid var(--border-light); color: var(--text-muted); font-size: 0.9rem;">
     <p>🇰🇷 韓國釜山 6 天 5 夜家族豪華慢遊行程指南 &copy; 2026. 祝各位團員旅途愉快！</p>
   </footer>
 
   <script>
-    // 內嵌互動 logic，方便作為單檔或獨立網頁發布
-// 韓國釜山 6天5夜行程網頁互動邏輯 (KKday一日遊優化版)
-
-// 行程資料集
-const itineraryData = [
-  {
-    day: 1,
-    date: "8/9（日）",
-    subTitle: "影島 · 藝術 · 烤肉",
-    title: "抵達釜山 ➔ 影島 Arte Museum ➔ P.ARK 海景咖啡 ➔ 南浦洞燒肉與微醺夜生活",
-    items: [
+    // 行程資料集
+    const itineraryData = [
       {
-        time: "09:55",
-        title: "抵達金海國際機場 (PUS)",
-        desc: "搭乘長榮 BR1194 班機抵達釜山，辦理入境與提領 8 個大行李箱。",
-        icon: "✈️",
-        badges: ["航班報到", "入境手續"],
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Gimhae+International+Airport"
+        day: 1,
+        date: "8/9（日）",
+        subTitle: "影島 · 藝術 · 烤肉",
+        title: "抵達釜山 ➔ 影島 Arte Museum ➔ P.ARK 海景咖啡 ➔ 南浦洞燒肉與微醺夜生活",
+        items: [
+          {
+            time: "09:55",
+            title: "抵達金海國際機場 (PUS)",
+            desc: "搭乘長榮 BR1194 班機抵達釜山，辦理入境與提領 8 個大行李箱。",
+            icon: "✈️",
+            badges: ["航班報到", "入境手續"],
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Gimhae+International+Airport"
+          },
+          {
+            time: "11:00 - 11:45",
+            title: "金海機場 ➔ 東橫INN 釜山站1號店",
+            desc: "叫 2 台 Kakao T Venti 大型計程車直達飯店寄放行李，避免行李塞不下。",
+            icon: "🚕",
+            badges: ["專車接送", "行李寄放"],
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Toyoko+Inn+Busan+Station+No.1"
+          },
+          {
+            time: "12:00 - 13:30",
+            title: "午餐：本錢豬肉湯飯 / 大建名家",
+            desc: "釜山站必吃 30 年老店，每碗約 9,000 韓元（約 NT$ 216），湯頭濃郁鮮美，附新鮮韭菜與蝦醬。",
+            icon: "🍲",
+            badges: ["老字號湯飯", "道地美食"],
+            badgeType: "food",
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Bonjeon+Dwaeji-gukbap+Busan"
+          },
+          {
+            time: "13:45 - 15:45",
+            title: "【高評價強推】影島 Arte Museum (아르떼뮤지엄 부산)",
+            desc: "門票 22,000 韓元（可用 PASS 兌換）。大型沉浸式光影展，運用投影、香氛與音效打造細雨與海浪等，室內非常涼快，極好拍照，被評為釜山必訪 CP 值最高景點！",
+            icon: "🎨",
+            badges: ["沉浸式光影展", "室內避暑"],
+            badgeType: "sight",
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Arte+Museum+Busan"
+          },
+          {
+            time: "16:00 - 17:15",
+            title: "影島海景複合空間（P.ARK）",
+            desc: "超大型海景文化空間，坐在冷氣觀景台喝咖啡看麵包，遠眺釜山港與港灣景色（人均約 8,000-12,000 韓元 / NT$ 192-288）。",
+            icon: "☕",
+            badges: ["海景咖啡廳", "網美拍照"],
+            badgeType: "sight",
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=P.ARK+Yeongdo+Busan"
+          },
+          {
+            time: "19:00 - 21:00",
+            title: "晚餐：味贊王鹽烤肉 + BIFF 廣場",
+            desc: "享用 3.5cm 超厚切熟成豬五花（人均約 NT$ 480-600），飯後逛 BIFF 廣場吃黑糖餅 (2,000 韓元 / NT$ 48)。",
+            icon: "🥩",
+            badges: ["厚切燒肉", "黑糖餅"],
+            badgeType: "food",
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Matchandeul+Wangso-geum-gui+Nampo+Busan"
+          },
+          {
+            time: "21:15 - 23:00",
+            title: "【夜生活】南浦洞布帳馬車街與龍頭山公園散步",
+            desc: "在龍頭山公園散步拍照，或至布帳馬車攤位喝燒酒配辣炒雞（不推薦登釜山塔，實測反光嚴重且設計一般，在公園拍照即可）。",
+            icon: "🍺",
+            badges: ["布帳馬車", "龍頭山散步"],
+            badgeType: "food",
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Yongdusan+Park+Busan"
+          }
+        ]
       },
       {
-        time: "11:00 - 11:45",
-        title: "金海機場 ➔ 東橫INN 釜山站1號店",
-        desc: "叫 2 台 Kakao T Venti 大型計程車直達飯店寄放行李，避免行李塞不下。",
-        icon: "🚕",
-        badges: ["專車接送", "行李寄放"],
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Toyoko+Inn+Busan+Station+No.1"
+        day: 2,
+        date: "8/10（一）",
+        subTitle: "天空膠囊 · 三大文化村",
+        title: "【KKday一日遊方案 B】天空膠囊列車 ➔ 五六島步道 ➔ 白淺灘文化村 ➔ 甘川文化村",
+        items: [
+          {
+            time: "09:00",
+            title: "釜山站集合上車 (一日遊專車)",
+            desc: "一日遊專車於 KTX 釜山站集合出發。飯店出門步行 3 分鐘即達，免除大隊人馬交通奔波之苦。",
+            icon: "🚌",
+            badges: ["專車出發", "KKday行程"],
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Busan+Station"
+          },
+          {
+            time: "09:50 - 11:20",
+            title: "海雲台藍線公園（天空膠囊列車）",
+            desc: "搭乘可愛的天空膠囊列車，一日遊已包票預定。由「尾浦 ➔ 青沙浦」方向，最靠近海景的第一排軌道無遮擋，視野最美。",
+            icon: "🚃",
+            badges: ["天空膠囊", "海景第一排"],
+            badgeType: "sight",
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Haeundae+Blueline+Park+Mipo+Station"
+          },
+          {
+            time: "11:30 - 13:00",
+            title: "五六島天空步道 & 中午餐食自理",
+            desc: "踏在懸崖邊 U 型玻璃棧道上，看五六島與壯麗海浪，拍出凌空絕景。中午在周邊自理午餐小吃。",
+            icon: "🌉",
+            badges: ["天空步道", "午餐自理"],
+            badgeType: "sight",
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Oryukdo+Skywalk+Busan"
+          },
+          {
+            time: "13:30 - 15:00",
+            title: "白淺灘文化村 (Huinnyeoul Culture Village)",
+            desc: "影島上的懸崖邊小村，沿著彩虹階梯走海邊，有如釜山版聖托里尼，專車直達最省力。",
+            icon: "📸",
+            badges: ["白淺灘", "沿海小白屋"],
+            badgeType: "sight",
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Huinnyeoul+Culture+Village+Busan"
+          },
+          {
+            time: "15:30 - 17:30",
+            title: "甘川文化村 (Gamcheon Culture Village)",
+            desc: "彩色房屋一層一層有如馬丘比丘，可與小王子拍照、逛文創小店。",
+            icon: "🏘️",
+            badges: ["甘川洞", "小王子打卡"],
+            badgeType: "sight",
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Gamcheon+Culture+Village+Busan"
+          },
+          {
+            time: "18:45 - 20:30",
+            title: "晚餐：西面豬肉湯飯街 松亭3代豬肉湯飯 (송정3대국밥)",
+            desc: "一日遊結束專車送回市區，推薦在「西面站」下車，直接吃影片大讚的 30 年老店豬肉湯飯（每碗約 9,000 韓元 / NT$ 216），飯後搭地鐵回飯店。",
+            icon: "🍲",
+            badges: ["老字號湯飯", "西面商圈"],
+            badgeType: "food",
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Songjo-3-dae+Dwaeji-gukbap+Seomyeon"
+          }
+        ]
       },
       {
-        time: "12:00 - 13:30",
-        title: "午餐：本錢豬肉湯飯 / 大建名家",
-        desc: "釜山站必吃 30 年老店，每碗約 9,000 韓元（約 NT$ 216），湯頭濃郁鮮美，附新鮮韭菜與蝦醬。",
-        icon: "🍲",
-        badges: ["老字號湯飯", "道地美食"],
-        badgeType: "food",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Bonjeon+Dwaeji-gukbap+Busan"
+        day: 3,
+        date: "8/11（二）",
+        subTitle: "海上纜車 · 帝王蟹宴 · 樂天超市",
+        title: "松島水晶纜車&龍宮雲橋 ➔ 札嘎其帝王蟹海鮮宴 ➔ 光復路美妝血拼 ➔ 樂天超市大採購",
+        items: [
+          {
+            time: "10:00 - 12:15",
+            title: "松島海上纜車（水晶車廂） ➔ 松島龍宮雲橋",
+            desc: "纜車來回 22,000 韓元（可用 PASS 兌換）。使用 Pass 兌換可免費升級為水晶透明車廂！松島龍宮雲橋需現場購票（1,000 韓元），懸崖景觀極具震撼。",
+            icon: "🈳",
+            badges: ["水晶透明車廂", "龍宮雲橋"],
+            badgeType: "sight",
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Songdo+Marine+Cable+Car+Busan"
+          },
+          {
+            time: "12:30 - 14:30",
+            title: "午餐：札嘎其海鮮市場 帝王蟹大餐",
+            desc: "1樓挑選帝王蟹/松葉蟹，2樓代客料理。釜山是全東亞吃帝王蟹最划算的地方，一定要爽吃一頓！（人均約 NT$ 960-1,440）。",
+            icon: "🦀",
+            badges: ["活帝王蟹", "海鮮大餐"],
+            badgeType: "food",
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Jagalchi+Market+Busan"
+          },
+          {
+            time: "14:30 - 17:45",
+            title: "【血拼主戰場】南浦洞光復路時尚街 & 樂天百貨光復店",
+            desc: "光復路美妝 (Olive Young 旗艦店)、韓系潮牌 (Musinsa, COVERNAT, Kodak)，並可上樂天百貨 13 樓頂樓庭園俯瞰港區全景。",
+            icon: "👗",
+            badges: ["光復路美妝", "韓系潮牌"],
+            badgeType: "shop",
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Gwangbok-ro+Fashion+Street+Busan"
+          },
+          {
+            time: "17:45 - 19:30",
+            title: "【伴手禮大採購】樂天超市 光復店 (Lotte Mart)",
+            desc: "在百貨連通樂天超市採買 HBAF 堅果、辛拉麵、海苔等，現場辦理退稅！買完搭計程車（NT$ 120）回飯店。伴手禮可用酷澎比價不用買太多塞行李。",
+            icon: "🛒",
+            badges: ["伴手禮採購", "現場退稅"],
+            badgeType: "shop",
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Lotte+Mart+Gwangbok+Busan"
+          },
+          {
+            time: "19:45 - 21:30",
+            title: "晚餐：南浦洞豬腳街 漢陽豬腳 (한양족발)",
+            desc: "涼拌芥末豬腳 (냉채족발, 大份約 45,000 韓元 / NT$ 1,080)，酸辣小黃瓜配切片豬腳，清爽開胃。",
+            icon: "🍖",
+            badges: ["涼拌豬腳", "南浦洞必吃"],
+            badgeType: "food",
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Hanyang+Jokbal+Nampo+Busan"
+          }
+        ]
       },
       {
-        time: "13:45 - 15:45",
-        title: "【高評價強推】影島 Arte Museum (아르떼뮤지엄 부산)",
-        desc: "門票 22,000 韓元（可用 PASS 兌換）。大型沉浸式光影展，運用投影、香氛與音效打造細雨與海浪等，室內非常涼快，極好拍照，被評為釜山必訪 CP 值最高景點！",
-        icon: "🎨",
-        badges: ["沉浸式光影展", "室內避暑"],
-        badgeType: "sight",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Arte+Museum+Busan"
+        day: 4,
+        date: "8/12（三）",
+        subTitle: "龍宮寺 · 滑車 · 松葉蟹 · 燒肉",
+        title: "海東龍宮寺 ➔ 釜山斜坡滑車 ➔ 機張松葉蟹盛宴 ➔ Ananti Cove 咖啡 ➔ Outlet ➔ 老宅邸燒肉",
+        items: [
+          {
+            time: "09:00 - 10:30",
+            title: "海東龍宮寺 (Haedong Yonggungsa Temple)",
+            desc: "全韓國唯一建在海邊斷崖上的礁岩古剎，氣氛能讓人慢下來看海、拜佛（免費參觀）。",
+            icon: "🏯",
+            badges: ["海邊古剎", "沉澱心靈"],
+            badgeType: "sight",
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Haedong+Yonggungsa+Temple"
+          },
+          {
+            time: "10:45 - 12:45",
+            title: "【高評價強推】釜山斜坡滑車 (Skyline Luge 釜山)",
+            desc: "玩兩次約 30,000 韓元（可用 PASS 兌換）。全長 2.4 公里、高低差 100 公尺，刺激好玩，搭乘纜車上去視野開闊，被評為釜山必玩！",
+            icon: "🏎️",
+            badges: ["斜坡滑車", "必玩景點"],
+            badgeType: "sight",
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Skyline+Luge+Busan"
+          },
+          {
+            time: "13:00 - 14:45",
+            title: "午餐：機張市場松葉蟹 (기장시장 대게)",
+            desc: "機張市場清蒸松葉蟹（蟹膏炒飯極品，人均約 NT$ 1,440-1,920）或濃郁海鮮湯麵（每碗約 NT$ 288）。",
+            icon: "🦀",
+            badges: ["機張松葉蟹", "海鮮炒飯"],
+            badgeType: "food",
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Gijang+Market+Busan"
+          },
+          {
+            time: "15:00 - 16:30",
+            title: "Ananti Cove 奢華海景廊道 & 海景咖啡廳",
+            desc: "釜山頂級渡假村沿海廊道，在挑高冷氣海景咖啡廳享用下午茶，拍照極具高級質感（人均約 NT$ 288-432）。",
+            icon: "🌊",
+            badges: ["奢華渡假村", "極美海景"],
+            badgeType: "sight",
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Ananti+Cove+Busan"
+          },
+          {
+            time: "16:45 - 19:00",
+            title: "【露天 Outlet】東釜山樂天 Outlet",
+            desc: "希臘聖托里尼風格超大型 Outlet，運動品牌（Nike, Adidas, NB）與韓國在地休閒品牌常有 3~5 折折扣。",
+            icon: "🏷️",
+            badges: ["露天Outlet", "品牌折扣"],
+            badgeType: "shop",
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Lotte+Premium+Outlets+Dongbusan"
+          },
+          {
+            time: "19:30 - 21:30",
+            title: "【新增美食】晚餐：老宅邸燒肉 廣安里店 (고반식당)",
+            desc: "影片強推的釜山精緻燒肉！高品質豬肉有專人桌邊代烤，小菜豐富（人均約 NT$ 480-600），吃完可直接在廣安里散步看橋上夜景。",
+            icon: "🍖",
+            badges: ["老宅邸燒肉", "專人代烤"],
+            badgeType: "food",
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Gobansikdang+Gwangalli+Busan"
+          }
+        ]
       },
       {
-        time: "16:00 - 17:15",
-        title: "影島海景複合空間（P.ARK）",
-        desc: "超大型海景文化空間，坐在冷氣觀景台喝咖啡看麵包，遠眺釜山港與港灣景色（人均約 8,000-12,000 韓元 / NT$ 192-288）。",
-        icon: "☕",
-        badges: ["海景咖啡廳", "網美拍照"],
-        badgeType: "sight",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=P.ARK+Yeongdo+Busan"
+        day: 5,
+        date: "8/13（四）",
+        subTitle: "SPA LAND · 百貨 · 遊艇煙火",
+        title: "Centum City SPA LAND ➔ 新世界百貨購物 ➔ 西面商圈血拼 ➔ 廣安里豪華遊艇煙火 ➔ 海景酒吧",
+        items: [
+          {
+            time: "09:30 - 12:30",
+            title: "【高溫避暑】SPA LAND 汗蒸幕（新世界 Centum City 店）",
+            desc: "門票 23,000 韓元（可用 PASS 兌換）。全釜山最奢華汗蒸幕，內有 13 種主題黃土/冰雪房與戶外天然溫泉足浴，充分放鬆身心。",
+            icon: "♨️",
+            badges: ["頂級汗蒸幕", "天然溫泉"],
+            badgeType: "sight",
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=SPA+LAND+Centum+City+Busan"
+          },
+          {
+            time: "12:30 - 15:30",
+            title: "【購物與美食】新世界百貨 Centum City 店 & 午餐自理",
+            desc: "逛全球最大百貨，網羅 Gentle Monster、Tamburins 及設計師潮牌。中午在百貨美食街享受精緻午餐（人均約 NT$ 288-432）。",
+            icon: "🛍️",
+            badges: ["全球最大百貨", "百貨美食"],
+            badgeType: "shop",
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Shinsegae+Centum+City+Busan"
+          },
+          {
+            time: "16:00 - 18:00",
+            title: "【年輕潮牌與地下街】西面商圈 (Seomyeon)",
+            desc: "搭地鐵二號線直達西面，逛西面地下購物街（平價服飾、配件、包包）與田浦咖啡街（文青小店與大創旗艦店）。",
+            icon: "👗",
+            badges: ["西面地下街", "潮牌血拼"],
+            badgeType: "shop",
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Seomyeon+Underground+Shopping+Center"
+          },
+          {
+            time: "18:30 - 19:30",
+            title: "【新增熱推】廣安里豪華遊艇體驗 (Yacht Tour)",
+            desc: "遊艇票價 30,000 韓元（可用 PASS 兌換）。搭豪華遊艇看廣安大橋夜間點燈，並在海上欣賞施放煙火，體驗極佳！",
+            icon: "⛵",
+            badges: ["海上游艇", "船上煙火"],
+            badgeType: "sight",
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Gwangalli+Yacht+Tour+Busan"
+          },
+          {
+            time: "19:45 - 22:00",
+            title: "晚餐與夜生活：海景餐酒館 Clam / 精釀酒吧 Gorilla / 海邊野餐",
+            desc: "可至 Clam 吃西班牙海鮮燉飯看夜景、或 Gorilla Brewing 喝精釀啤酒、或民樂市場外帶生魚片至海邊野餐（人均約 NT$ 480-840）。",
+            icon: "🍸",
+            badges: ["廣安大橋夜景", "精釀啤酒"],
+            badgeType: "food",
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Clam+Gwangalli+Busan"
+          }
+        ]
       },
       {
-        time: "19:00 - 21:00",
-        title: "晚餐：味贊王鹽烤肉 + BIFF 廣場",
-        desc: "享用 3.5cm 超厚切熟成豬五花（人均約 NT$ 480-600），飯後逛 BIFF 廣場吃黑糖餅 (2,000 韓元 / NT$ 48)。",
-        icon: "🥩",
-        badges: ["厚切燒肉", "黑糖餅"],
-        badgeType: "food",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Matchandeul+Wangso-geum-gui+Nampo+Busan"
-      },
-      {
-        time: "21:15 - 23:00",
-        title: "【夜生活】南浦洞布帳馬車街與龍頭山公園散步",
-        desc: "在龍頭山公園散步拍照，或至布帳馬車攤位喝燒酒配辣炒雞（不推薦登釜山塔，實測反光嚴重且設計一般，在公園拍照即可）。",
-        icon: "🍺",
-        badges: ["布帳馬車", "龍頭山散步"],
-        badgeType: "food",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Yongdusan+Park+Busan"
+        day: 6,
+        date: "8/14（五）",
+        subTitle: "古蹟咖啡 · 退房返台",
+        title: "飯店悠閒退房 ➔ 釜山站周邊文青咖啡/採買 ➔ 機場返台",
+        items: [
+          {
+            time: "09:00 - 10:45",
+            title: "【慢活早晨】飯店悠閒早餐與整理行李",
+            desc: "伴手禮已在 Day 3 買齊，早上慢活。可在東橫INN享用早餐、打包行李，或走至百濟醫院古蹟咖啡廳 (Brown Hands) 喝手沖咖啡 (NT$ 144)。",
+            icon: "☕",
+            badges: ["悠閒早晨", "百濟古蹟咖啡"],
+            badgeType: "sight",
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Brown+Hands+Baekje+Busan"
+          },
+          {
+            time: "11:00 - 11:40",
+            title: "專車 / Kakao T Venti 前往金海機場",
+            desc: "飯店退房提行李，搭乘預約車直達機場國際線航廈。",
+            icon: "🚕",
+            badges: ["專車前往", "直達機場"],
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Gimhae+International+Airport"
+          },
+          {
+            time: "14:10",
+            title: "搭乘長榮 BR1193 返抵桃園機場 T2",
+            desc: "11:40 前抵達金海機場辦理報到退稅，14:10 起飛圓滿結束韓國釜山 6 天 5 夜奢華慢遊。",
+            icon: "✈️",
+            badges: ["長榮航空", "順利返台"],
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Taoyuan+International+Airport"
+          }
+        ]
       }
-    ]
-  },
-  {
-    day: 2,
-    date: "8/10（一）",
-    subTitle: "天空膠囊 · 三大文化村 · 湯飯",
-    title: "【KKday一日遊方案 B】天空膠囊列車 ➔ 五六島步道 ➔ 白淺灘文化村 ➔ 甘川文化村",
-    items: [
+    ];
+
+    // 10 大實景相片資料
+    const galleryPhotos = [
       {
-        time: "09:00",
-        title: "釜山站集合上車 (一日遊專車)",
-        desc: "一日遊專車於 KTX 釜山站集合出發。飯店出門步行 3 分鐘即達，免除大隊人馬交通奔波之苦。",
-        icon: "🚌",
-        badges: ["專車出發", "KKday行程"],
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Busan+Station"
+        title: "海雲台天空膠囊列車",
+        location: "Day 2 行程：海雲台藍線公園 (尾浦 ➔ 青沙浦)",
+        src: "https://bobbytravel.tw/wp-content/uploads/2025/07/20250917000451_0_63bbf1.jpg",
+        desc: "實景拍攝：超萌彩色天空膠囊列車懸空行駛於海濱懸崖邊，遠眺藍天海水。"
       },
       {
-        time: "09:50 - 11:20",
-        title: "海雲台藍線公園（天空膠囊列車）",
-        desc: "搭乘可愛的天空膠囊列車，一日遊已包票預定。由「尾浦 ➔ 青沙浦」方向，最靠近海景的第一排軌道無遮擋，視野最美。",
-        icon: "🚃",
-        badges: ["天空膠囊", "海景第一排"],
-        badgeType: "sight",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Haeundae+Blueline+Park+Mipo+Station"
+        title: "海雲台海水浴場沙灘",
+        location: "Day 2 行程：海雲台區海雲台海邊路",
+        src: "https://bobbytravel.tw/wp-content/uploads/pixnet/33f02593d6cb524436ebddef9aa579cb.jpg",
+        desc: "實景拍攝：韓國最具代表性的美麗白沙海灘，周邊摩天大樓林立。"
       },
       {
-        time: "11:30 - 13:00",
-        title: "五六島天空步道 & 中午餐食自理",
-        desc: "踏在懸崖邊 U 型玻璃棧道上，看五六島與壯麗海浪，拍出凌空絕景。中午在周邊自理午餐小吃。",
-        icon: "🌉",
-        badges: ["天空步道", "午餐自理"],
-        badgeType: "sight",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Oryukdo+Skywalk+Busan"
+        title: "影島 Arte Museum",
+        location: "Day 1 行程：影島區海洋路",
+        src: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop",
+        desc: "實景拍攝：大型沉浸式光影展，運用投影、香氛與音效，給予強烈震撼的視覺與感官體驗。"
       },
       {
-        time: "13:30 - 15:00",
-        title: "白淺灘文化村 (Huinnyeoul Culture Village)",
-        desc: "影島上的懸崖邊小村，沿著彩虹階梯走海邊，有如釜山版聖托里尼，專車直達最省力。",
-        icon: "📸",
-        badges: ["白淺灘", "沿海小白屋"],
-        badgeType: "sight",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Huinnyeoul+Culture+Village+Busan"
+        title: "海東龍宮寺臨海全景",
+        location: "Day 4 行程：機張郡海東龍宮寺",
+        src: "https://bobbytravel.tw/wp-content/uploads/2025/12/20251218004310_0_f3a6c2.jpg",
+        desc: "實景拍攝：建於礁岩石壁之上的神聖海邊古剎，海浪拍岸非常壯麗。"
       },
       {
-        time: "15:30 - 17:30",
-        title: "甘川文化村 (Gamcheon Culture Village)",
-        desc: "彩色房屋一層一層有如馬丘比丘，可與小王子拍照、逛文創小店。",
-        icon: "🏘️",
-        badges: ["甘川洞", "小王子打卡"],
-        badgeType: "sight",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Gamcheon+Culture+Village+Busan"
+        title: "松島海上纜車與水域",
+        location: "Day 3 行程：松島海水浴場",
+        src: "https://bobbytravel.tw/wp-content/uploads/2025/12/20251208102655_0_96c489.jpg",
+        desc: "實景拍攝：韓國第一條海上纜車，跨越 1.62 公里汪洋大海。"
       },
       {
-        time: "18:45 - 20:30",
-        title: "晚餐：西面豬肉湯飯街 松亭3代豬肉湯飯 (송정3대국밥)",
-        desc: "一日遊結束專車送回市區，推薦在「西面站」下車，直接吃影片大讚的 30 年老店豬肉湯飯（每碗約 9,000 韓元 / NT$ 216），飯後搭地鐵回飯店。",
-        icon: "🍲",
-        badges: ["老字號湯飯", "西面商圈"],
-        badgeType: "food",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Songjo-3-dae+Dwaeji-gukbap+Seomyeon"
+        title: "松島龍宮雲橋",
+        location: "Day 3 行程：松島岩南公園對岸",
+        src: "https://bobbytravel.tw/wp-content/uploads/2026/01/20251216142051_0_73adad.jpg",
+        desc: "實景拍攝：360度跨海步道連通無人島，踩在懸崖斷崖上極具震撼。"
+      },
+      {
+        title: "白淺灘文化村海岸步道",
+        location: "Day 2 行程：影島區白淺灘文化村",
+        src: "https://bobbytravel.tw/wp-content/uploads/2025/07/20250916235936_0_f75aff.jpg",
+        desc: "實景拍攝：藍白色調小白屋沿海步道，文青咖啡廳與彩虹階梯聚落。"
+      },
+      {
+        title: "SPA LAND 奢華汗蒸幕",
+        location: "Day 5 行程：新世界 Centum City 店 1F",
+        src: "https://bobbytravel.tw/wp-content/uploads/2026/01/20260106101923_0_60fd9a.jpg",
+        desc: "實景拍攝：六星級奢華汗蒸幕設施，13種主題桑拿房與戶外溫泉足浴。"
+      },
+      {
+        title: "五六島天空步道",
+        location: "Day 2 行程：南區五六島路",
+        src: "https://bobbytravel.tw/wp-content/uploads/pixnet/7f1e572ed63347666a60876d27a9270d.jpg",
+        desc: "實景拍攝：建於 35 公尺懸崖邊的 U 型玻璃步道，踏在浪花之上。"
+      },
+      {
+        title: "廣安大橋夜景",
+        location: "Day 5 行程：廣安里海水浴場",
+        src: "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?q=80&w=1200&auto=format&fit=crop",
+        desc: "實景拍攝：廣安大橋夜間點燈，坐在海邊餐酒館或沙灘野餐感受最迷人的微醺夜生活。"
       }
-    ]
-  },
-  {
-    day: 3,
-    date: "8/11（二）",
-    subTitle: "松島水晶纜車 · 美妝 · 帝王蟹饗宴",
-    title: "松島水晶纜車&龍宮雲橋 ➔ 札嘎其帝王蟹海鮮宴 ➔ 光復路美妝血拼 ➔ 樂天超市大採購",
-    items: [
-      {
-        time: "10:00 - 12:15",
-        title: "松島海上纜車（水晶車廂） ➔ 松島龍宮雲橋",
-        desc: "纜車來回 22,000 韓元（可用 PASS 兌換）。使用 Pass 兌換可免費升級為水晶透明車廂！松島龍宮雲橋需現場購票（1,000 韓元），懸崖景觀極具震撼。",
-        icon: "🈳",
-        badges: ["水晶透明車廂", "龍宮雲橋"],
-        badgeType: "sight",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Songdo+Marine+Cable+Car+Busan"
-      },
-      {
-        time: "12:30 - 14:30",
-        title: "午餐：札嘎其海鮮市場 帝王蟹大餐",
-        desc: "1樓挑選帝王蟹/松葉蟹，2樓代客料理。釜山是全東亞吃帝王蟹最划算的地方，一定要爽吃一頓！（人均約 NT$ 960-1,440）。",
-        icon: "🦀",
-        badges: ["活帝王蟹", "海鮮大餐"],
-        badgeType: "food",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Jagalchi+Market+Busan"
-      },
-      {
-        time: "14:30 - 17:45",
-        title: "【血拼主戰場】南浦洞光復路時尚街 & 樂天百貨光復店",
-        desc: "光復路美妝 (Olive Young 旗艦店)、韓系潮牌 (Musinsa, COVERNAT, Kodak)，並可上樂天百貨 13 樓頂樓庭園俯瞰港區全景。",
-        icon: "👗",
-        badges: ["光復路美妝", "韓系潮牌"],
-        badgeType: "shop",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Gwangbok-ro+Fashion+Street+Busan"
-      },
-      {
-        time: "17:45 - 19:30",
-        title: "【伴手禮大採購】樂天超市 光復店 (Lotte Mart)",
-        desc: "在百貨連通樂天超市採買 HBAF 堅果、辛拉麵、海苔等，現場辦理退稅！買完搭計程車（NT$ 120）回飯店。伴手禮可用酷澎比價不用買太多塞行李。",
-        icon: "🛒",
-        badges: ["伴手禮採購", "現場退稅"],
-        badgeType: "shop",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Lotte+Mart+Gwangbok+Busan"
-      },
-      {
-        time: "19:45 - 21:30",
-        title: "晚餐：南浦洞豬腳街 漢陽豬腳 (한양족발)",
-        desc: "涼拌芥末豬腳 (냉채족발, 大份約 45,000 韓元 / NT$ 1,080)，酸辣小黃瓜配切片豬腳，清爽開胃。",
-        icon: "🍖",
-        badges: ["涼拌豬腳", "南浦洞必吃"],
-        badgeType: "food",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Hanyang+Jokbal+Nampo+Busan"
-      }
-    ]
-  },
-  {
-    day: 4,
-    date: "8/12（三）",
-    subTitle: "龍宮寺 · 斜坡滑車 · 松葉蟹 · Outlet",
-    title: "海東龍宮寺 ➔ 釜山斜坡滑車 ➔ 機張松葉蟹盛宴 ➔ Ananti Cove 咖啡 ➔ Outlet ➔ 老宅邸燒肉",
-    items: [
-      {
-        time: "09:00 - 10:30",
-        title: "海東龍宮寺 (Haedong Yonggungsa Temple)",
-        desc: "全韓國唯一建在海邊斷崖上的礁岩古剎，氣氛能讓人慢下來看海、拜佛（免費參觀）。",
-        icon: "🏯",
-        badges: ["海邊古剎", "沉澱心靈"],
-        badgeType: "sight",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Haedong+Yonggungsa+Temple"
-      },
-      {
-        time: "10:45 - 12:45",
-        title: "【高評價強推】釜山斜坡滑車 (Skyline Luge 釜山)",
-        desc: "玩兩次約 30,000 韓元（可用 PASS 兌換）。全長 2.4 公里、高低差 100 公尺，刺激好玩，搭乘纜車上去視野開闊，被評為釜山必玩！",
-        icon: "🏎️",
-        badges: ["斜坡滑車", "必玩景點"],
-        badgeType: "sight",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Skyline+Luge+Busan"
-      },
-      {
-        time: "13:00 - 14:45",
-        title: "午餐：機張市場松葉蟹 (기장시장 대게)",
-        desc: "機張市場清蒸松葉蟹（蟹膏炒飯極品，人均約 NT$ 1,440-1,920）或濃郁海鮮湯麵（每碗約 NT$ 288）。",
-        icon: "🦀",
-        badges: ["機張松葉蟹", "海鮮炒飯"],
-        badgeType: "food",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Gijang+Market+Busan"
-      },
-      {
-        time: "15:00 - 16:30",
-        title: "Ananti Cove 奢華海景廊道 & 海景咖啡廳",
-        desc: "釜山頂級渡假村沿海廊道，在挑高冷氣海景咖啡廳享用下午茶，拍照極具高級質感（人均約 NT$ 288-432）。",
-        icon: "🌊",
-        badges: ["奢華渡假村", "極美海景"],
-        badgeType: "sight",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Ananti+Cove+Busan"
-      },
-      {
-        time: "16:45 - 19:00",
-        title: "【露天 Outlet】東釜山樂天 Outlet",
-        desc: "希臘聖托里尼風格超大型 Outlet，運動品牌（Nike, Adidas, NB）與韓國在地休閒品牌常有 3~5 折折扣。",
-        icon: "🏷️",
-        badges: ["露天Outlet", "品牌折扣"],
-        badgeType: "shop",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Lotte+Premium+Outlets+Dongbusan"
-      },
-      {
-        time: "19:30 - 21:30",
-        title: "【新增美食】晚餐：老宅邸燒肉 廣安里店 (고반식당)",
-        desc: "影片強推的釜山精緻燒肉！高品質豬肉有專人桌邊代烤，小菜豐富（人均約 NT$ 480-600），吃完可直接在廣安里散步看橋上夜景。",
-        icon: "🍖",
-        badges: ["老宅邸燒肉", "專人代烤"],
-        badgeType: "food",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Gobansikdang+Gwangalli+Busan"
-      }
-    ]
-  },
-  {
-    day: 5,
-    date: "8/13（四）",
-    subTitle: "SPA LAND · 百貨 · 西面 · 遊艇煙火",
-    title: "Centum City SPA LAND ➔ 新世界百貨購物 ➔ 西面商圈血拼 ➔ 廣安里豪華遊艇煙火 ➔ 海景酒吧",
-    items: [
-      {
-        time: "09:30 - 12:30",
-        title: "【高溫避暑】SPA LAND 汗蒸幕（新世界 Centum City 店）",
-        desc: "門票 23,000 韓元（可用 PASS 兌換）。全釜山最奢華汗蒸幕，內有 13 種主題黃土/冰雪房與戶外天然溫泉足浴，充分放鬆身心。",
-        icon: "♨️",
-        badges: ["頂級汗蒸幕", "天然溫泉"],
-        badgeType: "sight",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=SPA+LAND+Centum+City+Busan"
-      },
-      {
-        time: "12:30 - 15:30",
-        title: "【購物與美食】新世界百貨 Centum City 店 & 午餐自理",
-        desc: "逛全球最大百貨，網羅 Gentle Monster、Tamburins 及設計師潮牌。中午在百貨美食街享受精緻午餐（人均約 NT$ 288-432）。",
-        icon: "🛍️",
-        badges: ["全球最大百貨", "百貨美食"],
-        badgeType: "shop",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Shinsegae+Centum+City+Busan"
-      },
-      {
-        time: "16:00 - 18:00",
-        title: "【年輕潮牌與地下街】西面商圈 (Seomyeon)",
-        desc: "搭地鐵二號線直達西面，逛西面地下購物街（平價服飾、配件、包包）與田浦咖啡街（文青小店與大創旗艦店）。",
-        icon: "👗",
-        badges: ["西面地下街", "潮牌血拼"],
-        badgeType: "shop",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Seomyeon+Underground+Shopping+Center"
-      },
-      {
-        time: "18:30 - 19:30",
-        title: "【新增熱推】廣安里豪華遊艇體驗 (Yacht Tour)",
-        desc: "遊艇票價 30,000 韓元（可用 PASS 兌換）。搭豪華遊艇看廣安大橋夜間點燈，並在海上欣賞施放煙火，體驗極佳！",
-        icon: "⛵",
-        badges: ["海上游艇", "船上煙火"],
-        badgeType: "sight",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Gwangalli+Yacht+Tour+Busan"
-      },
-      {
-        time: "19:45 - 22:00",
-        title: "晚餐與夜生活：海景餐酒館 Clam / 精釀酒吧 Gorilla / 海邊野餐",
-        desc: "可至 Clam 吃西班牙海鮮燉飯看夜景、或 Gorilla Brewing 喝精釀啤酒、或民樂市場外帶生魚片至海邊野餐（人均約 NT$ 480-840）。",
-        icon: "🍸",
-        badges: ["廣安大橋夜景", "精釀啤酒"],
-        badgeType: "food",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Clam+Gwangalli+Busan"
-      }
-    ]
-  },
-  {
-    day: 6,
-    date: "8/14（五）",
-    subTitle: "古蹟咖啡 · 退房 · 返台",
-    title: "飯店悠閒退房 ➔ 釜山站周邊文青咖啡/採買 ➔ 機場返台",
-    items: [
-      {
-        time: "09:00 - 10:45",
-        title: "【慢活早晨】飯店悠閒早餐與整理行李",
-        desc: "伴手禮已在 Day 3 買齊，早上免趕行程。可在東橫INN享用早餐、打包行李，或走至百濟醫院古蹟咖啡廳 (Brown Hands) 喝手沖咖啡 (NT$ 144)。",
-        icon: "☕",
-        badges: ["悠閒早晨", "百濟古蹟咖啡"],
-        badgeType: "sight",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Brown+Hands+Baekje+Busan"
-      },
-      {
-        time: "11:00 - 11:40",
-        title: "專車 / Kakao T Venti 前往金海機場",
-        desc: "飯店退房提行李，搭乘預約車直達機場國際線航廈。",
-        icon: "🚕",
-        badges: ["專車前往", "直達機場"],
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Gimhae+International+Airport"
-      },
-      {
-        time: "14:10",
-        title: "搭乘長榮 BR1193 返抵桃園機場 T2",
-        desc: "11:40 前抵達金海機場辦理報到退稅，14:10 起飛圓滿結束韓國釜山 6 天 5 夜奢華慢遊。",
-        icon: "✈️",
-        badges: ["長榮航空", "順利返台"],
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Taoyuan+International+Airport"
-      }
-    ]
-  }
-];
+    ];
 
-// 100% 精準對應本 6 天行程的真實高畫質景點相片集 (非本行程景點已剔除)
-const galleryPhotos = [
-  {
-    title: "海雲台天空膠囊列車",
-    location: "Day 2 行程：海雲台藍線公園 (尾浦 ➔ 青沙浦)",
-    src: "https://bobbytravel.tw/wp-content/uploads/2025/07/20250917000451_0_63bbf1.jpg",
-    desc: "實景拍攝：超萌彩色天空膠囊列車懸空行駛於海濱懸崖邊，遠眺藍天海水。"
-  },
-  {
-    title: "海雲台海水浴場沙灘",
-    location: "Day 2 行程：海雲台區海雲台海邊路",
-    src: "https://bobbytravel.tw/wp-content/uploads/pixnet/33f02593d6cb524436ebddef9aa579cb.jpg",
-    desc: "實景拍攝：韓國最具代表性的美麗白沙海灘，周邊摩天大樓林立。"
-  },
-  {
-    title: "影島 Arte Museum",
-    location: "Day 1 行程：影島區海洋路",
-    src: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop",
-    desc: "實景拍攝：大型沉浸式光影展，運用投影、香氛與音效，給予強烈震撼的視覺與感官體驗。"
-  },
-  {
-    title: "海東龍宮寺臨海全景",
-    location: "Day 4 行程：機張郡海東龍宮寺",
-    src: "https://bobbytravel.tw/wp-content/uploads/2025/12/20251218004310_0_f3a6c2.jpg",
-    desc: "實景拍攝：建於礁岩石壁之上的神聖海邊古剎，海浪拍岸非常壯麗。"
-  },
-  {
-    title: "松島海上纜車與水域",
-    location: "Day 3 行程：松島海水浴場",
-    src: "https://bobbytravel.tw/wp-content/uploads/2025/12/20251208102655_0_96c489.jpg",
-    desc: "實景拍攝：韓國第一條海上纜車，跨越 1.62 公里汪洋大海。"
-  },
-  {
-    title: "松島龍宮雲橋",
-    location: "Day 3 行程：松島岩南公園對岸",
-    src: "https://bobbytravel.tw/wp-content/uploads/2026/01/20251216142051_0_73adad.jpg",
-    desc: "實景拍攝：360度跨海步道連通無人島，踩在懸崖斷崖上極具震撼。"
-  },
-  {
-    title: "白淺灘文化村海岸步道",
-    location: "Day 2 行程：影島區白淺灘文化村",
-    src: "https://bobbytravel.tw/wp-content/uploads/2025/07/20250916235936_0_f75aff.jpg",
-    desc: "實景拍攝：藍白色調小白屋沿海步道，文青咖啡廳與彩虹階梯聚落。"
-  },
-  {
-    title: "SPA LAND 奢華汗蒸幕",
-    location: "Day 5 行程：新世界 Centum City 店 1F",
-    src: "https://bobbytravel.tw/wp-content/uploads/2026/01/20260106101923_0_60fd9a.jpg",
-    desc: "實景拍攝：六星級奢華汗蒸幕設施，13種主題桑拿房與戶外溫泉足浴。"
-  },
-  {
-    title: "五六島天空步道",
-    location: "Day 2 行程：南區五六島路",
-    src: "https://bobbytravel.tw/wp-content/uploads/pixnet/7f1e572ed63347666a60876d27a9270d.jpg",
-    desc: "實景拍攝：建於 35 公尺懸崖邊的 U 型玻璃步道，踏在浪花之上。"
-  },
-  {
-    title: "廣安大橋夜景",
-    location: "Day 5 行程：廣安里海水浴場",
-    src: "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?q=80&w=1200&auto=format&fit=crop",
-    desc: "實景拍攝：廣安大橋夜間點燈，坐在海邊餐酒館或沙灘野餐感受最迷人的微醺夜生活。"
-  }
-];
-
-// 初始化
-document.addEventListener("DOMContentLoaded", () => {
-  renderDayTabs();
-  renderDayTimeline(1);
-  renderGallery();
-  setupEventListeners();
-  renderOliveYoung();
-  calculateExchange();
-});
-
-function renderDayTabs() {
-  const tabGroup = document.getElementById("tab-group-container");
-  let html = "";
-  
-  itineraryData.forEach(d => {
-    html += `
-      <button class="tab-btn ${d.day === 1 ? 'active' : ''}" data-day="${d.day}" id="tab-day-${d.day}">
-        <span class="tab-day-code">DAY 0${d.day}</span>
-        <span class="tab-day-date">${d.date}</span>
-        <span class="tab-day-sub">${d.subTitle}</span>
-      </button>
-    `;
-  });
-  
-  tabGroup.innerHTML = html;
-}
-
-function renderDayTimeline(dayNum) {
-  const container = document.getElementById("timeline-container");
-  const dayData = itineraryData.find(d => d.day === dayNum);
-  
-  if (!dayData) return;
-  
-  document.getElementById("day-title").textContent = `Day ${dayData.day}｜${dayData.date} - ${dayData.title}`;
-  
-  let html = `<div class="timeline">`;
-  dayData.items.forEach(item => {
-    let badgeClass = "badge-sight";
-    if (item.badgeType === "food") badgeClass = "badge-food";
-    if (item.badgeType === "shop") badgeClass = "badge-shop";
-    
-    html += `
-      <div class="timeline-item">
-        <div class="timeline-icon">${item.icon}</div>
-        <div class="event-card">
-          <div class="event-header-flex">
-            <span class="event-time">${item.time}</span>
-            ${item.mapUrl ? `<a href="${item.mapUrl}" target="_blank" rel="noopener" class="btn-map-link">📍 導航地圖</a>` : ''}
-          </div>
-          <h3 class="event-title">${item.title}</h3>
-          <p class="event-desc">${item.desc}</p>
-          <div class="event-badges">
-            ${item.badges.map(b => `<span class="badge ${badgeClass}">${b}</span>`).join("")}
-          </div>
-        </div>
-      </div>
-    `;
-  });
-  html += `</div>`;
-  
-  container.innerHTML = html;
-  
-  document.querySelectorAll(".tab-btn").forEach(btn => {
-    btn.classList.toggle("active", parseInt(btn.dataset.day) === dayNum);
-  });
-}
-
-function renderGallery() {
-  const galleryContainer = document.getElementById("gallery-container");
-  let html = "";
-  
-  galleryPhotos.forEach((photo, index) => {
-    html += `
-      <div class="photo-card" onclick="openModal(${index})">
-        <img src="${photo.src}" alt="${photo.title}" loading="lazy">
-        <div class="photo-overlay">
-          <h4 class="photo-title">${photo.title}</h4>
-          <span class="photo-location">📍 ${photo.location}</span>
-        </div>
-      </div>
-    `;
-  });
-  
-  galleryContainer.innerHTML = html;
-}
-
-function openModal(index) {
-  const photo = galleryPhotos[index];
-  document.getElementById("modal-img").src = photo.src;
-  document.getElementById("modal-title").textContent = photo.title;
-  document.getElementById("modal-location").textContent = `📍 ${photo.location}`;
-  document.getElementById("modal-desc").textContent = photo.desc;
-  document.getElementById("photo-modal").classList.add("active");
-}
-
-function closeModal() {
-  document.getElementById("photo-modal").classList.remove("active");
-}
-
-function calculateExchange() {
-  const krwInput = document.getElementById("krw-input").value;
-  const rateInput = document.getElementById("rate-input").value || 0.024;
-  const peopleInput = document.getElementById("people-input").value || 8;
-  
-  const krw = parseFloat(krwInput) || 0;
-  const rate = parseFloat(rateInput);
-  const people = parseInt(peopleInput) || 1;
-  
-  const twdTotal = Math.round(krw * rate);
-  const twdPerPerson = Math.round(twdTotal / people);
-  
-  document.getElementById("twd-result").textContent = `NT$ ${twdTotal.toLocaleString()}`;
-  document.getElementById("twd-per-person").textContent = `NT$ ${twdPerPerson.toLocaleString()}`;
-}
-
-function setupEventListeners() {
-  document.getElementById("tab-group-container").addEventListener("click", (e) => {
-    const tabBtn = e.target.closest(".tab-btn");
-    if (tabBtn) {
-      const day = parseInt(tabBtn.dataset.day);
-      renderDayTimeline(day);
-    }
-  });
-  
-  document.getElementById("krw-input").addEventListener("input", calculateExchange);
-  document.getElementById("rate-input").addEventListener("input", calculateExchange);
-  document.getElementById("people-input").addEventListener("input", calculateExchange);
-  
-  document.querySelectorAll(".transit-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      document.querySelectorAll(".transit-btn").forEach(b => b.style.borderColor = "var(--border-light)");
-      btn.style.borderColor = "var(--primary-glow)";
-      
-      const plan = btn.dataset.plan;
-      const detailBox = document.getElementById("transit-detail");
-      
-      if (plan === "venti") {
-        detailBox.innerHTML = `
-          <strong style="color: var(--accent-gold);">👍 方案 1：預先預約 1 台 9~12 人座接送包車（極推薦！）</strong>
-          <p>強烈建議提前預訂機場包車！出關後司機直接舉牌接機，將 8 人與 8 個大行李箱一次載走直達釜山站東橫 INN，單趟約 NT$ 1,800-2,200（人均僅約 NT$ 250 元），最方便省心。</p>
-        `;
-      } else if (plan === "kakao") {
-        detailBox.innerHTML = `
-          <strong style="color: var(--primary-glow);">🚕 方案 2：現場 Kakao T 叫 2 台 Venti / 大型計程車</strong>
-          <p>Kakao T App 已支援中文介面與海外信用卡。出關後可叫 2 台 Venti（每台 4 人 + 4 箱），2 台總費用約 70,000 - 90,000 韓元（約 NT$ 1,680 - 2,160）。但需注意班機抵達高峰期大型車可能需稍作等待。</p>
-        `;
-      } else if (plan === "bus") {
-        detailBox.innerHTML = `
-          <strong style="color: var(--accent-green);">🚌 方案 3：機場巴士 (Limousine Bus) 直達釜山站</strong>
-          <p>於國際線 1 樓 3 號月台搭乘「釜山站/南浦洞線」，每人約 6,000-10,000 韓元（約 NT$ 144-240），8人總計約 NT$ 1,152-1,920。大行李放置下層車廂，車程約 45 分鐘。</p>
-        `;
-      }
+    // 初始化呼叫
+    document.addEventListener("DOMContentLoaded", () => {
+      renderSubDayTabs();
+      renderDayTimeline(1);
+      renderGallery();
+      renderOliveYoung();
+      setupEventListeners();
+      calculateExchange();
     });
-  });
-}
 
+    // 1. SPA Section 切換邏輯
+    function switchSection(sectionId) {
+      // 切換主導覽列按鈕 active
+      const buttons = document.querySelectorAll('.main-tab-btn');
+      buttons.forEach(btn => {
+        const spanText = btn.querySelector('span').innerText;
+        const matchingId = getSectionIdByText(spanText);
+        btn.classList.toggle("active", matchingId === sectionId);
+      });
 
-// === Olive Young Recommendations Logic ===
-const oyProducts = [{"id": "mediheal", "time": "01:37", "name": "MEDIHEAL 精華面膜片", "en_name": "MEDIHEAL Essential Mask", "category": "skincare", "category_zh": "臉部護理", "img_key": "MEDIHEAL Essential Mask", "features": "高濃度精華、服貼度高、高CP值", "skin_type": "所有膚質，特別是缺水肌與需要曬後鎮靜者", "reason": "金針菇姐姐強烈推薦的國民面膜。精華液含量極高，面膜紙薄且貼合度優秀。在 Olive Young 購買通常有 10 片一盒的包裝，並且常常有 1+1 (買一送一) 的促銷活動，是去韓國必囤的保濕聖品。", "tips": "建議洗完臉後敷 10-15 分鐘，取下後輕輕按摩至吸收，再擦上乳液鎖水。若有醫美術後泛紅，綠色積雪草款是很好的鎮靜選擇。", "img_url": "images/mediheal.svg"}, {"id": "biodance", "time": "03:25", "name": "Biodance 膠原蛋白深層全效面膜", "en_name": "Biodance Bio-Collagen Real Deep Mask", "category": "skincare", "category_zh": "臉部護理", "img_key": "Biodance Bio-Collagen Real Deep Mask", "features": "水凝膠材質、敷完變透明、深層彈力", "skin_type": "乾性肌、熟齡肌、暗沉無光澤肌", "reason": "近期紅遍全球的「敷著睡覺面膜」。它是果凍般的水凝膠材質，敷上後面膜中的超低分子玻尿酸與膠原蛋白會慢慢被肌膚吸收，面膜會隨時間變為完全透明。能顯著改善毛孔與提亮膚色。", "tips": "適合在夜間保養的最後一步使用，建議敷 3-4 小時以上（甚至敷著入睡），醒來後撕下即可看見驚人的水光感與澎潤肌膚。", "badge": "熱銷斷貨王", "img_url": "images/biodance.svg"}, {"id": "beyond", "time": "04:14", "name": "Beyond 美白乳液 / 身體乳", "en_name": "Beyond Body Emulsion", "category": "body", "category_zh": "身體保養", "img_key": "Beyond Body Emulsion", "features": "溫和草本、高級白麝香、深層鎖水", "skin_type": "所有膚質、身體肌膚乾燥脫屑者", "reason": "LG 生活健康旗下的環保自然品牌。這款身體乳以療癒且高級的「白麝香」香氣聞名，質地乳爽不黏膩，保濕度極佳，能修護乾燥的肌膚屏障。", "tips": "每天洗澡後，在身體微濕時塗抹，保濕與持香效果最佳。", "img_url": "images/beyond.svg"}, {"id": "yunjac", "time": "05:27", "name": "Yunjac 然植亞保濕底霜 (Base Prep)", "en_name": "Yunjac Skin Perfecting Protective Base Prep", "category": "makeup", "category_zh": "彩妝與定妝", "img_key": "Yunjac Skin Perfecting Protective Base Prep", "features": "底妝膠水", "skin_type": "乾性肌、混合偏乾、底妝容易浮粉起皮者", "reason": "高端草本護膚品牌推出的妝前精華。被譽為「乾皮親媽」與「化妝師的秘密武器」，質地如水般輕盈，能迅速撫平臉部角質，讓後續不論是粉底液還是氣墊粉餅都非常貼合，展現高級的水光感。", "tips": "在防曬後、底妝前，取 2-3 滴均勻塗抹於全臉，特別是易卡粉的鼻翼與兩頰，輕拍至微黏狀態再上底妝。", "badge": "美妝大賞第一", "img_url": "images/yunjac.svg"}, {"id": "obge", "time": "06:13", "name": "OBgE 自然防曬棒", "en_name": "OBgE Natural Cover Sun Stick", "category": "skincare", "category_zh": "防曬護理", "img_key": "OBgE Natural Cover Sun Stick", "features": "不沾手、清爽控油、不泛白", "skin_type": "所有膚質、混合偏油、男士、喜愛戶外活動者", "reason": "韓國男士理容第一品牌推出的防曬棒，女生也非常愛用！具備 SPF50+/PA++++ 最高防曬規格。棒狀設計極為方便，完全不沾手，上臉後呈乾爽霧面，且完全不泛白、不黏膩，抗汗效果優秀。", "tips": "適合隨身攜帶，在戶外每 2-3 小時隨時塗抹補防曬。因其清爽度高，妝後輕拍補防曬也不易弄髒妝容。", "img_url": "images/obge.svg"}, {"id": "the_saem", "time": "07:12", "name": "The Saem 得鮮完美遮瑕液", "en_name": "The Saem Cover Perfection Tip Concealer", "category": "makeup", "category_zh": "彩妝與定妝", "img_key": "The Saem Cover Perfection Tip Concealer", "features": "極高遮瑕力、平價戰神、多色號選擇", "skin_type": "有痘疤、黑眼圈、班點需要高度遮瑕者", "reason": "風靡亞洲的平價遮瑕天王。遮瑕力強、持妝度極佳，不論是多深的痘疤或黑眼圈，輕點一下就能完美遮蓋，CP 值高到不可思議。", "tips": "因遮瑕力極高，質地偏乾，建議局部「點」在瑕疵處，等 10 秒微乾後，再使用濕海綿或粉撲邊緣輕輕拍開。", "img_url": "images/the_saem.svg"}, {"id": "about_tone", "time": "08:40", "name": "About Tone 柔焦控油蜜粉餅", "en_name": "About Tone Blur Powder Pact", "category": "makeup", "category_zh": "彩妝與定妝", "img_key": "About Tone Blur Powder Pact", "features": "一秒磨皮、粉質極細、強效控油", "skin_type": "油性肌、混合肌、毛孔粗大者", "reason": "前身為風靡韓國的 Eglips 蜜粉餅。這款粉餅主打「空氣柔焦」效果，粉質如輕煙般細緻，能瞬間吸附皮脂，讓毛孔隱形，打造如陶瓷娃娃般的乾淨霧面妝效。", "tips": "使用附帶的粉撲，在底妝後輕壓在容易出油的 T 字部位、鼻翼，或用於眼周打底防暈染。", "img_url": "images/about_tone.svg"}, {"id": "so_natural", "time": "09:55", "name": "So Natural 經典定妝噴霧", "en_name": "So Natural All Day Tight Makeup Setting Fixer", "category": "makeup", "category_zh": "彩妝與定妝", "img_key": "So Natural All Day Tight Makeup Setting Fixer", "features": "細緻霧化、快速成膜、抗摩擦防脫妝", "skin_type": "所有膚質、混合偏油、需要長時間持妝者", "reason": "韓國定妝噴霧界的常勝冠軍，粉紅色瓶身非常具有代表性。其壓頭噴出的水霧極其細緻，不會在臉上結成水珠，能快速在底妝上形成保護膜，抗汗、抗油且防摩擦。", "tips": "化妝完成後，將噴霧距離臉部 20-30 公分，畫 'X' 和 'T' 字形噴灑全臉，靜待 1 分鐘自然風乾成膜，切勿用手拍打。", "img_url": "images/so_natural.svg"}, {"id": "canmake", "time": "10:30", "name": "Canmake 腮紅霜", "en_name": "Canmake Cream Cheek", "category": "makeup", "category_zh": "彩妝與定妝", "img_key": "Canmake Cream Cheek", "features": "清透血色感、凝膠轉粉質、白裡透紅", "skin_type": "所有膚質，尤其是喜愛無粉感日韓系妝容者", "reason": "雖然是日系彩妝，但其極佳的自然融膚感在韓國 Olive Young 也擁有超高人氣。凝膠般的質地上臉推開後會化為乾爽的粉質，呈現如皮膚底層自然透出來的紅潤氣色。", "tips": "用手指沾取適量，輕點於蘋果肌處往外拍開，或是用氣墊粉撲上妝，效果更加均勻清透。", "img_url": "images/canmake.svg"}, {"id": "fillimilli", "time": "11:38", "name": "Fillimilli 胖胖氣墊粉撲", "en_name": "Fillimilli Cushion Pang Pang Puff", "category": "tools", "category_zh": "美妝工具", "img_key": "Fillimilli Cushion Pang Pang Puff", "features": "厚實有彈性、上妝服貼、省時省粉底", "skin_type": "所有使用氣墊粉餅或粉底液的化妝者", "reason": "Olive Young 自有美妝配件品牌 Fillimilli 的明星產品。這款氣墊粉撲非常厚實，彈性極佳，能將粉底均勻且輕薄地拍入肌膚，大幅提升底妝的服貼度，是去 OY 必抓好幾個回台的囤貨小物。", "tips": "可用於氣墊粉餅，也適合搭配普通粉底液使用。上妝時採用「快速拍打」的方式，能讓妝效更具光澤與遮瑕力。", "img_url": "images/fillimilli.svg"}, {"id": "too_cool", "time": "12:43", "name": "Too Cool for School 美術課修容/腮紅 #14", "en_name": "Too Cool for School Artclass Shading", "category": "makeup", "category_zh": "彩妝與定妝", "img_key": "Too Cool for School Artclass Shading", "features": "發色自然、柔滑粉質、不易失手", "skin_type": "彩妝新手、喜愛溫柔日常妝容者", "reason": "Too Cool for School 的經典美術課系列，以極佳的發色與粉質著稱。#14 號色提供了極為溫柔、自然且符合亞洲人膚色的冷暖平衡色調，不易結塊且能完美修飾臉部輪廓。", "tips": "用修容刷或腮紅刷沾取後，在手背上稍微拍掉多餘粉末，再輕刷於臉頰或下顎線，可少量多次疊加。", "img_url": "images/too_cool.svg"}, {"id": "peripera", "time": "14:09", "name": "Peripera 水光唇釉 (Ink Mood Glowy)", "en_name": "Peripera Ink Mood Glowy Tint", "category": "makeup", "category_zh": "彩妝與定妝", "img_key": "Peripera Ink Mood Glowy Tint", "features": "玻璃水光感、滋潤修飾唇紋、持久顯色", "skin_type": "唇紋明顯、喜愛水光嘟嘟唇與純欲妝效者", "reason": "平價彩妝之王 Peripera 的明星水光唇釉。上嘴後會形成一層晶瑩剔透的水光膜，質地保濕不乾澀，且帶有輕微的染唇效果，不容易完全掉色，是打造網紅玻璃唇的首選。", "tips": "塗抹於雙唇後，**靜待 1-2 分鐘不要抿嘴**，等它自動成膜後，水光感 and 持久度會大幅提升。", "img_url": "images/peripera.svg"}, {"id": "banila_co", "time": "15:14", "name": "Banila Co 緻柔卸妝膏", "en_name": "Banila Co Clean It Zero Cleansing Balm", "category": "skincare", "category_zh": "臉部清潔", "img_key": "Banila Co Clean It Zero Cleansing Balm", "features": "雪酪質地、秒乳化、溫和不緊繃", "skin_type": "所有膚質，包括敏感肌與日常化濃妝者", "reason": "風靡全球的「國民卸妝膏」。雪酪般的固體質地，接觸體溫後會瞬間融化並乳化，能溫和、徹底地卸除所有頑固的防水彩妝與毛孔髒污，且洗後完全不熏眼、不緊繃。", "tips": "保持雙手和臉部乾燥，取適量卸妝膏塗抹於臉部輕柔按摩打圈，再沾取少量清水使其完全「乳化」變白，最後用溫水徹底沖洗乾淨。", "img_url": "images/banila_co.svg"}, {"id": "teazen", "time": "16:29", "name": "Teazen 康普茶 (Kombucha)", "en_name": "Teazen Kombucha", "category": "lifestyle", "category_zh": "健康飲品", "img_key": "Teazen Kombucha", "features": "低卡無糖、富含益生菌、清爽氣泡感", "skin_type": "注重腸道健康、想戒含糖飲料的健康追求者", "reason": "因為 BTS 成員飲用而火遍全韓的健康機能飲品。採用凍乾技術保留乳酸菌與益生元，沖泡後帶有碳酸微氣泡感，口味酸甜清爽（如檸檬、水蜜桃等），一包熱量僅 15 卡，解膩無負擔。", "tips": "用 250ml - 500ml 的冷水或冰水沖泡，氣泡感會更加強烈，喝起來就像健康的汽水，非常適合作為大餐後的消食飲料。", "img_url": "images/teazen.svg"}];
+      // 切換 section display
+      const sections = document.querySelectorAll('.app-section');
+      sections.forEach(sec => {
+        if (sec.id === sectionId) {
+          sec.classList.add('active');
+        } else {
+          sec.classList.remove('active');
+        }
+      });
+      
+      // 自動捲動到主選單下方以改善行動端體驗
+      document.getElementById('main-nav').scrollIntoView({ behavior: 'smooth' });
+    }
 
-function renderOliveYoung() {
-  const grid = document.getElementById("oy-product-grid");
-  if (!grid) return;
-  
-  let html = "";
-  oyProducts.forEach(p => {
-    const badgeHtml = p.badge ? `<div class="oy-card-badge">${p.badge}</div>` : '';
-    const tagsHtml = p.features.split('、').map(t => `<span class="oy-tag">${t.trim()}</span>`).join('');
-    
-    html += `
-      <div class="oy-card" data-category="${p.category}" onclick="openOyModal('${p.id}')">
-        <div class="oy-card-time"><i class="fa-solid fa-clock"></i> ${p.time}</div>
-        ${badgeHtml}
-        <div class="oy-img-container">
-          <img src="${p.img_url}" alt="${p.name}" class="oy-img" onerror="this.src='https://via.placeholder.com/300x300.png?text=${p.img_key.replace(/ /g, '+')}'">
+    function getSectionIdByText(text) {
+      if (text.includes("每日行程")) return "itinerary-section";
+      if (text.includes("交通地圖")) return "metro-section";
+      if (text.includes("必買好物")) return "oliveyoung-section";
+      if (text.includes("景點寫真")) return "gallery-section";
+      if (text.includes("交通試算")) return "tools-section";
+      if (text.includes("美食商圈")) return "recommendation-section";
+      return "";
+    }
+
+    // 2. 渲染行程 Day 子選單 (Sub Tabs)
+    function renderSubDayTabs() {
+      const container = document.getElementById("sub-nav-container");
+      let html = "";
+      
+      itineraryData.forEach(d => {
+        html += `
+          <button class="sub-tab-btn ${d.day === 1 ? 'active' : ''}" data-day="${d.day}" id="sub-tab-day-${d.day}">
+            <span class="sub-tab-day">DAY 0${d.day}</span>
+            <span style="font-size:0.85rem; font-weight:700; color:#fff;">8/${8+d.day}</span>
+            <span style="font-size:0.75rem; color:var(--text-muted);">${d.subTitle.split('·')[0]}</span>
+          </button>
+        `;
+      });
+      
+      container.innerHTML = html;
+    }
+
+    // 3. 渲染 Day Timeline 行程
+    function renderDayTimeline(dayNum) {
+      const container = document.getElementById("timeline-container");
+      const dayData = itineraryData.find(d => d.day === dayNum);
+      
+      if (!dayData) return;
+      
+      document.getElementById("day-title").textContent = `Day ${dayData.day}｜${dayData.date} - ${dayData.title}`;
+      
+      let html = `<div class="timeline">`;
+      dayData.items.forEach(item => {
+        let badgeClass = "badge-sight";
+        if (item.badgeType === "food") badgeClass = "badge-food";
+        if (item.badgeType === "shop") badgeClass = "badge-shop";
+        
+        html += `
+          <div class="timeline-item">
+            <div class="timeline-icon">${item.icon}</div>
+            <div class="event-card">
+              <div class="event-header-flex">
+                <span class="event-time">${item.time}</span>
+                ${item.mapUrl ? `<a href="${item.mapUrl}" target="_blank" rel="noopener" class="btn-map-link">📍 導航地圖</a>` : ''}
+              </div>
+              <h3 class="event-title">${item.title}</h3>
+              <p class="event-desc">${item.desc}</p>
+              <div class="event-badges">
+                ${item.badges.map(b => `<span class="badge ${badgeClass}">${b}</span>`).join("")}
+              </div>
+            </div>
+          </div>
+        `;
+      });
+      html += `</div>`;
+      
+      container.innerHTML = html;
+      
+      // 更新子 Tab 選中狀態
+      document.querySelectorAll(".sub-tab-btn").forEach(btn => {
+        btn.classList.toggle("active", parseInt(btn.dataset.day) === dayNum);
+      });
+    }
+
+    // 4. 渲染相片圖鑑
+    function renderGallery() {
+      const container = document.getElementById("gallery-container");
+      let html = "";
+      
+      galleryPhotos.forEach((photo, index) => {
+        html += `
+          <div class="photo-card" onclick="openModal(${index})">
+            <img src="${photo.src}" alt="${photo.title}" loading="lazy">
+            <div class="photo-overlay">
+              <h4 class="photo-title">${photo.title}</h4>
+              <span class="photo-location">📍 ${photo.location}</span>
+            </div>
+          </div>
+        `;
+      });
+      
+      container.innerHTML = html;
+    }
+
+    function openModal(index) {
+      const photo = galleryPhotos[index];
+      document.getElementById("modal-img").src = photo.src;
+      document.getElementById("modal-title").textContent = photo.title;
+      document.getElementById("modal-location").textContent = `📍 ${photo.location}`;
+      document.getElementById("modal-desc").textContent = photo.desc;
+      
+      const modal = document.getElementById("photo-modal");
+      modal.style.display = "flex";
+      setTimeout(() => modal.classList.add("active"), 10);
+    }
+
+    function closeModal() {
+      const modal = document.getElementById("photo-modal");
+      modal.classList.remove("active");
+      setTimeout(() => modal.style.display = "none", 300);
+    }
+
+    // 5. 匯率試算
+    function calculateExchange() {
+      const krwInput = document.getElementById("krw-input").value;
+      const rateInput = document.getElementById("rate-input").value || 0.024;
+      const peopleInput = document.getElementById("people-input").value || 8;
+      
+      const krw = parseFloat(krwInput) || 0;
+      const rate = parseFloat(rateInput);
+      const people = parseInt(peopleInput) || 1;
+      
+      const twdTotal = Math.round(krw * rate);
+      const twdPerPerson = Math.round(twdTotal / people);
+      
+      document.getElementById("twd-result").textContent = `NT$ ${twdTotal.toLocaleString()}`;
+      document.getElementById("twd-per-person").textContent = `NT$ ${twdPerPerson.toLocaleString()}`;
+    }
+
+    // 6. 事件監聽設定
+    function setupEventListeners() {
+      // 行程子 Tab 點擊
+      document.getElementById("sub-nav-container").addEventListener("click", (e) => {
+        const subBtn = e.target.closest(".sub-tab-btn");
+        if (subBtn) {
+          const day = parseInt(subBtn.dataset.day);
+          renderDayTimeline(day);
+        }
+      });
+      
+      // 試算器事件
+      document.getElementById("krw-input").addEventListener("input", calculateExchange);
+      document.getElementById("rate-input").addEventListener("input", calculateExchange);
+      document.getElementById("people-input").addEventListener("input", calculateExchange);
+      
+      // 交通方案按鈕
+      document.querySelectorAll(".transit-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".transit-btn").forEach(b => b.style.borderColor = "var(--border-light)");
+          btn.style.borderColor = "var(--primary-glow)";
+          
+          const plan = btn.dataset.plan;
+          const detailBox = document.getElementById("transit-detail");
+          
+          if (plan === "venti") {
+            detailBox.innerHTML = `
+              <strong style="color: var(--accent-gold);">👍 方案 1：預先預約 1 台 9~12 人座接送包車（極推薦！）</strong>
+              <p style="margin-top: 0.4rem;">強烈建議提前預訂機場包車！出關後司機直接舉牌接機，將 8 人與 8 個大行李箱一次載走直達釜山站東橫 INN，單趟約 NT$ 1,800-2,200（人均僅約 NT$ 250 元），最方便省心。</p>
+            `;
+          } else if (plan === "kakao") {
+            detailBox.innerHTML = `
+              <strong style="color: var(--primary-glow);">🚕 方案 2：現場 Kakao T 叫 2 台 Venti / 大型計程車</strong>
+              <p style="margin-top: 0.4rem;">Kakao T App 已支援中文介面與海外信用卡。出關後可叫 2 台 Venti（每台 4 人 + 4 箱），2 台總費用約 70,000 - 90,000 韓元（約 NT$ 1,680 - 2,160）。但需注意班機抵達高峰期大型車可能需稍作等待。</p>
+            `;
+          } else if (plan === "bus") {
+            detailBox.innerHTML = `
+              <strong style="color: var(--accent-green);">🚌 方案 3：機場巴士 (Limousine Bus) 直達釜山站</strong>
+              <p style="margin-top: 0.4rem;">於國際線 1 樓 3 號月台搭乘「釜山站/南浦洞線」，每人約 6,000-10,000 韓元（約 NT$ 144-240），8人總計約 NT$ 1,152-1,920。大行李放置下層車廂，車程約 45 分鐘。</p>
+            `;
+          }
+        });
+      });
+    }
+
+    // === Olive Young Recommendations Logic ===
+    const oyProducts = [{"id": "mediheal", "time": "01:37", "name": "MEDIHEAL 精華面膜片", "en_name": "MEDIHEAL Essential Mask", "category": "skincare", "category_zh": "臉部護理", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1122709230_0.jpg", "features": "高濃度精華、服貼度高、高CP值", "skin_type": "所有膚質，特別是缺水肌與需要曬後鎮靜者", "reason": "金針菇姐姐強烈推薦的國民面膜。精華液含量極高，面膜紙薄且貼合度優秀。在 Olive Young 購買通常有 10 片一盒的包裝，並且常常有 1+1 (買一送一) 的促銷活動，是去韓國必囤的保濕聖品。", "tips": "建議洗完臉後敷 10-15 分鐘，取下後輕輕按摩至吸收，再擦上乳液鎖水。若有醫美術後泛紅，綠色積雪草款是很好的鎮靜選擇。"}, {"id": "biodance", "time": "03:25", "name": "Biodance 膠原蛋白深層全效面膜", "en_name": "Biodance Bio-Collagen Real Deep Mask", "category": "skincare", "category_zh": "臉部護理", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1124314457_0.jpg", "features": "水凝膠材質、敷完變透明、深層彈力", "skin_type": "乾性肌、熟齡肌、暗沉無光澤肌", "reason": "近期紅遍全球的「敷著睡覺面膜」。它是果凍般的水凝膠材質，敷上後面膜中的超低分子玻尿酸與膠原蛋白會慢慢被肌膚吸收，面膜會隨時間變為完全透明。能顯著改善毛孔與提亮膚色。", "tips": "適合在夜間保養的最後一步使用，建議敷 3-4 小時以上（甚至敷著入睡），醒來後撕下即可看見驚人的水光感與澎潤肌膚。", "badge": "熱銷斷貨王"}, {"id": "beyond", "time": "04:14", "name": "Beyond 美白乳液 / 身體乳", "en_name": "Beyond Body Emulsion", "category": "body", "category_zh": "身體保養", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1117564731_0.jpg", "features": "溫和草本、高級白麝香、深層鎖水", "skin_type": "所有膚質、身體肌膚乾燥脫屑者", "reason": "LG 生活健康旗下的環保自然品牌。這款身體乳以療癒且高級的「白麝香」香氣聞名，質地乳爽不黏膩，保濕度極佳，能修護乾燥的肌膚屏障。", "tips": "每天洗澡後，在身體微濕時塗抹，保濕與持香效果最佳。"}, {"id": "yunjac", "time": "05:27", "name": "Yunjac 然植亞保濕底霜 (Base Prep)", "en_name": "Yunjac Skin Perfecting Protective Base Prep", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1119565507_0.jpg", "features": "底妝膠水、防護隔離、透亮光澤", "skin_type": "乾性肌、混合偏乾、底妝容易浮粉起皮者", "reason": "高端草本護膚品牌推出的妝前精華。被譽為「乾皮親媽」與「化妝師的秘密武器」，質地如水般輕盈，能迅速撫平臉部角質，讓後續不論是粉底液還是氣墊粉餅都非常貼合，展現高級的水光感。", "tips": "在防曬後、底妝前，取 2-3 滴均勻塗抹於全臉，特別是易卡粉的鼻翼與兩頰，輕拍至微黏狀態再上底妝。", "badge": "美妝大賞第一"}, {"id": "obge", "time": "06:13", "name": "OBgE 自然防曬棒", "en_name": "OBgE Natural Cover Sun Stick", "category": "skincare", "category_zh": "防曬護理", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1125217431_0.jpg", "features": "不沾手、清爽控油、不泛白", "skin_type": "所有膚質、混合偏油、男士、喜愛戶外活動者", "reason": "韓國男士理容第一品牌推出的防曬棒，女生也非常愛用！具備 SPF50+/PA++++ 最高防曬規格。棒狀設計極為方便，完全不沾手，上臉後呈乾爽霧面，且完全不泛白、不黏膩，抗汗效果優秀。", "tips": "適合隨身攜帶，在戶外每 2-3 小時隨時塗抹補防曬。因其清爽度高，妝後輕拍補防曬也不易弄髒妝容。"}, {"id": "the_saem", "time": "07:12", "name": "The Saem 得鮮完美遮瑕液", "en_name": "The Saem Cover Perfection Tip Concealer", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1071477759_0.jpg", "features": "極高遮瑕力、平價戰神、多色號選擇", "skin_type": "有痘疤、黑眼圈、班點需要高度遮瑕者", "reason": "風靡亞洲的平價遮瑕天王。遮瑕力強、持妝度極佳，不論是多深的痘疤或黑眼圈，輕點一下就能完美遮蓋，CP 值高到不可思議。", "tips": "因遮瑕力極高，質地偏乾，建議局部「點」在瑕疵處，等 10 秒微乾後，再使用濕海綿或粉撲邊緣輕輕拍開。"}, {"id": "about_tone", "time": "08:40", "name": "About Tone 柔焦控油蜜粉餅", "en_name": "About Tone Blur Powder Pact", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1109968434_0.jpg", "features": "一秒磨皮、粉質極細、強效控油", "skin_type": "油性肌、混合肌、毛孔粗大者", "reason": "前身為風靡韓國的 Eglips 蜜粉餅。這款粉餅主打「空氣柔焦」效果，粉質如輕煙般細緻，能瞬間吸附皮脂，讓毛孔隱形，打造如陶瓷娃娃般的乾淨霧面妝效。", "tips": "使用附帶的粉撲，在底妝後輕壓在容易出油的 T 字部位、鼻翼，或用於眼周打底防暈染。"}, {"id": "so_natural", "time": "09:55", "name": "So Natural 經典定妝噴霧", "en_name": "So Natural All Day Tight Makeup Setting Fixer", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1066497491_0.jpg", "features": "細緻霧化、快速成膜、抗摩擦防脫妝", "skin_type": "所有膚質、混合偏油、需要長時間持妝者", "reason": "韓國定妝噴霧界的常勝冠軍，粉紅色瓶身非常具有代表性。其壓頭噴出的水霧極其細緻，不會在臉上結成水珠，能快速在底妝上形成保護膜，抗汗、抗油且防摩擦。", "tips": "化妝完成後，將噴霧距離臉部 20-30 公分，畫 'X' 和 'T' 字形噴灑全臉，靜待 1 分鐘自然風乾成膜，切勿用手拍打。"}, {"id": "canmake", "time": "10:30", "name": "Canmake 腮紅霜", "en_name": "Canmake Cream Cheek", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1053709088_0.jpg", "features": "清透血色感", "skin_type": "所有膚質，尤其是喜愛無粉感日韓系妝容者", "reason": "雖然是日系彩妝，但其極佳的自然融膚感在韓國 Olive Young 也擁有超高人氣。凝膠般的質地上臉推開後會化為乾爽的粉質，呈現如皮膚底層自然透出來 of 紅潤氣色。", "tips": "用手指沾取適量，輕點於蘋果肌處往外拍開，或是用氣墊粉撲上妝，效果更加均勻清透。"}, {"id": "fillimilli", "time": "11:38", "name": "Fillimilli 胖胖氣墊粉撲", "en_name": "Fillimilli Cushion Pang Pang Puff", "category": "tools", "category_zh": "美妝工具", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1121118128_0.jpg", "features": "厚實有彈性、上妝服貼、省時省粉底", "skin_type": "所有使用氣墊粉餅或粉底液的化妝者", "reason": "Olive Young 自有美妝配件品牌 Fillimilli 的明星產品。這款氣墊粉撲非常厚實，彈性極佳，能將粉底均勻且輕薄地拍入肌膚，大幅提升底妝的服貼度，是去 OY 必抓好幾個回台的囤貨小物。", "tips": "可用於氣墊粉餅，也適合搭配普通粉底液使用。上妝時採用「快速拍打」的方式，能讓妝效更具光澤與遮瑕力。"}, {"id": "too_cool", "time": "12:43", "name": "Too Cool for School 美術課修容/腮紅 #14", "en_name": "Too Cool for School Artclass Shading", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1097241355_0.jpg", "features": "發色自然、柔滑粉質、不易失手", "skin_type": "彩妝新手、喜愛溫柔日常妝容者", "reason": "Too Cool for School 的經典美術課系列，以極佳的發色與粉質著稱。#14 號色提供了極為溫柔、自然且符合亞洲人膚色的冷暖平衡色調，不易結塊且能完美修飾臉部輪廓。", "tips": "用修容刷或腮紅刷沾取後，在手背上稍微拍掉多餘粉末，再輕刷於臉頰或下顎線，可少量多次疊加。"}, {"id": "peripera", "time": "14:09", "name": "Peripera 水光唇釉 (Ink Mood Glowy)", "en_name": "Peripera Ink Mood Glowy Tint", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1111666874_0.jpg", "features": "玻璃水光感、滋潤修飾唇紋、持久顯色", "skin_type": "唇紋明顯、喜愛水光嘟嘟唇與純欲妝效者", "reason": "平價彩妝之王 Peripera 的明星水光唇釉。上嘴後會形成一層晶瑩剔透的水光膜，質地保濕不乾澀，且帶有輕微的染唇效果，不容易完全掉色，是打造網紅玻璃唇的首選。", "tips": "塗抹於雙唇後，**靜待 1-2 分鐘不要抿嘴**，等它自動成膜後，水光感和持久度會大幅提升。"}, {"id": "banila_co", "time": "15:14", "name": "Banila Co 緻柔卸妝膏", "en_name": "Banila Co Clean It Zero Cleansing Balm", "category": "skincare", "category_zh": "臉部清潔", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1069614769_0.jpg", "features": "雪酪質地、秒乳化、溫和不緊繃", "skin_type": "所有膚質，包括敏感肌與日常化濃妝者", "reason": "風靡全球的「國民卸妝膏」。雪酪般的固體質地，接觸體溫後會瞬間融化並乳化，能溫和、徹底地卸除所有頑固的防水彩妝與毛孔髒污，且洗後完全不熏眼、不緊繃。", "tips": "保持雙手和臉部乾燥，取適量卸妝膏塗抹於臉部輕柔按摩打圈，再沾取少量清水使其完全「乳化」變白，最後用溫水徹底沖洗乾淨。"}, {"id": "teazen", "time": "16:29", "name": "Teazen 康普茶 (Kombucha)", "en_name": "Teazen Kombucha", "category": "lifestyle", "category_zh": "健康飲品", "img_url": "https://images.weserv.nl/?url=images.yesstyle.com/g/p/1105367807_0.jpg", "features": "低卡無糖、富含益生菌、清爽氣泡感", "skin_type": "注重腸道健康、想戒含糖飲料的健康追求者", "reason": "因為 BTS 成員飲用而火遍全韓的健康機能飲品。採用凍乾技術保留乳酸菌與益生元，沖泡後帶有碳酸微氣泡感，口味酸甜清爽（如檸檬、水蜜桃等），一包熱量僅 15 卡，解膩無負擔。", "tips": "用 250ml - 500ml 的冷水或冰水沖泡，氣泡感會更加強烈，喝起來就像健康的汽水，非常適合作為大餐後的消食飲料。"}];
+
+    function renderOliveYoung() {
+      const grid = document.getElementById("oy-product-grid");
+      if (!grid) return;
+      
+      let html = "";
+      oyProducts.forEach(p => {
+        const badgeHtml = p.badge ? `<div class="oy-card-badge">${p.badge}</div>` : '';
+        const tagsHtml = p.features.split('、').map(t => `<span class="oy-tag">${t.trim()}</span>`).join('');
+        
+        html += `
+          <div class="oy-card" data-category="${p.category}" onclick="openOyModal('${p.id}')">
+            <div class="oy-card-time"><i class="fa-solid fa-clock"></i> ${p.time}</div>
+            ${badgeHtml}
+            <div class="oy-img-container">
+              <img src="${p.img_url}" alt="${p.name}" class="oy-img" referrerpolicy="no-referrer" onerror="this.src='https://via.placeholder.com/300x300.png?text=${p.img_key.replace(/ /g, '+')}'">
+            </div>
+            <div class="oy-card-content">
+              <span class="oy-card-cat">${p.category_zh}</span>
+              <h3 class="oy-card-title">${p.name}</h3>
+              <p class="oy-card-en">${p.en_name}</p>
+              <div class="oy-tags">
+                ${tagsHtml}
+              </div>
+            </div>
+          </div>
+        `;
+      });
+      grid.innerHTML = html;
+    }
+
+    function filterOyCategory(category) {
+      const buttons = document.querySelectorAll('.oy-filter-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const cards = document.querySelectorAll('.oy-card');
+      cards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        if (category === 'all') {
+          card.style.display = 'flex';
+        } else if (category === 'skincare') {
+          if (cardCategory === 'skincare') {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        } else {
+          if (cardCategory === category) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        }
+      });
+    }
+
+    function openOyModal(id) {
+      const p = oyProducts.find(prod => prod.id === id);
+      if (!p) return;
+
+      const tagsHtml = p.features.split('、').map(t => `<span class="oy-tag" style="font-size:0.75rem; padding: 3px 8px;">${t.trim()}</span>`).join('');
+
+      const modalBodyHtml = `
+        <div class="oy-modal-header">
+          <div class="oy-modal-img-box">
+            <img src="${p.img_url}" alt="${p.name}" class="oy-modal-img" referrerpolicy="no-referrer" onerror="this.src='https://via.placeholder.com/300x300.png?text=${p.img_key.replace(/ /g, '+')}'">
+          </div>
+          <div class="oy-modal-title-info">
+            <span class="oy-modal-time"><i class="fa-solid fa-clock"></i> 影片時間 ${p.time}</span>
+            <h2 class="oy-modal-name">${p.name}</h2>
+            <div class="oy-modal-en">${p.en_name}</div>
+          </div>
         </div>
-        <div class="oy-card-content">
-          <span class="oy-card-cat">${p.category_zh}</span>
-          <h3 class="oy-card-title">${p.name}</h3>
-          <p class="oy-card-en">${p.en_name}</p>
-          <div class="oy-tags">
+        
+        <div class="oy-modal-section">
+          <div class="oy-modal-sec-title"><i class="fa-solid fa-star"></i> 產品特點</div>
+          <div style="display:flex; gap:6px; flex-wrap:wrap; margin-top:0.4rem; margin-bottom:0.4rem;">
             ${tagsHtml}
           </div>
         </div>
-      </div>
-    `;
-  });
-  grid.innerHTML = html;
-}
 
-function filterOyCategory(category) {
-  // 切換按鈕狀態
-  const buttons = document.querySelectorAll('.oy-filter-btn');
-  buttons.forEach(btn => btn.classList.remove('active'));
-  event.target.classList.add('active');
+        <div class="oy-modal-section">
+          <div class="oy-modal-sec-title"><i class="fa-solid fa-face-smile"></i> 適合對象</div>
+          <div class="oy-modal-sec-text">${p.skin_type}</div>
+        </div>
 
-  const cards = document.querySelectorAll('.oy-card');
-  cards.forEach(card => {
-    const cardCategory = card.getAttribute('data-category');
-    if (category === 'all') {
-      card.style.display = 'flex';
-    } else if (category === 'skincare') {
-      if (cardCategory === 'skincare') {
-        card.style.display = 'flex';
-      } else {
-        card.style.display = 'none';
-      }
-    } else {
-      if (cardCategory === category) {
-        card.style.display = 'flex';
-      } else {
-        card.style.display = 'none';
-      }
+        <div class="oy-modal-section oy-modal-reason-box">
+          <div class="oy-modal-sec-title" style="color:var(--accent-gold);"><i class="fa-solid fa-comment-dots"></i> 私人顧問姐推薦理由</div>
+          <div class="oy-modal-sec-text" style="color:#fff; font-weight:500;">${p.reason}</div>
+        </div>
+
+        <div class="oy-modal-section">
+          <div class="oy-modal-sec-title"><i class="fa-solid fa-lightbulb"></i> 使用與購物訣竅</div>
+          <div class="oy-modal-sec-text">${p.tips}</div>
+        </div>
+      `;
+
+      document.getElementById('oy-modal-body').innerHTML = modalBodyHtml;
+      const modal = document.getElementById('oy-modal');
+      modal.style.display = 'flex';
+      setTimeout(() => modal.classList.add('active'), 10);
     }
-  });
-}
 
-function openOyModal(id) {
-  const p = oyProducts.find(prod => prod.id === id);
-  if (!p) return;
+    function closeOyModal() {
+      const modal = document.getElementById('oy-modal');
+      modal.classList.remove('active');
+      setTimeout(() => {
+        modal.style.display = 'none';
+      }, 300);
+    }
 
-  const tagsHtml = p.features.split('、').map(t => `<span class="oy-tag" style="font-size:0.75rem; padding: 3px 8px;">${t.trim()}</span>`).join('');
+    function calculateOyTax() {
+      const priceInput = document.getElementById('oyCalcPrice');
+      const price = parseFloat(priceInput.value);
+      
+      if (isNaN(price) || price < 0) {
+        alert('請輸入有效金額！');
+        return;
+      }
 
-  const modalBodyHtml = `
-    <div class="oy-modal-header">
-      <div class="oy-modal-img-box">
-        <img src="${p.img_url}" alt="${p.name}" class="oy-modal-img" onerror="this.src='https://via.placeholder.com/300x300.png?text=${p.img_key.replace(/ /g, '+')}'">
-      </div>
-      <div class="oy-modal-title-info">
-        <span class="oy-modal-time"><i class="fa-solid fa-clock"></i> 影片時間 ${p.time}</span>
-        <h2 class="oy-modal-name">${p.name}</h2>
-        <div class="oy-modal-en">${p.en_name}</div>
-      </div>
-    </div>
-    
-    <div class="oy-modal-section">
-      <div class="oy-modal-sec-title"><i class="fa-solid fa-star"></i> 產品特點</div>
-      <div style="display:flex; gap:6px; flex-wrap:wrap; margin-top:0.4rem; margin-bottom:0.4rem;">
-        ${tagsHtml}
-      </div>
-    </div>
+      const resultBox = document.getElementById('oyCalcResult');
+      
+      if (price < 15000) {
+        resultBox.style.display = 'block';
+        document.getElementById('oyResPrice').innerText = price.toLocaleString() + ' KRW';
+        document.getElementById('oyResRate').innerText = '未達退稅標準';
+        document.getElementById('oyResTax').innerText = '0 KRW';
+        document.getElementById('oyResTwd').innerText = 'NT$ 0';
+        document.getElementById('oyResFinal').innerText = price.toLocaleString() + ' KRW';
+        return;
+      }
 
-    <div class="oy-modal-section">
-      <div class="oy-modal-sec-title"><i class="fa-solid fa-face-smile"></i> 適合對象</div>
-      <div class="oy-modal-sec-text">${p.skin_type}</div>
-    </div>
+      let rate = 0.05;
+      let rateText = '5.0%';
+      
+      if (price >= 15000 && price < 30000) {
+        rate = 0.033;
+        rateText = '3.3%';
+      } else if (price >= 30000 && price < 50000) {
+        rate = 0.05;
+        rateText = '5.0%';
+      } else if (price >= 50000 && price < 75000) {
+        rate = 0.06;
+        rateText = '6.0%';
+      } else if (price >= 75000 && price < 100000) {
+        rate = 0.065;
+        rateText = '6.5%';
+      } else {
+        rate = 0.07;
+        rateText = '7.0%';
+      }
 
-    <div class="oy-modal-section oy-modal-reason-box">
-      <div class="oy-modal-sec-title" style="color:var(--accent-gold);"><i class="fa-solid fa-comment-dots"></i> 私人顧問姐推薦理由</div>
-      <div class="oy-modal-sec-text" style="color:#fff; font-weight:500;">${p.reason}</div>
-    </div>
+      const tax = Math.round(price * rate);
+      const twd = Math.round(tax * 0.024); // 預設匯率 0.024
+      const finalPrice = price - tax;
 
-    <div class="oy-modal-section">
-      <div class="oy-modal-sec-title"><i class="fa-solid fa-lightbulb"></i> 使用與購物訣竅</div>
-      <div class="oy-modal-sec-text">${p.tips}</div>
-    </div>
-  `;
-
-  document.getElementById('oy-modal-body').innerHTML = modalBodyHtml;
-  const modal = document.getElementById('oy-modal');
-  modal.style.display = 'flex';
-  setTimeout(() => modal.classList.add('active'), 10);
-}
-
-function closeOyModal() {
-  const modal = document.getElementById('oy-modal');
-  modal.classList.remove('active');
-  setTimeout(() => {
-    modal.style.display = 'none';
-  }, 300);
-}
-
-function calculateOyTax() {
-  const priceInput = document.getElementById('oyCalcPrice');
-  const price = parseFloat(priceInput.value);
-  
-  if (isNaN(price) || price < 0) {
-    alert('請輸入有效金額！');
-    return;
-  }
-
-  const resultBox = document.getElementById('oyCalcResult');
-  
-  if (price < 15000) {
-    resultBox.style.display = 'block';
-    document.getElementById('oyResPrice').innerText = price.toLocaleString() + ' KRW';
-    document.getElementById('oyResRate').innerText = '未達退稅標準';
-    document.getElementById('oyResTax').innerText = '0 KRW';
-    document.getElementById('oyResTwd').innerText = 'NT$ 0';
-    document.getElementById('oyResFinal').innerText = price.toLocaleString() + ' KRW';
-    return;
-  }
-
-  let rate = 0.05;
-  let rateText = '5.0%';
-  
-  if (price >= 15000 && price < 30000) {
-    rate = 0.033;
-    rateText = '3.3%';
-  } else if (price >= 30000 && price < 50000) {
-    rate = 0.05;
-    rateText = '5.0%';
-  } else if (price >= 50000 && price < 75000) {
-    rate = 0.06;
-    rateText = '6.0%';
-  } else if (price >= 75000 && price < 100000) {
-    rate = 0.065;
-    rateText = '6.5%';
-  } else {
-    rate = 0.07;
-    rateText = '7.0%';
-  }
-
-  const tax = Math.round(price * rate);
-  const twd = Math.round(tax * 0.024); // 預設匯率 0.024
-  const finalPrice = price - tax;
-
-  resultBox.style.display = 'block';
-  document.getElementById('oyResPrice').innerText = price.toLocaleString() + ' KRW';
-  document.getElementById('oyResRate').innerText = rateText;
-  document.getElementById('oyResTax').innerText = tax.toLocaleString() + ' KRW';
-  document.getElementById('oyResTwd').innerText = 'NT$ ' + twd.toLocaleString();
-  document.getElementById('oyResFinal').innerText = finalPrice.toLocaleString() + ' KRW';
-}
-
+      resultBox.style.display = 'block';
+      document.getElementById('oyResPrice').innerText = price.toLocaleString() + ' KRW';
+      document.getElementById('oyResRate').innerText = rateText;
+      document.getElementById('oyResTax').innerText = tax.toLocaleString() + ' KRW';
+      document.getElementById('oyResTwd').innerText = 'NT$ ' + twd.toLocaleString();
+      document.getElementById('oyResFinal').innerText = finalPrice.toLocaleString() + ' KRW';
+    }
   </script>
 </body>
 </html>
