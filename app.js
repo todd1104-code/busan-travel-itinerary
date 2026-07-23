@@ -1,12 +1,12 @@
-// 韓國釜山 6天5夜行程網頁互動邏輯 (V4 100% 精準行程對應照片與線上記錄)
+// 韓國釜山 6天5夜行程網頁互動邏輯 (KKday一日遊優化版)
 
 // 行程資料集
 const itineraryData = [
   {
     day: 1,
     date: "8/9（日）",
-    subTitle: "影島 · 白淺灘 · 烤肉",
-    title: "抵達釜山 ➔ 影島絕美海景 ➔ 白淺灘夕陽 ➔ 南浦洞燒肉與夜生活",
+    subTitle: "影島 · 藝術 · 烤肉",
+    title: "抵達釜山 ➔ 影島 Arte Museum ➔ P.ARK 海景咖啡 ➔ 南浦洞燒肉與微醺夜生活",
     items: [
       {
         time: "09:55",
@@ -19,7 +19,7 @@ const itineraryData = [
       {
         time: "11:00 - 11:45",
         title: "金海機場 ➔ 東橫INN 釜山站1號店",
-        desc: "預約專車或叫 2 台 Kakao T Venti 大型計程車直達飯店寄放行李。",
+        desc: "叫 2 台 Kakao T Venti 大型計程車直達飯店寄放行李，避免行李塞不下。",
         icon: "🚕",
         badges: ["專車接送", "行李寄放"],
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Toyoko+Inn+Busan+Station+No.1"
@@ -34,22 +34,22 @@ const itineraryData = [
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Bonjeon+Dwaeji-gukbap+Busan"
       },
       {
-        time: "14:00 - 16:30",
+        time: "13:45 - 15:45",
+        title: "【高評價強推】影島 Arte Museum (아르떼뮤지엄 부산)",
+        desc: "門票 22,000 韓元（可用 PASS 兌換）。大型沉浸式光影展，運用投影、香氛與音效打造細雨與海浪等，室內非常涼快，極好拍照，被評為釜山必訪 CP 值最高景點！",
+        icon: "🎨",
+        badges: ["沉浸式光影展", "室內避暑"],
+        badgeType: "sight",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Arte+Museum+Busan"
+      },
+      {
+        time: "16:00 - 17:15",
         title: "影島海景複合空間（P.ARK）",
-        desc: "挑高 6 層樓超大型海景文化空間，坐在冷氣觀景台喝咖啡，遠眺釜山港與港灣景色（人均約 8,000-12,000 韓元 / NT$ 192-288）。",
+        desc: "超大型海景文化空間，坐在冷氣觀景台喝咖啡看麵包，遠眺釜山港與港灣景色（人均約 8,000-12,000 韓元 / NT$ 192-288）。",
         icon: "☕",
         badges: ["海景咖啡廳", "網美拍照"],
         badgeType: "sight",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=P.ARK+Yeongdo+Busan"
-      },
-      {
-        time: "16:45 - 18:30",
-        title: "白淺灘文化村 & 海岸隧道",
-        desc: "釜山版聖托里尼，沿著彩虹階梯走下海邊，穿過「絕影海岸隧道」拍網美剪影照，夕陽西下時極度夢幻。",
-        icon: "📸",
-        badges: ["絕影海岸", "網美打卡"],
-        badgeType: "sight",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Huinnyeoul+Culture+Village+Busan"
       },
       {
         time: "19:00 - 21:00",
@@ -62,89 +62,97 @@ const itineraryData = [
       },
       {
         time: "21:15 - 23:00",
-        title: "成年人夜生活：南浦洞布帳馬車或釜山塔夜景",
-        desc: "登釜山塔俯瞰夜景（門票 12,000 韓元 / NT$ 288），或至南浦洞布帳馬車攤位喝燒酒配辣炒雞體驗韓劇氛圍。",
+        title: "【夜生活】南浦洞布帳馬車街與龍頭山公園散步",
+        desc: "在龍頭山公園散步拍照，或至布帳馬車攤位喝燒酒配辣炒雞（不推薦登釜山塔，實測反光嚴重且設計一般，在公園拍照即可）。",
         icon: "🍺",
-        badges: ["韓劇布帳馬車", "釜山塔夜景"],
+        badges: ["布帳馬車", "龍頭山散步"],
         badgeType: "food",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Busan+Tower+Yongdusan+Park"
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Yongdusan+Park+Busan"
       }
     ]
   },
   {
     day: 2,
     date: "8/10（一）",
-    subTitle: "膠囊列車 · SPA LAND · 夜景",
-    title: "天空膠囊列車 ➔ SPA LAND 頂級汗蒸幕 ➔ 百貨購物 ➔ BUSAN X the SKY 100樓夜景",
+    subTitle: "天空膠囊 · 三大文化村 · 湯飯",
+    title: "【KKday一日遊方案 B】天空膠囊列車 ➔ 五六島步道 ➔ 白淺灘文化村 ➔ 甘川文化村",
     items: [
       {
-        time: "09:30 - 11:30",
-        title: "海雲台藍線公園（天空膠囊 & 海岸列車）",
-        desc: "包 2 台可愛的天空膠囊列車（尾浦➔青沙浦，4人車 40,000 韓元 / NT$ 960，8人共 2台），空中俯瞰彩色海景。",
+        time: "09:00",
+        title: "釜山站集合上車 (一日遊專車)",
+        desc: "一日遊專車於 KTX 釜山站集合出發。飯店出門步行 3 分鐘即達，免除大隊人馬交通奔波之苦。",
+        icon: "🚌",
+        badges: ["專車出發", "KKday行程"],
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Busan+Station"
+      },
+      {
+        time: "09:50 - 11:20",
+        title: "海雲台藍線公園（天空膠囊列車）",
+        desc: "搭乘可愛的天空膠囊列車，一日遊已包票預定。由「尾浦 ➔ 青沙浦」方向，最靠近海景的第一排軌道無遮擋，視野最美。",
         icon: "🚃",
-        badges: ["天空膠囊", "海岸列車"],
+        badges: ["天空膠囊", "海景第一排"],
         badgeType: "sight",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Haeundae+Blueline+Park+Mipo+Station"
       },
       {
-        time: "11:30 - 13:15",
-        title: "午餐：青沙浦 秀敏家烤貝 / 海鮮麵",
-        desc: "青沙浦紅燈塔旁的超人氣烤扇貝與烤鮑魚（大份烤貝約 50,000 韓元 / NT$ 1,200，人均約 NT$ 480-720）。",
-        icon: "🦪",
-        badges: ["海鮮烤貝", "青沙浦地標"],
+        time: "11:30 - 13:00",
+        title: "五六島天空步道 & 中午餐食自理",
+        desc: "踏在懸崖邊 U 型玻璃棧道上，看五六島與壯麗海浪，拍出凌空絕景。中午在周邊自理午餐小吃。",
+        icon: "🌉",
+        badges: ["天空步道", "午餐自理"],
+        badgeType: "sight",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Oryukdo+Skywalk+Busan"
+      },
+      {
+        time: "13:30 - 15:00",
+        title: "白淺灘文化村 (Huinnyeoul Culture Village)",
+        desc: "影島上的懸崖邊小村，沿著彩虹階梯走海邊，有如釜山版聖托里尼，專車直達最省力。",
+        icon: "📸",
+        badges: ["白淺灘", "沿海小白屋"],
+        badgeType: "sight",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Huinnyeoul+Culture+Village+Busan"
+      },
+      {
+        time: "15:30 - 17:30",
+        title: "甘川文化村 (Gamcheon Culture Village)",
+        desc: "彩色房屋一層一層有如馬丘比丘，可與小王子拍照、逛文創小店。",
+        icon: "🏘️",
+        badges: ["甘川洞", "小王子打卡"],
+        badgeType: "sight",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Gamcheon+Culture+Village+Busan"
+      },
+      {
+        time: "18:45 - 20:30",
+        title: "晚餐：西面豬肉湯飯街 松亭3代豬肉湯飯 (송정3대국밥)",
+        desc: "一日遊結束專車送回市區，推薦在「西面站」下車，直接吃影片大讚的 30 年老店豬肉湯飯（每碗約 9,000 韓元 / NT$ 216），飯後搭地鐵回飯店。",
+        icon: "🍲",
+        badges: ["老字號湯飯", "西面商圈"],
         badgeType: "food",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Suminine+Cheongsapo+Busan"
-      },
-      {
-        time: "13:45 - 16:45",
-        title: "【高溫避暑】SPA LAND 汗蒸幕（新世界 Centum City 店）",
-        desc: "門票 23,000 韓元（約 NT$ 552，可用 PASS 兌換）。全釜山最奢華汗蒸幕，內有 13 種主題黃土/冰雪房與戶外天然溫泉足浴。",
-        icon: "♨️",
-        badges: ["頂級汗蒸幕", "天然溫泉"],
-        badgeType: "sight",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=SPA+LAND+Centum+City+Busan"
-      },
-      {
-        time: "16:45 - 19:15",
-        title: "【購物天堂】新世界百貨 Centum City 店",
-        desc: "吉尼斯紀錄全球最大百貨，集合 Gentle Monster、Tamburins、Acne Studios 與韓國在地潮牌，買好買滿。",
-        icon: "🛍️",
-        badges: ["全球最大百貨", "韓國潮牌"],
-        badgeType: "shop",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Shinsegae+Centum+City+Busan"
-      },
-      {
-        time: "20:45 - 22:00",
-        title: "【夜景地標】BUSAN X the SKY (100樓觀景台)",
-        desc: "門票 27,000 韓元（約 NT$ 648）。韓國第二高樓，搭乘超高速電梯直達 100 樓，俯瞰海雲台沙灘與廣安大橋夜景，內有全球最高星巴克。",
-        icon: "🌃",
-        badges: ["100樓高空觀景", "最高星巴克"],
-        badgeType: "sight",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=BUSAN+X+the+SKY"
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Songjo-3-dae+Dwaeji-gukbap+Seomyeon"
       }
     ]
   },
   {
     day: 3,
     date: "8/11（二）",
-    subTitle: "松島纜車 · 美妝 · 超市大採購",
-    title: "松島纜車&龍宮雲橋 ➔ 札嘎其海鮮宴 ➔ 光復路美妝血拼 ➔ 樂天超市大採購",
+    subTitle: "松島水晶纜車 · 美妝 · 帝王蟹饗宴",
+    title: "松島水晶纜車&龍宮雲橋 ➔ 札嘎其帝王蟹海鮮宴 ➔ 光復路美妝血拼 ➔ 樂天超市大採購",
     items: [
       {
         time: "10:00 - 12:15",
-        title: "松島海上纜車 ➔ 松島龍宮雲橋 ➔ 天空步道",
-        desc: "纜車來回 17,000 韓元（約 NT$ 408，可用 PASS），搭水晶車廂過海；連通走松島龍宮雲橋（門票 1,000 韓元 / NT$ 24），跨海踏在無人島斷崖上。",
+        title: "松島海上纜車（水晶車廂） ➔ 松島龍宮雲橋",
+        desc: "纜車來回 22,000 韓元（可用 PASS 兌換）。使用 Pass 兌換可免費升級為水晶透明車廂！松島龍宮雲橋需現場購票（1,000 韓元），懸崖景觀極具震撼。",
         icon: "🈳",
-        badges: ["水晶纜車", "龍宮雲橋"],
+        badges: ["水晶透明車廂", "龍宮雲橋"],
         badgeType: "sight",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Songdo+Marine+Cable+Car+Busan"
       },
       {
         time: "12:30 - 14:30",
-        title: "午餐：札嘎其海鮮市場 (자갈치시장)",
-        desc: "1樓現挑活帝王蟹、松葉蟹、比目魚生魚片，2樓代客料理（人均約 NT$ 960-1,440）；或吃烤魚定食（每人約 NT$ 288）。",
+        title: "午餐：札嘎其海鮮市場 帝王蟹大餐",
+        desc: "1樓挑選帝王蟹/松葉蟹，2樓代客料理。釜山是全東亞吃帝王蟹最划算的地方，一定要爽吃一頓！（人均約 NT$ 960-1,440）。",
         icon: "🦀",
-        badges: ["活帝王蟹", "札嘎其烤魚"],
+        badges: ["活帝王蟹", "海鮮大餐"],
         badgeType: "food",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Jagalchi+Market+Busan"
       },
@@ -160,7 +168,7 @@ const itineraryData = [
       {
         time: "17:45 - 19:30",
         title: "【伴手禮大採購】樂天超市 光復店 (Lotte Mart)",
-        desc: "在百貨連通樂天超市採買 HBAF 堅果、辛拉麵、海苔、韓國燒酒等，現場辦理退稅！買完搭計程車（NT$ 120）提回飯店放，免後續負擔。",
+        desc: "在百貨連通樂天超市採買 HBAF 堅果、辛拉麵、海苔等，現場辦理退稅！買完搭計程車（NT$ 120）回飯店。伴手禮可用酷澎比價不用買太多塞行李。",
         icon: "🛒",
         badges: ["伴手禮採購", "現場退稅"],
         badgeType: "shop",
@@ -180,21 +188,30 @@ const itineraryData = [
   {
     day: 4,
     date: "8/12（三）",
-    subTitle: "龍宮寺 · 松葉蟹 · Outlet",
-    title: "海東龍宮寺 ➔ 機張松葉蟹盛宴 ➔ Ananti Cove 海景咖啡 ➔ 樂天 Outlet",
+    subTitle: "龍宮寺 · 斜坡滑車 · 松葉蟹 · Outlet",
+    title: "海東龍宮寺 ➔ 釜山斜坡滑車 ➔ 機張松葉蟹盛宴 ➔ Ananti Cove 咖啡 ➔ Outlet ➔ 老宅邸燒肉",
     items: [
       {
-        time: "09:30 - 11:30",
+        time: "09:00 - 10:30",
         title: "海東龍宮寺 (Haedong Yonggungsa Temple)",
-        desc: "全韓國唯一建在海邊斷崖上的古剎，8位成年人可挑戰 108 階梯，欣賞海浪拍打石壁的壯麗景致（免費參觀）。",
+        desc: "全韓國唯一建在海邊斷崖上的礁岩古剎，氣氛能讓人慢下來看海、拜佛（免費參觀）。",
         icon: "🏯",
-        badges: ["海邊古剎", "108階梯"],
+        badges: ["海邊古剎", "沉澱心靈"],
         badgeType: "sight",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Haedong+Yonggungsa+Temple"
       },
       {
-        time: "12:00 - 13:45",
-        title: "午餐：機張市場松葉蟹 或 長竹海鮮麵",
+        time: "10:45 - 12:45",
+        title: "【高評價強推】釜山斜坡滑車 (Skyline Luge 釜山)",
+        desc: "玩兩次約 30,000 韓元（可用 PASS 兌換）。全長 2.4 公里、高低差 100 公尺，刺激好玩，搭乘纜車上去視野開闊，被評為釜山必玩！",
+        icon: "🏎️",
+        badges: ["斜坡滑車", "必玩景點"],
+        badgeType: "sight",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Skyline+Luge+Busan"
+      },
+      {
+        time: "13:00 - 14:45",
+        title: "午餐：機張市場松葉蟹 (기장시장 대게)",
         desc: "機張市場清蒸松葉蟹（蟹膏炒飯極品，人均約 NT$ 1,440-1,920）或濃郁海鮮湯麵（每碗約 NT$ 288）。",
         icon: "🦀",
         badges: ["機張松葉蟹", "海鮮炒飯"],
@@ -202,7 +219,7 @@ const itineraryData = [
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Gijang+Market+Busan"
       },
       {
-        time: "14:00 - 16:00",
+        time: "15:00 - 16:30",
         title: "Ananti Cove 奢華海景廊道 & 海景咖啡廳",
         desc: "釜山頂級渡假村沿海廊道，在挑高冷氣海景咖啡廳享用下午茶，拍照極具高級質感（人均約 NT$ 288-432）。",
         icon: "🌊",
@@ -211,51 +228,69 @@ const itineraryData = [
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Ananti+Cove+Busan"
       },
       {
-        time: "16:15 - 18:45",
+        time: "16:45 - 19:00",
         title: "【露天 Outlet】東釜山樂天 Outlet",
         desc: "希臘聖托里尼風格超大型 Outlet，運動品牌（Nike, Adidas, NB）與韓國在地休閒品牌常有 3~5 折折扣。",
         icon: "🏷️",
         badges: ["露天Outlet", "品牌折扣"],
         badgeType: "shop",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Lotte+Premium+Outlets+Dongbusan"
+      },
+      {
+        time: "19:30 - 21:30",
+        title: "【新增美食】晚餐：老宅邸燒肉 廣安里店 (고반식당)",
+        desc: "影片強推的釜山精緻燒肉！高品質豬肉有專人桌邊代烤，小菜豐富（人均約 NT$ 480-600），吃完可直接在廣安里散步看橋上夜景。",
+        icon: "🍖",
+        badges: ["老宅邸燒肉", "專人代烤"],
+        badgeType: "food",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Gobansikdang+Gwangalli+Busan"
       }
     ]
   },
   {
     day: 5,
     date: "8/13（四）",
-    subTitle: "五六島 · 西面商圈 · 廣安夜景",
-    title: "五六島斷崖 ➔ 西面潮牌與地下街 ➔ 廣安里海景酒吧與燦爛夜景",
+    subTitle: "SPA LAND · 百貨 · 西面 · 遊艇煙火",
+    title: "Centum City SPA LAND ➔ 新世界百貨購物 ➔ 西面商圈血拼 ➔ 廣安里豪華遊艇煙火 ➔ 海景酒吧",
     items: [
       {
-        time: "09:30 - 10:45",
-        title: "五六島天空步道 (Oryukdo Skywalk)",
-        desc: "免費入場，踏在懸崖邊 U 型玻璃棧道上，看五六島與壯麗海浪，拍出凌空絕景。",
-        icon: "🌉",
-        badges: ["懸崖天空步道", "免費景點"],
+        time: "09:30 - 12:30",
+        title: "【高溫避暑】SPA LAND 汗蒸幕（新世界 Centum City 店）",
+        desc: "門票 23,000 韓元（可用 PASS 兌換）。全釜山最奢華汗蒸幕，內有 13 種主題黃土/冰雪房與戶外天然溫泉足浴，充分放鬆身心。",
+        icon: "♨️",
+        badges: ["頂級汗蒸幕", "天然溫泉"],
         badgeType: "sight",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Oryukdo+Skywalk+Busan"
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=SPA+LAND+Centum+City+Busan"
       },
       {
-        time: "11:15 - 16:00",
-        title: "【年輕潮牌與地下街】西面商圈 (Seomyeon)",
-        desc: "午餐吃松亭3代豬肉湯飯 (NT$ 216)，逛全釜山最大地下街平價服飾與田浦咖啡街潮牌店。",
+        time: "12:30 - 15:30",
+        title: "【購物與美食】新世界百貨 Centum City 店 & 午餐自理",
+        desc: "逛全球最大百貨，網羅 Gentle Monster、Tamburins 及設計師潮牌。中午在百貨美食街享受精緻午餐（人均約 NT$ 288-432）。",
         icon: "🛍️",
-        badges: ["西面地下街", "松亭豬肉湯飯"],
+        badges: ["全球最大百貨", "百貨美食"],
+        badgeType: "shop",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Shinsegae+Centum+City+Busan"
+      },
+      {
+        time: "16:00 - 18:00",
+        title: "【年輕潮牌與地下街】西面商圈 (Seomyeon)",
+        desc: "搭地鐵二號線直達西面，逛西面地下購物街（平價服飾、配件、包包）與田浦咖啡街（文青小店與大創旗艦店）。",
+        icon: "👗",
+        badges: ["西面地下街", "潮牌血拼"],
         badgeType: "shop",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Seomyeon+Underground+Shopping+Center"
       },
       {
-        time: "16:45 - 18:30",
-        title: "廣安里海水浴場景觀咖啡廳散步",
-        desc: "沿海灣散步，在海景第一排觀景窗咖啡廳喝咖啡，欣賞正對面的廣安大橋全景。",
-        icon: "☕",
-        badges: ["廣安里沙灘", "廣安大橋景"],
+        time: "18:30 - 19:30",
+        title: "【新增熱推】廣安里豪華遊艇體驗 (Yacht Tour)",
+        desc: "遊艇票價 30,000 韓元（可用 PASS 兌換）。搭豪華遊艇看廣安大橋夜間點燈，並在海上欣賞施放煙火，體驗極佳！",
+        icon: "⛵",
+        badges: ["海上游艇", "船上煙火"],
         badgeType: "sight",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Gwangalli+Beach+Busan"
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Gwangalli+Yacht+Tour+Busan"
       },
       {
-        time: "18:30 - 21:30",
+        time: "19:45 - 22:00",
         title: "晚餐與夜生活：海景餐酒館 Clam / 精釀酒吧 Gorilla / 海邊野餐",
         desc: "可至 Clam 吃西班牙海鮮燉飯看夜景、或 Gorilla Brewing 喝精釀啤酒、或民樂市場外帶生魚片至海邊野餐（人均約 NT$ 480-840）。",
         icon: "🍸",
@@ -315,10 +350,10 @@ const galleryPhotos = [
     desc: "實景拍攝：韓國最具代表性的美麗白沙海灘，周邊摩天大樓林立。"
   },
   {
-    title: "BUSAN X the SKY 100樓景觀",
-    location: "Day 2 行程：海雲台 LCT 塔 100樓",
-    src: "https://bobbytravel.tw/wp-content/uploads/2025/12/20251230192952_0_86319f.jpg",
-    desc: "實景拍攝：韓國第二高樓，360度俯瞰海雲台海灣全景與最高星巴克。"
+    title: "影島 Arte Museum",
+    location: "Day 1 行程：影島區海洋路",
+    src: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop",
+    desc: "實景拍攝：大型沉浸式光影展，運用投影、香氛與音效，給予強烈震撼的視覺與感官體驗。"
   },
   {
     title: "海東龍宮寺臨海全景",
@@ -340,19 +375,19 @@ const galleryPhotos = [
   },
   {
     title: "白淺灘文化村海岸步道",
-    location: "Day 1 行程：影島區白淺灘文化村",
+    location: "Day 2 行程：影島區白淺灘文化村",
     src: "https://bobbytravel.tw/wp-content/uploads/2025/07/20250916235936_0_f75aff.jpg",
     desc: "實景拍攝：藍白色調小白屋沿海步道，文青咖啡廳與彩虹階梯聚落。"
   },
   {
     title: "SPA LAND 奢華汗蒸幕",
-    location: "Day 2 行程：新世界 Centum City 店 1F",
+    location: "Day 5 行程：新世界 Centum City 店 1F",
     src: "https://bobbytravel.tw/wp-content/uploads/2026/01/20260106101923_0_60fd9a.jpg",
     desc: "實景拍攝：六星級奢華汗蒸幕設施，13種主題桑拿房與戶外溫泉足浴。"
   },
   {
     title: "五六島天空步道",
-    location: "Day 5 行程：南區五六島路",
+    location: "Day 2 行程：南區五六島路",
     src: "https://bobbytravel.tw/wp-content/uploads/pixnet/7f1e572ed63347666a60876d27a9270d.jpg",
     desc: "實景拍攝：建於 35 公尺懸崖邊的 U 型玻璃步道，踏在浪花之上。"
   },
