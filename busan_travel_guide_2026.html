@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="referrer" content="no-referrer">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="2026 韓國釜山 6 天 5 夜 8 位成年家族慢遊行程指南，含景點地圖與導航連結。">
@@ -170,6 +172,406 @@
 
     @media (max-width: 1024px) { .tab-group { grid-template-columns: repeat(3, 1fr); } }
     @media (max-width: 640px) { .tab-group { grid-template-columns: repeat(2, 1fr); } .hero-title { font-size: 2.1rem; } .timeline::before { left: 18px; } .timeline-item { padding-left: 50px; } .timeline-icon { left: 0; width: 36px; height: 36px; font-size: 1rem; } .event-header-flex { flex-direction: column; align-items: flex-start; } }
+
+    /* === Olive Young Section Styles === */
+    #oliveyoung-section {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      backdrop-filter: blur(15px);
+    }
+
+    .oy-subtitle {
+      color: var(--text-sub);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    /* OY Widgets Grid */
+    .oy-widgets-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .oy-widgets-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .oy-widget-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+    }
+
+    .oy-widget-title {
+      font-size: 1.15rem;
+      color: #fff;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding-bottom: 0.5rem;
+    }
+
+    .oy-widget-title i {
+      color: var(--accent-gold);
+    }
+
+    /* Tax Calc */
+    .oy-calc-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .oy-calc-input-wrapper {
+      flex-grow: 1;
+      position: relative;
+    }
+
+    .oy-calc-input-wrapper span {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .oy-calc-input {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-light);
+      color: #fff;
+      padding: 0.65rem 3rem 0.65rem 0.85rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      outline: none;
+      transition: var(--transition-smooth);
+    }
+
+    .oy-calc-input:focus {
+      border-color: var(--primary-glow);
+    }
+
+    .oy-calc-btn {
+      background: var(--primary-glow);
+      color: #000;
+      border: none;
+      font-weight: 700;
+      padding: 0 1.25rem;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .oy-calc-btn:hover {
+      background: #00b3d6;
+      box-shadow: 0 0 10px rgba(0, 210, 255, 0.3);
+    }
+
+    .oy-calc-result {
+      display: none;
+      margin-top: 1.25rem;
+      padding: 1rem;
+      background: rgba(0, 210, 255, 0.04);
+      border-left: 3px solid var(--primary-glow);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.9rem;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .oy-calc-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.4rem;
+    }
+
+    .oy-calc-row:last-child {
+      margin-bottom: 0;
+      border-top: 1px dashed rgba(255, 255, 255, 0.1);
+      padding-top: 0.4rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+    }
+
+    /* Tips */
+    .oy-tips-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      font-size: 0.88rem;
+      color: var(--text-sub);
+    }
+
+    .oy-tips-list li {
+      position: relative;
+      padding-left: 1.2rem;
+    }
+
+    .oy-tips-list li::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      color: var(--accent-gold);
+    }
+
+    /* Category filters */
+    .oy-filter-bar {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+
+    .oy-filter-btn {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-light);
+      color: var(--text-sub);
+      padding: 0.5rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .oy-filter-btn:hover {
+      border-color: var(--primary-glow);
+      color: #fff;
+    }
+
+    .oy-filter-btn.active {
+      background: var(--primary-glow);
+      color: #000;
+      border-color: var(--primary-glow);
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(0, 210, 255, 0.25);
+    }
+
+    /* Product Grid */
+    .oy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .oy-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .oy-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(0, 210, 255, 0.3);
+      box-shadow: var(--shadow-lux);
+    }
+
+    .oy-card-time {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(7, 11, 20, 0.75);
+      color: #fff;
+      font-size: 0.72rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      z-index: 2;
+      backdrop-filter: blur(2px);
+    }
+
+    .oy-card-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: var(--accent-coral);
+      color: #fff;
+      font-size: 0.68rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 800;
+      z-index: 2;
+    }
+
+    .oy-img-container {
+      width: 100%;
+      height: 180px;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .oy-img {
+      max-width: 95%;
+      max-height: 95%;
+      object-fit: contain;
+      transition: transform 0.4s ease;
+    }
+
+    .oy-card:hover .oy-img {
+      transform: scale(1.05);
+    }
+
+    .oy-card-content {
+      padding: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .oy-card-cat {
+      font-size: 0.72rem;
+      color: var(--primary-glow);
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      text-transform: uppercase;
+    }
+
+    .oy-card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.25rem;
+      line-height: 1.3;
+    }
+
+    .oy-card-en {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 0.8rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .oy-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: auto;
+    }
+
+    .oy-tag {
+      font-size: 0.68rem;
+      background: rgba(0, 210, 255, 0.08);
+      color: var(--primary-glow);
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-weight: 500;
+      border: 1px solid rgba(0, 210, 255, 0.15);
+    }
+
+    /* Modal for OY Details */
+    #oy-modal .modal-content {
+      max-width: 600px;
+    }
+
+    .oy-modal-header {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+      align-items: center;
+    }
+
+    @media (max-width: 576px) {
+      .oy-modal-header {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    .oy-modal-img-box {
+      width: 120px;
+      height: 120px;
+      min-width: 120px;
+      background: #fff;
+      border-radius: var(--radius-md);
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .oy-modal-img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .oy-modal-title-info {
+      flex-grow: 1;
+    }
+
+    .oy-modal-time {
+      display: inline-block;
+      background: rgba(0, 210, 255, 0.12);
+      color: var(--primary-glow);
+      padding: 3px 10px;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .oy-modal-name {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.25rem;
+    }
+
+    .oy-modal-en {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .oy-modal-section {
+      margin-bottom: 1.25rem;
+    }
+
+    .oy-modal-sec-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .oy-modal-sec-text {
+      font-size: 0.9rem;
+      color: var(--text-sub);
+      text-align: justify;
+      line-height: 1.5;
+    }
+
+    .oy-modal-reason-box {
+      background: rgba(255, 183, 3, 0.04);
+      border: 1px solid rgba(255, 183, 3, 0.15);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+    }
+
   </style>
 </head>
 <body>
@@ -263,6 +665,87 @@
       </div>
     </section>
 
+
+    <!-- Section: Olive Young 必買推薦 -->
+    <section id="oliveyoung-section" style="margin-bottom: 4rem;">
+      <div class="section-header">
+        <h2 class="section-title">🛍️ Olive Young 必買好物推薦 (醫師 & VIP 姐精選)</h2>
+      </div>
+      
+      <p class="oy-subtitle">
+        影片說明欄必買 14 項全紀錄。由皮膚科醫師與最高等級會員姐姐（私人顧問）精選，告訴您哪些是韓國當地人真正在瘋搶的實力派保養與彩妝好物。
+      </p>
+
+      <!-- Widgets Area -->
+      <div class="oy-widgets-grid">
+        <!-- Tax Calculator -->
+        <div class="oy-widget-card">
+          <h3 class="oy-widget-title"><i class="fa-solid fa-calculator"></i> Olive Young 現場即時退稅計算機</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+            在 OY 購物單筆滿 <strong>15,000 KRW</strong> 即可現場即時退稅！輸入消費金額估計稅金：
+          </p>
+          <div class="oy-calc-group">
+            <div class="oy-calc-input-wrapper">
+              <input type="number" id="oyCalcPrice" class="oy-calc-input" placeholder="輸入韓元金額" min="0">
+              <span>KRW</span>
+            </div>
+            <button class="oy-calc-btn" onclick="calculateOyTax()">計算</button>
+          </div>
+          
+          <div id="oyCalcResult" class="oy-calc-result">
+            <div class="oy-calc-row">
+              <span>消費金額：</span>
+              <span id="oyResPrice">0 KRW</span>
+            </div>
+            <div class="oy-calc-row">
+              <span>預估退稅率：</span>
+              <span id="oyResRate">0%</span>
+            </div>
+            <div class="oy-calc-row">
+              <span>可退稅額：</span>
+              <span id="oyResTax">0 KRW</span>
+            </div>
+            <div class="oy-calc-row">
+              <span>折合台幣 (預估)：</span>
+              <span id="oyResTwd" style="color: var(--primary-glow); font-weight: bold;">NT$ 0</span>
+            </div>
+            <div class="oy-calc-row">
+              <span>現場實付：</span>
+              <span id="oyResFinal">0 KRW</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shopping Tips -->
+        <div class="oy-widget-card">
+          <h3 class="oy-widget-title"><i class="fa-solid fa-circle-info"></i> 現場購物小技巧</h3>
+          <ul class="oy-tips-list">
+            <li><strong>尋找限定企劃裝：</strong> 許多熱銷款面膜及精華在現場有 OY 限定的「1+1」或加大版企劃套組，CP 值最高。</li>
+            <li><strong>出示護照即時扣除：</strong> 結帳時請務必在結帳前告知店員「Tax Free」並提供護照，金額將直接扣除退稅。</li>
+            <li><strong>避開明洞晚間尖峰：</strong> 明洞和弘大商圈旗艦店晚間人潮擁擠，建議選擇早上 10 點至 11 點半前往採購。</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Filters -->
+      <div class="oy-filter-bar">
+        <button class="oy-filter-btn active" onclick="filterOyCategory('all')">全部推薦 (14)</button>
+        <button class="oy-filter-btn" onclick="filterOyCategory('skincare')">臉部護理 & 清潔</button>
+        <button class="oy-filter-btn" onclick="filterOyCategory('makeup')">彩妝 & 定妝</button>
+        <button class="oy-filter-btn" onclick="filterOyCategory('body')">身體保養</button>
+        <button class="oy-filter-btn" onclick="filterOyCategory('tools')">美妝配件</button>
+        <button class="oy-filter-btn" onclick="filterOyCategory('lifestyle')">健康生活</button>
+      </div>
+
+      <!-- Grid -->
+      <div class="oy-grid" id="oy-product-grid">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+
+</section>
+
     <!-- Section 3: 100% 行程專屬景點寫真圖鑑 -->
     <section id="gallery-section" style="margin-bottom: 4rem;">
       <div class="section-header"><h2 class="section-title">📸 本行程 100% 專屬景點寫真 (10大亮點)</h2></div>
@@ -342,7 +825,18 @@
         <p id="modal-desc" style="color: var(--text-sub); font-size: 0.98rem; line-height: 1.6;">景點詳細說明...</p>
       </div>
     </div>
+  
+  <!-- Olive Young Details Modal -->
+  <div class="modal" id="oy-modal" onclick="closeOyModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeOyModal()">✕</button>
+      <div class="modal-body" id="oy-modal-body">
+        <!-- Injected dynamically by JS -->
+      </div>
+    </div>
   </div>
+
+</div>
 
   <footer style="text-align: center; padding: 2.5rem 1rem; background: rgba(5, 8, 16, 0.95); border-top: 1px solid var(--border-light); color: var(--text-muted); font-size: 0.9rem;">
     <p>🇰🇷 韓國釜山 6 天 5 夜家族豪華慢遊行程指南 &copy; 2026. 祝各位團員旅途愉快！</p>
@@ -757,6 +1251,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderDayTimeline(1);
   renderGallery();
   setupEventListeners();
+  renderOliveYoung();
   calculateExchange();
 });
 
@@ -904,6 +1399,175 @@ function setupEventListeners() {
       }
     });
   });
+}
+
+
+// === Olive Young Recommendations Logic ===
+const oyProducts = [{"id": "mediheal", "time": "01:37", "name": "MEDIHEAL 精華面膜片", "en_name": "MEDIHEAL Essential Mask", "category": "skincare", "category_zh": "臉部護理", "img_key": "MEDIHEAL Essential Mask", "features": "高濃度精華、服貼度高、高CP值", "skin_type": "所有膚質，特別是缺水肌與需要曬後鎮靜者", "reason": "金針菇姐姐強烈推薦的國民面膜。精華液含量極高，面膜紙薄且貼合度優秀。在 Olive Young 購買通常有 10 片一盒的包裝，並且常常有 1+1 (買一送一) 的促銷活動，是去韓國必囤的保濕聖品。", "tips": "建議洗完臉後敷 10-15 分鐘，取下後輕輕按摩至吸收，再擦上乳液鎖水。若有醫美術後泛紅，綠色積雪草款是很好的鎮靜選擇。", "img_url": "https://images.yesstyle.com/g/p/1122709230_0.jpg"}, {"id": "biodance", "time": "03:25", "name": "Biodance 膠原蛋白深層全效面膜", "en_name": "Biodance Bio-Collagen Real Deep Mask", "category": "skincare", "category_zh": "臉部護理", "img_key": "Biodance Bio-Collagen Real Deep Mask", "features": "水凝膠材質、敷完變透明、深層彈力", "skin_type": "乾性肌、熟齡肌、暗沉無光澤肌", "reason": "近期紅遍全球的「敷著睡覺面膜」。它是果凍般的水凝膠材質，敷上後面膜中的超低分子玻尿酸與膠原蛋白會慢慢被肌膚吸收，面膜會隨時間變為完全透明。能顯著改善毛孔與提亮膚色。", "tips": "適合在夜間保養的最後一步使用，建議敷 3-4 小時以上（甚至敷著入睡），醒來後撕下即可看見驚人的水光感與澎潤肌膚。", "badge": "熱銷斷貨王", "img_url": "https://images.yesstyle.com/g/p/1124314457_0.jpg"}, {"id": "beyond", "time": "04:14", "name": "Beyond 美白乳液 / 身體乳", "en_name": "Beyond Body Emulsion", "category": "body", "category_zh": "身體保養", "img_key": "Beyond Body Emulsion", "features": "溫和草本、高級白麝香、深層鎖水", "skin_type": "所有膚質、身體肌膚乾燥脫屑者", "reason": "LG 生活健康旗下的環保自然品牌。這款身體乳以療癒且高級的「白麝香」香氣聞名，質地乳爽不黏膩，保濕度極佳，能修護乾燥的肌膚屏障。", "tips": "每天洗澡後，在身體微濕時塗抹，保濕與持香效果最佳。", "img_url": "https://images.yesstyle.com/g/p/1117564731_0.jpg"}, {"id": "yunjac", "time": "05:27", "name": "Yunjac 然植亞保濕底霜 (Base Prep)", "en_name": "Yunjac Skin Perfecting Protective Base Prep", "category": "makeup", "category_zh": "彩妝與定妝", "img_key": "Yunjac Skin Perfecting Protective Base Prep", "features": "底妝膠水", "skin_type": "乾性肌、混合偏乾、底妝容易浮粉起皮者", "reason": "高端草本護膚品牌推出的妝前精華。被譽為「乾皮親媽」與「化妝師的秘密武器」，質地如水般輕盈，能迅速撫平臉部角質，讓後續不論是粉底液還是氣墊粉餅都非常貼合，展現高級的水光感。", "tips": "在防曬後、底妝前，取 2-3 滴均勻塗抹於全臉，特別是易卡粉的鼻翼與兩頰，輕拍至微黏狀態再上底妝。", "badge": "美妝大賞第一", "img_url": "https://images.yesstyle.com/g/p/1119565507_0.jpg"}, {"id": "obge", "time": "06:13", "name": "OBgE 自然防曬棒", "en_name": "OBgE Natural Cover Sun Stick", "category": "skincare", "category_zh": "防曬護理", "img_key": "OBgE Natural Cover Sun Stick", "features": "不沾手、清爽控油、不泛白", "skin_type": "所有膚質、混合偏油、男士、喜愛戶外活動者", "reason": "韓國男士理容第一品牌推出的防曬棒，女生也非常愛用！具備 SPF50+/PA++++ 最高防曬規格。棒狀設計極為方便，完全不沾手，上臉後呈乾爽霧面，且完全不泛白、不黏膩，抗汗效果優秀。", "tips": "適合隨身攜帶，在戶外每 2-3 小時隨時塗抹補防曬。因其清爽度高，妝後輕拍補防曬也不易弄髒妝容。", "img_url": "https://images.yesstyle.com/g/p/1125217431_0.jpg"}, {"id": "the_saem", "time": "07:12", "name": "The Saem 得鮮完美遮瑕液", "en_name": "The Saem Cover Perfection Tip Concealer", "category": "makeup", "category_zh": "彩妝與定妝", "img_key": "The Saem Cover Perfection Tip Concealer", "features": "極高遮瑕力、平價戰神、多色號選擇", "skin_type": "有痘疤、黑眼圈、班點需要高度遮瑕者", "reason": "風靡亞洲的平價遮瑕天王。遮瑕力強、持妝度極佳，不論是多深的痘疤或黑眼圈，輕點一下就能完美遮蓋，CP 值高到不可思議。", "tips": "因遮瑕力極高，質地偏乾，建議局部「點」在瑕疵處，等 10 秒微乾後，再使用濕海綿或粉撲邊緣輕輕拍開。", "img_url": "https://images.yesstyle.com/g/p/1071477759_0.jpg"}, {"id": "about_tone", "time": "08:40", "name": "About Tone 柔焦控油蜜粉餅", "en_name": "About Tone Blur Powder Pact", "category": "makeup", "category_zh": "彩妝與定妝", "img_key": "About Tone Blur Powder Pact", "features": "一秒磨皮、粉質極細、強效控油", "skin_type": "油性肌、混合肌、毛孔粗大者", "reason": "前身為風靡韓國的 Eglips 蜜粉餅。這款粉餅主打「空氣柔焦」效果，粉質如輕煙般細緻，能瞬間吸附皮脂，讓毛孔隱形，打造如陶瓷娃娃般的乾淨霧面妝效。", "tips": "使用附帶的粉撲，在底妝後輕壓在容易出油的 T 字部位、鼻翼，或用於眼周打底防暈染。", "img_url": "https://images.yesstyle.com/g/p/1109968434_0.jpg"}, {"id": "so_natural", "time": "09:55", "name": "So Natural 經典定妝噴霧", "en_name": "So Natural All Day Tight Makeup Setting Fixer", "category": "makeup", "category_zh": "彩妝與定妝", "img_key": "So Natural All Day Tight Makeup Setting Fixer", "features": "細緻霧化、快速成膜、抗摩擦防脫妝", "skin_type": "所有膚質、混合偏油、需要長時間持妝者", "reason": "韓國定妝噴霧界的常勝冠軍，粉紅色瓶身非常具有代表性。其壓頭噴出的水霧極其細緻，不會在臉上結成水珠，能快速在底妝上形成保護膜，抗汗、抗油且防摩擦。", "tips": "化妝完成後，將噴霧距離臉部 20-30 公分，畫 'X' 和 'T' 字形噴灑全臉，靜待 1 分鐘自然風乾成膜，切勿用手拍打。", "img_url": "https://images.yesstyle.com/g/p/1066497491_0.jpg"}, {"id": "canmake", "time": "10:30", "name": "Canmake 腮紅霜", "en_name": "Canmake Cream Cheek", "category": "makeup", "category_zh": "彩妝與定妝", "img_key": "Canmake Cream Cheek", "features": "清透血色感、凝膠轉粉質、白裡透紅", "skin_type": "所有膚質，尤其是喜愛無粉感日韓系妝容者", "reason": "雖然是日系彩妝，但其極佳的自然融膚感在韓國 Olive Young 也擁有超高人氣。凝膠般的質地上臉推開後會化為乾爽的粉質，呈現如皮膚底層自然透出來的紅潤氣色。", "tips": "用手指沾取適量，輕點於蘋果肌處往外拍開，或是用氣墊粉撲上妝，效果更加均勻清透。", "img_url": "https://images.yesstyle.com/g/p/1053709088_0.jpg"}, {"id": "fillimilli", "time": "11:38", "name": "Fillimilli 胖胖氣墊粉撲", "en_name": "Fillimilli Cushion Pang Pang Puff", "category": "tools", "category_zh": "美妝工具", "img_key": "Fillimilli Cushion Pang Pang Puff", "features": "厚實有彈性、上妝服貼、省時省粉底", "skin_type": "所有使用氣墊粉餅或粉底液的化妝者", "reason": "Olive Young 自有美妝配件品牌 Fillimilli 的明星產品。這款氣墊粉撲非常厚實，彈性極佳，能將粉底均勻且輕薄地拍入肌膚，大幅提升底妝的服貼度，是去 OY 必抓好幾個回台的囤貨小物。", "tips": "可用於氣墊粉餅，也適合搭配普通粉底液使用。上妝時採用「快速拍打」的方式，能讓妝效更具光澤與遮瑕力。", "img_url": "https://images.yesstyle.com/g/p/1121118128_0.jpg"}, {"id": "too_cool", "time": "12:43", "name": "Too Cool for School 美術課修容/腮紅 #14", "en_name": "Too Cool for School Artclass Shading", "category": "makeup", "category_zh": "彩妝與定妝", "img_key": "Too Cool for School Artclass Shading", "features": "發色自然、柔滑粉質、不易失手", "skin_type": "彩妝新手、喜愛溫柔日常妝容者", "reason": "Too Cool for School 的經典美術課系列，以極佳的發色與粉質著稱。#14 號色提供了極為溫柔、自然且符合亞洲人膚色的冷暖平衡色調，不易結塊且能完美修飾臉部輪廓。", "tips": "用修容刷或腮紅刷沾取後，在手背上稍微拍掉多餘粉末，再輕刷於臉頰或下顎線，可少量多次疊加。", "img_url": "https://images.yesstyle.com/g/p/1097241355_0.jpg"}, {"id": "peripera", "time": "14:09", "name": "Peripera 水光唇釉 (Ink Mood Glowy)", "en_name": "Peripera Ink Mood Glowy Tint", "category": "makeup", "category_zh": "彩妝與定妝", "img_key": "Peripera Ink Mood Glowy Tint", "features": "玻璃水光感、滋潤修飾唇紋、持久顯色", "skin_type": "唇紋明顯、喜愛水光嘟嘟唇與純欲妝效者", "reason": "平價彩妝之王 Peripera 的明星水光唇釉。上嘴後會形成一層晶瑩剔透的水光膜，質地保濕不乾澀，且帶有輕微的染唇效果，不容易完全掉色，是打造網紅玻璃唇的首選。", "tips": "塗抹於雙唇後，**靜待 1-2 分鐘不要抿嘴**，等它自動成膜後，水光感 and 持久度會大幅提升。", "img_url": "https://images.yesstyle.com/g/p/1111666874_0.jpg"}, {"id": "banila_co", "time": "15:14", "name": "Banila Co 緻柔卸妝膏", "en_name": "Banila Co Clean It Zero Cleansing Balm", "category": "skincare", "category_zh": "臉部清潔", "img_key": "Banila Co Clean It Zero Cleansing Balm", "features": "雪酪質地、秒乳化、溫和不緊繃", "skin_type": "所有膚質，包括敏感肌與日常化濃妝者", "reason": "風靡全球的「國民卸妝膏」。雪酪般的固體質地，接觸體溫後會瞬間融化並乳化，能溫和、徹底地卸除所有頑固的防水彩妝與毛孔髒污，且洗後完全不熏眼、不緊繃。", "tips": "保持雙手和臉部乾燥，取適量卸妝膏塗抹於臉部輕柔按摩打圈，再沾取少量清水使其完全「乳化」變白，最後用溫水徹底沖洗乾淨。", "img_url": "https://images.yesstyle.com/g/p/1069614769_0.jpg"}, {"id": "teazen", "time": "16:29", "name": "Teazen 康普茶 (Kombucha)", "en_name": "Teazen Kombucha", "category": "lifestyle", "category_zh": "健康飲品", "img_key": "Teazen Kombucha", "features": "低卡無糖、富含益生菌、清爽氣泡感", "skin_type": "注重腸道健康、想戒含糖飲料的健康追求者", "reason": "因為 BTS 成員飲用而火遍全韓的健康機能飲品。採用凍乾技術保留乳酸菌與益生元，沖泡後帶有碳酸微氣泡感，口味酸甜清爽（如檸檬、水蜜桃等），一包熱量僅 15 卡，解膩無負擔。", "tips": "用 250ml - 500ml 的冷水或冰水沖泡，氣泡感會更加強烈，喝起來就像健康的汽水，非常適合作為大餐後的消食飲料。", "img_url": "https://images.yesstyle.com/g/p/1105367807_0.jpg"}];
+
+function renderOliveYoung() {
+  const grid = document.getElementById("oy-product-grid");
+  if (!grid) return;
+  
+  let html = "";
+  oyProducts.forEach(p => {
+    const badgeHtml = p.badge ? `<div class="oy-card-badge">${p.badge}</div>` : '';
+    const tagsHtml = p.features.split('、').map(t => `<span class="oy-tag">${t.trim()}</span>`).join('');
+    
+    html += `
+      <div class="oy-card" data-category="${p.category}" onclick="openOyModal('${p.id}')">
+        <div class="oy-card-time"><i class="fa-solid fa-clock"></i> ${p.time}</div>
+        ${badgeHtml}
+        <div class="oy-img-container">
+          <img src="${p.img_url}" alt="${p.name}" class="oy-img" onerror="this.src='https://via.placeholder.com/300x300.png?text=${p.img_key.replace(/ /g, '+')}'">
+        </div>
+        <div class="oy-card-content">
+          <span class="oy-card-cat">${p.category_zh}</span>
+          <h3 class="oy-card-title">${p.name}</h3>
+          <p class="oy-card-en">${p.en_name}</p>
+          <div class="oy-tags">
+            ${tagsHtml}
+          </div>
+        </div>
+      </div>
+    `;
+  });
+  grid.innerHTML = html;
+}
+
+function filterOyCategory(category) {
+  // 切換按鈕狀態
+  const buttons = document.querySelectorAll('.oy-filter-btn');
+  buttons.forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+
+  const cards = document.querySelectorAll('.oy-card');
+  cards.forEach(card => {
+    const cardCategory = card.getAttribute('data-category');
+    if (category === 'all') {
+      card.style.display = 'flex';
+    } else if (category === 'skincare') {
+      if (cardCategory === 'skincare') {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    } else {
+      if (cardCategory === category) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    }
+  });
+}
+
+function openOyModal(id) {
+  const p = oyProducts.find(prod => prod.id === id);
+  if (!p) return;
+
+  const tagsHtml = p.features.split('、').map(t => `<span class="oy-tag" style="font-size:0.75rem; padding: 3px 8px;">${t.trim()}</span>`).join('');
+
+  const modalBodyHtml = `
+    <div class="oy-modal-header">
+      <div class="oy-modal-img-box">
+        <img src="${p.img_url}" alt="${p.name}" class="oy-modal-img" onerror="this.src='https://via.placeholder.com/300x300.png?text=${p.img_key.replace(/ /g, '+')}'">
+      </div>
+      <div class="oy-modal-title-info">
+        <span class="oy-modal-time"><i class="fa-solid fa-clock"></i> 影片時間 ${p.time}</span>
+        <h2 class="oy-modal-name">${p.name}</h2>
+        <div class="oy-modal-en">${p.en_name}</div>
+      </div>
+    </div>
+    
+    <div class="oy-modal-section">
+      <div class="oy-modal-sec-title"><i class="fa-solid fa-star"></i> 產品特點</div>
+      <div style="display:flex; gap:6px; flex-wrap:wrap; margin-top:0.4rem; margin-bottom:0.4rem;">
+        ${tagsHtml}
+      </div>
+    </div>
+
+    <div class="oy-modal-section">
+      <div class="oy-modal-sec-title"><i class="fa-solid fa-face-smile"></i> 適合對象</div>
+      <div class="oy-modal-sec-text">${p.skin_type}</div>
+    </div>
+
+    <div class="oy-modal-section oy-modal-reason-box">
+      <div class="oy-modal-sec-title" style="color:var(--accent-gold);"><i class="fa-solid fa-comment-dots"></i> 私人顧問姐推薦理由</div>
+      <div class="oy-modal-sec-text" style="color:#fff; font-weight:500;">${p.reason}</div>
+    </div>
+
+    <div class="oy-modal-section">
+      <div class="oy-modal-sec-title"><i class="fa-solid fa-lightbulb"></i> 使用與購物訣竅</div>
+      <div class="oy-modal-sec-text">${p.tips}</div>
+    </div>
+  `;
+
+  document.getElementById('oy-modal-body').innerHTML = modalBodyHtml;
+  const modal = document.getElementById('oy-modal');
+  modal.style.display = 'flex';
+  setTimeout(() => modal.classList.add('active'), 10);
+}
+
+function closeOyModal() {
+  const modal = document.getElementById('oy-modal');
+  modal.classList.remove('active');
+  setTimeout(() => {
+    modal.style.display = 'none';
+  }, 300);
+}
+
+function calculateOyTax() {
+  const priceInput = document.getElementById('oyCalcPrice');
+  const price = parseFloat(priceInput.value);
+  
+  if (isNaN(price) || price < 0) {
+    alert('請輸入有效金額！');
+    return;
+  }
+
+  const resultBox = document.getElementById('oyCalcResult');
+  
+  if (price < 15000) {
+    resultBox.style.display = 'block';
+    document.getElementById('oyResPrice').innerText = price.toLocaleString() + ' KRW';
+    document.getElementById('oyResRate').innerText = '未達退稅標準';
+    document.getElementById('oyResTax').innerText = '0 KRW';
+    document.getElementById('oyResTwd').innerText = 'NT$ 0';
+    document.getElementById('oyResFinal').innerText = price.toLocaleString() + ' KRW';
+    return;
+  }
+
+  let rate = 0.05;
+  let rateText = '5.0%';
+  
+  if (price >= 15000 && price < 30000) {
+    rate = 0.033;
+    rateText = '3.3%';
+  } else if (price >= 30000 && price < 50000) {
+    rate = 0.05;
+    rateText = '5.0%';
+  } else if (price >= 50000 && price < 75000) {
+    rate = 0.06;
+    rateText = '6.0%';
+  } else if (price >= 75000 && price < 100000) {
+    rate = 0.065;
+    rateText = '6.5%';
+  } else {
+    rate = 0.07;
+    rateText = '7.0%';
+  }
+
+  const tax = Math.round(price * rate);
+  const twd = Math.round(tax * 0.024); // 預設匯率 0.024
+  const finalPrice = price - tax;
+
+  resultBox.style.display = 'block';
+  document.getElementById('oyResPrice').innerText = price.toLocaleString() + ' KRW';
+  document.getElementById('oyResRate').innerText = rateText;
+  document.getElementById('oyResTax').innerText = tax.toLocaleString() + ' KRW';
+  document.getElementById('oyResTwd').innerText = 'NT$ ' + twd.toLocaleString();
+  document.getElementById('oyResFinal').innerText = finalPrice.toLocaleString() + ' KRW';
 }
 
   </script>
