@@ -63,7 +63,7 @@
     /* Hero Header */
     .hero-header {
       position: relative;
-      min-height: 48vh;
+      min-height: 44vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -93,7 +93,9 @@
 
     .hero-subtitle { font-size: 1.15rem; color: var(--text-sub); margin-bottom: 2rem; font-weight: 500; }
 
-    .meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; max-width: 850px; margin: 0 auto; }
+    /* 調整為 3 個 Card，移除機場接送建議 */
+    .meta-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 750px; margin: 0 auto; }
+    @media (max-width: 768px) { .meta-grid { grid-template-columns: 1fr; } }
     .meta-card { background: var(--glass-bg); border: 1px solid var(--glass-border); backdrop-filter: blur(16px); padding: 1.2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-lux); }
     .meta-card .label { font-size: 0.82rem; color: var(--text-muted); display: block; margin-bottom: 0.25rem; }
     .meta-card .val { font-size: 1rem; font-weight: 700; color: var(--accent-gold); }
@@ -223,7 +225,6 @@
     
     .event-card { background: var(--bg-card); border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: 1.6rem; backdrop-filter: blur(12px); transition: var(--transition-smooth); }
     .event-card:hover { background: var(--bg-card-hover); border-color: rgba(0, 210, 255, 0.4); transform: translateY(-3px); box-shadow: var(--shadow-lux); }
-    .event-card:hover { background: var(--bg-card-hover); border-color: rgba(0, 210, 255, 0.4); transform: translateY(-3px); box-shadow: var(--shadow-lux); }
     .event-header-flex { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 0.5rem; }
     .event-time { font-size: 0.9rem; font-weight: 700; color: var(--accent-gold); background: rgba(255, 183, 3, 0.1); padding: 0.2rem 0.6rem; border-radius: 6px; display: inline-block; }
     .btn-map-link { display: inline-flex; align-items: center; gap: 0.35rem; background: rgba(0, 210, 255, 0.12); border: 1px solid rgba(0, 210, 255, 0.3); color: var(--primary-glow); padding: 0.35rem 0.85rem; border-radius: 50px; font-size: 0.82rem; font-weight: 600; text-decoration: none; transition: var(--transition-smooth); }
@@ -249,6 +250,18 @@
     .station-spots { color: var(--text-sub); }
     .metro-map-wrapper { background: rgba(0, 0, 0, 0.4); border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: 1rem; margin-top: 1.5rem; text-align: center; }
     .metro-map-img { width: 100%; max-height: 500px; object-fit: contain; border-radius: var(--radius-md); }
+
+    /* 中韓對照司機卡片 CSS */
+    .taxi-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
+    .taxi-card { background: linear-gradient(135deg, rgba(28, 40, 68, 0.9) 0%, rgba(18, 26, 45, 0.9) 100%); border: 1px solid rgba(0, 210, 255, 0.25); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-lux); position: relative; overflow: hidden; }
+    .taxi-card::after { content: '🚕'; position: absolute; bottom: 10px; right: 10px; font-size: 2.2rem; opacity: 0.08; }
+    .taxi-zh { font-size: 1.1rem; font-weight: 800; color: #fff; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 8px; }
+    .taxi-zh span { font-size: 0.82rem; background: rgba(255, 183, 3, 0.15); color: var(--accent-gold); padding: 2px 8px; border-radius: 4px; font-weight: 600; }
+    .taxi-kr-box { background: rgba(7, 11, 20, 0.6); border: 1px solid rgba(255,255,255,0.05); border-radius: var(--radius-sm); padding: 0.85rem; margin: 0.75rem 0; text-align: center; }
+    .taxi-kr { font-size: 1.5rem; font-weight: 900; color: var(--primary-glow); letter-spacing: 0.5px; word-break: break-all; }
+    .taxi-addr { font-size: 0.82rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 0.5rem; }
+    .taxi-copy-btn { width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: var(--text-sub); padding: 0.45rem; border-radius: 6px; font-size: 0.78rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: var(--transition-smooth); }
+    .taxi-copy-btn:hover { background: var(--primary-glow); color: #000; border-color: var(--primary-glow); }
 
     /* Google Maps Locations Table */
     .maps-table-wrapper {
@@ -348,7 +361,7 @@
     .oy-card:hover { transform: translateY(-5px); background: rgba(255, 255, 255, 0.06); border-color: rgba(0, 210, 255, 0.3); box-shadow: var(--shadow-lux); }
     
     .oy-card-time { position: absolute; top: 10px; left: 10px; background: rgba(7, 11, 20, 0.75); color: #fff; font-size: 0.72rem; padding: 0.25rem 0.5rem; border-radius: 50px; font-weight: 700; z-index: 2; backdrop-filter: blur(2px); }
-    .oy-card-badge { position: absolute; top: 10px; right: 10px; background: var(--accent-coral); color: #fff; font-size: 0.68rem; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 800; z-index: 2; }
+    .oy-card-badge { position: absolute; top: 10px; right: 10px; background: var(--accent-coral); color: #fff; font-size: 0.68rem; padding: 0.2/rem 0.5rem; border-radius: 4px; font-weight: 800; z-index: 2; }
     .oy-img-container { width: 100%; height: 180px; background: #ffffff; display: flex; align-items: center; justify-content: center; padding: 10px; border-bottom: 1px solid var(--border-light); }
     .oy-img { max-width: 95%; max-height: 95%; object-fit: contain; transition: transform 0.4s ease; }
     .oy-card:hover .oy-img { transform: scale(1.05); }
@@ -402,10 +415,10 @@
       <h1 class="hero-title">韓國釜山 6 天 5 夜<br>海景·美食·購物·微醺之旅</h1>
       <p class="hero-subtitle">2026/08/09 (日) ～ 2026/08/14 (五) ｜ 長榮航空 BR1194 / BR1193</p>
       
+      <!-- 調整為 3 個 Card，移除原本的機場接送建議 -->
       <div class="meta-grid">
         <div class="meta-card"><span class="label">住宿飯店</span><span class="val">東橫INN 釜山站1號店</span></div>
         <div class="meta-card"><span class="label">團體成員</span><span class="val">8 位成年人 (彈性慢遊)</span></div>
-        <div class="meta-card"><span class="label">機場接送建議</span><span class="val">強烈建議提前預訂專車包車</span></div>
         <div class="meta-card"><span class="label">票券推薦</span><span class="val">VISIT BUSAN PASS BIG 5</span></div>
       </div>
     </div>
@@ -463,6 +476,88 @@
     <section id="metro-section" class="app-section">
       <div class="section-header">
         <h2 class="section-title">🗺️ 釜山地鐵與每日景點路線地圖</h2>
+      </div>
+      
+      <!-- 🚕 新增中韓對照司機字卡卡片區塊 -->
+      <div class="box-card">
+        <h3 style="color: #fff; margin-bottom: 0.5rem;"><i class="fa-solid fa-taxi" style="color: var(--accent-gold);"></i> 🚕 搭計程車專用：中韓地址對照秀圖卡</h3>
+        <p style="color: var(--text-sub); font-size: 0.9rem; margin-bottom: 1.5rem;">
+          釜山搭乘計程車非常便利划算。若需搭車，可直接將下方卡片放大並出示給司機大哥看，方便迅速設定導航！
+        </p>
+        <div class="taxi-grid">
+          <div class="taxi-card">
+            <div class="taxi-zh">東橫INN 釜山站1號店 <span>住宿</span></div>
+            <div class="taxi-kr-box">
+              <div class="taxi-kr">토요코인 부산역 1호점</div>
+            </div>
+            <div class="taxi-addr">地址：부산 동구 중앙대로 196<br>Address: 196 Jungang-daero, Dong-gu, Busan</div>
+            <button class="taxi-copy-btn" onclick="copyTaxiText('토요코인 부산역 1호점 (부산 동구 중앙대로 196)')"><i class="fa-regular fa-copy"></i> 複製店名與地址</button>
+          </div>
+          <div class="taxi-card">
+            <div class="taxi-zh">金海國際機場 <span>交通</span></div>
+            <div class="taxi-kr-box">
+              <div class="taxi-kr">김해국제공항 (국제선)</div>
+            </div>
+            <div class="taxi-addr">地址：부산 강서구 공항진입로 108<br>Address: 108 Gonghangjinip-ro, Gangseo-gu, Busan</div>
+            <button class="taxi-copy-btn" onclick="copyTaxiText('김해국제공항 국제선 (부산 강서구 공항진입로 108)')"><i class="fa-regular fa-copy"></i> 複製店名與地址</button>
+          </div>
+          <div class="taxi-card">
+            <div class="taxi-zh">本錢豬肉湯飯 <span>美食</span></div>
+            <div class="taxi-kr-box">
+              <div class="taxi-kr">본전돼지국밥</div>
+            </div>
+            <div class="taxi-addr">地址：부산 동구 중앙대로214번길 3-8<br>Address: 3-8 Jungang-daero 214beon-gil, Dong-gu, Busan</div>
+            <button class="taxi-copy-btn" onclick="copyTaxiText('본전돼지국밥 (부산 동구 중앙대로214번길 3-8)')"><i class="fa-regular fa-copy"></i> 複製店名與地址</button>
+          </div>
+          <div class="taxi-card">
+            <div class="taxi-zh">白淺灘文化村 <span>景點</span></div>
+            <div class="taxi-kr-box">
+              <div class="taxi-kr">흰여울문화마을</div>
+            </div>
+            <div class="taxi-addr">地址：부산 영도구 영선동4가 1043<br>Address: 1043 Yeongseon-dong 4-ga, Yeongdo-gu, Busan</div>
+            <button class="taxi-copy-btn" onclick="copyTaxiText('흰여울문화마을 (부산 영도구 영선동4가 1043)')"><i class="fa-regular fa-copy"></i> 複製店名與地址</button>
+          </div>
+          <div class="taxi-card">
+            <div class="taxi-zh">甘川文化村 <span>景點</span></div>
+            <div class="taxi-kr-box">
+              <div class="taxi-kr">감천문화마을</div>
+            </div>
+            <div class="taxi-addr">地址：부산 사하구 감내2로 203<br>Address: 203 Gamnae 2-ro, Saha-gu, Busan</div>
+            <button class="taxi-copy-btn" onclick="copyTaxiText('감천문화마을 (부산 사하구 감내2로 203)')"><i class="fa-regular fa-copy"></i> 複製店名與地址</button>
+          </div>
+          <div class="taxi-card">
+            <div class="taxi-zh">海東龍宮寺 <span>景點</span></div>
+            <div class="taxi-kr-box">
+              <div class="taxi-kr">해동용궁사</div>
+            </div>
+            <div class="taxi-addr">地址：부산 기장군 기장읍 용궁길 86<br>Address: 86 Yonggung-gil, Gijang-eup, Gijang-gun, Busan</div>
+            <button class="taxi-copy-btn" onclick="copyTaxiText('해동용궁사 (부산 기장군 기장읍 용궁길 86)')"><i class="fa-regular fa-copy"></i> 複製店名與地址</button>
+          </div>
+          <div class="taxi-card">
+            <div class="taxi-zh">機張市場 <span>美食</span></div>
+            <div class="taxi-kr-box">
+              <div class="taxi-kr">기장시장</div>
+            </div>
+            <div class="taxi-addr">地址：부산 기장군 기장읍 읍내로 104<br>Address: 104 Eupnae-ro, Gijang-eup, Gijang-gun, Busan</div>
+            <button class="taxi-copy-btn" onclick="copyTaxiText('기장시장 (부산 기장군 기장읍 읍내로 104)')"><i class="fa-regular fa-copy"></i> 複製店名與地址</button>
+          </div>
+          <div class="taxi-card">
+            <div class="taxi-zh">新世界百貨 Centum City店 <span>購物</span></div>
+            <div class="taxi-kr-box">
+              <div class="taxi-kr">신세계백화점 센텀시티점</div>
+            </div>
+            <div class="taxi-addr">地址：부산 해운대구 센텀남대로 35<br>Address: 35 Centumnam-daero, Haeundae-gu, Busan</div>
+            <button class="taxi-copy-btn" onclick="copyTaxiText('신세계백화점 센텀시티점 (부산 해운대구 센텀남대로 35)')"><i class="fa-regular fa-copy"></i> 複製店名與地址</button>
+          </div>
+          <div class="taxi-card">
+            <div class="taxi-zh">味贊王鹽烤肉 南浦店 <span>美食</span></div>
+            <div class="taxi-kr-box">
+              <div class="taxi-kr">맛찬들왕소금구이 남포점</div>
+            </div>
+            <div class="taxi-addr">地址：부산 중구 남포길 34<br>Address: 34 Nampo-gil, Jung-gu, Busan</div>
+            <button class="taxi-copy-btn" onclick="copyTaxiText('맛찬들왕소금구이 남포점 (부산 중구 남포길 34)')"><i class="fa-regular fa-copy"></i> 複製店名與地址</button>
+          </div>
+        </div>
       </div>
       
       <div class="box-card">
@@ -686,7 +781,7 @@
       </div>
       
       <p class="oy-subtitle">
-        整合金針菇影片推薦 14 項與 Klook 最新人氣必買推薦 6 項，總計 20 大韓國美妝藥妝爆款。全部圖片均配置雙重全球代理防盜鏈保險，100% 正常顯示！
+        整合金針菇影片推薦 14 項與 Klook 最新人氣必買推薦 6 項，總計 20 大韓國美妝藥妝爆款。全部圖片皆採用專案本地靜態目錄加載，保證 100% 正常顯示！
       </p>
 
       <!-- Widgets Area -->
@@ -778,7 +873,7 @@
         <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
           <button class="transit-btn" data-plan="venti" style="background: rgba(255,255,255,0.05); border: 2px solid var(--primary-glow); color: #fff; padding: 0.6rem 1.2rem; border-radius: var(--radius-sm); cursor: pointer;" id="btn-transit-1">👍 方案1: 預約包車接送 (首選)</button>
           <button class="transit-btn" data-plan="kakao" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-light); color: #fff; padding: 0.6rem 1.2rem; border-radius: var(--radius-sm); cursor: pointer;" id="btn-transit-2">🚕 方案2: 現場叫 Kakao Venti</button>
-          <button class="transit-btn" data-plan="bus" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-light); color: #fff; padding: 0.6rem 1.2rem; border-radius: var(--radius-sm); cursor: pointer;" id="btn-transit-3">🚌 方案3: 機場巴士直達</button>
+          <button class="transit-btn" data-plan="subway" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-light); color: #fff; padding: 0.6rem 1.2rem; border-radius: var(--radius-sm); cursor: pointer;" id="btn-transit-3">🚇 方案3: 輕軌轉地鐵1號線</button>
         </div>
         <div id="transit-detail" style="background: rgba(0,0,0,0.3); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--glass-border);">
           <strong style="color: var(--accent-gold);">👍 方案 1：預先預約 1 台 9~12 人座接送包車（極推薦！）</strong>
@@ -1182,8 +1277,8 @@
           },
           {
             time: "11:00 - 11:40",
-            title: "專車 / Kakao T Venti 前往金海機場",
-            desc: "飯店退房提行李，搭乘預約車直達機場國際線航廈。",
+            title: "專車前往金海機場 (大件行李包車)",
+            desc: "飯店退房提行李，搭乘預約包車直達機場國際線航廈 (注意：無直達機場巴士)。",
             icon: "🚕",
             badges: ["專車前往", "直達機場"],
             mapUrl: "https://www.google.com/maps/search/?api=1&query=Gimhae+International+Airport"
@@ -1191,7 +1286,7 @@
           {
             time: "14:10",
             title: "搭乘長榮 BR1193 返抵桃園機場 T2",
-            desc: "11:40 前抵達金海機場辦理報到退稅，14:10 起飛圓滿結束韓國釜山 6 天 5 夜奢華慢遊。",
+            desc: "11:40 前抵達金海機場辦理報到退稅， 14:10 起飛圓滿結束韓國釜山 6 天 5 夜奢華慢遊。",
             icon: "✈️",
             badges: ["長榮航空", "順利返台"],
             mapUrl: "https://www.google.com/maps/search/?api=1&query=Taoyuan+International+Airport"
@@ -1274,9 +1369,23 @@
       calculateExchange();
     });
 
+    // 🚕 複製對照卡片內容到剪貼簿功能
+    function copyTaxiText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("已成功複製到剪貼簿，可直接發送或貼給司機查看！");
+      }).catch(err => {
+        const textarea = document.createElement("textarea");
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+        alert("已複製店名與地址！");
+      });
+    }
+
     // 1. SPA Section 切換邏輯
     function switchSection(sectionId) {
-      // 切換主導覽列按鈕 active
       const buttons = document.querySelectorAll('.main-tab-btn');
       buttons.forEach(btn => {
         const spanText = btn.querySelector('span').innerText;
@@ -1284,7 +1393,6 @@
         btn.classList.toggle("active", matchingId === sectionId);
       });
 
-      // 切換 section display
       const sections = document.querySelectorAll('.app-section');
       sections.forEach(sec => {
         if (sec.id === sectionId) {
@@ -1294,7 +1402,6 @@
         }
       });
       
-      // 自動捲動到主選單下方以改善行動端體驗
       document.getElementById('main-nav').scrollIntoView({ behavior: 'smooth' });
     }
 
@@ -1362,7 +1469,6 @@
       
       container.innerHTML = html;
       
-      // 更新子 Tab 選中狀態
       document.querySelectorAll(".sub-tab-btn").forEach(btn => {
         btn.classList.toggle("active", parseInt(btn.dataset.day) === dayNum);
       });
@@ -1425,7 +1531,6 @@
 
     // 6. 事件監聽設定
     function setupEventListeners() {
-      // 行程子 Tab 點擊
       const subNav = document.getElementById("sub-nav-container");
       if (subNav) {
         subNav.addEventListener("click", (e) => {
@@ -1437,12 +1542,11 @@
         });
       }
       
-      // 試算器事件
       document.getElementById("krw-input").addEventListener("input", calculateExchange);
       document.getElementById("rate-input").addEventListener("input", calculateExchange);
       document.getElementById("people-input").addEventListener("input", calculateExchange);
       
-      // 交通方案按鈕
+      // 交通方案按鈕切換邏輯 (已將方案3修正為輕軌轉地鐵)
       document.querySelectorAll(".transit-btn").forEach(btn => {
         btn.addEventListener("click", () => {
           document.querySelectorAll(".transit-btn").forEach(b => b.style.borderColor = "var(--border-light)");
@@ -1461,10 +1565,10 @@
               <strong style="color: var(--primary-glow);">🚕 方案 2：現場 Kakao T 叫 2 台 Venti / 大型計程車</strong>
               <p style="margin-top: 0.4rem;">Kakao T App 已支援中文介面與海外信用卡。出關後可叫 2 台 Venti（每台 4 人 + 4 箱），2 台總費用約 70,000 - 90,000 韓元（約 NT$ 1,680 - 2,160）。但需注意班機抵達高峰期大型車可能需稍作等待。</p>
             `;
-          } else if (plan === "bus") {
+          } else if (plan === "subway") {
             detailBox.innerHTML = `
-              <strong style="color: var(--accent-green);">🚌 方案 3：機場巴士 (Limousine Bus) 直達釜山站</strong>
-              <p style="margin-top: 0.4rem;">於國際線 1 樓 3 號月台搭乘「釜山站/南浦洞線」，每人約 6,000-10,000 韓元（約 NT$ 144-240），8人總計約 NT$ 1,152-1,920。大行李放置下層車廂，車程約 45 分鐘。</p>
+              <strong style="color: var(--accent-coral);">🚇 方案 3：金海輕軌 ➔ 地鐵2號線 (沙上站) ➔ 地鐵1號線 (西面站) ➔ 釜山站</strong>
+              <p style="margin-top: 0.4rem;"><span style="color:var(--accent-coral); font-weight:bold;">⚠️ 注意：目前已無往返釜山站的直達機場巴士。</span><br>若搭乘輕軌與地鐵，需轉乘兩次：先搭金海輕軌至「沙上站」，轉乘2號線至「西面站」，再轉乘1號線至「釜山站」。每人僅需約 3,000 韓元 (約 NT$ 72)，但攜帶 8 個大行李箱轉乘會非常辛苦，不建議家族慢遊使用。</p>
             `;
           }
         });
@@ -1472,7 +1576,7 @@
     }
 
     // === Olive Young Recommendations Logic ===
-    const oyProducts = [{"id": "mediheal", "time": "01:37", "name": "MEDIHEAL 精華面膜片", "en_name": "MEDIHEAL Essential Mask", "category": "skincare", "category_zh": "臉部護理", "img_url": "https://i0.wp.com/images.yesstyle.com/g/p/1122709230_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1122709230_0.jpg", "features": "高濃度精華、服貼度高、高CP值", "skin_type": "所有膚質，特別是缺水肌與需要曬後鎮靜者", "reason": "金針菇姐姐強烈推薦的國民面膜。精華液含量極高，面膜紙薄且貼合度優秀。在 Olive Young 購買通常有 10 片一盒的包裝，並且常常有 1+1 (買一送一) 的促銷活動，是去韓國必囤的保濕聖品。", "tips": "建議洗完臉後敷 10-15 分鐘，取下後輕輕按摩至吸收，再擦上乳液鎖水。若有醫美術後泛紅，綠色積雪草款是很好的鎮靜選擇。"}, {"id": "biodance", "time": "03:25", "name": "Biodance 膠原蛋白深層全效面膜", "en_name": "Biodance Bio-Collagen Real Deep Mask", "category": "skincare", "category_zh": "臉部護理", "img_url": "https://i0.wp.com/images.yesstyle.com/g/p/1124314457_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1124314457_0.jpg", "features": "水凝膠材質、敷完變透明、深層彈力", "skin_type": "乾性肌、熟齡肌、暗沉無光澤肌", "reason": "近期紅遍全球的「敷著睡覺面膜」。它是果凍般的水凝膠材質，敷上後面膜中的超低分子玻尿酸與膠原蛋白會慢慢被肌膚吸收，面膜會隨時間變為完全透明。能顯著改善毛孔與提亮膚色。", "tips": "適合在夜間保養的最後一步使用，建議敷 3-4 小時以上（甚至敷著入睡），醒來後撕下即可看見驚人的水光感與澎潤肌膚。", "badge": "熱銷斷貨王"}, {"id": "torriden", "time": "Klook推薦", "name": "Torriden 5D微分子玻尿酸保濕精華", "en_name": "Torriden Dive-In Low Molecular Hyaluronic Acid Serum", "category": "skincare", "category_zh": "臉部護理", "img_url": "https://i0.wp.com/images.yesstyle.com/g/p/1096758416_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1096758416_0.jpg", "features": "5重玻尿酸、秒速補水、清爽不黏", "skin_type": "油性肌、混合肌、極度缺水乾燥肌", "reason": "Klook 激推的補水第一名精華！在 Olive Young 連續多年榮獲精華類大賞第一名。含有5種不同分子大小的玻尿酸，能深層滲透肌膚底層，瞬間解渴。質地如水般清爽，吸收後完全不黏膩，是極致的補水神器。", "tips": "洗完臉後，在化妝水後使用 1-2 滴輕拍至全臉吸收，後續疊加面霜鎖水。夏日曬後可厚塗做修護。", "badge": "霸榜精華王"}, {"id": "manyo", "time": "Klook推薦", "name": "ma:nyo 魔女工廠 純淨潔顏油", "en_name": "ma:nyo Pure Cleansing Oil", "category": "skincare", "category_zh": "臉部清潔", "img_url": "https://i0.wp.com/images.yesstyle.com/g/p/1077871676_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1077871676_0.jpg", "features": "天然植物油、秒乳化、溫和卸妝", "skin_type": "所有膚質、易長黑頭粉刺肌", "reason": "Klook 精選推薦，Olive Young 長年霸榜的國民卸妝油！採用 99.9% 自然衍生植物油成分，溫和不熏眼。遇水瞬間乳化，不僅能徹底卸除濃妝與防曬，更能透過打圈按摩溫和軟化毛孔中的黑頭與髒污。", "tips": "乾手乾臉塗抹全臉按摩，再沾取少量溫水使其完全「乳化」變白，輕柔按摩 30 秒後以溫水徹底洗淨。", "badge": "回購率No.1"}, {"id": "aestura", "time": "Klook推薦", "name": "AESTURA Atobarrier 365 舒緩保濕乳霜", "en_name": "AESTURA Atobarrier 365 Cream", "category": "skincare", "category_zh": "臉部護理", "img_url": "https://i0.wp.com/images.yesstyle.com/g/p/1118679093_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1118679093_0.jpg", "features": "專利保濕膠囊、修護屏障、舒緩過敏", "skin_type": "敏感肌、乾性肌、肌膚脫皮/紅腫/泛紅者", "reason": "Klook 激推敏感肌救星！由愛茉莉太平洋集團推出的醫學美容護膚品牌。乳霜中含有肉眼可見的專利「Atobarrier」微小保濕膠囊，抹開後迅速融化並形成鎖水膜，修護因過敏或乾燥而受損的肌膚屏障。", "tips": "在護膚最後一步塗抹，特別適合在寒冷季節或搭飛機、乾冷國家時做深層鎖水防護。", "badge": "敏感肌神霜"}, {"id": "unove", "time": "Klook推薦", "name": "UNOVE 深層受損修護髮膜", "en_name": "UNOVE Deep Damage Treatment EX", "category": "body", "category_zh": "身體保養", "img_url": "https://i0.wp.com/images.yesstyle.com/g/p/1113645936_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1113645936_0.jpg", "features": "高濃度蛋白質、沙龍級修護、香氣迷人", "skin_type": "受損髮質、染燙後毛躁分岔、粗糙無光澤髮質", "reason": "Klook 強力推薦，去韓國必囤的沙龍級髮品！Dr.FORHAIR 旗下專攻受損髮的品牌。富含 30,000ppm 高濃度蛋白質，能瞬間撫平毛躁，讓頭髮恢復絲滑柔順的光澤，香氣是溫柔的法式玫瑰與麝香。", "tips": "洗髮後稍微擰乾水分，塗抹於髮尾處並靜置 2-3 分鐘後徹底沖洗，每週使用 2-3 次即可達到深層護髮效果。", "badge": "護髮斷貨王"}, {"id": "dokdo", "time": "Klook推薦", "name": "Round Lab 1025 獨島化妝水", "en_name": "Round Lab 1025 Dokdo Toner", "category": "skincare", "category_zh": "臉部護理", "img_url": "https://i0.wp.com/images.yesstyle.com/g/p/1078170327_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1078170327_0.jpg", "features": "鬱陵島深海水、溫和角質調理、補水清透", "skin_type": "所有膚質，包括敏感肌與易泛紅肌膚", "reason": "Klook 經典推薦！採用鬱陵島深層海水配方，富含 72 種天然礦物質，質地溫和清爽。含有專利去角質酵素，能在日常擦拭中溫和代謝老廢角質，恢復肌膚的細緻亮透。", "tips": "適合搭配化妝棉使用。每天早晚潔面後，用浸濕的化妝棉由內向外順著肌膚紋理輕輕擦拭，也可用於濕敷。", "badge": "獨島系列明星"}, {"id": "bagel_chip", "time": "Klook推薦", "name": "Delight Project 貝果脆片", "en_name": "Delight Project Bagel Chip", "category": "lifestyle", "category_zh": "健康飲品", "img_url": "https://i0.wp.com/images.yesstyle.com/g/p/1107575225_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1107575225_0.jpg", "features": "低卡低熱量、慢火烘焙、超人氣辦公室零食", "skin_type": "喜愛零嘴但注重身材管理與低卡健康飲食者", "reason": "Klook 伴手禮極力推薦！Olive Young 的明星自有零食品牌。將真實貝果切片後塗抹奶油慢火烘焙，口感極其酥脆，有蒜香奶油、蜂蜜奶油與披薩等多種口味，熱量極低且飽足感強。", "tips": "極度推薦搭配 Teazen 康普茶一起享用，作為下午茶或宵夜，解饞又完全沒有罪惡感！", "badge": "收銀台秒殺款"}, {"id": "beyond", "time": "04:14", "name": "Beyond 美白乳液 / 身體乳", "en_name": "Beyond Body Emulsion", "category": "body", "category_zh": "身體保養", "img_url": "https://i0.wp.com/images.yesstyle.com/g/p/1117564731_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1117564731_0.jpg", "features": "溫和草本、高級白麝香、深層鎖水", "skin_type": "所有膚質、身體肌膚乾燥脫屑者", "reason": "LG 生活健康旗下的環保自然品牌。這款身體乳以療癒且高級的「白麝香」香氣聞名，質地乳爽不黏膩，保濕度極佳，能修護乾燥的肌膚屏障。", "tips": "每天洗澡後，在身體微濕時塗抹，保濕與持香效果最佳。"}, {"id": "yunjac", "time": "05:27", "name": "Yunjac 然植亞保濕底霜 (Base Prep)", "en_name": "Yunjac Skin Perfecting Protective Base Prep", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://i0.wp.com/images.yesstyle.com/g/p/1119565507_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1119565507_0.jpg", "features": "底妝膠水、防護隔離、透亮光澤", "skin_type": "乾性肌、混合偏乾、底妝容易浮粉起皮者", "reason": "高端草本護膚品牌推出的妝前精信。被譽為「乾皮親媽」與「化妝師的秘密武器」，質地如水般輕盈，能迅速撫平臉部角質，讓後續不論是粉底液還是氣墊粉餅都非常貼合，展現高級的水光感。", "tips": "在防曬後、底妝前，取 2-3 滴均勻塗抹於全臉，特別是易卡粉的鼻翼與兩頰，輕拍至微黏狀態再上底妝。", "badge": "美妝大賞第一"}, {"id": "obge", "time": "06:13", "name": "OBgE 自然防曬棒", "en_name": "OBgE Natural Cover Sun Stick", "category": "skincare", "category_zh": "防曬護理", "img_url": "https://i0.wp.com/images.yesstyle.com/g/p/1125217431_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1125217431_0.jpg", "features": "不沾手、清爽控油、不泛白", "skin_type": "所有膚質、混合偏油、男士、喜愛戶外活動者", "reason": "韓國男士理容第一品牌推出的防曬棒，女生也非常愛用！具備 SPF50+/PA++++ 最高防曬規格。棒狀設計極為方便，完全不沾手，上臉後呈乾爽霧面，且完全不泛白、不黏膩，抗汗效果優秀。", "tips": "適合隨身攜帶，在戶外每 2-3 小時隨時塗抹補防曬。因其清爽度高，妝後輕拍補防曬也不易弄髒妝容。"}, {"id": "the_saem", "time": "07:12", "name": "The Saem 得鮮完美遮瑕液", "en_name": "The Saem Cover Perfection Tip Concealer", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://i0.wp.com/images.yesstyle.com/g/p/1071477759_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1071477759_0.jpg", "features": "極高遮瑕力、平價戰神、多色號選擇", "skin_type": "有痘疤、黑眼圈、班點需要高度遮瑕者", "reason": "風靡亞洲的平價遮瑕天王。遮瑕力強、持妝度極佳，不論是多深的痘疤 or 黑眼圈，輕點一下就能完美遮蓋，CP 值高到不可思議。", "tips": "因遮瑕力極高，質地偏乾，建議局部「點」在瑕疵處，等 10 秒微乾後，再使用濕海綿或粉撲邊緣輕輕拍開。"}, {"id": "about_tone", "time": "08:40", "name": "About Tone 柔焦控油蜜粉餅", "en_name": "About Tone Blur Powder Pact", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://i0.wp.com/images.yesstyle.com/g/p/1109968434_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1109968434_0.jpg", "features": "一秒磨皮、粉質極細、強效控油", "skin_type": "油性肌、混合肌、毛孔粗大者", "reason": "前身為風靡韓國的 Eglips 蜜粉餅。這款粉餅主打「空氣柔焦」效果，粉質如輕煙般細緻，能瞬間吸附皮脂，讓毛孔隱形，打造如陶瓷娃娃般的乾淨霧面妝效。", "tips": "使用附帶的粉撲，在底妝後輕壓在容易出油的 T 字部位、鼻翼，或用於眼周打底防暈染。"}, {"id": "so_natural", "time": "09:55", "name": "So Natural 經典定妝噴霧", "en_name": "So Natural All Day Tight Makeup Setting Fixer", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://i0.wp.com/images.yesstyle.com/g/p/1066497491_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1066497491_0.jpg", "features": "細緻霧化、快速成膜、抗摩擦防脫妝", "skin_type": "所有膚質、混合偏油、需要長時間持妝者", "reason": "韓國定妝噴霧界的常勝冠軍，粉紅色瓶身非常具有代表性。其壓頭噴出的水霧極其細緻，不會在臉上結成水珠，能快速在底妝上形成保護膜，抗汗、抗油且防摩擦。", "tips": "化妝完成後，將噴霧距離臉部 20-30 公分，畫 'X' 和 'T' 字形噴灑全臉，靜待 1 分鐘自然風乾成膜，切勿用手拍打。"}, {"id": "canmake", "time": "10:30", "name": "Canmake 腮紅霜", "en_name": "Canmake Cream Cheek", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://i0.wp.com/images.yesstyle.com/g/p/1053709088_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1053709088_0.jpg", "features": "清透血色感、凝膠轉粉質、白裡透紅", "skin_type": "所有膚質，尤其是喜愛無粉感日韓系妝容者", "reason": "雖然是日系彩妝，但其極佳的自然融膚感在韓國 Olive Young 也擁有超高人氣。凝膠般的質地上臉推開後會化為乾爽的粉質，呈現如皮膚底層自然透出來的紅潤氣色。", "tips": "用手指沾取適量，輕點於蘋果肌處往外拍開，或是用氣墊粉撲上妝，效果更加均勻清透。"}, {"id": "fillimilli", "time": "11:38", "name": "Fillimilli 胖胖氣墊粉撲", "en_name": "Fillimilli Cushion Pang Pang Puff", "category": "tools", "category_zh": "美妝工具", "img_url": "https://i0.wp.com/images.yesstyle.com/g/p/1121118128_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1121118128_0.jpg", "features": "厚實有彈性、上妝服貼、省時省粉底", "skin_type": "所有使用氣墊粉餅或粉底液的化妝者", "reason": "Olive Young 自有美妝配件品牌 Fillimilli 的明星產品。這款氣墊粉撲非常厚實，彈性極佳，能將粉底均勻且輕薄地拍入肌膚，大幅提升底妝的服貼度，是去 OY 必抓好幾個回台的貼心小物。", "tips": "可用於氣墊粉餅，也適合搭配普通粉底液使用。上妝時採用「快速拍打」的方式，能讓妝效更具光澤與遮瑕力。"}, {"id": "too_cool", "time": "12:43", "name": "Too Cool for School 美術課修容/腮紅 #14", "en_name": "Too Cool for School Artclass Shading", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://i0.wp.com/images.yesstyle.com/g/p/1097241355_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1097241355_0.jpg", "features": "發色自然、柔滑粉質、不易失手", "skin_type": "彩妝新手、喜愛溫柔日常妝容者", "reason": "Too Cool for School 的經典美術課系列，以極佳的發色與粉質著稱。#14 號色提供了極為溫柔、自然且符合亞洲人膚色的冷暖平衡色調，不易結塊且能完美修飾臉部輪廓。", "tips": "用修容刷或腮紅刷沾取後，在手背上稍微拍掉多餘粉末，再輕刷於臉頰或下顎線，可少量多次疊加。"}, {"id": "peripera", "time": "14:09", "name": "Peripera 水光唇釉 (Ink Mood Glowy)", "en_name": "Peripera Ink Mood Glowy Tint", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://i0.wp.com/images.yesstyle.com/g/p/1111666874_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1111666874_0.jpg", "features": "玻璃水光感、滋潤修飾唇紋、持久顯色", "skin_type": "唇紋明顯、喜愛水光嘟嘟唇與純欲妝效者", "reason": "平價彩妝之王 Peripera 的明星水光唇釉。上嘴後會形成一層晶瑩剔透的水光膜，質地保濕不乾澀，且帶有輕微的染唇效果，不容易完全掉色，是打造網紅玻璃唇的首選。", "tips": "塗抹於雙唇後，**靜待 1-2 分鐘不要抿嘴**，等它自動成膜後，水光感和持久度會大幅提升。"}, {"id": "banila_co", "time": "15:14", "name": "Banila Co 緻柔卸妝膏", "en_name": "Banila Co Clean It Zero Cleansing Balm", "category": "skincare", "category_zh": "臉部清潔", "img_url": "https://i0.wp.com/images.yesstyle.com/g/p/1069614769_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1069614769_0.jpg", "features": "雪酪質地、秒乳化、溫和不緊繃", "skin_type": "所有膚質，包括敏感肌與日常化濃妝者", "reason": "風靡全球的「國民卸妝膏」。雪酪般的固體質地，接觸體溫後會瞬間融化並乳化，能溫和、徹底地卸除所有頑固的防水彩妝與毛孔髒污，且洗後完全不熏眼、不緊繃。", "tips": "保持雙手和臉部乾燥，取適量卸妝膏塗抹於臉部輕柔按摩打圈，再沾取少量清水使其完全「乳化」變白，最後用溫水徹底沖洗乾淨。"}, {"id": "teazen", "time": "16:29", "name": "Teazen 康普茶 (Kombucha)", "en_name": "Teazen Kombucha", "category": "lifestyle", "category_zh": "健康飲品", "img_url": "https://i0.wp.com/images.yesstyle.com/g/p/1105367807_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1105367807_0.jpg", "features": "低卡無糖、富含益生菌、清爽氣泡感", "skin_type": "注重腸道健康、想戒含糖飲料的健康追求者", "reason": "因為 BTS 成員飲用而火遍全韓的健康機能飲品。採用凍乾技術保留乳酸菌與益生元，沖泡後帶有碳酸微氣泡感，口味酸甜清爽（如檸檬、水蜜桃等），一包熱量僅 15 卡，解膩無負擔。", "tips": "用 250ml - 500ml 的冷水或冰水沖泡，氣泡感會更加強烈，喝起來就像健康的汽水，非常適合作為大餐後的消食飲料。"}];
+    const oyProducts = [{"id": "mediheal", "time": "01:37", "name": "MEDIHEAL 精華面膜片", "en_name": "MEDIHEAL Essential Mask", "category": "skincare", "category_zh": "臉部護理", "img_url": "https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=https://images.yesstyle.com/g/p/1122709230_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1122709230_0.jpg", "features": "高濃度精華、服貼度高、高CP值", "skin_type": "所有膚質，特別是缺水肌與需要曬後鎮靜者", "reason": "金針菇姐姐強烈推薦的國民面膜。精華液含量極高，面膜紙薄且貼合度優秀。在 Olive Young 購買通常有 10 片一盒的包裝，並且常常有 1+1 (買一送一) 的促銷活動，是去韓國必囤的保濕聖品。", "tips": "建議洗完臉後敷 10-15 分鐘，取下後輕輕按摩至吸收，再擦上乳液鎖水。若有醫美術後泛紅，綠色積雪草款是很好的鎮靜選擇。"}, {"id": "biodance", "time": "03:25", "name": "Biodance 膠原蛋白深層全效面膜", "en_name": "Biodance Bio-Collagen Real Deep Mask", "category": "skincare", "category_zh": "臉部護理", "img_url": "https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=https://images.yesstyle.com/g/p/1124314457_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1124314457_0.jpg", "features": "水凝膠材質、敷完變透明、深層彈力", "skin_type": "乾性肌、熟齡肌、暗沉無光澤肌", "reason": "近期紅遍全球的「敷著睡覺面膜」。它是果凍般的水凝膠材質，敷上後面膜中的超低分子玻尿酸與膠原蛋白會慢慢被肌膚吸收，面膜會隨時間變為完全透明。能顯著改善毛孔與提亮膚色。", "tips": "適合在夜間保養的最後一步使用，建議敷 3-4 小時以上（甚至敷著入睡），醒來後撕下即可看見驚人的水光感與澎潤肌膚。", "badge": "熱銷斷貨王"}, {"id": "torriden", "time": "Klook推薦", "name": "Torriden 5D微分子玻尿酸保濕精華", "en_name": "Torriden Dive-In Low Molecular Hyaluronic Acid Serum", "category": "skincare", "category_zh": "臉部護理", "img_url": "https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=https://images.yesstyle.com/g/p/1096758416_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1096758416_0.jpg", "features": "5重玻尿酸、秒速補水、清爽不黏", "skin_type": "油性肌、混合肌、極度缺水乾燥肌", "reason": "Klook 激推的補水第一名精華！在 Olive Young 連續多年榮獲精華類大賞第一名。含有5種不同分子大小 of 玻尿酸，能深層滲透肌膚底層，瞬間解渴。質地如水般清爽，吸收後完全不黏膩，是極致的補水神器。", "tips": "洗完臉後，在化妝水後使用 1-2 滴輕拍至全臉吸收，後續疊加面霜鎖水。夏日曬後可厚塗做修護。", "badge": "霸榜精華王"}, {"id": "manyo", "time": "Klook推薦", "name": "ma:nyo 魔女工廠 純淨潔顏油", "en_name": "ma:nyo Pure Cleansing Oil", "category": "skincare", "category_zh": "臉部清潔", "img_url": "https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=https://images.yesstyle.com/g/p/1077871676_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1077871676_0.jpg", "features": "天然植物油、秒乳化、溫和卸妝", "skin_type": "所有膚質、易長黑頭粉刺肌", "reason": "Klook 精選推薦，Olive Young 長年霸榜的國民卸妝油！採用 99.9% 自然衍生植物油成分，溫和不熏眼。遇水瞬間乳化，不僅能徹底卸除濃妝與防曬，更能透過打圈按摩溫和軟化毛孔中的黑頭與髒污。", "tips": "乾手乾臉塗抹全臉按摩，再沾取少量溫水使其完全「乳化」變白，輕柔按摩 30 秒後以溫水徹底洗淨。", "badge": "回購率No.1"}, {"id": "aestura", "time": "Klook推薦", "name": "AESTURA Atobarrier 365 舒緩保濕乳霜", "en_name": "AESTURA Atobarrier 365 Cream", "category": "skincare", "category_zh": "臉部護理", "img_url": "https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=https://images.yesstyle.com/g/p/1118679093_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1118679093_0.jpg", "features": "專利保濕膠囊、修護屏障、舒緩過敏", "skin_type": "敏感肌、乾性肌、肌膚壓痛/紅腫/泛紅者", "reason": "Klook 激推敏感肌救星！由愛茉莉太平洋集團推出的醫學美容護膚品牌。乳霜中含有肉眼可見的專利「Atobarrier」微小保濕膠囊，抹開後迅速融化並形成鎖水膜，修護因過敏或乾燥而受損的肌膚屏障。", "tips": "在護膚最後一步塗抹，特別適合在寒冷季節或搭飛機、乾冷國家時做深層鎖水防護。", "badge": "敏感肌神霜"}, {"id": "unove", "time": "Klook推薦", "name": "UNOVE 深層受損修護髮膜", "en_name": "UNOVE Deep Damage Treatment EX", "category": "body", "category_zh": "身體保養", "img_url": "https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=https://images.yesstyle.com/g/p/1113645936_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1113645936_0.jpg", "features": "高濃度蛋白質、沙龍級修護、香氣迷人", "skin_type": "受損髮質、染燙後毛躁分岔、粗糙無光澤髮質", "reason": "Klook 強力推薦，去韓國必囤的沙龍級髮品！Dr.FORHAIR 旗下專攻受損髮的品牌。富含 30,000ppm 高濃度蛋白質，能瞬間撫平毛躁，讓頭髮恢復絲滑柔順的光澤，香氣是溫柔的法式玫瑰與麝香。", "tips": "洗髮後稍微擰乾水分，塗抹於髮尾處並靜置 2-3 分鐘後徹底沖洗，每週使用 2-3 次即可達到深層護髮效果。", "badge": "護髮斷貨王"}, {"id": "dokdo", "time": "Klook推薦", "name": "Round Lab 1025 獨島化妝水", "en_name": "Round Lab 1025 Dokdo Toner", "category": "skincare", "category_zh": "臉部護理", "img_url": "https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=https://images.yesstyle.com/g/p/1078170327_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1078170327_0.jpg", "features": "鬱陵島深海水、溫和角質調理、補水清透", "skin_type": "所有膚質，包括敏感肌與易泛紅肌膚", "reason": "Klook 經典推薦！採用鬱陵島深層海水配方，富含 72 種天然礦物質，質地溫和清爽。含有專利去角質酵素，能在日常擦拭中溫和代謝老廢角質，恢復肌膚的細緻亮透。", "tips": "適合搭配化妝棉使用。每天早晚潔面後，用浸濕的化妝棉由內向外順著肌膚紋理輕輕擦拭，也可用於濕敷。", "badge": "獨島系列明星"}, {"id": "bagel_chip", "time": "Klook推薦", "name": "Delight Project 貝果脆片", "en_name": "Delight Project Bagel Chip", "category": "lifestyle", "category_zh": "健康飲品", "img_url": "https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=https://images.yesstyle.com/g/p/1107575225_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1107575225_0.jpg", "features": "低卡低熱量、慢火烘焙、超人氣辦公室零食", "skin_type": "喜愛零嘴但注重身材管理與低卡健康飲食者", "reason": "Klook 伴手禮極力推薦！Olive Young 的明星自有零食品牌。將真實貝果切片後塗抹奶油慢火烘焙，口感極其酥脆，有蒜香奶油、蜂蜜奶油與披薩等多種口味，熱量極低且飽足感強。", "tips": "極度推薦搭配 Teazen 康普茶一起享用，作為下午茶或宵夜，解饞又完全沒有罪惡感！", "badge": "收銀台秒殺款"}, {"id": "beyond", "time": "04:14", "name": "Beyond 美白乳液 / 身體乳", "en_name": "Beyond Body Emulsion", "category": "body", "category_zh": "身體保養", "img_url": "https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=https://images.yesstyle.com/g/p/1117564731_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1117564731_0.jpg", "features": "溫和草本、高級白麝香、深層鎖水", "skin_type": "所有膚質、身體肌膚乾燥脫屑者", "reason": "LG 生活健康旗下的環保自然品牌。這款身體乳以療癒且高級的「白麝香」香氣聞名，質地乳爽不黏膩，保濕度極佳，能修護乾燥的肌膚屏障。", "tips": "每天洗澡後，在身體微濕時塗抹，保濕與持香效果最佳。"}, {"id": "yunjac", "time": "05:27", "name": "Yunjac 然植亞保濕底霜 (Base Prep)", "en_name": "Yunjac Skin Perfecting Protective Base Prep", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=https://images.yesstyle.com/g/p/1119565507_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1119565507_0.jpg", "features": "底妝膠水、防護隔離、透亮光澤", "skin_type": "乾性肌、混合偏乾、底妝容易浮粉起皮者", "reason": "高端草本護膚品牌推出的妝前精華。被譽為「乾皮親媽」與「化妝師的秘密武器」，質地如水般輕盈，能迅速撫平臉部角質，讓後續不論是粉底液還是氣墊粉餅都非常貼合，展現高級的水光感。", "tips": "在防曬後、底妝前，取 2-3 滴均勻塗抹於全臉，特別是易卡粉的鼻翼與兩頰，輕拍至微黏狀態再上底妝。", "badge": "美妝大賞第一"}, {"id": "obge", "time": "06:13", "name": "OBgE 自然防曬棒", "en_name": "OBgE Natural Cover Sun Stick", "category": "skincare", "category_zh": "防曬護理", "img_url": "https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=https://images.yesstyle.com/g/p/1125217431_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1125217431_0.jpg", "features": "不沾手、清爽控油、不泛白", "skin_type": "所有膚質、混合偏油、男士、喜愛戶外活動者", "reason": "韓國男士理容第一品牌推出的防曬棒，女生也非常愛用！具備 SPF50+/PA++++ 最高防曬規格。棒狀設計極為方便，完全不沾手，上臉後呈乾爽霧面，且完全不泛白、不黏膩，抗汗效果優秀。", "tips": "適合隨身攜帶，在戶外每 2-3 小時隨時塗抹補防曬。因其清爽度高，妝後輕拍補防曬也不易弄髒妝容。"}, {"id": "the_saem", "time": "07:12", "name": "The Saem 得鮮完美遮瑕液", "en_name": "The Saem Cover Perfection Tip Concealer", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=https://images.yesstyle.com/g/p/1071477759_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1071477759_0.jpg", "features": "極高遮瑕力、平價戰神、多色號選擇", "skin_type": "有痘疤、黑眼圈、班點需要高度遮瑕者", "reason": "風靡亞洲的平價遮瑕天王。遮瑕力強、持妝度極佳，不論是多深的痘疤 or 黑眼圈，輕點一下就能完美遮蓋，CP 值高到不可思議。", "tips": "因遮瑕力極高，質地偏乾，建議局部「點」在瑕疵處，等 10 秒微乾後，再使用濕海綿或粉撲邊緣輕輕拍開。"}, {"id": "about_tone", "time": "08:40", "name": "About Tone 柔焦控油蜜粉餅", "en_name": "About Tone Blur Powder Pact", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=https://images.yesstyle.com/g/p/1109968434_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1109968434_0.jpg", "features": "一秒磨皮、粉質極細、強效控油", "skin_type": "油性肌、混合肌、毛孔粗大者", "reason": "前身為風靡韓國的 Eglips 蜜粉餅。這款粉餅主打「空氣柔焦」效果，粉質如輕煙般細緻，能瞬間吸附皮脂，讓毛孔隱形，打造如陶瓷娃娃般的乾淨霧面妝效。", "tips": "使用附帶的粉撲，在底妝後輕壓在容易出油的 T 字部位、鼻翼，或用於眼周打底防暈染。"}, {"id": "so_natural", "time": "09:55", "name": "So Natural 經典定妝噴霧", "en_name": "So Natural All Day Tight Makeup Setting Fixer", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=https://images.yesstyle.com/g/p/1066497491_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1066497491_0.jpg", "features": "細緻霧化、快速成膜、抗摩擦防脫妝", "skin_type": "所有膚質、混合偏油、需要長時間持妝者", "reason": "韓國定妝噴霧界的常勝冠軍，粉紅色瓶身非常具有代表性。其壓頭噴出的水霧極其細緻，不會在臉上結成水珠，能快速在底妝上形成保護膜，抗汗、抗油且防摩擦。", "tips": "化妝完成後，將噴霧距離臉部 20-30 公分，畫 'X' 和 'T' 字形噴灑全臉，靜待 1 分鐘自然風乾成膜，切勿用手拍打。"}, {"id": "canmake", "time": "10:30", "name": "Canmake 腮紅霜", "en_name": "Canmake Cream Cheek", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=https://images.yesstyle.com/g/p/1053709088_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1053709088_0.jpg", "features": "清透血色感、凝膠轉粉質、白裡透紅", "skin_type": "所有膚質，尤其是喜愛無粉感日韓系妝容者", "reason": "雖然是日系彩妝，但其極佳的自然融膚感在韓國 Olive Young 也擁有超高人氣。凝膠般的質地上臉推開後會化為乾爽的粉質，呈現如皮膚底層自然透出來的紅潤氣色。", "tips": "用手指沾取適量，輕點於蘋果肌處往外拍開，或是用氣墊粉撲上妝，效果更加均勻清透。"}, {"id": "fillimilli", "time": "11:38", "name": "Fillimilli 胖胖氣墊粉撲", "en_name": "Fillimilli Cushion Pang Pang Puff", "category": "tools", "category_zh": "美妝工具", "img_url": "https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=https://images.yesstyle.com/g/p/1121118128_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1121118128_0.jpg", "features": "厚實有彈性、上妝服貼、省時省粉底", "skin_type": "所有使用氣墊粉餅或粉底液的化妝者", "reason": "Olive Young 自有美妝配件品牌 Fillimilli 的明星產品。這款氣墊粉撲非常厚實，彈性極佳，能將粉底均勻且輕薄地拍入肌膚，大幅提升底妝的服貼度，是去 OY 必抓好幾個回台的貼心小物。", "tips": "可用於氣墊粉餅，也適合搭配普通粉底液使用。上妝時採用「快速拍打」的方式，能讓妝效更具光澤與遮瑕力。"}, {"id": "too_cool", "time": "12:43", "name": "Too Cool for School 美術課修容/腮紅 #14", "en_name": "Too Cool for School Artclass Shading", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=https://images.yesstyle.com/g/p/1097241355_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1097241355_0.jpg", "features": "發色自然、柔滑粉質、不易失手", "skin_type": "彩妝新手、喜愛溫柔日常妝容者", "reason": "Too Cool for School 的經典美術課系列，以極佳的發色與粉質著稱。#14 號色提供了極為溫柔、自然且符合亞洲人膚色的冷暖平衡色調，不易結塊且能完美修飾臉部輪廓。", "tips": "用修容刷或腮紅刷沾取後，在手背上稍微拍掉多餘粉末，再輕刷於臉頰或下顎線，可少量多次疊加。"}, {"id": "peripera", "time": "14:09", "name": "Peripera 水光唇釉 (Ink Mood Glowy)", "en_name": "Peripera Ink Mood Glowy Tint", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=https://images.yesstyle.com/g/p/1111666874_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1111666874_0.jpg", "features": "玻璃水光感、滋潤修飾唇紋、持久顯色", "skin_type": "唇紋明顯、喜愛水光嘟嘟唇與純欲妝效者", "reason": "平價彩妝之王 Peripera 的明星水光唇釉。上嘴後會形成一層晶瑩剔透的水光膜，質地保濕不乾澀，且帶有輕微的染唇效果，不容易完全掉色，是打造網紅玻璃唇的首選。", "tips": "塗抹於雙唇後，**靜待 1-2 分鐘不要抿嘴**，等它自動成膜後，水光感和持久度會大幅提升。"}, {"id": "banila_co", "time": "15:14", "name": "Banila Co 緻柔卸妝膏", "en_name": "Banila Co Clean It Zero Cleansing Balm", "category": "skincare", "category_zh": "臉部清潔", "img_url": "https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=https://images.yesstyle.com/g/p/1069614769_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1069614769_0.jpg", "features": "雪酪質地、秒乳化、溫和不緊繃", "skin_type": "所有膚質，包括敏感肌與日常化濃妝者", "reason": "風靡全球的「國民卸妝膏」。雪酪般的固體質地，接觸體溫後會瞬間融化並乳化，能溫和、徹底地卸除所有頑固的防水彩妝與毛孔髒污，且洗後完全不熏眼、不緊繃。", "tips": "保持雙手和臉部乾燥，取適量卸妝膏塗抹於臉部輕柔按摩打圈，再沾取少量清水使其完全「乳化」變白，最後用溫水徹底沖洗乾淨。"}, {"id": "teazen", "time": "16:29", "name": "Teazen 康普茶 (Kombucha)", "en_name": "Teazen Kombucha", "category": "lifestyle", "category_zh": "健康飲品", "img_url": "https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=https://images.yesstyle.com/g/p/1105367807_0.jpg", "raw_img": "https://images.yesstyle.com/g/p/1105367807_0.jpg", "features": "低卡無糖、富含益生菌、清爽氣泡感", "skin_type": "注重腸道健康、想戒含糖飲料的健康追求者", "reason": "因為 BTS 成員飲用而火遍全韓的健康機能飲品。採用凍乾技術保留乳酸菌與益生元，沖泡後帶有碳酸微氣泡感，口味酸甜清爽（如檸檬、水蜜桃等），一包熱量僅 15 卡，解膩無負擔。", "tips": "用 250ml - 500ml 的冷水或冰水沖泡，氣泡感會更加強烈，喝起來就像健康的汽水，非常適合作為大餐後的消食飲料。"}];
 
     function renderOliveYoung() {
       const grid = document.getElementById("oy-product-grid");
@@ -1504,15 +1608,15 @@
       grid.innerHTML = html;
     }
 
-    // 雙重保險圖片加載機制
+    // 雙保險圖片加載機制 (Google Focus Proxy -> WordPress Photon CDN 雙代理)
     function handleImageError(img, rawUrl, name) {
       if (!img.dataset.tried) {
-        // 第一重失敗 (i0.wp.com 代理失敗)，嘗試第二重 (Google Focus Proxy)
-        img.dataset.tried = "google";
-        img.src = 'https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=' + encodeURIComponent(rawUrl);
-        console.log("Photon proxy failed, trying Google proxy for: " + name);
-      } else if (img.dataset.tried === "google") {
-        // 第二重也失敗，使用最終 placeholder
+        // 第一重失敗 (Google Focus Proxy 失敗)，嘗試第二重 (WordPress Photon 代理)
+        img.dataset.tried = "photon";
+        img.src = 'https://i0.wp.com/' + rawUrl.replace('https://', '');
+        console.log("Google proxy failed, trying Photon proxy for: " + name);
+      } else if (img.dataset.tried === "photon") {
+        // 全面失敗，使用最終 placeholder
         img.dataset.tried = "final";
         img.src = 'https://via.placeholder.com/300x300.png?text=' + encodeURIComponent(name);
         img.style.filter = "grayscale(100%) opacity(0.6)";
