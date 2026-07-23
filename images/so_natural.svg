@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+        <rect width="200" height="200" fill="#fff5f5"/>
+        <!-- 粉色定妝噴霧瓶身 -->
+        <rect x="75" y="65" width="50" height="100" rx="20" fill="#ffccd5" stroke="#ffb3c1" stroke-width="3"/>
+        <!-- 噴頭與噴嘴 -->
+        <rect x="90" y="45" width="20" height="20" fill="#f8f9fa" stroke="#e9ecef" stroke-width="1.5"/>
+        <path d="M 92 45 L 92 35 L 108 35 L 108 45 Z" fill="#dee2e6"/>
+        <!-- 細緻噴霧特效 -->
+        <path d="M 85 25 Q 70 10 50 15 M 100 22 Q 100 5 100 0 M 115 25 Q 130 10 150 15" stroke="#ff85a1" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+        <text x="100" y="115" font-family="'Outfit', sans-serif" font-size="8" font-weight="bold" fill="#c9184a" text-anchor="middle">SO</text>
+        <text x="100" y="130" font-family="'Outfit', sans-serif" font-size="8" font-weight="bold" fill="#c9184a" text-anchor="middle">NATURAL</text>
+    </svg>

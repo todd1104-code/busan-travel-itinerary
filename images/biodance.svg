@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+        <rect width="200" height="200" fill="#fff0f5"/>
+        <!-- 粉色面膜包裝 -->
+        <rect x="50" y="30" width="100" height="140" rx="10" fill="#ffb3c6" stroke="#ff85a1" stroke-width="3"/>
+        <!-- 水凝膠果凍質感 -->
+        <path d="M 60 70 Q 100 40 140 70 T 140 130 Q 100 160 60 130 Z" fill="#ffffff" opacity="0.6"/>
+        <!-- 亮光波紋與星星 -->
+        <path d="M100 80 L103 88 L111 90 L103 92 L100 100 L97 92 L89 90 L97 88 Z" fill="#ff85a1"/>
+        <circle cx="120" cy="110" r="4" fill="#ffffff"/>
+        <circle cx="80" cy="120" r="3" fill="#ffffff"/>
+        <text x="100" y="152" font-family="'Outfit', sans-serif" font-size="10" font-weight="bold" fill="#fa3b6e" text-anchor="middle">BIODANCE</text>
+    </svg>

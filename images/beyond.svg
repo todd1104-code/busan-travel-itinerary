@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+        <rect width="200" height="200" fill="#fcfcf9"/>
+        <!-- 乳液瓶身 -->
+        <rect x="70" y="60" width="60" height="100" rx="15" fill="#f0eFEB" stroke="#d5bdaf" stroke-width="3"/>
+        <path d="M 85 60 L 85 45 L 115 45 L 115 60 Z" fill="#d5bdaf"/>
+        <!-- 壓頭 -->
+        <path d="M 100 45 L 100 35 L 80 35 L 80 40 L 100 40 Z" fill="#b7b7a4"/>
+        <!-- 綠色草本葉子 -->
+        <path d="M 100 90 Q 115 90 115 105 Q 100 120 100 105 Z" fill="#95d5b2"/>
+        <path d="M 100 105 Q 85 105 85 120 Q 100 135 100 120 Z" fill="#74c69d"/>
+        <text x="100" y="142" font-family="'Outfit', sans-serif" font-size="8" font-weight="bold" fill="#6b705c" text-anchor="middle">BEYOND</text>
+    </svg>
