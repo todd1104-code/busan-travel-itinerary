@@ -182,14 +182,47 @@
     }
 
     /* 交通試算區塊與按鈕白底白字覆蓋修正 */
+    .transit-btn {
+      background: rgba(255, 255, 255, 0.08);
+      color: #cbd5e1;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 0.65rem 1.25rem;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 0.92rem;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .transit-btn:hover {
+      background: rgba(14, 165, 233, 0.25);
+      border-color: var(--primary-glow);
+      color: #ffffff;
+    }
+
+    .transit-btn.active {
+      background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%) !important;
+      color: #ffffff !important;
+      border: 1px solid var(--primary-glow) !important;
+      box-shadow: 0 4px 15px rgba(14, 165, 233, 0.4) !important;
+    }
+
     html[data-theme="light-trip"] .transit-btn {
-      background: #f1f5f9 !important;
+      background: #ffffff !important;
       color: #1e293b !important;
       border: 1px solid #cbd5e1 !important;
     }
 
+    html[data-theme="light-trip"] .transit-btn:hover {
+      background: #f1f5f9 !important;
+      color: #0f172a !important;
+    }
+
     html[data-theme="light-trip"] .transit-btn.active {
-      background: #0066f5 !important;
+      background: linear-gradient(135deg, #0066f5 0%, #0284c7 100%) !important;
       color: #ffffff !important;
       border-color: #0066f5 !important;
       box-shadow: 0 4px 14px rgba(0, 102, 245, 0.3) !important;
@@ -1238,9 +1271,9 @@
         <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: #fff;">🚕 金海機場往返飯店 3 大交通方案（8人 + 8大行李箱）</h3>
         <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem;">針對 8 人與 8 個大行李箱，評估優缺點如下：</p>
         <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
-          <button class="transit-btn" data-plan="venti" style="background: rgba(255,255,255,0.05); border: 2px solid var(--primary-glow); color: #fff; padding: 0.6rem 1.2rem; border-radius: var(--radius-sm); cursor: pointer;" id="btn-transit-1">👍 方案1: 預約包車接送 (首選)</button>
-          <button class="transit-btn" data-plan="kakao" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-light); color: #fff; padding: 0.6rem 1.2rem; border-radius: var(--radius-sm); cursor: pointer;" id="btn-transit-2">🚕 方案2: 現場叫 Kakao Venti</button>
-          <button class="transit-btn" data-plan="subway" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-light); color: #fff; padding: 0.6rem 1.2rem; border-radius: var(--radius-sm); cursor: pointer;" id="btn-transit-3">🚇 方案3: 輕軌轉地鐵1號線</button>
+          <button class="transit-btn active" id="btn-transit-1">👍 方案1: 預約包車接送 (首選)</button>
+          <button class="transit-btn" id="btn-transit-2">🚕 方案2: 現場叫 Kakao Venti</button>
+          <button class="transit-btn" id="btn-transit-3">🚇 方案3: 輕軌轉地鐵1號線</button>
         </div>
         <div id="transit-detail" style="background: rgba(0,0,0,0.3); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--glass-border);">
           <strong style="color: var(--accent-gold);">👍 方案 1：預先預約 1 台 9~12 人座接送包車（極推薦！）</strong>

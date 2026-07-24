@@ -180,14 +180,47 @@
     }
 
     /* 交通試算區塊與按鈕白底白字覆蓋修正 */
+    .transit-btn {
+      background: rgba(255, 255, 255, 0.08);
+      color: #cbd5e1;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 0.65rem 1.25rem;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 0.92rem;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .transit-btn:hover {
+      background: rgba(14, 165, 233, 0.25);
+      border-color: var(--primary-glow);
+      color: #ffffff;
+    }
+
+    .transit-btn.active {
+      background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%) !important;
+      color: #ffffff !important;
+      border: 1px solid var(--primary-glow) !important;
+      box-shadow: 0 4px 15px rgba(14, 165, 233, 0.4) !important;
+    }
+
     html[data-theme="light-trip"] .transit-btn {
-      background: #f1f5f9 !important;
+      background: #ffffff !important;
       color: #1e293b !important;
       border: 1px solid #cbd5e1 !important;
     }
 
+    html[data-theme="light-trip"] .transit-btn:hover {
+      background: #f1f5f9 !important;
+      color: #0f172a !important;
+    }
+
     html[data-theme="light-trip"] .transit-btn.active {
-      background: #0066f5 !important;
+      background: linear-gradient(135deg, #0066f5 0%, #0284c7 100%) !important;
       color: #ffffff !important;
       border-color: #0066f5 !important;
       box-shadow: 0 4px 14px rgba(0, 102, 245, 0.3) !important;
