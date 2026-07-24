@@ -45,6 +45,222 @@
       --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
+    /* ☀️ Trip.com 藍白簡約風格 (Light Trip Theme) 全面美化與對比優化 */
+    html[data-theme="light-trip"] {
+      --primary-glow: #0066f5;
+      --secondary-glow: #0284c7;
+      --accent-gold: #d97706;
+      --accent-coral: #e11d48;
+      --accent-green: #10b981;
+      
+      --bg-dark: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-light: #dbeafe;
+      
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --text-sub: #334155;
+      
+      --glass-bg: #ffffff;
+      --glass-border: #cbd5e1;
+      --shadow-lux: 0 8px 30px rgba(0, 102, 245, 0.08);
+    }
+
+    html[data-theme="light-trip"] body {
+      background-color: #f1f5f9 !important;
+      background-image: 
+        radial-gradient(circle at 10% 15%, rgba(0, 102, 245, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 90% 75%, rgba(217, 119, 6, 0.05) 0%, transparent 45%) !important;
+      color: #0f172a !important;
+    }
+
+    html[data-theme="light-trip"] .hero-header {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, #f1f5f9 100%),
+                  url('https://images.unsplash.com/photo-1570168007204-dfb528c6958f?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat !important;
+      border-bottom: 1px solid #cbd5e1 !important;
+    }
+
+    html[data-theme="light-trip"] .hero-overlay {
+      background: radial-gradient(circle, rgba(241, 245, 249, 0.4) 0%, rgba(241, 245, 249, 0.92) 100%) !important;
+    }
+
+    html[data-theme="light-trip"] .hero-title {
+      background: linear-gradient(135deg, #0f172a 20%, #0066f5 70%, #d97706 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+    }
+
+    html[data-theme="light-trip"] .sticky-nav {
+      background: rgba(255, 255, 255, 0.95) !important;
+      border-bottom: 1px solid #cbd5e1 !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+    }
+
+    html[data-theme="light-trip"] .main-tab-btn {
+      background: #ffffff !important;
+      color: #475569 !important;
+      border: 1px solid #cbd5e1 !important;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03) !important;
+    }
+
+    html[data-theme="light-trip"] .main-tab-btn.active {
+      background: linear-gradient(135deg, #0066f5 0%, #0284c7 100%) !important;
+      color: #ffffff !important;
+      border-color: #0066f5 !important;
+      box-shadow: 0 4px 14px rgba(0, 102, 245, 0.35) !important;
+    }
+
+    /* 每日行程子頁籤背欄與按鈕修正 */
+    html[data-theme="light-trip"] .sub-nav-container,
+    html[data-theme="light-trip"] #sub-nav-container {
+      background: #e2e8f0 !important;
+      border: 1px solid #cbd5e1 !important;
+      padding: 6px !important;
+      border-radius: 40px !important;
+    }
+
+    html[data-theme="light-trip"] .sub-tab-btn {
+      background: #ffffff !important;
+      color: #334155 !important;
+      border: 1px solid #cbd5e1 !important;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.03) !important;
+    }
+
+    html[data-theme="light-trip"] .sub-tab-btn.active {
+      background: linear-gradient(135deg, #0066f5 0%, #0284c7 100%) !important;
+      color: #ffffff !important;
+      border-color: #0066f5 !important;
+      box-shadow: 0 4px 12px rgba(0, 102, 245, 0.3) !important;
+    }
+
+    /* 每日行程區塊卡片美化（告別難看灰底） */
+    html[data-theme="light-trip"] .day-section-block {
+      background: #ffffff !important;
+      border: 1.5px solid #dbeafe !important;
+      box-shadow: 0 6px 25px rgba(0, 102, 245, 0.06) !important;
+      padding: 1.5rem !important;
+      border-radius: var(--radius-lg) !important;
+      margin-bottom: 2.5rem !important;
+    }
+
+    html[data-theme="light-trip"] .day-section-title {
+      color: #1e40af !important;
+      border-bottom: 2px solid #60a5fa !important;
+      padding-bottom: 0.6rem !important;
+      margin-bottom: 1.75rem !important;
+      font-size: 1.35rem !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.5rem !important;
+    }
+
+    /* 時間軸內容卡片 */
+    html[data-theme="light-trip"] .timeline-content {
+      background: #ffffff !important;
+      border: 1px solid #e2e8f0 !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+    }
+
+    html[data-theme="light-trip"] .timeline-time {
+      color: #0066f5 !important;
+      font-weight: 800 !important;
+    }
+
+    html[data-theme="light-trip"] .timeline-title {
+      color: #0f172a !important;
+    }
+
+    html[data-theme="light-trip"] .timeline-desc {
+      color: #334155 !important;
+    }
+
+    html[data-theme="light-trip"] .transport-info-box {
+      background: #eff6ff !important;
+      border: 1px solid #bfdbfe !important;
+      color: #1e40af !important;
+    }
+
+    /* 交通試算區塊與按鈕白底白字覆蓋修正 */
+    html[data-theme="light-trip"] .transit-btn {
+      background: #f1f5f9 !important;
+      color: #1e293b !important;
+      border: 1px solid #cbd5e1 !important;
+    }
+
+    html[data-theme="light-trip"] .transit-btn.active {
+      background: #0066f5 !important;
+      color: #ffffff !important;
+      border-color: #0066f5 !important;
+      box-shadow: 0 4px 14px rgba(0, 102, 245, 0.3) !important;
+    }
+
+    html[data-theme="light-trip"] #transit-detail {
+      background: #eff6ff !important;
+      border: 1.5px solid #bfdbfe !important;
+      color: #0f172a !important;
+    }
+
+    html[data-theme="light-trip"] .transit-plan-desc {
+      color: #334155 !important;
+    }
+
+    html[data-theme="light-trip"] .calc-input {
+      background: #ffffff !important;
+      color: #0f172a !important;
+      border: 1px solid #cbd5e1 !important;
+    }
+
+    html[data-theme="light-trip"] .result-box {
+      background: #eff6ff !important;
+      border: 1px solid #bfdbfe !important;
+    }
+
+    html[data-theme="light-trip"] .result-val {
+      color: #0066f5 !important;
+    }
+
+    /* 通用卡片與文字高對比度強制修正 */
+    html[data-theme="light-trip"] .box-card,
+    html[data-theme="light-trip"] .korean-card-box,
+    html[data-theme="light-trip"] .product-card,
+    html[data-theme="light-trip"] .gallery-card,
+    html[data-theme="light-trip"] .meta-card {
+      background: #ffffff !important;
+      border: 1px solid #e2e8f0 !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    html[data-theme="light-trip"] h1,
+    html[data-theme="light-trip"] h2,
+    html[data-theme="light-trip"] h3,
+    html[data-theme="light-trip"] h4,
+    html[data-theme="light-trip"] .section-title,
+    html[data-theme="light-trip"] .product-title,
+    html[data-theme="light-trip"] .gallery-title {
+      color: #0f172a !important;
+    }
+
+    html[data-theme="light-trip"] p,
+    html[data-theme="light-trip"] label,
+    html[data-theme="light-trip"] li {
+      color: #334155 !important;
+    }
+
+    html[data-theme="light-trip"] .korean-cat-btn,
+    html[data-theme="light-trip"] .oy-filter-btn {
+      background: #f1f5f9 !important;
+      color: #334155 !important;
+      border: 1px solid #cbd5e1 !important;
+    }
+
+    html[data-theme="light-trip"] .korean-cat-btn.active,
+    html[data-theme="light-trip"] .oy-filter-btn.active {
+      background: #0066f5 !important;
+      color: #ffffff !important;
+      border-color: #0066f5 !important;
+    }
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
@@ -114,65 +330,129 @@
     .nav-container { max-width: 1250px; margin: 0 auto; padding: 0 1.5rem; }
     
     .main-tab-group {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 0.5rem;
+      display: flex !important;
+      flex-wrap: nowrap !important;
+      overflow-x: auto !important;
+      gap: 0.5rem !important;
+      padding: 0.2rem 0 !important;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
     }
+    .main-tab-group::-webkit-scrollbar { display: none; }
     
     .main-tab-btn {
-      background: rgba(255, 255, 255, 0.02);
+      flex: 0 0 auto !important;
+      white-space: nowrap !important;
+      background: rgba(255, 255, 255, 0.03);
       border: 1px solid var(--border-light);
-      border-radius: var(--radius-md);
-      padding: 0.85rem 0.5rem;
+      border-radius: 30px !important;
+      padding: 0.55rem 1.1rem !important;
       cursor: pointer;
       color: var(--text-sub);
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 0.88rem !important;
       font-family: inherit;
-      display: flex;
-      flex-direction: column;
+      display: inline-flex !important;
+      flex-direction: row !important;
       align-items: center;
       justify-content: center;
-      gap: 0.25rem;
+      gap: 0.4rem !important;
       transition: var(--transition-smooth);
     }
-    .main-tab-btn i { font-size: 1.1rem; }
+    .main-tab-btn i { font-size: 0.95rem; }
     .main-tab-btn:hover {
-      background: rgba(255, 255, 255, 0.06);
+      background: rgba(255, 255, 255, 0.08);
       border-color: var(--primary-glow);
       color: #fff;
     }
     .main-tab-btn.active {
-      background: linear-gradient(135deg, rgba(0, 210, 255, 0.2) 0%, rgba(58, 123, 213, 0.3) 100%);
-      border: 1.5px solid var(--primary-glow);
-      color: #fff;
-      box-shadow: 0 8px 20px rgba(0, 210, 255, 0.3);
-      transform: translateY(-1px);
+      background: linear-gradient(135deg, var(--primary-glow), #0284c7) !important;
+      border: 1px solid rgba(255, 255, 255, 0.4) !important;
+      color: #fff !important;
+      box-shadow: 0 4px 15px rgba(0, 210, 255, 0.4) !important;
     }
 
-    @media (max-width: 900px) {
-      .main-tab-group { grid-template-columns: repeat(3, 1fr); gap: 0.4rem; }
+    /* 美化分類過濾按鈕 (解決白底粗糙醜按鈕) */
+    .korean-cat-btn, .oy-filter-btn {
+      background: rgba(255, 255, 255, 0.05) !important;
+      color: var(--text-sub) !important;
+      border: 1px solid var(--border-light) !important;
+      padding: 0.4rem 0.9rem !important;
+      border-radius: 20px !important;
+      font-size: 0.85rem !important;
+      font-weight: 600 !important;
+      cursor: pointer !important;
+      transition: all 0.2s ease !important;
+      white-space: nowrap !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.3rem !important;
     }
-    @media (max-width: 600px) {
-      .main-tab-group { grid-template-columns: repeat(2, 1fr); }
+    .korean-cat-btn:hover, .oy-filter-btn:hover {
+      background: rgba(14, 165, 233, 0.15) !important;
+      color: var(--primary-glow) !important;
+      border-color: var(--primary-glow) !important;
+    }
+    .korean-cat-btn.active, .oy-filter-btn.active {
+      background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%) !important;
+      color: #ffffff !important;
+      border-color: transparent !important;
+      box-shadow: 0 4px 12px rgba(14, 165, 233, 0.4) !important;
     }
 
-    /* Sub Navigation Tabs for Itinerary Days */
+    /* 韓語/地址卡 網格與等高強制對齊 (Equal Height) */
+    .korean-cards-grid {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
+      gap: 1.25rem !important;
+      align-items: stretch !important;
+    }
+    .korean-card-box {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      height: 100% !important;
+      min-height: 250px !important;
+    }
+
+    /* Sub Navigation Tabs for Itinerary Days (膠囊單排滑動軌道，不佔兩排) */
     .sub-nav-wrapper {
-      background: rgba(255, 255, 255, 0.02);
+      background: rgba(15, 23, 42, 0.85);
       border: 1px solid var(--border-light);
-      border-radius: var(--radius-md);
-      padding: 0.75rem;
+      border-radius: 40px;
+      padding: 0.4rem;
       margin-bottom: 2rem;
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 0.5rem;
+      display: flex !important;
+      flex-wrap: nowrap !important;
+      overflow-x: auto !important;
+      gap: 0.5rem !important;
+      backdrop-filter: blur(12px);
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
     }
-    @media (max-width: 768px) {
-      .sub-nav-wrapper { grid-template-columns: repeat(3, 1fr); }
+    .sub-nav-wrapper::-webkit-scrollbar { display: none; }
+    .sub-tab-btn {
+      flex: 0 0 auto !important;
+      white-space: nowrap !important;
+      padding: 0.55rem 1.1rem !important;
+      border-radius: 30px !important;
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
     }
-    @media (max-width: 480px) {
-      .sub-nav-wrapper { grid-template-columns: repeat(2, 1fr); }
+    .sub-tab-btn.active {
+      background: linear-gradient(135deg, var(--primary-glow), #0284c7) !important;
+      color: #ffffff !important;
+      font-weight: 700 !important;
+      border-color: rgba(255, 255, 255, 0.4);
+      box-shadow: 0 4px 15px rgba(0, 210, 255, 0.4);
     }
 
     .sub-tab-btn {
@@ -226,8 +506,31 @@
     .event-card:hover { background: var(--bg-card-hover); border-color: rgba(0, 210, 255, 0.4); transform: translateY(-3px); box-shadow: var(--shadow-lux); }
     .event-header-flex { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 0.5rem; }
     .event-time { font-size: 0.9rem; font-weight: 700; color: var(--accent-gold); background: rgba(255, 183, 3, 0.1); padding: 0.2rem 0.6rem; border-radius: 6px; display: inline-block; }
-    .btn-map-link { display: inline-flex; align-items: center; gap: 0.35rem; background: rgba(0, 210, 255, 0.12); border: 1px solid rgba(0, 210, 255, 0.3); color: var(--primary-glow); padding: 0.35rem 0.85rem; border-radius: 50px; font-size: 0.82rem; font-weight: 600; text-decoration: none; transition: var(--transition-smooth); }
-    .btn-map-link:hover { background: var(--primary-glow); color: #000; box-shadow: 0 0 12px rgba(0, 210, 255, 0.5); }
+    .btn-map-link, .map-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%) !important;
+      color: #ffffff !important;
+      padding: 0.55rem 1.1rem !important;
+      border-radius: 8px !important;
+      font-size: 0.88rem !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      border: 1px solid rgba(255, 255, 255, 0.4) !important;
+      box-shadow: 0 4px 14px rgba(14, 165, 233, 0.4) !important;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+      transition: var(--transition-smooth) !important;
+    }
+    .btn-map-link:hover, .map-link-btn:hover {
+      background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%) !important;
+      color: #ffffff !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 6px 20px rgba(56, 189, 248, 0.6) !important;
+    }
+    .btn-map-link i, .map-link-btn i {
+      color: #ffffff !important;
+    }
     .event-title { font-size: 1.3rem; font-weight: 700; color: #fff; margin-bottom: 0.6rem; }
     .event-desc { color: var(--text-sub); font-size: 1rem; line-height: 1.65; margin-bottom: 1rem; }
     .event-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; }
@@ -433,10 +736,12 @@
       <h1 class="hero-title">韓國釜山 6 天 5 夜<br>海景·美食·購物·微醺之旅</h1>
       <p class="hero-subtitle">2026/08/09 (日) ～ 2026/08/14 (五) ｜ 長榮航空 BR1194 / BR1193</p>
       
-      <div class="meta-grid">
-        <div class="meta-card"><span class="label">住宿飯店</span><span class="val">東橫INN 釜山站1號店</span></div>
-        <div class="meta-card"><span class="label">團體成員</span><span class="val">8 位成年人 (彈性慢遊)</span></div>
-        <div class="meta-card"><span class="label">票券推薦</span><span class="val">VISIT BUSAN PASS BIG 5</span></div>
+      <!-- 🎨 風格配色切換按鈕 -->
+      <div style="margin-top: 1.25rem;">
+        <button class="theme-toggle-btn" onclick="toggleTheme()" id="theme-toggle-btn-hero" style="background: rgba(14, 165, 233, 0.15); border: 1.5px solid var(--primary-glow); color: var(--text-main); padding: 0.6rem 1.4rem; border-radius: 30px; font-weight: 700; font-size: 0.95rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; backdrop-filter: blur(10px); box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+          <i class="fa-solid fa-sun" id="theme-btn-icon-hero" style="color: var(--accent-gold); font-size: 1.1rem;"></i>
+          <span id="theme-btn-text-hero">☀️ 切換為 Trip 藍白明亮風格</span>
+        </button>
       </div>
     </div>
   </header>
@@ -465,9 +770,21 @@
           <i class="fa-solid fa-sliders"></i>
           <span>交通試算</span>
         </button>
+        <button class="main-tab-btn" onclick="switchSection('korean-card-section')">
+          <i class="fa-solid fa-comments"></i>
+          <span>韓語/地址卡</span>
+        </button>
+        <button class="main-tab-btn" onclick="switchSection('crab-section')">
+          <i class="fa-solid fa-crab"></i>
+          <span>🦀 帝王蟹評比</span>
+        </button>
         <button class="main-tab-btn" onclick="switchSection('recommendation-section')">
           <i class="fa-solid fa-utensils"></i>
           <span>美食商圈</span>
+        </button>
+        <button class="main-tab-btn theme-nav-btn" onclick="toggleTheme()" id="theme-toggle-btn-nav" style="background: rgba(14, 165, 233, 0.2) !important; border: 1px solid var(--primary-glow) !important; color: var(--primary-glow) !important; font-weight: 700; margin-left: auto;">
+          <i class="fa-solid fa-sun" id="theme-btn-icon-nav" style="color: var(--accent-gold);"></i>
+          <span id="theme-btn-text-nav">☀️ 切換風格</span>
         </button>
       </div>
     </div>
@@ -495,86 +812,15 @@
         <h2 class="section-title">🗺️ 釜山地鐵與每日景點路線地圖</h2>
       </div>
       
-      <!-- 🚕 搭計程車專用：中韓地址對照秀圖卡 -->
-      <div class="box-card">
-        <h3 style="color: #fff; margin-bottom: 0.5rem;"><i class="fa-solid fa-taxi" style="color: var(--accent-gold);"></i> 🚕 搭計程車專用：中韓地址對照秀圖卡</h3>
-        <p style="color: var(--text-sub); font-size: 0.9rem; margin-bottom: 1.5rem;">
-          釜山搭乘計程車非常便利劃算。若需搭車，可直接將下方卡片放大並出示給司機大哥看，方便迅速設定導航！
-        </p>
-        <div class="taxi-grid">
-          <div class="taxi-card">
-            <div class="taxi-zh">東橫INN 釜山站1號店 <span>住宿</span></div>
-            <div class="taxi-kr-box">
-              <div class="taxi-kr">토요코인 부산역 1호점</div>
-            </div>
-            <div class="taxi-addr">地址：부산 동구 중앙대로 196<br>Address: 196 Jungang-daero, Dong-gu, Busan</div>
-            <button class="taxi-copy-btn" onclick="copyTaxiText('토요코인 부산역 1호점 (부산 동구 중앙대로 196)')"><i class="fa-regular fa-copy"></i> 複製店名與地址</button>
-          </div>
-          <div class="taxi-card">
-            <div class="taxi-zh">金海國際機場 <span>交通</span></div>
-            <div class="taxi-kr-box">
-              <div class="taxi-kr">김해국제공항 (국제선)</div>
-            </div>
-            <div class="taxi-addr">地址：부산 강서구 공항진입로 108<br>Address: 108 Gonghangjinip-ro, Gangseo-gu, Busan</div>
-            <button class="taxi-copy-btn" onclick="copyTaxiText('김해국제공항 국제선 (부산 강서구 공항진입로 108)')"><i class="fa-regular fa-copy"></i> 複製店名與地址</button>
-          </div>
-          <div class="taxi-card">
-            <div class="taxi-zh">本錢豬肉湯飯 <span>美食</span></div>
-            <div class="taxi-kr-box">
-              <div class="taxi-kr">본전돼지국밥</div>
-            </div>
-            <div class="taxi-addr">地址：부산 동구 중앙대로214번길 3-8<br>Address: 3-8 Jungang-daero 214beon-gil, Dong-gu, Busan</div>
-            <button class="taxi-copy-btn" onclick="copyTaxiText('본전돼지국밥 (부산 동구 중앙대로214번길 3-8)')"><i class="fa-regular fa-copy"></i> 複製店名與地址</button>
-          </div>
-          <div class="taxi-card">
-            <div class="taxi-zh">白淺灘文化村 <span>景點</span></div>
-            <div class="taxi-kr-box">
-              <div class="taxi-kr">흰여울문화마을</div>
-            </div>
-            <div class="taxi-addr">地址：부산 영도구 영선동4가 1043<br>Address: 1043 Yeongseon-dong 4-ga, Yeongdo-gu, Busan</div>
-            <button class="taxi-copy-btn" onclick="copyTaxiText('흰여울문화마을 (부산 영도구 영선동4가 1043)')"><i class="fa-regular fa-copy"></i> 複製店名與地址</button>
-          </div>
-          <div class="taxi-card">
-            <div class="taxi-zh">甘川文化村 <span>景點</span></div>
-            <div class="taxi-kr-box">
-              <div class="taxi-kr">감천문화마을</div>
-            </div>
-            <div class="taxi-addr">地址：부산 사하구 감내2로 203<br>Address: 203 Gamnae 2-ro, Saha-gu, Busan</div>
-            <button class="taxi-copy-btn" onclick="copyTaxiText('감천문화마을 (부산 사하구 감내2로 203)')"><i class="fa-regular fa-copy"></i> 複製店名與地址</button>
-          </div>
-          <div class="taxi-card">
-            <div class="taxi-zh">海東龍宮寺 <span>景點</span></div>
-            <div class="taxi-kr-box">
-              <div class="taxi-kr">해동용궁사</div>
-            </div>
-            <div class="taxi-addr">地址：부산 기장군 기장읍 용궁길 86<br>Address: 86 Yonggung-gil, Gijang-eup, Gijang-gun, Busan</div>
-            <button class="taxi-copy-btn" onclick="copyTaxiText('해동용궁사 (부산 기장군 기장읍 용궁길 86)')"><i class="fa-regular fa-copy"></i> 複製店名與地址</button>
-          </div>
-          <div class="taxi-card">
-            <div class="taxi-zh">機張市場 <span>美食</span></div>
-            <div class="taxi-kr-box">
-              <div class="taxi-kr">기장시장</div>
-            </div>
-            <div class="taxi-addr">地址：부산 기장군 기장읍 읍내로 104<br>Address: 104 Eupnae-ro, Gijang-eup, Gijang-gun, Busan</div>
-            <button class="taxi-copy-btn" onclick="copyTaxiText('기장시장 (부산 기장군 기장읍 읍내로 104)')"><i class="fa-regular fa-copy"></i> 複製店名與地址</button>
-          </div>
-          <div class="taxi-card">
-            <div class="taxi-zh">新世界百貨 Centum City店 <span>購物</span></div>
-            <div class="taxi-kr-box">
-              <div class="taxi-kr">신세계백화점 센텀시티점</div>
-            </div>
-            <div class="taxi-addr">地址：부산 해운대구 센텀남대로 35<br>Address: 35 Centumnam-daero, Haeundae-gu, Busan</div>
-            <button class="taxi-copy-btn" onclick="copyTaxiText('신세계백화점 센텀시티점 (부산 해운대구 센텀남대로 35)')"><i class="fa-regular fa-copy"></i> 複製店名與地址</button>
-          </div>
-          <div class="taxi-card">
-            <div class="taxi-zh">味贊王鹽烤肉 南浦店 <span>美食</span></div>
-            <div class="taxi-kr-box">
-              <div class="taxi-kr">맛찬들왕소금구이 남포점</div>
-            </div>
-            <div class="taxi-addr">地址：부산 중구 남포길 34<br>Address: 34 Nampo-gil, Jung-gu, Busan</div>
-            <button class="taxi-copy-btn" onclick="copyTaxiText('맛찬들왕소금구이 남포점 (부산 중구 남포길 34)')"><i class="fa-regular fa-copy"></i> 複製店名與地址</button>
-          </div>
+      <!-- 🚕 搭計程車專用導引 -->
+      <div class="box-card" style="background: rgba(14, 165, 233, 0.1); border: 1px solid rgba(14, 165, 233, 0.3); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding: 1.25rem 1.5rem; margin-bottom: 1.75rem;">
+        <div>
+          <h3 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.25rem;"><i class="fa-solid fa-taxi" style="color: var(--accent-gold);"></i> 🚕 搭計程車專用中韓地址與實用對話卡</h3>
+          <p style="color: var(--text-sub); font-size: 0.88rem; margin: 0;">已為您收錄飯店、景點、美食韓文地址與「📱 秀給司機看」滿版大字置頂視窗！</p>
         </div>
+        <button class="map-link-btn" onclick="switchSection('korean-card-section')" style="background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%) !important; color: #fff !important; font-weight: 700; border-radius: 30px; padding: 0.6rem 1.25rem; white-space: nowrap;">
+          <i class="fa-solid fa-comments"></i> 前往【韓語/地址卡】專區 ➔
+        </button>
       </div>
       
       <div class="box-card">
@@ -585,12 +831,12 @@
         <!-- 一鍵定位整日所有景點 -->
         <h3 style="color: #fff; margin-bottom: 0.85rem;"><i class="fa-solid fa-route" style="color: var(--primary-glow);"></i> 每日行程景點一鍵路線地圖</h3>
         <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2rem;">
-          <a href="https://www.google.com/maps/dir/Toyoko+Inn+Busan+Station+No.1/Bonjeon+Dwaeji-gukbap+Busan/Arte+Museum+Busan/P.ARK+Yeongdo+Busan/Matchandeul+Wangso-geum-gui+Nampo+Busan/Yongdusan+Park+Busan" target="_blank" class="btn-map-link" style="padding: 0.55rem 1.1rem; font-size: 0.88rem;"><i class="fa-solid fa-route"></i> Day 1 全日路線地圖</a>
+          <a href="https://www.google.com/maps/dir/Toyoko+Inn+Busan+Station+No.1/Bonjeon+Dwaeji-gukbap+Busan/Woori+Exchange+Nampo+Busan/Gwangbok-ro+Fashion+Street+Busan/Matchandeul+Wangso-geum-gui+Nampo+Busan" target="_blank" class="btn-map-link" style="padding: 0.55rem 1.1rem; font-size: 0.88rem;"><i class="fa-solid fa-route"></i> Day 1 全日路線地圖</a>
           <a href="https://www.google.com/maps/dir/Busan+Station/Haeundae+Blueline+Park+Mipo+Station/Oryukdo+Skywalk+Busan/Huinnyeoul+Culture+Village+Busan/Gamcheon+Culture+Village+Busan/Songjo-3-dae+Dwaeji-gukbap+Seomyeon" target="_blank" class="btn-map-link" style="padding: 0.55rem 1.1rem; font-size: 0.88rem;"><i class="fa-solid fa-route"></i> Day 2 全日路線地圖</a>
-          <a href="https://www.google.com/maps/dir/Toyoko+Inn+Busan+Station+No.1/Songdo+Marine+Cable+Car+Busan/Jagalchi+Market+Busan/Gwangbok-ro+Fashion+Street+Busan/Lotte+Mart+Gwangbok+Busan/Hanyang+Jokbal+Nampo+Busan" target="_blank" class="btn-map-link" style="padding: 0.55rem 1.1rem; font-size: 0.88rem;"><i class="fa-solid fa-route"></i> Day 3 全日路線地圖</a>
-          <a href="https://www.google.com/maps/dir/Toyoko+Inn+Busan+Station+No.1/Haedong+Yonggungsa+Temple/Skyline+Luge+Busan/Gijang+Market+Busan/Ananti+Cove+Busan/Lotte+Premium+Outlets+Dongbusan/Gobansikdang+Gwangalli+Busan" target="_blank" class="btn-map-link" style="padding: 0.55rem 1.1rem; font-size: 0.88rem;"><i class="fa-solid fa-route"></i> Day 4 全日路線地圖</a>
-          <a href="https://www.google.com/maps/dir/Toyoko+Inn+Busan+Station+No.1/SPA+LAND+Centum+City+Busan/Shinsegae+Centum+City+Busan/Seomyeon+Underground+Shopping+Center/Gwangalli+Yacht+Tour+Busan/Clam+Gwangalli+Busan" target="_blank" class="btn-map-link" style="padding: 0.55rem 1.1rem; font-size: 0.88rem;"><i class="fa-solid fa-route"></i> Day 5 全日路線地圖</a>
-          <a href="https://www.google.com/maps/dir/Toyoko+Inn+Busan+Station+No.1/Brown+Hands+Baekje+Busan/Gimhae+International+Airport" target="_blank" class="btn-map-link" style="padding: 0.55rem 1.1rem; font-size: 0.88rem;"><i class="fa-solid fa-route"></i> Day 6 全日路線地圖</a>
+          <a href="https://www.google.com/maps/dir/Toyoko+Inn+Busan+Station+No.1/Songdo+Marine+Cable+Car+Busan/Jagalchi+Market+Busan/Gwangbok-ro+Fashion+Street+Busan/Lotte+Mart+Gwangbok+Busan/BIFF+Square+Busan" target="_blank" class="btn-map-link" style="padding: 0.55rem 1.1rem; font-size: 0.88rem;"><i class="fa-solid fa-route"></i> Day 3 全日路線地圖</a>
+          <a href="https://www.google.com/maps/dir/Toyoko+Inn+Busan+Station+No.1/Haedong+Yonggungsa+Temple/Skyline+Luge+Busan/Gijang+Market+Busan/Ananti+Cove+Busan/Lotte+Premium+Outlets+Dongbusan/Toyoko+Inn+Busan+Station+No.1" target="_blank" class="btn-map-link" style="padding: 0.55rem 1.1rem; font-size: 0.88rem;"><i class="fa-solid fa-route"></i> Day 4 全日路線地圖</a>
+          <a href="https://www.google.com/maps/dir/Toyoko+Inn+Busan+Station+No.1/SPA+LAND+Centum+City+Busan/Shinsegae+Centum+City+Busan/Cheongsapo+Busan/Busan+X+the+SKY/Marine+City+Busan/Clam+Gwangalli+Busan" target="_blank" class="btn-map-link" style="padding: 0.55rem 1.1rem; font-size: 0.88rem;"><i class="fa-solid fa-route"></i> Day 5 全日路線地圖</a>
+          <a href="https://www.google.com/maps/dir/Toyoko+Inn+Busan+Station+No.1/Gimhae+International+Airport" target="_blank" class="btn-map-link" style="padding: 0.55rem 1.1rem; font-size: 0.88rem;"><i class="fa-solid fa-route"></i> Day 6 全日路線地圖</a>
         </div>
 
         <!-- 地鐵路線對照圖 -->
@@ -629,15 +875,15 @@
               </tr>
               <tr>
                 <td><strong>Day 1</strong></td>
-                <td>影島 Arte Museum</td>
-                <td>景點</td>
-                <td><a href="https://www.google.com/maps/search/?api=1&query=Arte+Museum+Busan" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
+                <td>南浦洞換錢所 (友利/映珍/Money Box)</td>
+                <td>換匯</td>
+                <td><a href="https://www.google.com/maps/search/?api=1&query=Woori+Exchange+Nampo+Busan" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
               </tr>
               <tr>
                 <td><strong>Day 1</strong></td>
-                <td>影島 P.ARK 海景咖啡廳</td>
-                <td>美食</td>
-                <td><a href="https://www.google.com/maps/search/?api=1&query=P.ARK+Yeongdo+Busan" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
+                <td>南浦洞光復路時尚街 & 美妝散步</td>
+                <td>購物</td>
+                <td><a href="https://www.google.com/maps/search/?api=1&query=Gwangbok-ro+Fashion+Street+Busan" target="_blank"><i class="fa-solid fa-map-pin"></i> 開啟地圖</a></td>
               </tr>
               <tr>
                 <td><strong>Day 1</strong></td>
@@ -868,6 +1114,110 @@
       </div>
     </section>
 
+    <!-- Section: 🗣️ 實用韓語與計程車中韓地址秀圖卡 -->
+    <section id="korean-card-section" class="app-section">
+      <div class="korean-section-header">
+        <h2 class="section-title">🗣️ 實用韓語與計程車中韓地址秀圖卡</h2>
+        <div class="korean-cat-tabs" style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.75rem;">
+          <button class="korean-cat-btn active" onclick="filterKoreanCat('all', this)">全部</button>
+          <button class="korean-cat-btn" onclick="filterKoreanCat('taxi', this)">🚕 搭計程車</button>
+          <button class="korean-cat-btn" onclick="filterKoreanCat('food', this)">🍴 餐廳點餐</button>
+          <button class="korean-cat-btn" onclick="filterKoreanCat('shop', this)">🛍️ 購物退稅</button>
+          <button class="korean-cat-btn" onclick="filterKoreanCat('common', this)">👋 禮貌用語</button>
+        </div>
+      </div>
+      <div class="korean-cards-grid" id="korean-cards-container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
+        <!-- Cards loaded dynamically via app.js -->
+      </div>
+    </section>
+
+    <!-- Section: 🦀 8人帝王蟹完整對比與避坑指南專區 (獨立頁籤專區) -->
+    <section id="crab-section" class="app-section">
+      <div class="section-header">
+        <h2 class="section-title" style="color: #f43f5e; display: flex; align-items: center; gap: 0.6rem;">
+          🦀 札嘎其 100/101號 (渡邊水產) vs 新東亞 8號 8人帝王蟹完整對比與評比指南
+        </h2>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.4rem;">
+          這兩家都是台灣遊客在札嘎其/新東亞區域評價極高的海鮮攤位，針對 8 位成年家族全團出行的情境，特別為您整理出詳細的對比與實戰避坑建議：
+        </p>
+      </div>
+
+      <div class="box-card" style="background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(225, 29, 72, 0.3); border-radius: var(--radius-lg); padding: 1.5rem; margin-bottom: 2rem;">
+        <div style="overflow-x: auto; margin-bottom: 1.5rem;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem; background: rgba(30, 41, 59, 0.6); border-radius: 10px; overflow: hidden;">
+            <thead>
+              <tr style="background: rgba(225, 29, 72, 0.25); color: #fda4af;">
+                <th style="padding: 0.85rem; border: 1px solid rgba(255,255,255,0.1); text-align: left; width: 20%;">比較項目</th>
+                <th style="padding: 0.85rem; border: 1px solid rgba(255,255,255,0.1); text-align: left; width: 40%;">🏆 札嘎其 100/101號 (渡邊水產)</th>
+                <th style="padding: 0.85rem; border: 1px solid rgba(255,255,255,0.1); text-align: left; width: 40%;">🏆 新東亞水產市場 8號攤位 (華僑老闆)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); font-weight:700; color: #fff;">所在位置</td>
+                <td style="padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); color: var(--text-sub);">札嘎其市場大樓 1 樓（傳統大樓內）</td>
+                <td style="padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); color: var(--text-sub);">新東亞水產市場 1 樓（緊鄰札嘎其大樓旁 1 分鐘路程）</td>
+              </tr>
+              <tr style="background: rgba(255,255,255,0.02);">
+                <td style="padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); font-weight:700; color: #fff;">用餐型態</td>
+                <td style="padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); color: var(--text-sub);">1樓挑海鮮 ➔ 上 2樓配合餐廳用餐</td>
+                <td style="padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); color: var(--text-sub);">1樓挑海鮮 ➔ 攤位旁現場設座用餐</td>
+              </tr>
+              <tr>
+                <td style="padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); font-weight:700; color: #fff;">語言溝通</td>
+                <td style="padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); color: var(--text-sub);">中文非常流利（店員/老闆娘會講中文）</td>
+                <td style="padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); color: var(--text-sub);">華僑老闆主持，中文極度流利溝通零障礙</td>
+              </tr>
+              <tr style="background: rgba(255,255,255,0.02);">
+                <td style="padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); font-weight:700; color: #fff;">額外料理費</td>
+                <td style="padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); color:#f87171;">需另付 2 樓開桌費 + 蒸煮加工費 (人均約 ₩5,000+)</td>
+                <td style="padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); color:#4ade80; font-weight:700;">免收額外料理費/開桌費 (包含在車拚總價內)</td>
+              </tr>
+              <tr>
+                <td style="padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); font-weight:700; color: #fff;">免費招待配菜</td>
+                <td style="padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); color: var(--text-sub);">生魚片、大扇貝、鮑魚、生章魚、海膽等豪邁海鮮</td>
+                <td style="padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); color: var(--text-sub);">豐富韓式小菜、生章魚、烤/蒸扇貝、海帶湯、鮭魚壽司</td>
+              </tr>
+              <tr style="background: rgba(255,255,255,0.02);">
+                <td style="padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); font-weight:700; color: #fff;">環境與座位</td>
+                <td style="padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); color: var(--text-sub);">2樓為標準餐廳風格，座位多，冷氣足且視野可看港口</td>
+                <td style="padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); color: var(--text-sub);">1樓攤位旁傳統鐵桌，很有在地市井接地氣傳統氛圍</td>
+              </tr>
+              <tr>
+                <td style="padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); font-weight:700; color: #fff;">蟹膏炒飯體驗</td>
+                <td style="padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); color: var(--text-sub);">2樓餐廳代為處理，炒香入味</td>
+                <td style="padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); color: var(--text-sub);">一樓現場直接炒，加入大量芝麻香油與海苔</td>
+              </tr>
+              <tr style="background: rgba(255,255,255,0.02);">
+                <td style="padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); font-weight:700; color: #fff;">8人桌位舒適度</td>
+                <td style="padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); color:var(--accent-gold);">★★★★☆ (2樓可輕鬆安排 8 人連桌大桌)</td>
+                <td style="padding: 0.75rem; border: 1px solid rgba(255,255,255,0.1); color:var(--accent-gold);">★★★☆☆ (空間較緊湊，8 人需稍微併桌)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem;">
+          <div style="background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); padding: 1.25rem; border-radius: var(--radius-md);">
+            <strong style="color: var(--accent-gold); font-size: 1.05rem; display: block; margin-bottom: 0.6rem;">💡 8 人家族選擇總結與建議：</strong>
+            <ul style="margin: 0; padding-left: 1.2rem; line-height: 1.7; font-size: 0.9rem; color: #cbd5e1;">
+              <li><b>選擇「渡邊水產 (100/101號)」</b>：若全家希望上 2 樓冷氣餐廳坐得寬敞舒適、看港景，且想吃到極致豐富的海鮮拼盤（生魚片、鮑魚大方送）。</li>
+              <li><b>選擇「新東亞 8號」</b>：若全家希望一樓一筆結清無隱藏開桌費、華僑老闆溝通親切無壓力、體驗傳統漁港接地氣美食氛圍。</li>
+            </ul>
+          </div>
+
+          <div style="background: rgba(14, 165, 233, 0.1); border: 1px solid rgba(14, 165, 233, 0.3); padding: 1.25rem; border-radius: var(--radius-md);">
+            <strong style="color: var(--primary-glow); font-size: 1.05rem; display: block; margin-bottom: 0.6rem;">💡 帝王蟹點餐與防坑實戰指南：</strong>
+            <ol style="margin: 0; padding-left: 1.2rem; line-height: 1.7; font-size: 0.9rem; color: #cbd5e1;">
+              <li><b>認明紅帝王蟹 (鱈場蟹)</b>：背殼正中央有 <b>6 顆凸出尖刺</b>（肉質最肥美多汁）。不要買成只有 <b>4 顆尖刺的藍帝王蟹 (油蟹)</b>，口感差很多！</li>
+              <li><b>秤重扣除籃重</b>：秤重時請確認老闆將電子秤歸零，或扣除塑膠籃本身重量，避免被多算斤兩。</li>
+              <li><b>8人份量精算</b>：8 位成人建議挑選 2 隻大帝王蟹 (總重約 4.5～5.5 kg)，再加上店家招待的海鮮與「蟹膏炒飯」，份量就會非常充裕飽足！</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Section 4: 景點寫真圖鑑 -->
     <section id="gallery-section" class="app-section">
       <div class="section-header">
@@ -913,7 +1263,22 @@
       </div>
     </section>
 
-    <!-- Section 6: 美食與商圈指南 -->
+    <!-- Section: 🗣️ 實用韓語與計程車中韓地址秀圖卡 -->
+    <section id="korean-card-section" class="app-section">
+      <div class="korean-section-header">
+        <h2 class="section-title">🗣️ 實用韓語與計程車中韓地址秀圖卡</h2>
+        <div class="korean-cat-tabs">
+          <button class="korean-cat-btn active" onclick="filterKoreanCat('all', this)">全部</button>
+          <button class="korean-cat-btn" onclick="filterKoreanCat('taxi', this)">🚕 搭計程車</button>
+          <button class="korean-cat-btn" onclick="filterKoreanCat('food', this)">🍴 餐廳點餐</button>
+          <button class="korean-cat-btn" onclick="filterKoreanCat('shop', this)">🛍️ 購物退稅</button>
+          <button class="korean-cat-btn" onclick="filterKoreanCat('common', this)">👋 禮貌用語</button>
+        </div>
+      </div>
+      <div id="korean-cards-container" class="korean-cards-grid"></div>
+    </section>
+
+    <!-- Section 6: 必吃美食與商圈懶人包 -->
     <section id="recommendation-section" class="app-section">
       <div class="section-header">
         <h2 class="section-title">🍱 必吃美食與 🛍️ 購物商圈精華指南</h2>
@@ -976,9 +1341,11 @@
     <p>🇰🇷 韓國釜山 6 天 5 夜家族豪華慢遊行程指南 &copy; 2026. 祝各位團員旅途愉快！</p>
   </footer>
 
+  <script src="app.js"></script>
   <script>
-    // 行程資料集
-    const itineraryData = [
+    // 行程資料集載入自 app.js 檔
+    if (typeof itineraryData === 'undefined') {
+      window.itineraryData = [
       {
         day: 1,
         date: "8/9（日）",
@@ -986,15 +1353,15 @@
         title: "抵達釜山 ➔ 影島 Arte Museum ➔ P.ARK 海景咖啡 ➔ 南浦洞味贊王燒肉與微醺夜生活",
         items: [
           {
-            time: "09:55",
+            time: "11:35",
             title: "抵達金海國際機場 (PUS)",
-            desc: "搭乘長榮 BR1194 班機抵達釜山，辦理入境與提領 8 個大行李箱。",
+            desc: "搭乘長榮 BR1194 班機 (08:20 桃園 T2 出發 ➔ 11:35 抵達釜山)，辦理入境與提領 8 個大行李箱。",
             icon: "✈️",
-            badges: ["航班報到", "入境手續"],
+            badges: ["長榮航空", "入境手續"],
             mapUrl: "https://www.google.com/maps/search/?api=1&query=Gimhae+International+Airport"
           },
           {
-            time: "11:00 - 11:45",
+            time: "12:30 - 13:15",
             title: "金海機場 ➔ 東橫INN 釜山站1號店",
             desc: "搭乘 2 台 Kakao T Venti 大型計程車直達飯店寄放行李，避免行李塞不下。",
             icon: "🚕",
@@ -1002,16 +1369,16 @@
             mapUrl: "https://www.google.com/maps/search/?api=1&query=Toyoko+Inn+Busan+Station+No.1"
           },
           {
-            time: "12:00 - 13:30",
+            time: "13:20 - 14:30",
             title: "午餐：本錢豬肉湯飯 / 大建名家",
-            desc: "釜山站必吃 30 年老店，每碗約 9,000 韓元（約 NT$ 216），湯頭濃郁鮮美，附新鮮韭菜與蝦醬。",
+            desc: "釜山站必吃 30 年老店，每碗約 9,000 韓元（約 NT$ 216），湯頭濃郁鮮美，附新鮮韭菜與蝦醬。正好避開中午排隊尖峰！",
             icon: "🍲",
-            badges: ["老字號湯飯", "道地美食"],
+            badges: ["老字號湯飯", "避開尖峰"],
             badgeType: "food",
             mapUrl: "https://www.google.com/maps/search/?api=1&query=Bonjeon+Dwaeji-gukbap+Busan"
           },
           {
-            time: "13:45 - 15:45",
+            time: "14:45 - 16:45",
             title: "【高評價強推】影島 Arte Museum (아르떼뮤지엄 부산)",
             desc: "門票 22,000 韓元（可用 PASS 兌換）。大型沉浸式光影展，運用投影、香氛與音效打造細雨與海浪等，室內非常涼快，極好拍照，被評為釜山必訪 CP 值最高景點！",
             icon: "🎨",
@@ -1020,7 +1387,7 @@
             mapUrl: "https://www.google.com/maps/search/?api=1&query=Arte+Museum+Busan"
           },
           {
-            time: "16:00 - 17:15",
+            time: "17:00 - 18:15",
             title: "影島海景複合空間（P.ARK）",
             desc: "超大型海景文化空間，坐在冷氣觀景台喝咖啡看麵包，遠眺釜山港與港灣景色（人均約 8,000-12,000 韓元 / NT$ 192-288）。",
             icon: "☕",
@@ -1152,13 +1519,13 @@
             mapUrl: "https://www.google.com/maps/search/?api=1&query=Lotte+Mart+Gwangbok+Busan"
           },
           {
-            time: "19:45 - 21:30",
-            title: "晚餐：南浦洞豬腳街 漢陽豬腳 (한양족발)",
-            desc: "涼拌芥末豬腳 (냉채족발, 大份約 45,000 韓元 / NT$ 1,080)，酸辣小黃瓜配切片豬腳，清爽開胃。",
-            icon: "🍖",
-            badges: ["涼拌豬腳", "南浦洞必吃"],
+            time: "19:00 - 21:30",
+            title: "採買後雙彈性路線 (方案 A / 方案 B) ➔ BIFF 廣場夜市小吃",
+            desc: "【方案 A (戰利品較多)】先搭 5 分鐘計程車回飯店擺放戰利品，再無後顧之憂去逛夜市；【方案 B (戰利品不多)】採買完直接步行 5~8 分鐘至相鄰的 BIFF 廣場與富平罐頭夜市吃黑糖餅、辣炒年糕與魚板，逛完後再一起搭車回飯店。",
+            icon: "🍡",
+            badges: ["雙彈性動線", "BIFF黑糖餅"],
             badgeType: "food",
-            mapUrl: "https://www.google.com/maps/search/?api=1&query=Hanyang+Jokbal+Nampo+Busan"
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=BIFF+Square+Busan"
           }
         ]
       },
@@ -1280,30 +1647,30 @@
       {
         day: 6,
         date: "8/14（五）",
-        subTitle: "古蹟咖啡 · 退房返台",
-        title: "飯店悠閒退房 ➔ 釜山站周邊文青咖啡/採買 ➔ 機場返台",
+        subTitle: "退房 · 機場免稅 · 返台",
+        title: "飯店退房 ➔ 前往金海機場辦理退稅與購物 ➔ 搭機返台",
         items: [
           {
-            time: "09:00 - 10:45",
-            title: "【慢活早晨】飯店悠閒早餐與整理行李",
-            desc: "伴手禮已在 Day 3 買齊，早上慢活。可在東橫INN享用早餐、打包行李，或走至百濟醫院古蹟咖啡廳 (Brown Hands) 喝手沖咖啡 (NT$ 144)。",
+            time: "07:30 - 09:00",
+            title: "【慢活早晨】飯店享用早餐與整理行李",
+            desc: "在東橫INN享用免費早餐、完成行李打包，準備辦理退房。",
             icon: "☕",
-            badges: ["悠閒早晨", "百濟古蹟咖啡"],
+            badges: ["飯店早餐", "行李打包"],
             badgeType: "sight",
-            mapUrl: "https://www.google.com/maps/search/?api=1&query=Brown+Hands+Baekje+Busan"
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=Toyoko+Inn+Busan+Station+No.1"
           },
           {
-            time: "11:00 - 11:40",
+            time: "09:40 - 10:20",
             title: "專車前往金海機場 (大件行李包車)",
-            desc: "飯店退房提行李，搭乘預約包車直達機場國際線航廈 (注意：無直達機場巴士)。",
+            desc: "飯店退房提行李，搭乘預約包車直達機場國際線航廈。",
             icon: "🚕",
             badges: ["專車前往", "直達機場"],
             mapUrl: "https://www.google.com/maps/search/?api=1&query=Gimhae+International+Airport"
           },
           {
-            time: "14:10",
-            title: "搭乘長榮 BR1193 返抵桃園機場 T2",
-            desc: "11:40 前抵達金海機場辦理報到退稅， 14:10 起飛圓滿結束韓國釜山 6 天 5 夜奢華慢遊。",
+            time: "12:45",
+            title: "搭乘長榮 BR1193 起飛返抵桃園機場 T2",
+            desc: "10:15 - 10:30 前抵達金海機場辦理報到退稅，12:45 起飛 (預計 14:10 抵達桃園 T2)，圓滿結束韓國釜山 6 天 5 夜奢華慢遊。",
             icon: "✈️",
             badges: ["長榮航空", "順利返台"],
             mapUrl: "https://www.google.com/maps/search/?api=1&query=Taoyuan+International+Airport"
@@ -1313,66 +1680,67 @@
     ];
 
     // 10 大實景相片資料
+    // 10 大實景相片資料 (100% 來自《波比看世界》busan-attractions 文章中之真實寫實圖)
     const galleryPhotos = [
       {
-        title: "海雲台天空膠囊列車",
+        title: "1. 海雲台藍線公園天空膠囊列車",
         location: "Day 2 行程：海雲台藍線公園 (尾浦 ➔ 青沙浦)",
         src: "https://bobbytravel.tw/wp-content/uploads/2025/07/20250917000451_0_63bbf1.jpg",
-        desc: "實景拍攝：超萌彩色天空膠囊列車懸空行駛於海濱懸崖邊，遠眺藍天海水。"
+        desc: "《波比看世界》實景拍攝：超萌彩色天空膠囊列車懸空行駛於海濱懸崖邊，遠眺藍天海水。"
       },
       {
-        title: "海雲台海水浴場沙灘",
+        title: "2. 海雲台海水浴場沙灘",
         location: "Day 2 行程：海雲台區海雲台海邊路",
         src: "https://bobbytravel.tw/wp-content/uploads/pixnet/33f02593d6cb524436ebddef9aa579cb.jpg",
-        desc: "實景拍攝：韓國最具代表性的美麗白沙海灘，周邊摩天大樓林立。"
+        desc: "《波比看世界》實景拍攝：韓國最具代表性的美麗白沙海灘，周邊摩天大樓林立。"
       },
       {
-        title: "影島 Arte Museum",
-        location: "Day 1 行程：影島區海洋路",
-        src: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop",
-        desc: "實景拍攝：大型沉浸式光影展，運用投影、香氛與音效，給予強烈震撼的視覺與感官體驗。"
-      },
-      {
-        title: "海東龍宮寺臨海全景",
+        title: "3. 海東龍宮寺臨海古剎全景",
         location: "Day 4 行程：機張郡海東龍宮寺",
         src: "https://bobbytravel.tw/wp-content/uploads/2025/12/20251218004310_0_f3a6c2.jpg",
-        desc: "實景拍攝：建於礁岩石壁之上的神聖海邊古剎，海浪拍岸非常壯麗。"
+        desc: "《波比看世界》實景拍攝：建於礁岩石壁之上的神聖海邊古剎，海浪拍岸非常壯麗。"
       },
       {
-        title: "松島海上纜車與水域",
+        title: "4. 甘川洞文化村山城彩虹聚落",
+        location: "Day 2 行程：沙下區甘川文化村",
+        src: "https://bobbytravel.tw/wp-content/uploads/2026/01/20251126140602_0_569c43.jpg",
+        desc: "《波比看世界》實景拍攝：層層疊疊的彩色小房子與小王子雕像，俯瞰山城海岸景緻。"
+      },
+      {
+        title: "5. 松島海上纜車海景車廂",
         location: "Day 3 行程：松島海水浴場",
         src: "https://bobbytravel.tw/wp-content/uploads/2025/12/20251208102655_0_96c489.jpg",
-        desc: "實景拍攝：韓國第一條海上纜車，跨越 1.62 公里汪洋大海。"
+        desc: "《波比看世界》實景拍攝：韓國第一條海上纜車，跨越 1.62 公里汪洋大海。"
       },
       {
-        title: "松島龍宮雲橋",
+        title: "6. 松島龍宮雲橋海景步道",
         location: "Day 3 行程：松島岩南公園對岸",
         src: "https://bobbytravel.tw/wp-content/uploads/2026/01/20251216142051_0_73adad.jpg",
-        desc: "實景拍攝：360度跨海步道連通無人島，踩在懸崖斷崖上極具震撼。"
+        desc: "《波比看世界》實景拍攝：360度跨海步道連通無人島，踩在懸崖斷崖上極具震撼。"
       },
       {
-        title: "白淺灘文化村海岸步道",
+        title: "7. 白淺灘文化村海岸步道",
         location: "Day 2 行程：影島區白淺灘文化村",
         src: "https://bobbytravel.tw/wp-content/uploads/2025/07/20250916235936_0_f75aff.jpg",
-        desc: "實景拍攝：藍白色調小白屋沿海步道，文青咖啡廳與彩虹階梯聚落。"
+        desc: "《波比看世界》實景拍攝：藍白色調小白屋沿海步道，文青咖啡廳與彩虹階梯聚落。"
       },
       {
-        title: "SPA LAND 奢華汗蒸幕",
+        title: "8. 新世界 Spa Land 奢華汗蒸幕",
         location: "Day 5 行程：新世界 Centum City 店 1F",
         src: "https://bobbytravel.tw/wp-content/uploads/2026/01/20260106101923_0_60fd9a.jpg",
-        desc: "實景拍攝：六星級奢華汗蒸幕設施，13種主題桑拿房與戶外溫泉足浴。"
+        desc: "《波比看世界》實景拍攝：六星級奢華汗蒸幕設施，13種主題桑拿房與戶外溫泉足浴。"
       },
       {
-        title: "五六島天空步道",
+        title: "9. 五六島天空步道海岸景觀",
         location: "Day 2 行程：南區五六島路",
         src: "https://bobbytravel.tw/wp-content/uploads/pixnet/7f1e572ed63347666a60876d27a9270d.jpg",
-        desc: "實景拍攝：建於 35 公尺懸崖邊的 U 型玻璃步道，踏在浪花之上。"
+        desc: "《波比看世界》實景拍攝：建於 35 公尺懸崖邊的 U 型玻璃步道，踏在浪花之上。"
       },
       {
-        title: "廣安大橋夜景",
-        location: "Day 5 行程：廣安里海水浴場",
-        src: "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?q=80&w=1200&auto=format&fit=crop",
-        desc: "實景拍攝：廣安大橋夜間點燈，坐在海邊餐酒館或沙灘野餐感受最迷人的微醺夜生活。"
+        title: "10. 札嘎其市場海鮮與帝王蟹攤位",
+        location: "Day 3 行程：札嘎其水產市場",
+        src: "https://bobbytravel.tw/wp-content/uploads/2026/03/20260318092438_0_990d37.jpg",
+        desc: "《波比看世界》實景拍攝：釜山最大水產市場，現挑現蒸鮮甜肥美帝王蟹與松葉蟹。"
       }
     ];
 
