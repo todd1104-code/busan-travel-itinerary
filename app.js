@@ -202,9 +202,9 @@ const itineraryData = [
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Arte+Museum+Busan"
       },
       {
-        time: "17:30 - 19:00",
-        title: "樂天超市光復店 (Lotte Mart 伴手禮大採購)",
-        desc: "免費登上空中庭園露台，360 度俯瞰影島大橋開橋與釜山港景致。",
+        time: "17:00 - 17:30",
+        title: "樂天百貨光復店 13 樓頂樓露台",
+        desc: "免費登上空中庭園露台，360 度俯瞰影島大橋與釜山港港灣夜景全貌。",
         icon: "🏢",
         badges: ["免費高空露台", "俯瞰釜山港"],
         badgeType: "sight",
@@ -411,6 +411,15 @@ const itineraryData = [
 
 // Olive Young 必買好物資料庫 (基於 olive_young_final_v2.md 精準校正版)
 const oyProductsData = [
+  {
+    name: "SUNGBOON EDITOR 綠番茄緊緻毛孔泥膜 (李多慧代言)",
+    cat: "skincare",
+    priceKrw: "₩19,800",
+    priceTwd: "約 NT$ 475",
+    desc: "李多慧強烈推薦代言！綠番茄毛孔緊緻泥膜，深層清潔吸附黑頭粉刺，洗後肌膚細緻不緊繃。",
+    img: "./images/oy/green_tomato_clay.jpg",
+    link: "https://global.oliveyoung.com/product/detail?prdtNo=GA250228504&dataSource=search_result"
+  },
   {"id": "mediheal", "name": "MEDIHEAL 精華面膜片", "en_name": "MEDIHEAL Essential Mask", "price_krw": "₩20,000 / 10片", "price_twd": "約 NT$ 476", "category": "skincare", "category_zh": "臉部護理", "img_url": "./images/oy/mediheal.jpg", "raw_img": "https://global.oliveyoung.com/product/detail?prdtNo=GA260539900&dataSource=search_result", "features": "高濃度精華、服貼度高、高CP值", "skin_type": "所有膚質，特別是缺水肌與需要曬後鎮靜者", "reason": "金針菇姐姐強烈推薦的國民面膜。精華液含量極高，面膜紙薄且貼合度優秀。在 Olive Young 購買通常有 10 片一盒的包裝，並且常常有 1+1 (買一送一) 的促銷活動，是去韓國必囤的保濕聖品。", "tips": "建議洗完臉後敷 10-15 分鐘，取下後輕輕按摩至吸收，再擦上乳液鎖水。若有醫美術後泛紅，綠色積雪草款是很好的鎮靜選擇。"},
   {"id": "biodance", "name": "Biodance 膠原蛋白深層全效面膜", "en_name": "Biodance Bio-Collagen Real Deep Mask", "price_krw": "₩19,000 / 4片", "price_twd": "約 NT$ 452", "category": "skincare", "category_zh": "臉部護理", "img_url": "./images/oy/biodance.jpg", "raw_img": "https://global.oliveyoung.com/product/detail?prdtNo=GA251235738&dataSource=search_result", "features": "水凝膠材質、敷完變透明、深層彈力", "skin_type": "乾性肌、熟齡肌、暗沉無光澤肌", "reason": "近期紅遍全球的「敷著睡覺面膜」。它是果凍般的水凝膠材質，敷上後面膜中的超低分子玻尿酸與膠原蛋白會慢慢被肌膚吸收，面膜會隨時間變為完全透明。能顯著改善毛孔與提亮膚色。", "tips": "適合在夜間保養的最後一步使用，建議敷 3-4 小時以上（甚至敷著入睡），醒來後撕下即可看見驚人的水光感與澎潤肌膚。", "badge": "熱銷斷貨王"},
   {"id": "torriden", "name": "Torriden 5D微分子玻尿酸保濕精華", "en_name": "Torriden Dive-In Serum", "price_krw": "₩22,000 / 50ml", "price_twd": "約 NT$ 524", "category": "skincare", "category_zh": "臉部護理", "img_url": "./images/oy/torriden.jpg", "raw_img": "https://global.oliveyoung.com/product/detail?prdtNo=GA260539968&dataSource=search_result", "features": "5重玻尿酸、秒速補水、清爽不黏", "skin_type": "油性肌、混合肌、極度缺水乾燥肌", "reason": "Klook 激推的補水第一名精華！在 Olive Young 連續多年榮獲精華類大賞第一名。含有5種不同分子大小的玻尿酸，能深層滲透肌膚底層，瞬間解渴。質地如水般清爽，吸收後完全不黏膩，是極致的補水神器。", "tips": "洗完臉後，在化妝水後使用 1-2 滴輕拍至全臉吸收，後續疊加面霜鎖水。夏日曬後可厚塗做修護。", "badge": "霸榜精華王"},
