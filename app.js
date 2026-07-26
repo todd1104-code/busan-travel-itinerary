@@ -87,10 +87,10 @@ const itineraryData = [
       },
       {
         time: "19:30 - 21:00",
-        title: "龍頭山公園 & 釜山塔夜景散步",
-        desc: "搭乘光復路手扶梯上山，在龍頭山公園散步，遠眺釜山港與港灣大橋夜景。",
+        title: "龍頭山公園 & 釜山塔觀景台登頂 (🎫 BIG 5 - B區 No.8)",
+        desc: "搭乘光復路手扶梯上山，憑 Pass 免費兌換門票登上釜山塔觀景台，俯瞰 360 度釜山港夜景與璀璨燈火。",
         icon: "🗼",
-        badges: ["龍頭山公園", "夜景散步"],
+        badges: ["🎫 BIG 5 - B區8", "釜山塔觀景台", "360度夜景"],
         badgeType: "sight",
         transport: "🚶 光復路手扶梯上山",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Yongdusan+Park"
@@ -118,7 +118,7 @@ const itineraryData = [
         title: "海雲台藍線公園天空膠囊列車 (尾浦 ➔ 青沙浦)",
         desc: "【夢幻搭乘】搭乘彩色復古高架膠囊列車，沿著海雲台海岸線徐徐行駛，拍照極致吸睛。",
         icon: "🚃",
-        badges: ["天空膠囊列車", "海岸景觀"],
+        badges: ["KKday一日遊", "天空膠囊列車", "海岸列車"],
         badgeType: "sight",
         transport: "🚕 五六島搭計程車至尾浦站約 25 分鐘 (預估車資 ₩18,000/台 / 約 NT$ 432)",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Haeundae+Blueline+Park+Mipo"
@@ -176,7 +176,7 @@ const itineraryData = [
         title: "松島海上纜車 & 松島龍宮雲橋",
         desc: "搭乘水晶透明車廂跨越 1.62 公里汪洋大海，再走上連接無人島的懸崖龍宮雲橋。",
         icon: "🚠",
-        badges: ["水晶纜車", "龍宮雲橋"],
+        badges: ["🎫 BIG 5 - B區14", "水晶纜車", "龍宮雲橋"],
         badgeType: "sight",
         transport: "🚕 飯店搭計程車約 15 分鐘 (預估車資 ₩12,000/台 / 約 NT$ 288)",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Songdo+Marine+Cable+Car"
@@ -192,8 +192,18 @@ const itineraryData = [
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Jagalchi+Market"
       },
       {
-        time: "15:30 - 17:30",
-        title: "樂天百貨光復店 13 樓頂樓露台",
+        time: "15:00 - 17:00",
+        title: "ARTE MUSEUM Busan 影島光影展 (🎫 BIG 5 - B區 No.17)",
+        desc: "【2024全新開幕】札嘎其搭計程車約 10-15 分鐘直達，體驗全球最大沉浸式數位自然藝術展，極致絢麗的光影海浪與花海波浪！<a href='https://www.google.com/maps/search/?api=1&query=Arte+Museum+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 Arte Museum 地圖</a>",
+        icon: "🖼️",
+        badges: ["🎫 BIG 5 - B區17", "沉浸式光影展", "影島熱門景點"],
+        badgeType: "sight",
+        transport: "🚕 札嘎其市場搭計程車約 12 分鐘 (預估車資 ₩7,000/台 / 約 NT$ 168)",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Arte+Museum+Busan"
+      },
+      {
+        time: "17:30 - 19:00",
+        title: "樂天超市光復店 (Lotte Mart 伴手禮大採購)",
         desc: "免費登上空中庭園露台，360 度俯瞰影島大橋開橋與釜山港景致。",
         icon: "🏢",
         badges: ["免費高空露台", "俯瞰釜山港"],
@@ -254,7 +264,7 @@ const itineraryData = [
         title: "Skyline Luge 釜山斜坡滑車",
         desc: "搭乘纜車上山，體驗 2 次賽道卡丁車疾馳俯瞰海景，刺激又安全。",
         icon: "🏎️",
-        badges: ["斜坡滑車", "賽道體驗"],
+        badges: ["🎫 BIG 5 - A區2", "斜坡滑車", "賽道體驗"],
         badgeType: "sight",
         transport: "🚕 海東龍宮寺搭計程車約 5 分鐘 (預估車資 ₩4,500/台 / 約 NT$ 108)",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Skyline+Luge+Busan"
@@ -312,20 +322,20 @@ const itineraryData = [
         title: "SPA LAND 汗蒸幕 (新世界 Centum City 店)",
         desc: "【六星級放鬆】韓國頂級奢華汗蒸幕！體驗 13 種主題桑拿房、戶外露天足浴與甜米露洗禮。",
         icon: "♨️",
-        badges: ["六星級汗蒸幕", "SPA體驗"],
+        badges: ["🎫 BIG 5 - A區4", "六星級汗蒸幕", "SPA體驗"],
         badgeType: "sight",
         transport: "🚇 釜山站搭地鐵 1 號線至西面轉 2 號線至 Centum City 站 (約 35 分鐘 / 車資 ₩1,600/人)",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Spa+Land+Centum+City"
       },
       {
         time: "14:30 - 16:30",
-        title: "釜山 X the SKY 觀景台 (100 樓全景視角)",
-        desc: "登頂韓國第二高樓 100 樓，俯瞰海雲台無敵海景，體驗透明玻璃步道與高空星巴克。",
-        icon: "🏙️",
-        badges: ["100樓觀景台", "無敵海景"],
-        badgeType: "sight",
-        transport: "🚕 Centum City 搭計程車約 15 分鐘 (預估車資 ₩8,000/台 / 約 NT$ 192)",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Busan+X+the+SKY"
+        title: "Snoopy Place Busan (海雲台史努比主題海景咖啡館)",
+        desc: "位在海雲台海岸沿線，打卡巨大衝浪史努比雕像、享用史努比造型蛋糕與香濃咖啡，享受悠閒時光！<a href='https://www.google.com/maps/search/?api=1&query=Snoopy+Place+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 Snoopy Place 地圖</a>",
+        icon: "☕",
+        badges: ["海景第一排", "史努比主題", "網美打卡"],
+        badgeType: "food",
+        transport: "🚕 Centum City 搭計程車約 12 分鐘 (預估車資 ₩7,500/台 / 約 NT$ 180)",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Snoopy+Place+Busan"
       },
       {
         time: "17:00 - 18:30",
