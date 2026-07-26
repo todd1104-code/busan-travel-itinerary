@@ -140,7 +140,7 @@ const itineraryData = [
         icon: "☕",
         badges: ["海岸小白屋", "海景咖啡廳"],
         badgeType: "sight",
-        transport: "🚕 青沙浦搭計程車至影島約 30 分鐘 (預估車資 ₩20,000/台 / 約 NT$ 480)",
+        transport: "🚕 青沙浦搭計程車至影島約 35 分鐘 (約 22km / 預估車資 ₩22,000/台 / 約 NT$ 528)",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Huinnyeoul+Culture+Village"
       },
       {
@@ -198,7 +198,7 @@ const itineraryData = [
         icon: "🏢",
         badges: ["免費高空露台", "俯瞰釜山港"],
         badgeType: "sight",
-        transport: "🚶 札嘎其市場步行約 10 分鐘",
+        transport: "🚶 札嘎其市場沿光復路步行約 8-10 分鐘 (約 600m)",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Lotte+Department+Store+Gwangbok"
       },
       {
@@ -214,11 +214,11 @@ const itineraryData = [
       {
         time: "19:00 - 20:45",
         title: "晚餐：味贊王鹽烤肉 富平店 (맛찬들왕소금구이 부평점)",
-        desc: "🥩【首選】採買完超市後步行 5 分鐘即達富平新店（札嘎其站 3 號出口新址）。大口享用專人代烤的 3.5cm 超厚切熟成豬五花與大醬湯！<a href='https://www.google.com/maps/search/?api=1&query=Matchandeul+Wangso-geum-gu-i+Bupyeong' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 味贊王富平店地圖</a><br>💡【防排隊備案 A】河南豬肉家 南浦店 (하남돼지집)<a href='https://www.google.com/maps/search/?api=1&query=Hanam+Pig+House+Nampo+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 河南豬肉家地圖</a><br>💡【防排隊備案 B】南浦 88 豬肉 (88돼지)<a href='https://www.google.com/maps/search/?api=1&query=88+Pork+Nampo+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 88豬肉地圖</a>",
+        desc: "🥩【首選】採買完超市後，步行約 15-18 分鐘 (約 950m 穿越光復路商圈) 至富平新店（札嘎其站 3 號出口新址）。若手提大包小包伴手禮戰利品，強烈建議搭計程車約 3-5 分鐘直達！大口享用專人代烤 3.5cm 厚切熟成豬五花與大醬湯！<a href='https://www.google.com/maps/search/?api=1&query=Matchandeul+Wangso-geum-gu-i+Bupyeong' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 味贊王富平店地圖</a><br>💡【防排隊備案 A】河南豬肉家 南浦店 (하남돼지집)<a href='https://www.google.com/maps/search/?api=1&query=Hanam+Pig+House+Nampo+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 河南豬肉家地圖</a><br>💡【防排隊備案 B】南浦 88 豬肉 (88돼지)<a href='https://www.google.com/maps/search/?api=1&query=88+Pork+Nampo+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 88豬肉地圖</a>",
         icon: "🥩",
         badges: ["3.5cm專人代烤", "熟成豬五花"],
         badgeType: "food",
-        transport: "🚶 超市步行約 5 分鐘",
+        transport: "🚕 建議搭計程車約 3-5 分鐘 (車資 ₩5,000/台 / 約 NT$ 120)；步行約 15-18 分鐘 (約 950m)",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Matchandeul+Wangso-geum-gu-i+Bupyeong"
       },
       {
