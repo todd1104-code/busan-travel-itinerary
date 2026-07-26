@@ -321,7 +321,7 @@
       padding: 4rem 1.5rem;
       background: linear-gradient(180deg, rgba(7, 11, 20, 0.4) 0%, var(--bg-dark) 100%),
                   url('https://images.unsplash.com/photo-1570168007204-dfb528c6958f?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
-      border-bottom: 1px solid var(--border-light);
+      /* border-bottom removed for seamless join */
     }
 
     .hero-overlay { position: absolute; inset: 0; background: radial-gradient(circle, rgba(7,11,20,0.3) 0%, rgba(7,11,20,0.92) 100%); z-index: 1; }
@@ -350,6 +350,7 @@
 
     /* Sticky Main Navigation Tabs */
     .sticky-nav {
+      border-top: none !important;
       position: sticky;
       top: 0;
       z-index: 100;
