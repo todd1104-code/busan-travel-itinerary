@@ -312,13 +312,13 @@
     /* Hero Header */
     .hero-header {
       position: relative;
-      min-height: 44vh;
+      min-height: auto !important;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 4rem 1.5rem;
+      padding: 1.75rem 1.5rem 1.2rem 1.5rem !important;
       background: linear-gradient(180deg, rgba(7, 11, 20, 0.4) 0%, var(--bg-dark) 100%),
                   url('https://images.unsplash.com/photo-1570168007204-dfb528c6958f?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
       /* border-bottom removed for seamless join */
@@ -330,7 +330,7 @@
     .badge-tag {
       display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1.25rem;
       background: rgba(0, 210, 255, 0.15); border: 1px solid var(--primary-glow); color: var(--primary-glow);
-      border-radius: 50px; font-size: 0.9rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 1.5rem;
+      border-radius: 50px; font-size: 0.9rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 0.6rem !important;
       backdrop-filter: blur(10px); box-shadow: 0 0 15px rgba(0, 210, 255, 0.2);
     }
 
@@ -340,7 +340,7 @@
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; line-height: 1.2;
     }
 
-    .hero-subtitle { font-size: 1.15rem; color: var(--text-sub); margin-bottom: 2rem; font-weight: 500; }
+    .hero-subtitle { font-size: 1.15rem; color: var(--text-sub); margin-bottom: 0.5rem !important; font-weight: 500; }
 
     .meta-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 750px; margin: 0 auto; }
     @media (max-width: 768px) { .meta-grid { grid-template-columns: 1fr; } }
@@ -513,7 +513,7 @@
     .sub-tab-day { font-size: 0.7rem; color: var(--accent-gold); }
 
     /* App Layout */
-    .main-wrapper { max-width: 1250px; margin: 2rem auto; padding: 0 1.5rem; }
+    .main-wrapper { max-width: 1250px; margin: 0.75rem auto; padding: 0 1.5rem; }
     
     /* App Sections */
     .app-section {
