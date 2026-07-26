@@ -412,13 +412,20 @@ const itineraryData = [
 // Olive Young 必買好物資料庫 (基於 olive_young_final_v2.md 精準校正版)
 const oyProductsData = [
   {
-    name: "SUNGBOON EDITOR 綠番茄緊緻毛孔泥膜 (李多慧代言)",
-    cat: "skincare",
-    priceKrw: "₩19,800",
-    priceTwd: "約 NT$ 475",
-    desc: "李多慧強烈推薦代言！綠番茄毛孔緊緻泥膜，深層清潔吸附黑頭粉刺，洗後肌膚細緻不緊繃。",
-    img: "./images/oy/green_tomato_clay.jpg",
-    link: "https://global.oliveyoung.com/product/detail?prdtNo=GA250228504&dataSource=search_result"
+    "id": "green_tomato",
+    "name": "SUNGBOON EDITOR 綠番茄緊緻毛孔泥膜",
+    "en_name": "SUNGBOON EDITOR Green Tomato Pore Clay Pack",
+    "price_krw": "₩19,800 / 罐",
+    "price_twd": "約 NT$ 475",
+    "category": "skincare",
+    "category_zh": "臉部清潔與護理",
+    "img_url": "./images/oy/green_tomato_clay.jpg",
+    "raw_img": "https://global.oliveyoung.com/product/detail?prdtNo=GA250228504&dataSource=search_result",
+    "features": "李多慧強烈推薦代言、綠番茄專利毛孔緊緻、吸附黑頭粉刺",
+    "skin_type": "毛孔粗大、易出油、有黑頭粉刺與需要角質清潔者",
+    "reason": "李多慧熱烈代言與強烈推薦！在 Olive Young 爆紅的毛孔保養神物。採用專利綠番茄萃取與高嶺土泥膜，能深層吸附油脂黑頭、收斂粗大毛孔，質地濕潤滑順，洗後肌膚細緻亮白且完全不緊繃。",
+    "tips": "洗臉後敷於全臉約 10-15 分鐘，待泥膜轉乾後以溫水搭配打圈輕柔洗淨，每週使用 1-2 次即可獲得驚人毛孔清潔效果。",
+    "badge": "李多慧代言熱銷"
   },
   {"id": "mediheal", "name": "MEDIHEAL 精華面膜片", "en_name": "MEDIHEAL Essential Mask", "price_krw": "₩20,000 / 10片", "price_twd": "約 NT$ 476", "category": "skincare", "category_zh": "臉部護理", "img_url": "./images/oy/mediheal.jpg", "raw_img": "https://global.oliveyoung.com/product/detail?prdtNo=GA260539900&dataSource=search_result", "features": "高濃度精華、服貼度高、高CP值", "skin_type": "所有膚質，特別是缺水肌與需要曬後鎮靜者", "reason": "金針菇姐姐強烈推薦的國民面膜。精華液含量極高，面膜紙薄且貼合度優秀。在 Olive Young 購買通常有 10 片一盒的包裝，並且常常有 1+1 (買一送一) 的促銷活動，是去韓國必囤的保濕聖品。", "tips": "建議洗完臉後敷 10-15 分鐘，取下後輕輕按摩至吸收，再擦上乳液鎖水。若有醫美術後泛紅，綠色積雪草款是很好的鎮靜選擇。"},
   {"id": "biodance", "name": "Biodance 膠原蛋白深層全效面膜", "en_name": "Biodance Bio-Collagen Real Deep Mask", "price_krw": "₩19,000 / 4片", "price_twd": "約 NT$ 452", "category": "skincare", "category_zh": "臉部護理", "img_url": "./images/oy/biodance.jpg", "raw_img": "https://global.oliveyoung.com/product/detail?prdtNo=GA251235738&dataSource=search_result", "features": "水凝膠材質、敷完變透明、深層彈力", "skin_type": "乾性肌、熟齡肌、暗沉無光澤肌", "reason": "近期紅遍全球的「敷著睡覺面膜」。它是果凍般的水凝膠材質，敷上後面膜中的超低分子玻尿酸與膠原蛋白會慢慢被肌膚吸收，面膜會隨時間變為完全透明。能顯著改善毛孔與提亮膚色。", "tips": "適合在夜間保養的最後一步使用，建議敷 3-4 小時以上（甚至敷著入睡），醒來後撕下即可看見驚人的水光感與澎潤肌膚。", "badge": "熱銷斷貨王"},
