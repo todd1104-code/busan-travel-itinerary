@@ -279,149 +279,28 @@ const itineraryData = [
       {
         time: "15:00 - 17:00",
         title: "Ananti Cove 奢華海景廊道 & Cabinet de Poissons 咖啡廳",
-        desc: "充分停留 2 小時放慢腳步，在頂級渡假村海景廊道散步拍照、享用冷氣精緻下午茶。",
-        icon: "☕",
-        badges: ["奢華渡假村", "海景下午茶"],
-        badgeType: "sight",
-        transport: "🚕 機張市場搭計程車約 10 分鐘 (預估車資 ₩6,500/台 / 約 NT$ 156)",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Ananti+Cove+Busan"
-      },
-      {
-        time: "17:15 - 19:00",
-        title: "露天 Outlet：東釜山樂天 Outlet (Lotte Premium Outlet)",
-        desc: "希臘聖托里尼風格超大型 Outlet，運動與韓國在地服飾品牌折扣多。",
-        icon: "🛍️",
-        badges: ["東釜山Outlet", "折扣購物"],
-        badgeType: "shop",
-        transport: "🚕 Ananti 搭計程車約 7 分鐘 (預估車資 ₩5,000/台 / 約 NT$ 120)",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Lotte+Premium+Outlet+Dongbusan"
-      },
-      {
-        time: "19:15～",
-        title: "返回飯店休息 / 釜山站周邊輕鬆晚餐",
-        desc: "Outlet 結束後搭計程車直達飯店門口，晚上於釜山站周邊享用輕鬆晚餐或叫韓式炸雞外送，讓連續旅遊第四天的體力得到充分恢復。",
-        icon: "🏨",
-        badges: ["直達飯店", "充份休息"],
-        badgeType: "sight",
-        transport: "🚕 Outlet 搭計程車直達飯店約 35 分鐘 (預估車資 ₩22,000/台 / 約 NT$ 528)",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Toyoko+Inn+Busan+Station+No.1"
-      }
-    ]
-  },
-  {
-    day: 5,
-    date: "8/13（四）",
-    subTitle: "SPA LAND · 100樓觀景 · 廣安里夜景",
-    title: "SPA LAND 汗蒸幕 ➔ 新世界百貨 ➔ 青沙浦海岸線 ➔ 100樓觀景台 ➔ Marine City ➔ 廣安里夜景與海景餐酒館",
-    items: [
-      {
-        time: "09:30 - 12:30",
-        title: "【避暑放鬆】SPA LAND 汗蒸幕（新世界 Centum City 店）",
-        desc: "全釜山最豪華汗蒸幕，內有 13 種主題桑拿房與戶外足浴區（【建議提前線上預買 Klook/KKday 電子票】約 NT$ 450~500）。",
-        icon: "♨️",
-        badges: ["最美汗蒸幕", "天然溫泉"],
-        badgeType: "sight",
-        transport: "🚇 地鐵 1 號線 釜山站 ➔ 2 號線 Centum City 站 (車資 ₩1,600/人 / 約 NT$ 38)",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Spa+Land+Centum+City"
-      },
-      {
-        time: "12:30 - 14:30",
-        title: "購物與美食：新世界百貨 Centum City 店 & 美食街午餐",
-        desc: "全球最大百貨公司，於高級美食街享用午餐並逛國際潮牌。",
-        icon: "🏬",
-        badges: ["全球最大百貨", "潮牌購物"],
-        badgeType: "shop",
-        transport: "🚶 SPA LAND 內連通至新世界百貨 (費用 ₩0)",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Shinsegae+Centum+City+Busan"
-      },
-      {
-        time: "15:00 - 16:45",
-        title: "青沙浦 (Cheongsapo) 海岸散步 & 紅白燈塔",
-        desc: "欣賞經典紅白燈塔、海濱雲端列車景致與青沙浦天空步道。",
-        icon: "🏮",
-        badges: ["紅白燈塔", "海岸散步"],
-        badgeType: "sight",
-        transport: "🚕 Centum City 搭計程車約 15 分鐘 (預估車資 ₩10,000/台 / 約 NT$ 240)",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Cheongsapo+Busan"
-      },
-      {
-        time: "17:15 - 18:15",
-        title: "【使用 PASS 兌換第 3 額度】釜山 X the SKY 觀景台 (100樓)",
-        desc: "順路登上 100 樓觀景台（原價 ₩27,000，用 Pass 免費兌換），俯瞰夕陽下的海雲台海岸線與廣安大橋夜景！",
-        icon: "🌆",
-        badges: ["100樓觀景台", "PASS第三額度"],
-        badgeType: "sight",
-        transport: "🚕 青沙浦搭計程車約 8 分鐘 (預估車資 ₩5,500/台 / 約 NT$ 132)",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Busan+X+the+SKY"
-      },
-      {
-        time: "18:30 - 19:30",
-        title: "Marine City 摩天樓海景散步",
-        desc: "順著沿海路線，欣賞海天一色的現代摩天大樓景致。",
-        icon: "🌃",
-        badges: ["摩天樓夜景", "海邊步道"],
-        badgeType: "sight",
-        transport: "🚕 X the SKY 搭計程車約 7 分鐘 (預估車資 ₩5,000/台 / 約 NT$ 120)",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Marine+City+Busan"
-      },
-      {
-        time: "19:45 - 22:00",
-        title: "微醺夜生活：廣安里海景餐酒館 (Clam) / 精釀酒吧 (Gorilla Brewing)",
-        desc: "直接前往廣安里海景第一排的 Clam 餐酒館戶外座位，吃著海鮮燉飯與調酒，看著點燈的廣安大橋！飯後可在沙灘散步吹海風。",
-        icon: "🍹",
-        badges: ["廣安大橋夜景", "海景餐酒館"],
-        badgeType: "food",
-        transport: "🚕 Marine City 搭計程車約 8 分鐘 (預估車資 ₩5,500/台) / 回飯店約 20 分鐘 (₩13,000/台)",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Clam+Gwangalli+Busan"
-      }
-    ]
-  },
-  {
-    day: 6,
-    date: "8/14（五）",
-    subTitle: "退房 · 機場免稅 · 返台",
-    title: "飯店退房 ➔ 前往金海機場辦理退稅與購物 ➔ 搭機返台",
-    items: [
-      {
-        time: "07:30 - 09:00",
-        title: "【慢活早晨】飯店享用早餐與整理行李",
-        desc: "在東橫INN享用免費早餐、完成戰利品打包與整理，準備退房。",
-        icon: "☕",
-        badges: ["飯店早餐", "行李打包"],
-        badgeType: "sight",
-        transport: "🏨 飯店內 (費用 ₩0)",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Toyoko+Inn+Busan+Station+No.1"
-      },
-      {
-        time: "09:40 - 10:20",
-        title: "專車前往金海機場 (Kakao T Venti 大型包車)",
-        desc: "飯店辦退提行李，搭乘預約車直達金海機場國際線航廈。",
-        icon: "🚕",
-        badges: ["專車前往", "直達機場"],
-        transport: "🚕 Kakao T Venti 包車約 35 分鐘 (預估車資 ₩25,000-30,000/台 / 約 NT$ 600-720)",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Gimhae+International+Airport"
-      },
-      {
-        time: "12:45",
-        title: "搭乘長榮 BR1193 起飛返抵桃園機場 T2",
-        desc: "10:15 - 10:30 前抵達金海機場辦理報到退稅，12:45 起飛 (預計 14:10 抵達桃園 T2)，圓滿結束韓國釜山 6 天 5 夜奢華慢遊。",
-        icon: "✈️",
-        badges: ["長榮航空", "順利返台"],
-        transport: "✈️ 長榮 BR1193 (12:45 起飛 ➔ 14:10 抵達桃園)",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Taoyuan+International+Airport"
-      }
-    ]
-  }
-];
-
-// Olive Young 必買商品 20 款完整資料集 (採用專案本地 100% 永不失效高畫質圖檔與雙購物管道: 台灣 MOMO/PChome + Olive Young 官網)
-const oyProductsData = [
-  {"id": "mediheal", "time": "01:37", "name": "MEDIHEAL 精華面膜片", "en_name": "MEDIHEAL Essential Mask", "price_krw": "₩20,000 / 10片 (特價約 ₩10,000)", "price_twd": "約 NT$ 476 (特價約 NT$ 238)", "category": "skincare", "category_zh": "臉部護理", "img_url": "./images/oy/mediheal.jpg", "raw_img": "https://global.oliveyoung.com/search?query=MEDIHEAL+Essential+Mask&lang=zh_TW", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=MEDIHEAL+面膜", "features": "高濃度精華、服貼度高、高CP值", "skin_type": "所有膚質，特別是缺水肌與需要曬後鎮靜者", "reason": "金針菇姐姐強烈推薦的國民面膜。精華液含量極高，面膜紙薄且貼合度優秀。在 Olive Young 購買通常有 10 片一盒的包裝，並且常常有 1+1 (買一送一) 的促銷活動，是去韓國必囤的保濕聖品。", "tips": "建議洗完臉後敷 10-15 分鐘，取下後輕輕按摩至吸收，再擦上乳液鎖水。若有醫美術後泛紅，綠色積雪草款是很好的鎮靜選擇。"},
-  {"id": "biodance", "time": "03:25", "name": "Biodance 膠原蛋白深層全效面膜", "en_name": "Biodance Bio-Collagen Real Deep Mask", "price_krw": "₩19,000 / 4片", "price_twd": "約 NT$ 452", "category": "skincare", "category_zh": "臉部護理", "img_url": "./images/oy/biodance.jpg", "raw_img": "https://global.oliveyoung.com/search?query=Biodance+Bio-Collagen+Real+Deep+Mask&lang=zh_TW", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=Biodance+面膜", "features": "水凝膠材質、敷完變透明、深層彈力", "skin_type": "乾性肌、熟齡肌、暗沉無光澤肌", "reason": "近期紅遍全球的「敷著睡覺面膜」。它是果凍般的水凝膠材質，敷上後面膜中的超低分子玻尿酸與膠原蛋白會慢慢被肌膚吸收，面膜會隨時間變為完全透明。能顯著改善毛孔與提亮膚色。", "tips": "適合在夜間保養的最後一步使用，建議敷 3-4 小時以上（甚至敷著入睡），醒來後撕下即可看見驚人的水光感與澎潤肌膚。", "badge": "熱銷斷貨王"},
-  {"id": "torriden", "time": "Klook推薦", "name": "Torriden 5D微分子玻尿酸保濕精華", "en_name": "Torriden Dive-In Low Molecular Hyaluronic Acid Serum", "price_krw": "₩22,000 / 50ml", "price_twd": "約 NT$ 524", "category": "skincare", "category_zh": "臉部護理", "img_url": "./images/oy/torriden.jpg", "raw_img": "https://global.oliveyoung.com/search?query=Torriden+Dive-In+Serum&lang=zh_TW", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=Torriden+玻尿酸精華", "features": "5重玻尿酸、秒速補水、清爽不黏", "skin_type": "油性肌、混合肌、極度缺水乾燥肌", "reason": "Klook 激推的補水第一名精華！在 Olive Young 連續多年榮獲精華類大賞第一名。含有5種不同分子大小的玻尿酸，能深層滲透肌膚底層，瞬間解渴。質地如水般清爽，吸收後完全不黏膩，是極致的補水神器。", "tips": "洗完臉後，在化妝水後使用 1-2 滴輕拍至全臉吸收，後續疊加面霜鎖水。夏日曬後可厚塗做修護。", "badge": "霸榜精華王"},
-  {"id": "manyo", "time": "Klook推薦", "name": "ma:nyo 魔女工廠 純淨潔顏油", "en_name": "ma:nyo Pure Cleansing Oil", "price_krw": "₩29,000 / 200ml", "price_twd": "約 NT$ 690", "category": "skincare", "category_zh": "臉部清潔", "img_url": "./images/oy/manyo.jpg", "raw_img": "https://global.oliveyoung.com/search?query=manyo+Pure+Cleansing+Oil&lang=zh_TW", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=魔女工廠+卸妝油", "features": "天然植物油、秒乳化、溫和卸妝", "skin_type": "所有膚質、易長黑頭粉刺肌", "reason": "Klook 批踢踢極力推薦，Olive Young 長年霸榜的國民卸妝油！採用 99.9% 自然衍生植物油成分，溫和不熏眼。遇水瞬間乳化，不僅能徹底卸除濃妝與防曬，更能透過打圈按摩溫和軟化毛孔中的黑頭與髒污。", "tips": "乾手乾臉塗抹全臉按摩，再沾取少量溫水使其完全「乳化」變白，輕柔按摩 30 秒後以溫水徹底洗淨。", "badge": "回購率No.1"},
-  {"id": "aestura", "time": "Klook推薦", "name": "AESTURA Atobarrier 365 舒緩保濕乳霜", "en_name": "AESTURA Atobarrier 365 Cream", "price_krw": "₩31,000 / 80ml", "price_twd": "約 NT$ 738", "category": "skincare", "category_zh": "臉部護理", "img_url": "./images/oy/aestura.jpg", "raw_img": "https://global.oliveyoung.com/search?query=AESTURA+Atobarrier+365+Cream&lang=zh_TW", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=AESTURA+乳霜", "features": "專利保濕膠囊、修護屏障、舒緩過敏", "skin_type": "敏感肌、乾性肌、肌膚壓痛/紅腫/泛紅者", "reason": "Klook 激推敏感肌救星！由愛茉莉太平洋集團推出的醫學美容護膚品牌。乳霜中含有肉眼可見的專利「Atobarrier」微小保濕膠囊，抹開後迅速融化並形成鎖水膜，修護因過敏或乾燥而受損的肌膚屏障。", "tips": "在護膚最後一步塗抹，特別適合在寒冷季節或搭飛機、乾冷國家時做深層鎖水防護。", "badge": "敏感肌神霜"},
-  {"id": "unove", "time": "Klook推薦", "name": "UNOVE 深層受損修護髮膜", "en_name": "UNOVE Deep Damage Treatment EX", "price_krw": "₩23,000 / 207ml", "price_twd": "約 NT$ 548", "category": "body", "category_zh": "身體保養", "img_url": "./images/oy/unove.jpg", "raw_img": "https://global.oliveyoung.com/search?query=UNOVE+Deep+Damage+Treatment&lang=zh_TW", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=UNOVE+髮膜", "features": "高濃度蛋白質、沙龍級修護、香氣迷人", "skin_type": "受損髮質、染燙後毛躁分岔、粗糙無光澤髮質", "reason": "Klook 強力推薦，去韓國必囤的沙龍級髮品！Dr.FORHAIR 旗下專攻受損髮的品牌。富含 30,000ppm 高濃度蛋白質，能瞬間撫平毛躁，讓頭髮恢復絲滑柔順的光澤，香氣是溫柔的法式玫瑰與麝香。", "tips": "洗髮後稍微擰乾水分，塗抹於髮尾處並靜置 2-3 分鐘後徹底沖洗，每週使用 2-3 次即可達到深層護髮效果。", "badge": "護髮斷貨王"},
+        desc: "充分停留 2 小時放慢腳步，在頂const oyProductsData = [
+  {"id": "mediheal", "time": "01:37", "name": "MEDIHEAL 精華面膜片", "en_name": "MEDIHEAL Essential Mask", "price_krw": "₩20,000 / 10片 (特價約 ₩10,000)", "price_twd": "約 NT$ 476 (特價約 NT$ 238)", "category": "skincare", "category_zh": "臉部護理", "img_url": "./images/oy/mediheal.jpg", "raw_img": "https://global.oliveyoung.com/search?query=MEDIHEAL+Essential+Mask", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=MEDIHEAL+面膜", "features": "高濃度精華、服貼度高、高CP值", "skin_type": "所有膚質，特別是缺水肌與需要曬後鎮靜者", "reason": "金針菇姐姐強烈推薦的國民面膜。精華液含量極高，面膜紙薄且貼合度優秀。在 Olive Young 購買通常有 10 片一盒的包裝，並且常常有 1+1 (買一送一) 的促銷活動，是去韓國必囤的保濕聖品。", "tips": "建議洗完臉後敷 10-15 分鐘，取下後輕輕按摩至吸收，再擦上乳液鎖水。若有醫美術後泛紅，綠色積雪草款是很好的鎮靜選擇。"},
+  {"id": "biodance", "time": "03:25", "name": "Biodance 膠原蛋白深層全效面膜", "en_name": "Biodance Bio-Collagen Real Deep Mask", "price_krw": "₩19,000 / 4片", "price_twd": "約 NT$ 452", "category": "skincare", "category_zh": "臉部護理", "img_url": "./images/oy/biodance.jpg", "raw_img": "https://global.oliveyoung.com/search?query=Biodance+Bio-Collagen+Real+Deep+Mask", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=Biodance+面膜", "features": "水凝膠材質、敷完變透明、深層彈力", "skin_type": "乾性肌、熟齡肌、暗沉無光澤肌", "reason": "近期紅遍全球的「敷著睡覺面膜」。它是果凍般的水凝膠材質，敷上後面膜中的超低分子玻尿酸與膠原蛋白會慢慢被肌膚吸收，面膜會隨時間變為完全透明。能顯著改善毛孔與提亮膚色。", "tips": "適合在夜間保養的最後一步使用，建議敷 3-4 小時以上（甚至敷著入睡），醒來後撕下即可看見驚人的水光感與澎潤肌膚。", "badge": "熱銷斷貨王"},
+  {"id": "torriden", "time": "Klook推薦", "name": "Torriden 5D微分子玻尿酸保濕精華", "en_name": "Torriden Dive-In Low Molecular Hyaluronic Acid Serum", "price_krw": "₩22,000 / 50ml", "price_twd": "約 NT$ 524", "category": "skincare", "category_zh": "臉部護理", "img_url": "./images/oy/torriden.jpg", "raw_img": "https://global.oliveyoung.com/search?query=Torriden+Dive-In+Serum", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=Torriden+玻尿酸精華", "features": "5重玻尿酸、秒速補水、清爽不黏", "skin_type": "油性肌、混合肌、極度缺水乾燥肌", "reason": "Klook 激推的補水第一名精華！在 Olive Young 連續多年榮獲精華類大賞第一名。含有5種不同分子大小的玻尿酸，能深層滲透肌膚底層，瞬間解渴。質地如水般清爽，吸收後完全不黏膩，是極致的補水神器。", "tips": "洗完臉後，在化妝水後使用 1-2 滴輕拍至全臉吸收，後續疊加面霜鎖水。夏日曬後可厚塗做修護。", "badge": "霸榜精華王"},
+  {"id": "manyo", "time": "Klook推薦", "name": "ma:nyo 魔女工廠 純淨潔顏油", "en_name": "ma:nyo Pure Cleansing Oil", "price_krw": "₩29,000 / 200ml", "price_twd": "約 NT$ 690", "category": "skincare", "category_zh": "臉部清潔", "img_url": "./images/oy/manyo.jpg", "raw_img": "https://global.oliveyoung.com/search?query=manyo+Pure+Cleansing+Oil", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=魔女工廠+卸妝油", "features": "天然植物油、秒乳化、溫和卸妝", "skin_type": "所有膚質、易長黑頭粉刺肌", "reason": "Klook 批踢踢極力推薦，Olive Young 長年霸榜的國民卸妝油！採用 99.9% 自然衍生植物油成分，溫和不熏眼。遇水瞬間乳化，不僅能徹底卸除濃妝與防曬，更能透過打圈按摩溫和軟化毛孔中的黑頭與髒污。", "tips": "乾手乾臉塗抹全臉按摩，再沾取少量溫水使其完全「乳化」變白，輕柔按摩 30 秒後以溫水徹底洗淨。", "badge": "回購率No.1"},
+  {"id": "aestura", "time": "Klook推薦", "name": "AESTURA Atobarrier 365 舒緩保濕乳霜", "en_name": "AESTURA Atobarrier 365 Cream", "price_krw": "₩31,000 / 80ml", "price_twd": "約 NT$ 738", "category": "skincare", "category_zh": "臉部護理", "img_url": "./images/oy/aestura.jpg", "raw_img": "https://global.oliveyoung.com/search?query=AESTURA+Atobarrier+365+Cream", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=AESTURA+乳霜", "features": "專利保濕膠囊、修護屏障、舒緩過敏", "skin_type": "敏感肌、乾性肌、肌膚壓痛/紅腫/泛紅者", "reason": "Klook 激推敏感肌救星！由愛茉莉太平洋集團推出的醫學美容護膚品牌。乳霜中含有肉眼可見的專利「Atobarrier」微小保濕膠囊，抹開後迅速融化並形成鎖水膜，修護因過敏或乾燥而受損的肌膚屏障。", "tips": "在護膚最後一步塗抹，特別適合在寒冷季節或搭飛機、乾冷國家時做深層鎖水防護。", "badge": "敏感肌神霜"},
+  {"id": "unove", "time": "Klook推薦", "name": "UNOVE 深層受損修護髮膜", "en_name": "UNOVE Deep Damage Treatment EX", "price_krw": "₩23,000 / 207ml", "price_twd": "約 NT$ 548", "category": "body", "category_zh": "身體保養", "img_url": "./images/oy/unove.jpg", "raw_img": "https://global.oliveyoung.com/search?query=UNOVE+Deep+Damage+Treatment", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=UNOVE+髮膜", "features": "高濃度蛋白質、沙龍級修護、香氣迷人", "skin_type": "受損髮質、染燙後毛躁分岔、粗糙無光澤髮質", "reason": "Klook 強力推薦，去韓國必囤的沙龍級髮品！Dr.FORHAIR 旗下專攻受損髮的品牌。富含 30,000ppm 高濃度蛋白質，能瞬間撫平毛躁，讓頭髮恢復絲滑柔順的光澤，香氣是溫柔的法式玫瑰與麝香。", "tips": "洗髮後稍微擰乾水分，塗抹於髮尾處並靜置 2-3 分鐘後徹底沖洗，每週使用 2-3 次即可達到深層護髮效果。", "badge": "護髮斷貨王"},
+  {"id": "dokdo", "time": "Klook推薦", "name": "Round Lab 1025 獨島化妝水", "en_name": "Round Lab 1025 Dokdo Toner", "price_krw": "₩30,000 / 500ml", "price_twd": "約 NT$ 714", "category": "skincare", "category_zh": "臉部護理", "img_url": "./images/oy/dokdo.jpg", "raw_img": "https://global.oliveyoung.com/search?query=Round+Lab+1025+Dokdo+Toner", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=獨島化妝水", "features": "鬱陵島深海水、溫和角質調理、補水清透", "skin_type": "所有膚質，包括敏感肌與易泛紅肌膚", "reason": "Klook 經典推薦！採用鬱陵島深層海水配方，富含 72 種天然礦物質，質地溫和清爽。含有專利去角質酵素，能在日常擦拭中溫和代謝老廢角質，恢復肌膚的細緻亮透。", "tips": "適合搭配化妝棉使用。每天早晚潔面後，用浸濕的化妝棉由內向外順著肌膚紋理輕輕擦拭，也可用於濕敷。", "badge": "獨島系列明星"},
+  {"id": "bagel_chip", "time": "Klook推薦", "name": "Delight Project 貝果脆片", "en_name": "Delight Project Bagel Chip", "price_krw": "₩3,500 / 包", "price_twd": "約 NT$ 83", "category": "lifestyle", "category_zh": "健康飲品", "img_url": "./images/oy/bagel_chip.jpg", "raw_img": "https://global.oliveyoung.com/search?query=Delight+Project+Bagel+Chip", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=Delight+Project+貝果餅乾", "features": "低卡低熱量、慢火烘焙、超人氣辦公室零食", "skin_type": "喜愛零嘴但注重身材管理與低卡健康飲食者", "reason": "Klook 伴手禮極力推薦！Olive Young 的明星自有零食品牌。將真實貝果切片後塗抹奶油慢火烘焙，口感極其酥脆，有蒜香奶油、蜂蜜奶油與披薩等多種口味，熱量極低且飽足感強。", "tips": "極度推薦搭配 Teazen 康普茶一起享用，作為下午茶或宵夜，解饞又完全沒有罪惡感！", "badge": "收銀台秒殺款"},
+  {"id": "beyond", "time": "04:14", "name": "Beyond 美白乳液 / 身體乳", "en_name": "Beyond Body Emulsion", "price_krw": "₩22,000 / 450ml", "price_twd": "約 NT$ 524", "category": "body", "category_zh": "身體保養", "img_url": "./images/oy/beyond.jpg", "raw_img": "https://global.oliveyoung.com/search?query=Beyond+Body+Emulsion", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=Beyond+身體乳", "features": "溫和草本、高級白麝香、深層鎖水", "skin_type": "所有膚質、身體肌膚乾燥脫屑者", "reason": "LG 生活健康旗下的環保自然品牌。這款身體乳以療癒且高級的「白麝香」香氣聞名，質地乳爽不黏膩，保濕度極佳，能修護乾燥的肌膚屏障。", "tips": "每天洗澡後，在身體微濕時塗抹，保濕與持香效果最佳。"},
+  {"id": "yunjac", "time": "05:27", "name": "Yunjac 然植亞保濕底霜 (Base Prep)", "en_name": "Yunjac Skin Perfecting Protective Base Prep", "price_krw": "₩48,000 / 40ml", "price_twd": "約 NT$ 1,143", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "./images/oy/yunjac.jpg", "raw_img": "https://global.oliveyoung.com/search?query=Yunjac+Base+Prep", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=Yunjac+妝前", "features": "底妝膠水、防護隔離、透亮光澤", "skin_type": "乾性肌、混合偏乾、底妝容易浮粉起皮者", "reason": "高端草本護膚品牌推出的妝前精華。被譽為「乾皮親媽」與「化妝師的秘密武器」，質地如水般輕盈，能迅速覆平臉部角質，讓後續不論是粉底液還是氣墊粉餅都非常貼合，展現高級的水光感。", "tips": "在防曬後、底妝前，取 2-3 滴均勻塗抹於全臉，特別是易卡粉的鼻翼與兩頰，輕拍至微黏狀態再上底妝。", "badge": "美妝大賞第一"},
+  {"id": "obge", "time": "06:13", "name": "OBgE 自然防曬棒", "en_name": "OBgE Natural Cover Sun Stick", "price_krw": "₩24,900 / 18g", "price_twd": "約 NT$ 593", "category": "skincare", "category_zh": "防曬護理", "img_url": "./images/oy/obge.jpg", "raw_img": "https://global.oliveyoung.com/product/detail?prdtNo=GA250430215&dataSource=search_result", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=OBgE+防曬", "features": "不沾手、清爽控油、不泛白", "skin_type": "所有膚質、混合偏油、男士、喜愛戶外活動者", "reason": "韓國男士理容第一品牌推出的防曬棒，女生也非常愛用！具備 SPF50+/PA++++ 最高防曬規格。棒狀設計極為方便，完全不沾手，上臉後呈乾爽霧面，且完全不泛白、不黏膩，抗汗效果優秀。", "tips": "適合隨身攜帶，在戶外每 2-3 小時隨時塗抹補防曬。因其清爽度高，妝後輕拍補防曬也不易弄髒妝容。"},
+  {"id": "the_saem", "time": "07:12", "name": "THE SAEM 完美保護三層遮瑕膏", "en_name": "THE SAEM Cover Perfection Triple Concealer", "price_krw": "₩15,000 / 盤", "price_twd": "約 NT$ 357", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "./images/oy/the_saem.jpg", "raw_img": "https://global.oliveyoung.com/product/detail?prdtNo=GA260540072&dataSource=search_result", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=THE+SAEM+三色遮瑕", "features": "三色調色校色、高遮瑕力、保濕不卡粉", "skin_type": "有黑眼圈、泛紅淚溝、深色痘疤需要高度精準遮瑕者", "reason": "Olive Young 超高人氣三色遮瑕盤！一盤集結膚色遮瑕、鮭魚粉（校正黑眼圈）與綠色（校正泛紅），質地膏狀絲滑保濕，服貼度極佳不卡細紋。", "tips": "先用橘粉色校正黑眼圈、綠色修飾鼻翼泛紅，最後疊加膚色遮瑕膏，能打造零瑕疵立體底妝。", "badge": "三色遮瑕王"},
+  {"id": "about_tone", "time": "08:40", "name": "About Tone 柔焦控油蜜粉餅", "en_name": "About Tone Blur Powder Pact", "price_krw": "₩12,000 / 9g", "price_twd": "約 NT$ 286", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "./images/oy/about_tone.jpg", "raw_img": "https://global.oliveyoung.com/product/detail?prdtNo=GA260338276&dataSource=search_result", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=About+Tone+蜜粉餅", "features": "一秒磨皮、粉質極細、強效控油", "skin_type": "油性肌、混合肌、毛孔粗大者", "reason": "前身為風靡韓國的 Eglips 蜜粉餅。這款粉餅主打「空氣柔焦」效果，粉質如輕煙般細緻，能瞬間吸附皮脂，讓毛孔隱形，打造如陶瓷娃娃般的乾淨霧面妝效。", "tips": "使用附帶的粉撲，在底妝後輕壓在容易出油的 T 字部位、鼻翼，或用於眼周打底防暈染。"},
+  {"id": "so_natural", "time": "09:55", "name": "So Natural 經典定妝噴霧", "en_name": "So Natural All Day Tight Makeup Setting Fixer", "price_krw": "₩16,000 / 75ml", "price_twd": "約 NT$ 380", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "./images/oy/so_natural.jpg", "raw_img": "https://global.oliveyoung.com/search?query=So+Natural+Fixer", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=So+Natural+定妝噴霧", "features": "細緻霧化、快速成膜、抗摩擦防脫妝", "skin_type": "所有膚質、混合偏油、需要長時間持妝者", "reason": "韓國定妝噴霧界的常勝冠軍，粉紅色瓶身非常具有代表性。其壓頭噴出的水霧極其細緻，不會在臉上結成水珠，能快速在底妝上形成保護膜，抗汗、抗油且防摩擦。", "tips": "化妝完成後，將噴霧距離臉部 20-30 公分，畫 'X' 和 'T' 字形噴灑全臉，靜待 1 分鐘自然風乾成膜，切勿用手拍打。"},
+  {"id": "canmake", "time": "10:30", "name": "Canmake 腮紅霜", "en_name": "Canmake Cream Cheek", "price_krw": "₩11,000 / 4g", "price_twd": "約 NT$ 262", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "./images/oy/canmake.jpg", "raw_img": "https://global.oliveyoung.com/search?query=Canmake+Cream+Cheek", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=Canmake+腮紅霜", "features": "清透血色感、凝膠轉粉質、白裡透紅", "skin_type": "所有膚質，尤其是喜愛無粉感日韓系妝容者", "reason": "雖然是日系彩妝，但其極佳的自然融膚感在韓國 Olive Young 也擁有超高人氣。凝膠般的質地上臉推開後會化為乾爽的粉質，呈現如皮膚底層自然透出來 of 紅潤氣色。", "tips": "用手指沾取適量，輕點於蘋果肌處往外拍開，或是用氣墊粉撲上妝，效果更加均勻清透。"},
+  {"id": "fillimilli", "time": "11:38", "name": "Fillimilli 胖胖氣墊粉撲", "en_name": "Fillimilli Cushion Pang Pang Puff", "price_krw": "₩5,000 / 2入", "price_twd": "約 NT$ 119", "category": "tools", "category_zh": "美妝工具", "img_url": "./images/oy/fillimilli.jpg", "raw_img": "https://global.oliveyoung.com/search?query=Fillimilli+Puff", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=Fillimilli+粉撲", "features": "厚實有彈性、上妝服貼、省時省粉底", "skin_type": "所有使用氣墊粉餅或粉底液的化妝者", "reason": "Olive Young 自有美妝配件品牌 Fillimilli 的明星產品。這款氣墊粉撲非常厚實，彈性極佳，能將粉底均勻且輕薄地拍入肌膚，大幅提升底妝的服貼度，是去 OY 必抓好幾個回台的貼心小物。", "tips": "可用於氣墊粉餅，也適合搭配普通粉底液使用。上妝時採用「快速拍打」的方式，能讓妝效更具光澤與遮瑕力。"},
+  {"id": "too_cool", "time": "12:43", "name": "Too Cool for School 美術課修容/腮紅 #14", "en_name": "Too Cool for School Artclass Shading", "price_krw": "₩16,000 / 9.5g", "price_twd": "約 NT$ 380", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "./images/oy/too_cool.jpg", "raw_img": "https://global.oliveyoung.com/search?query=Too+Cool+for+School+Artclass+Shading", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=Too+Cool+for+School+修容", "features": "發色自然、柔滑粉質、不易失手", "skin_type": "彩妝新手、喜愛溫柔日常妝容者", "reason": "Too Cool for School 的經典美術課系列，以極佳的發色與粉質著稱。#14 號色提供了極為溫柔、自然且符合亞洲人膚色的冷暖平衡色調，不易結塊且能完美修飾臉部輪廓。", "tips": "用修容刷或腮紅刷沾取後，在手背上稍微拍掉多餘粉末，再輕刷於臉頰或下顎線，可少量多次疊加。"},
+  {"id": "peripera", "time": "14:09", "name": "Peripera 水光唇釉 (Ink Mood Glowy)", "en_name": "Peripera Ink Mood Glowy Tint", "price_krw": "₩10,000 / 4g", "price_twd": "約 NT$ 238", "category": "makeup", "category_zh": "彩妝與定妝", "img_url": "./images/oy/peripera.jpg", "raw_img": "https://global.oliveyoung.com/search?query=Peripera+Ink+Mood+Glowy+Tint", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=Peripera+水光唇釉", "features": "玻璃水光感、滋潤修飾唇紋、持久顯色", "skin_type": "唇紋明顯、喜愛水光嘟嘟唇與純欲妝效者", "reason": "平價彩妝之王 Peripera 的明星水光唇釉。上嘴後會形成一層晶瑩剔透的水光膜，質地保濕不乾澀，且帶有輕微的染唇效果，不容易完全掉色，是打造網紅玻璃唇的首選。", "tips": "塗抹於雙唇後，**靜待 1-2 分鐘不要抿嘴**，等它自動成膜後，水光感和持久度會大幅提升。"},
+  {"id": "banila_co", "time": "15:14", "name": "Banila Co 緻柔卸妝膏", "en_name": "Banila Co Clean It Zero Cleansing Balm", "price_krw": "₩20,000 / 100ml", "price_twd": "約 NT$ 476", "category": "skincare", "category_zh": "臉部清潔", "img_url": "./images/oy/banila_co.jpg", "raw_img": "https://global.oliveyoung.com/search?query=Banila+Co+Clean+It+Zero", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=Banila+Co+卸妝膏", "features": "雪酪質地、秒乳化、溫和不緊繃", "skin_type": "所有膚質，包括敏感肌與日常化濃妝者", "reason": "風靡全球的「國民卸妝膏」。雪酪般的固體質地，接觸體溫後會瞬間融化並乳化，能溫和、徹底地卸除所有頑固的防水彩妝與毛孔髒污，且洗後完全不熏眼、不緊繃。", "tips": "保持雙手和臉部乾燥，取適量卸妝膏塗抹於臉部輕柔按摩打圈，再沾取少量清水使其完全「乳化」變白，最後用溫水徹底沖洗乾淨。"},
+  {"id": "teazen", "time": "16:29", "name": "Teazen 康普茶 (Kombucha)", "en_name": "Teazen Kombucha", "price_krw": "₩7,500 / 10條盒裝", "price_twd": "約 NT$ 178", "category": "lifestyle", "category_zh": "健康飲品", "img_url": "./images/oy/teazen.jpg", "raw_img": "https://global.oliveyoung.com/search?query=Teazen+Kombucha", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=Teazen+康普茶", "features": "低卡無糖、富含益生菌、清爽氣泡感", "skin_type": "注重腸道健康、想戒含糖飲料的健康追求者", "reason": "因為 BTS 成員飲用而火遍全韓的健康機能飲品。採用凍乾技術保留乳酸菌與益生元，沖泡後帶有碳酸微氣泡感，口味酸甜清爽（如檸檬、水蜜桃等），一包熱量僅 15 卡，解膩無負擔。", "tips": "用 250ml - 500ml 的冷水或冰水沖泡，氣泡感會更加強烈，喝起來就像健康的汽水，非常適合作為大餐後的消食飲料。"}
+];層護髮效果。", "badge": "護髮斷貨王"},
   {"id": "dokdo", "time": "Klook推薦", "name": "Round Lab 1025 獨島化妝水", "en_name": "Round Lab 1025 Dokdo Toner", "price_krw": "₩30,000 / 500ml", "price_twd": "約 NT$ 714", "category": "skincare", "category_zh": "臉部護理", "img_url": "./images/oy/dokdo.jpg", "raw_img": "https://global.oliveyoung.com/search?query=Round+Lab+1025+Dokdo+Toner&lang=zh_TW", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=獨島化妝水", "features": "鬱陵島深海水、溫和角質調理、補水清透", "skin_type": "所有膚質，包括敏感肌與易泛紅肌膚", "reason": "Klook 經典推薦！採用鬱陵島深層海水配方，富含 72 種天然礦物質，質地溫和清爽。含有專利去角質酵素，能在日常擦拭中溫和代謝老廢角質，恢復肌膚的細緻亮透。", "tips": "適合搭配化妝棉使用。每天早晚潔面後，用浸濕的化妝棉由內向外順著肌膚紋理輕輕擦拭，也可用於濕敷。", "badge": "獨島系列明星"},
   {"id": "bagel_chip", "time": "Klook推薦", "name": "Delight Project 貝果脆片", "en_name": "Delight Project Bagel Chip", "price_krw": "₩3,500 / 包", "price_twd": "約 NT$ 83", "category": "lifestyle", "category_zh": "健康飲品", "img_url": "./images/oy/bagel_chip.jpg", "raw_img": "https://global.oliveyoung.com/search?query=Delight+Project+Bagel+Chip&lang=zh_TW", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=Delight+Project+貝果餅乾", "features": "低卡低熱量、慢火烘焙、超人氣辦公室零食", "skin_type": "喜愛零嘴但注重身材管理與低卡健康飲食者", "reason": "Klook 伴手禮極力推薦！Olive Young 的明星自有零食品牌。將真實貝果切片後塗抹奶油慢火烘焙，口感極其酥脆，有蒜香奶油、蜂蜜奶油與披薩等多種口味，熱量極低且飽足感強。", "tips": "極度推薦搭配 Teazen 康普茶一起享用，作為下午茶或宵夜，解饞又完全沒有罪惡感！", "badge": "收銀台秒殺款"},
   {"id": "beyond", "time": "04:14", "name": "Beyond 美白乳液 / 身體乳", "en_name": "Beyond Body Emulsion", "price_krw": "₩22,000 / 450ml", "price_twd": "約 NT$ 524", "category": "body", "category_zh": "身體保養", "img_url": "./images/oy/beyond.jpg", "raw_img": "https://global.oliveyoung.com/search?query=Beyond+Body+Emulsion&lang=zh_TW", "momo_url": "https://m.momoshop.com.tw/search.momo?searchKeyword=Beyond+身體乳", "features": "溫和草本、高級白麝香、深層鎖水", "skin_type": "所有膚質、身體肌膚乾燥脫屑者", "reason": "LG 生活健康旗下的環保自然品牌。這款身體乳以療癒且高級的「白麝香」香氣聞名，質地乳爽不黏膩，保濕度極佳，能修護乾燥的肌膚屏障。", "tips": "每天洗澡後，在身體微濕時塗抹，保濕與持香效果最佳。"},
@@ -717,9 +596,6 @@ function renderOliveYoung(filterCategory = 'all') {
     if (filterCategory !== 'all' && p.category !== filterCategory) return;
     count++;
     let targetUrl = p.raw_img || `https://global.oliveyoung.com/search?query=${encodeURIComponent(p.name)}`;
-    if (targetUrl.includes('oliveyoung.com') && !targetUrl.includes('lang=')) {
-      targetUrl += targetUrl.includes('?') ? '&lang=zh_TW' : '?lang=zh_TW';
-    }
     html += `
       <div class="product-card" style="background: var(--bg-card); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
         <div class="oy-thumb-container" style="position: relative; border-radius: 8px; overflow: hidden; height: 180px; background: #ffffff; display: flex; align-items: center; justify-content: center;">
