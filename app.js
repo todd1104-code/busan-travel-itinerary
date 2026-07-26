@@ -58,7 +58,7 @@ const itineraryData = [
       {
         time: "13:20 - 14:30",
         title: "午餐：本錢豬肉湯飯 (본전돼지국밥)",
-        desc: "飯店步行 3 分鐘即達之釜山站必吃老店，每碗約 ₩9,000（約 NT$ 216），湯頭濃郁鮮美，附新鮮韭菜與蝦醬。💡【防排隊/備案】若排隊過長，可直接前往隔壁「大建名家豬肉湯飯 (대건명가)」或釜山站前「草梁辣炒豬肉包飯 (초량불백)」。",
+        desc: "🥣【首選】飯店步行 3 分鐘即達之釜山站必吃老店，每碗約 ₩9,000（約 NT$ 216），湯頭濃郁鮮美，附新鮮韭菜與蝦醬。<a href='https://www.google.com/maps/search/?api=1&query=Bonjeon+Dwaeji+Gukbap' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 本錢地圖</a><br>💡【防排隊備案 A】隔壁大建名家豬肉湯飯 (대건명가)<a href='https://www.google.com/maps/search/?api=1&query=Daegaen+Myeongga+Dwaeji-gukbap+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 大建名家地圖</a><br>💡【防排隊備案 B】釜山站前草梁辣炒豬肉包飯 (초량불백)<a href='https://www.google.com/maps/search/?api=1&query=Choryang+Bulbaek+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 草梁辣炒豬肉地圖</a>",
         icon: "🍲",
         badges: ["釜山必吃", "豬肉湯飯"],
         badgeType: "food",
@@ -78,7 +78,7 @@ const itineraryData = [
       {
         time: "18:00 - 19:30",
         title: "晚餐：五福海帶湯 南浦店 (오복미역) 或 南浦蔘雞湯 (남포삼계탕)",
-        desc: "【首日清爽暖胃】下飛機首日選擇鮑魚牛肉海帶湯或 50 年老字號蔘雞湯，滋補暖胃且完全不油膩，減輕搭機疲勞！💡【備案】李재모披薩 (Lee Jae Mo Pizza)。",
+        desc: "🥣【方案 A (清爽保濕)】五福海帶湯 南浦店 (오복미역) - 鮑魚牛肉海帶湯滋補暖胃。<a href='https://www.google.com/maps/search/?api=1&query=Obok+Miyeok+Nampo+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 五福海帶湯地圖</a><br>🥣【方案 B (養生名店)】南浦蔘雞湯 (남포삼계탕) - 50 年老字號蔘雞湯，清爽不油膩，減輕搭機疲勞！<a href='https://www.google.com/maps/search/?api=1&query=Nampo+Samgyetang' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 南浦蔘雞湯地圖</a><br>💡【防排隊備案】李재모披薩 (Lee Jae Mo Pizza)<a href='https://www.google.com/maps/search/?api=1&query=Lee+Jae+Mo+Pizza+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 李재모披薩地圖</a>",
         icon: "🥣",
         badges: ["清爽暖胃", "老字號參雞湯"],
         badgeType: "food",
@@ -126,7 +126,7 @@ const itineraryData = [
       {
         time: "13:00 - 14:30",
         title: "午餐：青沙浦秀民家烤貝 (수민이네)",
-        desc: "青沙浦超高人氣海景烤貝老店，品嚐鮮甜烤扇貝、海膽與海鮮拉麵。💡【備案】黃色燈塔烤貝 / 道喜家。",
+        desc: "🦪【首選】青沙浦超高人氣海景烤貝老店，品嚐鮮甜烤扇貝、海膽與海鮮拉麵。<a href='https://www.google.com/maps/search/?api=1&query=Suminine+Cheongsapo' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 秀民家地圖</a><br>💡【海景備案 A】黃色燈塔烤貝 (노란마차)<a href='https://www.google.com/maps/search/?api=1&query=Noran+Macha+Cheongsapo+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 黃色燈塔地圖</a><br>💡【海景備案 B】道喜家烤貝 (도희집)<a href='https://www.google.com/maps/search/?api=1&query=Dohee-jib+Cheongsapo+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 道喜家地圖</a>",
         icon: "🦪",
         badges: ["海景烤貝", "鮮甜海鮮"],
         badgeType: "food",
@@ -156,7 +156,7 @@ const itineraryData = [
       {
         time: "19:00 - 21:00",
         title: "晚餐雙方案自由選擇 (獨立卡片)",
-        desc: "🟢【方案 A (體力優先/極推薦)】：南浦洞品嚐韓式炸雞/海鮮煎餅或蔘雞湯，早點休息。<br>🔵【方案 B (熱鬧經典)】：前往西面商圈 Shopping 並享用「松亭3代豬肉湯飯」。",
+        desc: "🟢【方案 A (體力優先/免遠奔)】南浦洞品嚐韓式炸雞/海鮮煎餅或蔘雞湯，早點休息。<a href='https://www.google.com/maps/search/?api=1&query=Gwangbok-ro+Fashion+Street+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 南浦洞商圈地圖</a><br>🔵【方案 B (西面名店)】西面松亭3代豬肉湯飯 (송정3대국밥)<a href='https://www.google.com/maps/search/?api=1&query=Songjo-3-dae+Dwaeji-gukbap+Seomyeon' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 松亭3代地圖</a><br>💡【西面備案 A】朴家豬肉湯飯 (박가네돼지국밥)<a href='https://www.google.com/maps/search/?api=1&query=Bakgane+Dwaeji-gukbap+Seomyeon' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 朴家湯飯地圖</a><br>💡【西面備案 B】雙胞胎豬肉湯飯 (쌍둥이돼지국밥)<a href='https://www.google.com/maps/search/?api=1&query=Twin+Dwaeji-gukbap+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 雙胞胎湯飯地圖</a>",
         icon: "🍗",
         badges: ["雙方案彈性選擇", "自由決定"],
         badgeType: "food",
@@ -184,7 +184,7 @@ const itineraryData = [
       {
         time: "12:30 - 15:00",
         title: "午餐三方案彈性選擇 (新東亞帝王蟹 vs 札嘎其帝王蟹 vs 避膩海鮮定食)",
-        desc: "🦀【方案 A (新東亞水產市場 - 推薦 8號 華僑攤位)】：新東亞 1F 8號 華僑攤位 (一樓買蟹一樓代蒸享用)，中文溝通親切無障礙！免收人頭開桌費與蒸煮費，大方送蟹膏炒飯與豐富小菜，CP 值最高！<br>🦀【方案 B (札嘎其水產大樓 - 推薦 100/101號 渡邊水產)】：札嘎其大樓 1F 100/101號 (渡邊水產) 挑選活體大蟹，至 2F 海景餐廳享用（大方送生魚片海鮮拼盤，需加收蒸煮費 ₩10,000 與開桌費約 ₩4,000-5,000/人）。<br>🦪【方案 C (清爽避膩/高CP值)】：南浦洞韓式烤魚/石鍋拌飯與鮮蝦海鮮湯（若不吃大蟹時的避膩定食）。",
+        desc: "🦀【方案 A (新東亞水產市場 - 推薦 8號 華僑攤位)】：新東亞 1F 8號 華僑攤位 (一樓買蟹一樓代蒸享用)，中文溝通親切無障礙！免收人頭費與蒸煮費，大方送蟹膏炒飯與小菜，CP 值最高！<a href='https://www.google.com/maps/search/?api=1&query=Shin+Dong-A+Market+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 新東亞水產地圖</a><br>🦀【方案 B (札嘎其水產大樓 - 推薦 100/101號 渡邊水產)】：札嘎其大樓 1F 100/101號 (渡邊水產) 挑選活體大蟹，至 2F 海景餐廳享用（大方送生魚片海鮮拼盤，需加收蒸煮費 ₩10,000 與開桌費約 ₩4,000-5,000/人）。<a href='https://www.google.com/maps/search/?api=1&query=Jagalchi+Market+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 札嘎其大樓地圖</a><br>🦪【方案 C (清爽避膩/高CP值)】：南浦洞韓式烤魚/石鍋拌飯與鮮蝦海鮮湯（若不吃大蟹時的避膩定食）。<a href='https://www.google.com/maps/search/?api=1&query=Nampo-dong+Gwangbok-ro+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 南浦洞美食街地圖</a>",
         icon: "🦀",
         badges: ["活體帝王蟹", "三方案美食"],
         badgeType: "food",
@@ -214,7 +214,7 @@ const itineraryData = [
       {
         time: "19:00 - 20:45",
         title: "晚餐：味贊王鹽烤肉 富平店 (맛찬들왕소금구이 부평점)",
-        desc: "【最佳時段調整】採買完超市後步行 5 分鐘即達富平新店（札嘎其站 3 號出口新址）。大口享用專人代烤的 3.5cm 超厚切熟成豬五花與大醬湯！💡【備案】河南豬肉家 南浦店。",
+        desc: "🥩【首選】採買完超市後步行 5 分鐘即達富平新店（札嘎其站 3 號出口新址）。大口享用專人代烤的 3.5cm 超厚切熟成豬五花與大醬湯！<a href='https://www.google.com/maps/search/?api=1&query=Matchandeul+Wangso-geum-gu-i+Bupyeong' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 味贊王富平店地圖</a><br>💡【防排隊備案 A】河南豬肉家 南浦店 (하남돼지집)<a href='https://www.google.com/maps/search/?api=1&query=Hanam+Pig+House+Nampo+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 河南豬肉家地圖</a><br>💡【防排隊備案 B】南浦 88 豬肉 (88돼지)<a href='https://www.google.com/maps/search/?api=1&query=88+Pork+Nampo+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 88豬肉地圖</a>",
         icon: "🥩",
         badges: ["3.5cm專人代烤", "熟成豬五花"],
         badgeType: "food",
@@ -262,7 +262,7 @@ const itineraryData = [
       {
         time: "13:00 - 15:00",
         title: "午餐雙方案彈性選擇 (機張松葉蟹 vs 輕食鮑魚粥)",
-        desc: "🦀【方案 A (產地松葉蟹大餐)】：前往機張水產市場 (清海王/總角帝王蟹) 享用現蒸鮮甜松葉蟹與蟹膏炒飯。<br>🥣【方案 B (輕食無負擔)】：若 Day 3 已吃帝王蟹，直接前往 Ananti Cove 享用海景鮑魚粥與拉麵。",
+        desc: "🦀【方案 A (產地松葉蟹大餐)】機張水產市場 (清海王/總角帝王蟹) 享用現蒸鮮甜松葉蟹與蟹膏炒飯。<a href='https://www.google.com/maps/search/?api=1&query=Gijang+Market+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 機張市場地圖</a><br>🥣【方案 B (輕食無負擔)】若 Day 3 已吃帝王蟹，直接前往 Ananti Cove 享用海景鮑魚粥與拉麵。<a href='https://www.google.com/maps/search/?api=1&query=Ananti+Cove+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 Ananti Cove地圖</a>",
         icon: "🦀",
         badges: ["機張松葉蟹", "雙方案午餐"],
         badgeType: "food",
@@ -340,7 +340,7 @@ const itineraryData = [
       {
         time: "18:45 - 21:00",
         title: "廣安里海水浴場 & 廣安大橋夜景第一排餐酒館",
-        desc: "在廣安里海邊第一排美式/韓式餐酒館，邊享用美食邊欣賞點亮璀璨燈光的廣安大橋夜景。💡【備案】彥陽韓牛燒肉。",
+        desc: "🍷【首選】廣安里海邊第一排美式/西班牙餐酒館 (Clam)，邊享用美食邊欣賞點亮璀璨燈光的廣安大橋夜景。<a href='https://www.google.com/maps/search/?api=1&query=Clam+Gwangalli+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 廣安里餐酒館地圖</a><br>💡【燒肉備案】彥陽韓牛燒肉 (언양불고기)<a href='https://www.google.com/maps/search/?api=1&query=Eonyang+Bulgogi+Gwangalli+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 彥陽韓牛燒肉地圖</a>",
         icon: "🌉",
         badges: ["廣安大橋夜景", "海景餐酒館"],
         badgeType: "food",
