@@ -1,7 +1,7 @@
 # 🇰🇷 2026 韓國釜山 6 天 5 夜家族豪華慢遊行程指南 (8人同行全量彙整版)
 
 > **修改日期**：2026 年 7 月 26 日 (Updated 2026-07-26)  
-> **版本**：V7.3 徹底實體化圖片至本地專案目錄 (永不 403 變空白、100% 相符對應)  
+> **版本**：V7.4 雙電商管道 (台灣 MOMO + 韓國 Olive Young) 與 Banila Co / Fillimilli 官網正版實物圖重製版  
 > **適用人數**：全團 8 位成年人（隨身攜帶 8 件 28-30 吋大行李）  
 > **行程定位**：動線流暢、雙方案獨立卡片斷行展示、不走回頭路、兼顧體力與美食新鮮感之家族 slow-travel 體驗。
 
@@ -128,30 +128,30 @@
 
 ---
 
-## 🛍️ 4. Olive Young 20 大必買好物對照表 (專案本地高清實體圖檔與繁中詳情頁)
+## 🛍️ 4. Olive Young 20 大必買好物對照表 (雙電商購物管道與正版實物圖)
 
-| 商品名稱 (中/韓) | 本地實體高清圖 | 繁體中文詳情頁鏈結 (含 &lang=zh_TW) |
-| :--- | :--- | :--- |
-| **1. MEDIHEAL 精華面膜片** | ![MEDIHEAL](./images/oy/mediheal.jpg) | [👉 點此前往官方繁中詳情頁](https://global.oliveyoung.com/product/detail?prdtNo=GA250128210&lang=zh_TW) |
-| **2. Biodance 膠原蛋白深層全效面膜** | ![Biodance](./images/oy/biodance.jpg) | [👉 點此前往官方繁中詳情頁](https://global.oliveyoung.com/product/detail?prdtNo=GA230418238&lang=zh_TW) |
-| **3. Torriden 5D微分子玻尿酸保濕精華** | ![Torriden](./images/oy/torriden.jpg) | [👉 點此前往官方繁中詳情頁](https://global.oliveyoung.com/product/detail?prdtNo=GA230920410&lang=zh_TW) |
-| **4. ma:nyo 魔女工廠 純淨潔顏油** | ![manyo](./images/oy/manyo.jpg) | [👉 點此前往官方繁中詳情頁](https://global.oliveyoung.com/product/detail?prdtNo=GA210000733&lang=zh_TW) |
-| **5. AESTURA Atobarrier 365 乳霜** | ![Aestura](./images/oy/aestura.jpg) | [👉 點此前往官方繁中詳情頁](https://global.oliveyoung.com/product/detail?prdtNo=GA240121573&lang=zh_TW) |
-| **6. UNOVE 深層受損修護髮膜** | ![UNOVE](./images/oy/unove.jpg) | [👉 點此前往官方繁中詳情頁](https://global.oliveyoung.com/product/detail?prdtNo=GA220916169&lang=zh_TW) |
-| **7. Round Lab 1025 獨島化妝水** | ![Dokdo](./images/oy/dokdo.jpg) | [👉 點此前往官方繁中詳情頁](https://global.oliveyoung.com/product/detail?prdtNo=GA210002228&lang=zh_TW) |
-| **8. Delight Project 貝果脆片** | ![Bagel Chip](./images/oy/bagel_chip.jpg) | [👉 點此前往官方繁中詳情頁](https://global.oliveyoung.com/product/detail?prdtNo=GA240322301&lang=zh_TW) |
-| **9. Beyond 美白乳液 / 身體乳** | ![Beyond](./images/oy/beyond.jpg) | [👉 點此前往官方繁中詳情頁](https://global.oliveyoung.com/product/detail?prdtNo=GA210711216&lang=zh_TW) |
-| **10. Yunjac 然植亞保濕底霜** | ![Yunjac](./images/oy/yunjac.jpg) | [👉 點此前往官方繁中詳情頁](https://global.oliveyoung.com/product/detail?prdtNo=GA231020780&lang=zh_TW) |
-| **11. OBgE 自然防曬棒** | ![OBgE](./images/oy/obge.jpg) | [👉 點此前往官方繁中詳情頁](https://global.oliveyoung.com/product/detail?prdtNo=GA230519001&lang=zh_TW) |
-| **12. The Saem 得鮮完美遮瑕液** | ![The Saem](./images/oy/the_saem.jpg) | [👉 點此前往官方繁中詳情頁](https://global.oliveyoung.com/product/detail?prdtNo=GA210001099&lang=zh_TW) |
-| **13. About Tone 柔焦控油蜜粉餅** | ![About Tone](./images/oy/about_tone.jpg) | [👉 點此前往官方繁中詳情頁](https://global.oliveyoung.com/product/detail?prdtNo=GA250933463&lang=zh_TW) |
-| **14. So Natural 經典定妝噴霧** | ![So Natural](./images/oy/so_natural.jpg) | [👉 點此前往官方繁中詳情頁](https://global.oliveyoung.com/product/detail?prdtNo=GA231020789&lang=zh_TW) |
-| **15. Canmake 腮紅霜** | ![Canmake](./images/oy/canmake.jpg) | [👉 點此前往官方繁中詳情頁](https://global.oliveyoung.com/product/detail?prdtNo=GA240121700&lang=zh_TW) |
-| **16. Fillimilli 胖胖氣墊粉撲** | ![Fillimilli](./images/oy/fillimilli.jpg) | [👉 點此前往官方繁中詳情頁](https://global.oliveyoung.com/product/detail?prdtNo=GA250933686&lang=zh_TW) |
-| **17. Too Cool for School 修容/腮紅** | ![Too Cool](./images/oy/too_cool.jpg) | [👉 點此前往官方繁中詳情頁](https://global.oliveyoung.com/product/detail?prdtNo=GA240121736&lang=zh_TW) |
-| **18. Peripera 水光唇釉** | ![Peripera](./images/oy/peripera.jpg) | [👉 點此前往官方繁中詳情頁](https://global.oliveyoung.com/product/detail?prdtNo=GA231121205&lang=zh_TW) |
-| **19. Banila Co 緻柔卸妝膏** | ![Banila Co](./images/oy/banila_co.jpg) | [👉 點此前往官方繁中詳情頁](https://global.oliveyoung.com/product/detail?prdtNo=GA260439352&lang=zh_TW) |
-| **20. Teazen 康普茶** | ![Teazen](./images/oy/teazen.jpg) | [👉 點此前往官方繁中詳情頁](https://global.oliveyoung.com/product/detail?prdtNo=GA210711200&lang=zh_TW) |
+| 商品名稱 (中/韓) | 官方正版實物圖 | 🛒 台灣 MOMO 購物網搜尋 | 🇰🇷 韓國 Olive Young 官網 |
+| :--- | :--- | :--- | :--- |
+| **1. MEDIHEAL 精華面膜片** | ![MEDIHEAL](./images/oy/mediheal.jpg) | [👉 MOMO 電商搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=MEDIHEAL+面膜) | [👉 OY 官網鏈結](https://global.oliveyoung.com/search?query=MEDIHEAL+Essential+Mask&lang=zh_TW) |
+| **2. Biodance 膠原蛋白面膜** | ![Biodance](./images/oy/biodance.jpg) | [👉 MOMO 電商搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=Biodance+面膜) | [👉 OY 官網鏈結](https://global.oliveyoung.com/search?query=Biodance+Bio-Collagen+Real+Deep+Mask&lang=zh_TW) |
+| **3. Torriden 玻尿酸精華** | ![Torriden](./images/oy/torriden.jpg) | [👉 MOMO 電商搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=Torriden+玻尿酸精華) | [👉 OY 官網鏈結](https://global.oliveyoung.com/search?query=Torriden+Dive-In+Serum&lang=zh_TW) |
+| **4. ma:nyo 魔女工廠 潔顏油** | ![manyo](./images/oy/manyo.jpg) | [👉 MOMO 電商搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=魔女工廠+卸妝油) | [👉 OY 官網鏈結](https://global.oliveyoung.com/search?query=manyo+Pure+Cleansing+Oil&lang=zh_TW) |
+| **5. AESTURA Atobarrier 乳霜** | ![Aestura](./images/oy/aestura.jpg) | [👉 MOMO 電商搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=AESTURA+乳霜) | [👉 OY 官網鏈結](https://global.oliveyoung.com/search?query=AESTURA+Atobarrier+365+Cream&lang=zh_TW) |
+| **6. UNOVE 深層受損修護髮膜** | ![UNOVE](./images/oy/unove.jpg) | [👉 MOMO 電商搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=UNOVE+髮膜) | [👉 OY 官網鏈結](https://global.oliveyoung.com/search?query=UNOVE+Deep+Damage+Treatment&lang=zh_TW) |
+| **7. Round Lab 1025 獨島化妝水** | ![Dokdo](./images/oy/dokdo.jpg) | [👉 MOMO 電商搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=獨島化妝水) | [👉 OY 官網鏈結](https://global.oliveyoung.com/search?query=Round+Lab+1025+Dokdo+Toner&lang=zh_TW) |
+| **8. Delight Project 貝果脆片** | ![Bagel Chip](./images/oy/bagel_chip.jpg) | [👉 MOMO 電商搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=Delight+Project+貝果餅乾) | [👉 OY 官網鏈結](https://global.oliveyoung.com/search?query=Delight+Project+Bagel+Chip&lang=zh_TW) |
+| **9. Beyond 美白乳液 / 身體乳** | ![Beyond](./images/oy/beyond.jpg) | [👉 MOMO 電商搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=Beyond+身體乳) | [👉 OY 官網鏈結](https://global.oliveyoung.com/search?query=Beyond+Body+Emulsion&lang=zh_TW) |
+| **10. Yunjac 然植亞保濕底霜** | ![Yunjac](./images/oy/yunjac.jpg) | [👉 MOMO 電商搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=Yunjac+妝前) | [👉 OY 官網鏈結](https://global.oliveyoung.com/search?query=Yunjac+Base+Prep&lang=zh_TW) |
+| **11. OBgE 自然防曬棒** | ![OBgE](./images/oy/obge.jpg) | [👉 MOMO 電商搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=OBgE+防曬) | [👉 OY 官網鏈結](https://global.oliveyoung.com/search?query=OBgE+Sun+Stick&lang=zh_TW) |
+| **12. The Saem 得鮮完美遮瑕液** | ![The Saem](./images/oy/the_saem.jpg) | [👉 MOMO 電商搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=The+Saem+遮瑕液) | [👉 OY 官網鏈結](https://global.oliveyoung.com/search?query=The+Saem+Concealer&lang=zh_TW) |
+| **13. About Tone 柔焦控油蜜粉餅** | ![About Tone](./images/oy/about_tone.jpg) | [👉 MOMO 電商搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=About+Tone+蜜粉餅) | [👉 OY 官網鏈結](https://global.oliveyoung.com/search?query=About+Tone+Blur+Powder+Pact&lang=zh_TW) |
+| **14. So Natural 經典定妝噴霧** | ![So Natural](./images/oy/so_natural.jpg) | [👉 MOMO 電商搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=So+Natural+定妝噴霧) | [👉 OY 官網鏈結](https://global.oliveyoung.com/search?query=So+Natural+Fixer&lang=zh_TW) |
+| **15. Canmake 腮紅霜** | ![Canmake](./images/oy/canmake.jpg) | [👉 MOMO 電商搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=Canmake+腮紅霜) | [👉 OY 官網鏈結](https://global.oliveyoung.com/search?query=Canmake+Cream+Cheek&lang=zh_TW) |
+| **16. Fillimilli 胖胖氣墊粉撲** | ![Fillimilli](./images/oy/fillimilli.jpg) | [👉 MOMO 電商搜尋 (直達)](https://m.momoshop.com.tw/search.momo?searchKeyword=Fillimilli+粉撲) | [👉 OY 官網鏈結](https://global.oliveyoung.com/search?query=Fillimilli+Puff&lang=zh_TW) |
+| **17. Too Cool for School 修容/腮紅** | ![Too Cool](./images/oy/too_cool.jpg) | [👉 MOMO 電商搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=Too+Cool+for+School+修容) | [👉 OY 官網鏈結](https://global.oliveyoung.com/search?query=Too+Cool+for+School+Artclass+Shading&lang=zh_TW) |
+| **18. Peripera 水光唇釉** | ![Peripera](./images/oy/peripera.jpg) | [👉 MOMO 電商搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=Peripera+水光唇釉) | [👉 OY 官網鏈結](https://global.oliveyoung.com/search?query=Peripera+Ink+Mood+Glowy+Tint&lang=zh_TW) |
+| **19. Banila Co 緻柔卸妝膏** | ![Banila Co](./images/oy/banila_co.jpg) | [👉 MOMO 電商搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=Banila+Co+卸妝膏) | [👉 OY 官網鏈結](https://global.oliveyoung.com/search?query=Banila+Co+Clean+It+Zero&lang=zh_TW) |
+| **20. Teazen 康普茶** | ![Teazen](./images/oy/teazen.jpg) | [👉 MOMO 電商搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=Teazen+康普茶) | [👉 OY 官網鏈結](https://global.oliveyoung.com/search?query=Teazen+Kombucha&lang=zh_TW) |
 
 ---
 
