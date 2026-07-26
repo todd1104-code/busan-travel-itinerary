@@ -532,7 +532,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // 渲染 Day 切換頁籤
 function renderDayTabs() {
-  const container = document.getElementById("day-tabs");
+  const container = document.getElementById("sub-nav-container") || document.getElementById("day-tabs");
   if (!container) return;
 
   let html = `<button class="sub-tab-btn active" data-day="1">Day 1 (8/9)</button>`;
