@@ -379,7 +379,7 @@
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid var(--border-light);
       border-radius: 30px !important;
-      padding: 0.55rem 1.1rem !important;
+      padding: 0.48rem 0.85rem !important; font-size: 0.92rem !important;
       cursor: pointer;
       color: var(--text-sub);
       font-weight: 600;
@@ -467,7 +467,7 @@
     .sub-tab-btn {
       flex: 0 0 auto !important;
       white-space: nowrap !important;
-      padding: 0.55rem 1.1rem !important;
+      padding: 0.48rem 0.85rem !important; font-size: 0.92rem !important;
       border-radius: 30px !important;
       border: 1px solid transparent;
       background: transparent;
@@ -545,7 +545,7 @@
       gap: 0.4rem;
       background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%) !important;
       color: #ffffff !important;
-      padding: 0.55rem 1.1rem !important;
+      padding: 0.48rem 0.85rem !important; font-size: 0.92rem !important;
       border-radius: 8px !important;
       font-size: 0.88rem !important;
       font-weight: 700 !important;
@@ -786,6 +786,12 @@
   <!-- Hero Header Section -->
   <header class="hero-header" id="hero-section">
     <div class="hero-overlay"></div>
+    <div style="position: absolute; top: 1.25rem; right: 1.5rem; z-index: 10;">
+      <button onclick="toggleTheme()" id="theme-toggle-btn-nav" style="background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.25); color: #fff; padding: 0.5rem 1rem; border-radius: 30px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+        <i class="fa-solid fa-sun" id="theme-btn-icon-nav" style="color: var(--accent-gold);"></i>
+        <span id="theme-btn-text-nav">☀️ 切換風格</span>
+      </button>
+    </div>
     <div class="hero-content">
       <span class="badge-tag">✨ 8人成年家族專屬 · 豪華動感版</span>
       <h1 class="hero-title">韓國釜山 6 天 5 夜<br>海景·美食·購物·微醺之旅</h1>
@@ -833,10 +839,7 @@
           <i class="fa-solid fa-utensils"></i>
           <span>美食商圈</span>
         </button>
-        <button class="main-tab-btn theme-nav-btn" onclick="toggleTheme()" id="theme-toggle-btn-nav" style="background: rgba(14, 165, 233, 0.2) !important; border: 1px solid var(--primary-glow) !important; color: var(--primary-glow) !important; font-weight: 700; margin-left: auto;">
-          <i class="fa-solid fa-sun" id="theme-btn-icon-nav" style="color: var(--accent-gold);"></i>
-          <span id="theme-btn-text-nav">☀️ 切換風格</span>
-        </button>
+
       </div>
     </div>
   </nav>
