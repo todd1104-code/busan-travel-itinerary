@@ -597,7 +597,6 @@ function renderDayTimeline(dayFilter = 1) {
   container.innerHTML = html;
 }
 
-// 渲染 Olive Young 卡片
 function renderOliveYoung(filterCategory = 'all') {
   const container = document.getElementById("oy-product-grid");
   if (!container) return;
@@ -607,8 +606,11 @@ function renderOliveYoung(filterCategory = 'all') {
   oyProductsData.forEach(p => {
     if (filterCategory !== 'all' && p.category !== filterCategory) return;
     count++;
-    let targetUrl = p.raw_img || `https://global.oliveyoung.com/search?query=${encodeURIComponent(p.name)}`;
     
+    // 判斷是否為已知的 prdtNo 直達網址
+    let targetUrl = p.raw_img || `https://global.oliveyoung.com/display/search?query=${encodeURIComponent(p.en_name || p.name)}`;
+    const googleFallbackUrl = `https://www.google.com/search?q=site:global.oliveyoung.com+${encodeURIComponent(p.en_name || p.name)}`;
+
     html += `
       <div class="product-card" style="background: var(--bg-card); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
         <div class="oy-thumb-container" style="position: relative; border-radius: 8px; overflow: hidden; height: 180px; background: #ffffff; display: flex; align-items: center; justify-content: center;">
@@ -624,12 +626,15 @@ function renderOliveYoung(filterCategory = 'all') {
         <p class="product-features" style="font-size: 0.88rem; color: #e2e8f0; margin: 0;">💡 <b>特色：</b>${p.features}</p>
         <p class="product-skin" style="font-size: 0.85rem; color: var(--text-sub); margin: 0;">👤 <b>適用：</b>${p.skin_type}</p>
         <p class="product-reason" style="font-size: 0.88rem; color: #cbd5e1; line-height: 1.5; margin: 0;">${p.reason}</p>
-        <div style="margin-top: auto; display: flex; flex-direction: column; gap: 0.5rem;">
-          <a href="${p.momo_url || `https://m.momoshop.com.tw/search.momo?searchKeyword=${encodeURIComponent(p.name)}`}" target="_blank" rel="noopener" class="map-link-btn" style="text-align: center; justify-content: center; background: linear-gradient(135deg, #ff0055, #ff5e78); color: #fff;">
+        <div style="margin-top: auto; display: flex; flex-direction: column; gap: 0.4rem;">
+          <a href="${p.momo_url || `https://m.momoshop.com.tw/search.momo?searchKeyword=${encodeURIComponent(p.name)}`}" target="_blank" rel="noopener" class="map-link-btn" style="text-align: center; justify-content: center; background: linear-gradient(135deg, #ff0055, #ff5e78); color: #fff; font-weight: 700;">
             <i class="fa-solid fa-cart-shopping"></i> 前往 MOMO 購物網搜尋 🛒
           </a>
-          <a href="${targetUrl}" target="_blank" rel="noopener" class="map-link-btn" style="text-align: center; justify-content: center; background: rgba(255,255,255,0.08); border: 1px solid var(--border-light); color: var(--text-sub);">
-            <i class="fa-solid fa-globe"></i> 前往 Olive Young 官網 🔗
+          <a href="${targetUrl}" target="_blank" rel="noopener" class="map-link-btn" style="text-align: center; justify-content: center; background: rgba(0, 210, 255, 0.15); border: 1px solid var(--primary-glow); color: var(--primary-glow); font-weight: 700;">
+            <i class="fa-solid fa-globe"></i> 前往 Olive Young 全球官網 🔗
+          </a>
+          <a href="${googleFallbackUrl}" target="_blank" rel="noopener" class="map-link-btn" style="text-align: center; justify-content: center; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); color: var(--text-sub); font-size: 0.8rem;">
+            <i class="fa-solid fa-magnifying-glass"></i> Google 直達搜尋此商品官網頁 🔍
           </a>
         </div>
       </div>
