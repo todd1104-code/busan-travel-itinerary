@@ -72,7 +72,7 @@ const itineraryData = [
         icon: "🛍️",
         badges: ["民間換錢", "購物散策"],
         badgeType: "shop",
-        transport: "🚇 地鐵 1 號線釜山站 ➔ 南浦站 (1 站，約 3 分鐘 / 車資 ₩1,400/人)",
+        transport: "🚕 強烈建議搭計程車：車程約 5 分鐘直達換錢所 (預估車資 ₩5,500/台，8人搭 2 台約 NT$ 260，每人僅 NT$ 32！免去步行 20 分鐘保護長輩體力)",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Gwangbok-ro+Fashion+Street"
       },
       {
