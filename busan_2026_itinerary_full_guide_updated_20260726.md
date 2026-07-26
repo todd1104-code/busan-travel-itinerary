@@ -109,32 +109,32 @@
 
 ---
 
-## 🛍️ 3. Olive Young 20 大必買好物對照表 (官方直達網址與價格標註)
+## 🛍️ 3. Olive Young 20 大必買好物對照表 (官方直達連結校正版)
 
-> 💡 **網址說明**：已全面修正為官方精準直達商品頁網址（包含原始 prdtNo 參數，直達不迷路）。
+> 💡 **網址說明**：已全面修正為官方精準直達商品頁網址（包含原始 prdtNo 參數，直達不迷路；已移除 MOMO 與 Google 檢索）。
 
-| 商品名稱 (中/韓) | 🏷️ 韓國 OY 官方價格 (韓幣 ₩) | 💰 估算換算台幣 (NT$) | 🛒 台灣 MOMO 購物網搜尋 | 🇰🇷 韓國 Olive Young 官網直達 |
-| :--- | :--- | :--- | :--- | :--- |
-| **1. MEDIHEAL 精華面膜片** | ₩20,000 / 10片 (特價約 ₩10,000) | 約 NT$ 476 (特價約 NT$ 238) | [👉 MOMO 搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=MEDIHEAL+面膜) | [👉 OY 官網直達](https://global.oliveyoung.com/search?query=MEDIHEAL+Essential+Mask) |
-| **2. Biodance 膠原蛋白面膜** | ₩19,000 / 4片 | 約 NT$ 452 | [👉 MOMO 搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=Biodance+面膜) | [👉 OY 官網直達](https://global.oliveyoung.com/search?query=Biodance+Bio-Collagen+Real+Deep+Mask) |
-| **3. Torriden 玻尿酸精華** | ₩22,000 / 50ml | 約 NT$ 524 | [👉 MOMO 搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=Torriden+玻尿酸精華) | [👉 OY 官網直達](https://global.oliveyoung.com/search?query=Torriden+Dive-In+Serum) |
-| **4. ma:nyo 魔女工廠 潔顏油** | ₩29,000 / 200ml | 約 NT$ 690 | [👉 MOMO 搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=魔女工廠+卸妝油) | [👉 OY 官網直達](https://global.oliveyoung.com/search?query=manyo+Pure+Cleansing+Oil) |
-| **5. AESTURA Atobarrier 乳霜** | ₩31,000 / 80ml | 約 NT$ 738 | [👉 MOMO 搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=AESTURA+乳霜) | [👉 OY 官網直達](https://global.oliveyoung.com/search?query=AESTURA+Atobarrier+365+Cream) |
-| **6. UNOVE 深層受損修護髮膜** | ₩23,000 / 207ml | 約 NT$ 548 | [👉 MOMO 搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=UNOVE+髮膜) | [👉 OY 官網直達](https://global.oliveyoung.com/search?query=UNOVE+Deep+Damage+Treatment) |
-| **7. Round Lab 1025 獨島化妝水** | ₩30,000 / 500ml | 約 NT$ 714 | [👉 MOMO 搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=獨島化妝水) | [👉 OY 官網直達](https://global.oliveyoung.com/search?query=Round+Lab+1025+Dokdo+Toner) |
-| **8. Delight Project 貝果脆片** | ₩3,500 / 包 | 約 NT$ 83 | [👉 MOMO 搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=Delight+Project+貝果餅乾) | [👉 OY 官網直達](https://global.oliveyoung.com/search?query=Delight+Project+Bagel+Chip) |
-| **9. Beyond 美白乳液 / 身體乳** | ₩22,000 / 450ml | 約 NT$ 524 | [👉 MOMO 搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=Beyond+身體乳) | [👉 OY 官網直達](https://global.oliveyoung.com/search?query=Beyond+Body+Emulsion) |
-| **10. Yunjac 然植亞保濕底霜** | ₩48,000 / 40ml | 約 NT$ 1,143 | [👉 MOMO 搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=Yunjac+妝前) | [👉 OY 官網直達](https://global.oliveyoung.com/search?query=Yunjac+Base+Prep) |
-| **11. OBgE 自然防曬棒** | ₩24,900 / 18g | 約 NT$ 593 | [👉 MOMO 搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=OBgE+防曬) | [👉 OY 官網直達 🔗](https://global.oliveyoung.com/product/detail?prdtNo=GA250430215&dataSource=search_result) |
-| **12. THE SAEM 完美保護三層遮瑕膏** | ₩15,000 / 盤 | 約 NT$ 357 | [👉 MOMO 搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=THE+SAEM+三色遮瑕) | [👉 OY 官網直達 🔗](https://global.oliveyoung.com/product/detail?prdtNo=GA260540072&dataSource=search_result) |
-| **13. About Tone 柔焦控油蜜粉餅** | ₩12,000 / 9g | 約 NT$ 286 | [👉 MOMO 搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=About+Tone+蜜粉餅) | [👉 OY 官網直達 🔗](https://global.oliveyoung.com/product/detail?prdtNo=GA260338276&dataSource=search_result) |
-| **14. So Natural 經典定妝噴霧** | ₩16,000 / 75ml | 約 NT$ 380 | [👉 MOMO 搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=So+Natural+定妝噴霧) | [👉 OY 官網直達](https://global.oliveyoung.com/search?query=So+Natural+Fixer) |
-| **15. Canmake 腮紅霜** | ₩11,000 / 4g | 約 NT$ 262 | [👉 MOMO 搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=Canmake+腮紅霜) | [👉 OY 官網直達](https://global.oliveyoung.com/search?query=Canmake+Cream+Cheek) |
-| **16. Fillimilli 胖胖氣墊粉撲** | ₩5,000 / 2入 | 約 NT$ 119 | [👉 MOMO 搜尋 (直達)](https://m.momoshop.com.tw/search.momo?searchKeyword=Fillimilli+粉撲) | [👉 OY 官網直達](https://global.oliveyoung.com/search?query=Fillimilli+Puff) |
-| **17. Too Cool for School 修容/腮紅** | ₩16,000 / 9.5g | 約 NT$ 380 | [👉 MOMO 搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=Too+Cool+for+School+修容) | [👉 OY 官網直達](https://global.oliveyoung.com/search?query=Too+Cool+for+School+Artclass+Shading) |
-| **18. Peripera 水光唇釉** | ₩10,000 / 4g | 約 NT$ 238 | [👉 MOMO 搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=Peripera+Ink+Mood+Glowy+Tint) | [👉 OY 官網直達](https://global.oliveyoung.com/search?query=Peripera+Ink+Mood+Glowy+Tint) |
-| **19. Banila Co 緻柔卸妝膏** | ₩20,000 / 100ml | 約 NT$ 476 | [👉 MOMO 搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=Banila+Co+卸妝膏) | [👉 OY 官網直達](https://global.oliveyoung.com/search?query=Banila+Co+Clean+It+Zero) |
-| **20. Teazen 康普茶** | ₩7,500 / 10條盒裝 | 約 NT$ 178 | [👉 MOMO 搜尋](https://m.momoshop.com.tw/search.momo?searchKeyword=Teazen+康普茶) | [👉 OY 官網直達](https://global.oliveyoung.com/search?query=Teazen+Kombucha) |
+| 商品名稱 (中/韓) | 🏷️ 韓國 OY 官方價格 (USD) | 💰 估算換算台幣 (NT$) | 🇰🇷 韓國 Olive Young 官網直達 |
+| :--- | :--- | :--- | :--- |
+| **1. MEDIHEAL 精華面膜片** | US$ 3.00 / 1片 | 約 NT$ 95 | [👉 OY 官網直達](https://global.oliveyoung.com/product/detail?prdtNo=GA250128024) |
+| **2. Biodance 膠原蛋白面膜** | US$ 19.00 / 4片 | 約 NT$ 598 | [👉 OY 官網直達](https://global.oliveyoung.com/product/detail?prdtNo=GA250128210) |
+| **3. Torriden 玻尿酸精華** | US$ 26.00 / 50ml | 約 NT$ 819 | [👉 OY 官網直達](https://global.oliveyoung.com/product/detail?prdtNo=GA230920410) |
+| **4. ma:nyo 魔女工廠 潔顏油** | US$ 29.00 / 200ml | 約 NT$ 913 | [👉 OY 官網直達](https://global.oliveyoung.com/product/detail?prdtNo=GA210000733) |
+| **5. AESTURA Atobarrier 乳霜** | US$ 44.00 / 80ml | 約 NT$ 1,386 | [👉 OY 官網直達](https://global.oliveyoung.com/product/detail?prdtNo=GA260136967) |
+| **6. UNOVE 深層受損修護髮膜** | US$ 27.30 / 320ml | 約 NT$ 860 | [👉 OY 官網直達](https://global.oliveyoung.com/product/detail?prdtNo=GA230819892) |
+| **7. Round Lab 1025 獨島化妝水** | US$ 30.00 / 500ml | 約 NT$ 945 | [👉 OY 官網直達](https://global.oliveyoung.com/product/detail?prdtNo=GA210000858) |
+| **8. Delight Project 貝果脆片** | US$ 3.50 / 包 | 約 NT$ 110 | [👉 OY 官網直達](https://global.oliveyoung.com/product/detail?prdtNo=GA210000572) |
+| **9. Beyond 美白乳液 / 身體乳** | US$ 22.00 / 450ml | 約 NT$ 693 | [👉 OY 官網直達](https://global.oliveyoung.com/product/detail?prdtNo=GA210001092) |
+| **10. Yunjac 然植亞保濕底霜** | US$ 48.00 / 40ml | 約 NT$ 1,512 | [👉 OY 官網直達](https://global.oliveyoung.com/product/detail?prdtNo=GA230518772) |
+| **11. OBgE 自然防曬棒** | US$ 24.90 / 18g | 約 NT$ 784 | [👉 OY 官網直達](https://global.oliveyoung.com/product/detail?prdtNo=GA250430215) |
+| **12. THE SAEM 完美保護三層遮瑕膏** | US$ 15.00 / 盤 | 約 NT$ 472 | [👉 OY 官網直達](https://global.oliveyoung.com/product/detail?prdtNo=GA260540072) |
+| **13. About Tone 柔焦控油蜜粉餅** | US$ 12.00 / 9g | 約 NT$ 378 | [👉 OY 官網直達](https://global.oliveyoung.com/product/detail?prdtNo=GA260338276) |
+| **14. So Natural 經典定妝噴霧** | US$ 16.00 / 75ml | 約 NT$ 504 | [👉 OY 官網直達](https://global.oliveyoung.com/product/detail?prdtNo=GA210000912) |
+| **15. Canmake 腮紅霜** | US$ 11.00 / 4g | 約 NT$ 346 | [👉 OY 官網直達](https://global.oliveyoung.com/product/detail?prdtNo=GA210000311) |
+| **16. Fillimilli 胖胖氣墊粉撲** | US$ 5.00 / 2入 | 約 NT$ 157 | [👉 OY 官網直達](https://global.oliveyoung.com/product/detail?prdtNo=GA210000455) |
+| **17. Too Cool for School 修容/腮紅** | US$ 16.00 / 9.5g | 約 NT$ 504 | [👉 OY 官網直達](https://global.oliveyoung.com/product/detail?prdtNo=GA210001011) |
+| **18. Peripera 水光唇釉** | US$ 10.00 / 4g | 約 NT$ 315 | [👉 OY 官網直達](https://global.oliveyoung.com/product/detail?prdtNo=GA220314488) |
+| **19. Banila Co 緻柔卸妝膏** | US$ 20.00 / 100ml | 約 NT$ 630 | [👉 OY 官網直達](https://global.oliveyoung.com/product/detail?prdtNo=GA210000102) |
+| **20. Teazen 康普茶** | US$ 7.50 / 10條盒裝 | 約 NT$ 236 | [👉 OY 官網直達](https://global.oliveyoung.com/product/detail?prdtNo=GA210000998) |
 
 ---
 
