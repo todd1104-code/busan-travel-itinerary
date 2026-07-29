@@ -100,68 +100,68 @@ const itineraryData = [
   {
     day: 2,
     date: "8/10（一）",
-    subTitle: "懸崖步道 · 天空膠囊列車 · 彩虹山城",
-    title: "五六島天空步道 ➔ 海雲台天空膠囊列車 ➔ 青沙浦燈塔與烤貝 ➔ 白淺灘文化村 ➔ 甘川洞文化村 ➔ 晚餐雙方案自由選",
+    subTitle: "Klook一日遊 · 天空膠囊列車 · 彩虹山城 · 釜山站燒肉",
+    title: "KTX釜山站集合 ➔ 海雲台天空膠囊列車 ➔ 五六島天空步道 ➔ 白淺灘文化村 ➔ 甘川洞文化村 ➔ 18:00釜山站解散回飯店休息與草梁燒肉美食",
     items: [
       {
-        time: "09:30 - 10:45",
-        title: "五六島天空步道 (Oryukdo Skywalk)",
-        desc: "站在 35 公尺高的透明玻璃懸崖步道上俯瞰太平洋浪花，體驗踏空震撼。",
-        icon: "🌊",
-        badges: ["玻璃步道", "絕美海景"],
-        badgeType: "sight",
-        transport: "🚕 釜山站搭計程車約 25 分鐘 (預估車資 ₩15,000/台 / 約 NT$ 360)",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Oryukdo+Skywalk"
+        time: "08:40",
+        title: "KTX 釜山站 1 號出口集合出發",
+        desc: "【集合點】於 KTX 釜山站 1號出口集合搭乘 Klook 專車（憑證號：KLK5807654069 / 訂單號：VTR876120），輕鬆出發往海雲台。",
+        icon: "🚌",
+        badges: ["Klook B方案", "KTX釜山站集合"],
+        badgeType: "transport",
+        transport: "🚌 Klook 旅遊專車接送",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Busan+Station"
       },
       {
-        time: "11:30 - 13:00",
-        title: "海雲台藍線公園天空膠囊列車 (尾浦 ➔ 青沙浦)",
-        desc: "【夢幻搭乘】搭乘彩色復古高架膠囊列車，沿著海雲台海岸線徐徐行駛，拍照極致吸睛。",
+        time: "10:00 - 13:00",
+        title: "海雲台藍線公園 (天空膠囊列車 3 小時體驗 & 海邊散步)",
+        desc: "【夢幻搭乘】搭乘彩色天空膠囊列車飽覽海岸線全景！導遊說明後，於海雲台沿岸及藍線公園自由散策並享用海邊午餐。",
         icon: "🚃",
-        badges: ["KKday一日遊", "天空膠囊列車", "海岸列車"],
+        badges: ["天空膠囊列車", "海岸全景", "3小時體驗"],
         badgeType: "sight",
-        transport: "🚕 五六島搭計程車至尾浦站約 25 分鐘 (預估車資 ₩18,000/台 / 約 NT$ 432)",
+        transport: "🚌 專車接送 (約 40 分鐘車程)",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Haeundae+Blueline+Park+Mipo"
       },
       {
-        time: "13:00 - 14:30",
-        title: "午餐：青沙浦秀民家烤貝 (수민이네)",
-        desc: "🦪【首選】青沙浦超高人氣海景烤貝老店，品嚐鮮甜烤扇貝、海膽與海鮮拉麵。<a href='https://www.google.com/maps/search/?api=1&query=Suminine+Cheongsapo' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 秀民家地圖</a><br>💡【海景備案 A】黃色燈塔烤貝 (노란마차)<a href='https://www.google.com/maps/search/?api=1&query=Noran+Macha+Cheongsapo+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 黃色燈塔地圖</a><br>💡【海景備案 B】道喜家烤貝 (도희집)<a href='https://www.google.com/maps/search/?api=1&query=Dohee-jib+Cheongsapo+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 道喜家地圖</a>",
-        icon: "🦪",
-        badges: ["海景烤貝", "鮮甜海鮮"],
-        badgeType: "food",
-        transport: "🚶 青沙浦站步行 5 分鐘",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Suminine+Cheongsapo"
+        time: "13:30 - 14:30",
+        title: "五六島天空步道 (Oryukdo Skywalk)",
+        desc: "站在 35 公尺高的透明玻璃懸崖步道上俯瞰太平洋浪花，體驗踏空震撼景色。",
+        icon: "🌊",
+        badges: ["懸崖玻璃步道", "絕美海景"],
+        badgeType: "sight",
+        transport: "🚌 專車接駁約 30 分鐘",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Oryukdo+Skywalk"
       },
       {
-        time: "15:00 - 16:45",
+        time: "15:00 - 16:10",
         title: "影島白淺灘文化村 (Huinnyeoul Culture Village)",
-        desc: "藍白色調的海岸峭壁聚落，被譽為「釜山聖托里尼」，在海景咖啡廳享受悠閒下午茶。",
+        desc: "藍白色調的海岸峭壁聚落，被譽為「釜山聖托里尼」，在海岸峭壁文青咖啡廳享受悠閒散策與海景。",
         icon: "☕",
         badges: ["海岸小白屋", "海景咖啡廳"],
         badgeType: "sight",
-        transport: "🚕 青沙浦搭計程車至影島約 35 分鐘 (約 22km / 預估車資 ₩22,000/台 / 約 NT$ 528)",
+        transport: "🚌 專車接駁約 25 分鐘",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Huinnyeoul+Culture+Village"
       },
       {
-        time: "17:15 - 18:45",
+        time: "16:30 - 17:40",
         title: "甘川洞文化村 (Gamcheon Culture Village)",
-        desc: "階梯狀彩虹房子與小王子雕像，俯瞰夕陽餘暉下的夢幻山城。",
+        desc: "階梯狀彩虹房子與小王子雕像，俯瞰夕陽餘暉下的夢幻彩虹山城。",
         icon: "🎨",
         badges: ["彩虹山城", "小王子雕像"],
         badgeType: "sight",
-        transport: "🚕 白淺灘搭計程車約 15 分鐘 (預估車資 ₩8,000/台 / 約 NT$ 192)",
+        transport: "🚌 專車接駁約 20 分鐘",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Gamcheon+Culture+Village"
       },
       {
-        time: "19:00 - 21:00",
-        title: "晚餐雙方案自由選擇 (獨立卡片)",
-        desc: "🟢【方案 A (體力優先/免遠奔)】南浦洞品嚐韓式炸雞/海鮮煎餅或蔘雞湯，早點休息。<a href='https://www.google.com/maps/search/?api=1&query=Gwangbok-ro+Fashion+Street+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 南浦洞商圈地圖</a><br>🔵【方案 B (西面名店)】西面松亭3代豬肉湯飯 (송정3대국밥)<a href='https://www.google.com/maps/search/?api=1&query=Songjo-3-dae+Dwaeji-gukbap+Seomyeon' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 松亭3代地圖</a><br>💡【西面備案 A】朴家豬肉湯飯 (박가네돼지국밥)<a href='https://www.google.com/maps/search/?api=1&query=Bakgane+Dwaeji-gukbap+Seomyeon' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 朴家湯飯地圖</a><br>💡【西面備案 B】雙胞胎豬肉湯飯 (쌍둥이돼지국밥)<a href='https://www.google.com/maps/search/?api=1&query=Twin+Dwaeji-gukbap+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 雙胞胎湯飯地圖</a>",
-        icon: "🍗",
-        badges: ["雙方案彈性選擇", "自由決定"],
+        time: "18:00 - 20:30",
+        title: "18:00 釜山站解散 ➔ 飯店放行李休息 ➔ 草梁燒肉與在地美食盛宴",
+        desc: "【最體貼規劃】專車 18:00 抵達 KTX 釜山站解散，步行 3 分鐘回飯店放下戰利品洗漱休息，隨後輕鬆前往飯店週邊享用美食大餐：<br>🥩<b>【首選】草梁辣炒豬肉包飯街 (초량불백)</b> — 釜山超人氣在地微辣豬肉定食！<a href='https://www.google.com/maps/search/?api=1&query=Choryang+Bulbaek+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 辣炒豬肉地圖</a><br>🍖<b>【老饕】草梁醬燒豬排骨街 (초량갈비)</b> — 老字號甜鹹醬燒豬排骨配冷麵！<a href='https://www.google.com/maps/search/?api=1&query=Choryang+Galbi+Street+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 醬燒豬排骨地圖</a><br>🍲<b>【湯飯】大建名家 / 本錢豬肉湯飯</b><a href='https://www.google.com/maps/search/?api=1&query=Bonjeon+Dwaeji+Gukbap' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 本錢湯飯地圖</a><br>🍗<b>【輕鬆】橋村炸雞 / 醬醬炸雞</b>外帶至飯店享用。",
+        icon: "🥩",
+        badges: ["釜山站18:00解散", "回飯店放行李", "草梁燒肉美食"],
         badgeType: "food",
-        transport: "🚕 計程車約 10-15 分鐘",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Seomyeon+Shopping+District"
+        transport: "🚶 釜山站下車步行 3 分鐘即達飯店",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Toyoko+Inn+Busan+Station+No.1"
       }
     ]
   },
@@ -522,10 +522,12 @@ const koreanLocations = [
   { zh: "釜山 X the SKY 觀景台", kr: "부산 엑스더스카이", addr: "부산 해운대구 달맞이길 30", cat: "sight", pinyin: "Busan X the SKY" },
   { zh: "廣安里海水浴場 (海灘/餐酒館)", kr: "광안리해수욕장", addr: "부산 수영구 광안해변로 219", cat: "sight", pinyin: "Gwangalli Haesuyokjang" },
   { zh: "甘川文化村", kr: "감천문화마을", addr: "부산 사하구 감내2로 203", cat: "sight", pinyin: "Gamcheon Munhwa Maeul" },
+  { zh: "草梁辣炒豬肉包飯街", kr: "초량불백", addr: "부산 동구 초량로 36", cat: "food", pinyin: "Choryang Bulbaek" },
+  { zh: "草梁傳統醬燒豬排骨街", kr: "초량돼지갈비골목", addr: "부산 동구 초량중로 26", cat: "food", pinyin: "Choryang Dwaeji Galbi" },
   { zh: "味贊王鹽烤肉 富平店 (新址)", kr: "맛찬들왕소금구이 부평점", addr: "부산 중구 광복로 3", cat: "food", pinyin: "Matchandeul Bupyeong" },
   { zh: "新東亞水產市場 1樓 華僑攤位", kr: "신동아수산시장 1층", addr: "부산 중구 자갈치로 42", cat: "food", pinyin: "Shindonga Market 1F" },
   { zh: "機張黃海鮮 / 松葉蟹市場", kr: "기장시장 (대게거리)", addr: "부산 기장군 기장읍 읍내로104번길 16", cat: "food", pinyin: "Gijang Sijang Daege" },
-  { zh: "西面 Olive Young 旗艦店", kr: "올리브영 부산서면타운점", addr: "부산 부산진구 중앙대로 692번길 15", cat: "shop", pinyin: "Olive Young Seomyeon Town" }
+  { zh: "西面 Olive Young 旗艦店", kr: "올리브영 부산서면타운점", addr: "부산 부산진구 中央대로 692번길 15", cat: "shop", pinyin: "Olive Young Seomyeon Town" }
 ];
 
 const koreanPhrases = [

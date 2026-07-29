@@ -105,20 +105,18 @@
 
 ---
 
-### 📍 Day 2｜8/10（一）：【KKday 一日遊】五六島天空步道 ➔ 海雲台膠囊/海岸列車 ➔ 青沙浦烤貝 ➔ 白淺灘文化村 ➔ 甘川洞彩虹山城 ➔ 晚餐(南浦/西面)
-* **09:30 - 10:45**【懸崖步道】**五六島天空步道 (Oryukdo Skywalk)**（35m 高透明玻璃懸崖步道）。（KKday 專車接送）
-* **11:30 - 13:00**【海景夢幻列車】**海雲台藍線公園 (天空膠囊列車 / 海岸列車)** 尾浦 ➔ 青沙浦。
-* **13:00 - 14:30**【午餐：青沙浦海景烤貝】  
-  🦪 **【首選】** 青沙浦秀民家烤貝 (수민이네) — 超高人氣海景烤貝老店。[📍 秀民家地圖](https://www.google.com/maps/search/?api=1&query=Suminine+Cheongsapo)  
-  💡 **【海景備案 A】** 黃色燈塔烤貝 (노란마차)[📍 黃色燈塔地圖](https://www.google.com/maps/search/?api=1&query=Noran+Macha+Cheongsapo+Busan)  
-  💡 **【海景備案 B】** 道喜家烤貝 (도희집)[📍 道喜家地圖](https://www.google.com/maps/search/?api=1&query=Dohee-jib+Cheongsapo+Busan)
-* **15:00 - 16:45**【影島聖托里尼】**影島白淺灘文化村 (Huinnyeoul Culture Village)** 海岸峭壁文青咖啡廳。
-* **17:15 - 18:45**【彩虹山城】**甘川洞文化村 (Gamcheon Culture Village)** 俯瞰夕陽餘暉下的彩虹房子與小王子。
-* **19:00 - 21:00**【晚餐雙方案自由選擇】:  
-  🟢 **【方案 A (體力優先/免遠奔)】**：南浦洞品嚐韓式炸雞/海鮮煎餅或蔘雞湯。[📍 南浦洞商圈地圖](https://www.google.com/maps/search/?api=1&query=Gwangbok-ro+Fashion+Street+Busan)  
-  🔵 **【方案 B (西面名店)】**：西面松亭3代豬肉湯飯 (송정3대국밥)[📍 松亭3代地圖](https://www.google.com/maps/search/?api=1&query=Songjo-3-dae+Dwaeji-gukbap+Seomyeon)  
-  💡 **【西面備案 A】** 朴家豬肉湯飯 (박가네돼지국밥)[📍 朴家湯飯地圖](https://www.google.com/maps/search/?api=1&query=Bakgane+Dwaeji-gukbap+Seomyeon)  
-  💡 **【西面備案 B】** 雙胞胎豬肉湯飯 (쌍둥이돼지국밥)[📍 雙胞胎湯飯地圖](https://www.google.com/maps/search/?api=1&query=Twin+Dwaeji-gukbap+Busan)
+### 📍 Day 2｜8/10（一）：【Klook 一日遊 B方案】KTX釜山站集合 ➔ 海雲台天空膠囊列車 ➔ 五六島天空步道 ➔ 白淺灘文化村 ➔ 甘川洞彩虹山城 ➔ 18:00 釜山站解散回飯店休息與草梁燒肉美食
+* **08:40**【集合出發】**KTX 釜山站 1號出口集合**上車（專車接送，憑證號：`KLK5807654069` / 訂單號：`VTR876120`）。
+* **10:00 - 13:00**【海景夢幻列車 & 海邊散步】**海雲台藍線公園 (天空膠囊列車搭乘 3小時)**，盡情飽覽海岸線壯麗全景與海邊午餐自由安排。
+* **13:30 - 14:30**【懸崖步道】**五六島天空步道 (Oryukdo Skywalk)**（35m 高透明玻璃懸崖步道，巴士車程約 30 分鐘）。
+* **15:00 - 16:10**【影島聖托里尼】**影島白淺灘文化村 (Huinnyeoul Culture Village)** 海岸峭壁文青咖啡廳自由散策。
+* **16:30 - 17:40**【彩虹山城】**甘川洞文化村 (Gamcheon Culture Village)** 俯瞰夕陽餘暉下的彩虹房子與小王子。
+* **18:00**【回程專車直達】**18:00 抵達 KTX 釜山站解散**，步行 3 分鐘返回飯店 (東橫INN 釜山站1號店) 放下戰利品、洗漱與稍作休息。
+* **18:40 - 20:30**【飯店週邊美食盛宴自由選】:  
+  🥩 **【首選推薦】** 草梁辣炒豬肉包飯街 (초량불백) — 釜山超人氣在地微辣燒肉定食。[📍 草梁辣炒豬肉地圖](https://www.google.com/maps/search/?api=1&query=Choryang+Bulbaek+Busan)  
+  🍖 **【老饕推薦】** 草梁傳統醬燒豬排骨街 (초량갈비) — 老字號醬燒豬排骨與水冷麵。[📍 草梁豬排骨地圖](https://www.google.com/maps/search/?api=1&query=Choryang+Galbi+Street+Busan)  
+  🍲 **【湯飯備案】** 大建名家 / 本錢豬肉湯飯 (대건명가 / 본전돼지국밥)[📍 本錢湯飯地圖](https://www.google.com/maps/search/?api=1&query=Bonjeon+Dwaeji+Gukbap)  
+  🍗 **【輕鬆備案】** 韓式橋村炸雞 / 醬醬炸雞外帶回飯店享受。[📍 釜山站橋村炸雞地圖](https://www.google.com/maps/search/?api=1&query=Kyochon+Chicken+Busan+Station)
 
 ---
 
