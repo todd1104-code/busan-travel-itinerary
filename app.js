@@ -574,7 +574,20 @@ function renderDayTabs() {
 // 渲染每日行程時間軸
 function renderDayTimeline(dayFilter = 1) {
   const container = document.getElementById("timeline-container");
+  const dayTitleEl = document.getElementById("day-title");
   if (!container) return;
+
+  // 動態更新頂部單一主標題 #day-title
+  if (dayTitleEl) {
+    if (dayFilter === 'all') {
+      dayTitleEl.innerHTML = `📍 韓國釜山 6 天 5 夜行程全覽指南`;
+    } else {
+      const curDay = itineraryData.find(d => d.day === parseInt(dayFilter, 10));
+      if (curDay) {
+        dayTitleEl.innerHTML = `Day ${curDay.day}｜${curDay.date} - ${curDay.title}`;
+      }
+    }
+  }
 
   container.innerHTML = "";
   let filteredDays = [];
@@ -587,14 +600,19 @@ function renderDayTimeline(dayFilter = 1) {
 
   let html = "";
   filteredDays.forEach(day => {
-    html += `
-      <div class="day-section" style="margin-bottom: 2.5rem;">
+    html += `<div class="day-section" style="margin-bottom: 2rem;">`;
+    
+    // 僅在「全 6 天總覽」模式下呈現分天小區塊頭，單天模式下只保留頂部唯一主標題
+    if (dayFilter === 'all') {
+      html += `
         <div class="day-header" style="background: linear-gradient(135deg, rgba(0,210,255,0.1), rgba(58,123,213,0.2)); border: 1px solid var(--border-light); padding: 1rem 1.25rem; border-radius: var(--radius-md); margin-bottom: 1.25rem;">
-          <h2 style="color: var(--primary-glow); font-size: 1.3rem; margin-bottom: 0.3rem;">📍 Day ${day.day}｜${day.date} - ${day.subTitle}</h2>
-          <p style="color: var(--text-sub); font-size: 0.95rem; margin: 0; line-height: 1.5;">${day.title}</p>
+          <h3 style="color: var(--primary-glow); font-size: 1.2rem; margin-bottom: 0.3rem;">📍 Day ${day.day}｜${day.date} - ${day.subTitle}</h3>
+          <p style="color: var(--text-sub); font-size: 0.9rem; margin: 0; line-height: 1.5;">${day.title}</p>
         </div>
-        <div class="timeline" style="display: flex; flex-direction: column; gap: 1rem;">
-    `;
+      `;
+    }
+
+    html += `<div class="timeline" style="display: flex; flex-direction: column; gap: 1rem;">`;
 
     day.items.forEach(item => {
       const badgeHtml = item.badges.map(b => `<span class="badge badge-blue" style="background: rgba(0,210,255,0.15); color: var(--primary-glow); border: 1px solid rgba(0,210,255,0.3); padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-right: 0.4rem; font-weight: 700;">${b}</span>`).join("");
