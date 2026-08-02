@@ -1,0 +1,8 @@
+node_modules/
+package.json
+package-lock.json
+*.zip
+diff_report.txt
+generated_table.txt
+backup_md/
+data_test.js

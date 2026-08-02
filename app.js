@@ -29,387 +29,390 @@ window.switchSection = function(sectionId) {
 
 // 行程資料集 (完全同步最新行程、車資標註與帝王蟹/備案餐廳指南)
 const itineraryData = [
-  {
-    day: 1,
+  { day: 1, 
     date: "8/9（日）",
-    subTitle: "抵達 · 換匯 · 暖胃晚餐放鬆",
-    title: "抵達釜山 ➔ 飯店寄放行李 ➔ 釜山站湯飯 ➔ 南浦洞換匯 ➔ 光復路散策 ➔ 五福海帶湯/南浦蔘雞湯 ➔ 龍頭山公園夜景",
+    subTitle: "抵達釜山 ➔ 飯店 Check-in ➔ 豬肉湯飯 ➔ 光復路換錢血拼 ➔ 南浦參雞湯/海帶湯 ➔ 釜山塔夜景",
+    title: "金海機場 ➔ 東橫INN 釜山站1號店 ➔ 本錢豬肉湯飯 ➔ 光復路換錢/逛街 ➔ 晚餐 ➔ 釜山塔",
     items: [
       {
         time: "11:35",
-        title: "抵達金海國際機場 (PUS)",
+        title: "長榮航空入境手續",
         desc: "搭乘長榮 BR1194 班機 (08:20 桃園 T2 起飛 ➔ 11:35 抵達釜山)，辦理入境與提領 8 個大行李箱。",
-        icon: "✈️",
-        badges: ["長榮航空", "入境手續"],
+        icon: "🛬",
+        badges: ["釜山機場", "抵達"],
         badgeType: "transport",
         transport: "✈️ 長榮 BR1194 (08:20 桃園出發)",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Gimhae+International+Airport"
       },
-      {
+  {
         time: "12:30 - 13:15",
-        title: "金海機場 ➔ 東橫INN 釜山站1號店",
+        title: "專車接送行李寄放",
         desc: "叫 2 台 Kakao T Venti 大型計程車直達飯店寄放行李與辦理預備手續，避免行李塞不下。",
         icon: "🚕",
-        badges: ["專車接送", "行李寄放"],
-        badgeType: "transport",
+        badges: ["計程車", "飯店入住"],
+        badgeType: "hotel",
         transport: "🚕 Kakao T Venti 包車 (約 35 分鐘 / 預估車資 ₩25,000-30,000/台 / 約 NT$ 600-720)",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Toyoko+Inn+Busan+Station+No.1"
       },
-      {
+  {
         time: "13:20 - 14:30",
-        title: "午餐：本錢豬肉湯飯 (본전돼지국밥)",
-        desc: "🥣【首選】飯店步行 3 分鐘即達之釜山站必吃老店，每碗約 ₩9,000（約 NT$ 216），湯頭濃郁鮮美，附新鮮韭菜與蝦醬。<a href='https://www.google.com/maps/search/?api=1&query=Bonjeon+Dwaeji+Gukbap' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 本錢地圖</a><br>💡【防排隊備案 A】隔壁大建名家豬肉湯飯 (대건명가)<a href='https://www.google.com/maps/search/?api=1&query=Daegaen+Myeongga+Dwaeji-gukbap+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 大建名家地圖</a><br>💡【防排隊備案 B】釜山站前草梁辣炒豬肉包飯 (초량불백)<a href='https://www.google.com/maps/search/?api=1&query=Choryang+Bulbaek+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 草梁辣炒豬肉地圖</a>",
+        title: "釜山必吃豬肉湯飯",
+        desc: "🍲<b>【首選】本錢豬肉湯飯 (본전돼지국밥)</b> ─ 飯店步行 3 分鐘即達之釜山站必吃老店，每日 09:00–20:30 營業，湯頭濃郁鮮美 (4.1星)。<a href='https://www.google.com/maps/search/?api=1&query=Bonjeon+Dwaeji+Gukbap' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 本錢地圖</a><br>💡<b>【防排隊備案 A】大建名家 (대건명가돼지국밥)</b> ─ 採用純豬骨慢火燉煮呈乳白色，口感濃郁無腥味，每日 07:00–22:00 營業 (4.4星)。<a href='https://www.google.com/maps/search/?api=1&query=%EB%8C%80%EA%B1%B4%EB%AA%85%EA%B0%80%EB%8F%BC%EC%A7%80%EA%B5%AD%EB%B0%A5' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 大建名家地圖</a><br>💡<b>【防排隊備案 B】草梁知名辣炒豬肉包飯 (소문난 불백)</b> ─ 草梁名店，鐵板現炒鹹香微辣醃豬肉，全天候 24 小時營業 (4.4星)。<a href='https://www.google.com/maps/search/?api=1&query=%EC%86%8C%EB%AC%B8%EB%82%9C+%EB%B6%88%EB%B0%B1' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 草梁辣炒豬肉地圖</a>",
         icon: "🍲",
-        badges: ["釜山必吃", "豬肉湯飯"],
+        badges: ["豬肉湯飯", "大建名家", "辣炒豬肉"],
         badgeType: "food",
         transport: "🚶 飯店步行 3 分鐘",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Bonjeon+Dwaeji+Gukbap"
       },
-      {
+  {
         time: "15:00 - 18:00",
-        title: "南浦洞光復路時尚街 (換錢 & 購物散策)",
-        desc: "前往友利/映珍民間換錢所用台幣換韓元，逛 Olive Young、Shoopen 門市與樂天百貨週邊。",
+        title: "光復路時尚街 (換錢與購物)",
+        desc: "抵達光復路後，首先前往民間換錢所用台幣換韓元，接著開逛 Olive Young 兩大門市：<br>✨ <b>Olive Young Gwangbok Town</b>：南浦洞 BIFF 廣場旁。<a href='https://www.google.com/maps/search/?api=1&query=Olive+Young+Gwangbok+Town' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 地圖</a><br>✨ <b>Olive Young Busan Nampo</b>：光復路美妝街上，品項齊全！<a href='https://www.google.com/maps/search/?api=1&query=Olive+Young+Busan+Nampo' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 地圖</a><br>💵 <b>推薦換錢所：</b><a href='https://www.google.com/maps/search/?api=1&query=Woori+Exchange+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 友利/映珍 換錢所 (兩家緊鄰)</a>",
         icon: "🛍️",
-        badges: ["民間換錢", "購物散策"],
-        badgeType: "shop",
+        badges: ["南浦洞", "光復路", "換錢"],
+        badgeType: "sight",
         transport: "🚕 強烈建議搭計程車：車程約 5 分鐘直達換錢所 (預估車資 ₩5,500/台，8人搭 2 台約 NT$ 260，每人僅 NT$ 32！免去步行 20 分鐘保護長輩體力)",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Gwangbok-ro+Fashion+Street"
       },
-      {
+  {
         time: "18:00 - 19:30",
-        title: "晚餐：五福海帶湯 南浦店 (오복미역) 或 南浦蔘雞湯 (남포삼계탕)",
-        desc: "🥣【方案 A (清爽保濕)】五福海帶湯 南浦店 (오복미역) - 鮑魚牛肉海帶湯滋補暖胃。<a href='https://www.google.com/maps/search/?api=1&query=Obok+Miyeok+Nampo+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 五福海帶湯地圖</a><br>🥣【方案 B (養生名店)】南浦蔘雞湯 (남포삼계탕) - 50 年老字號蔘雞湯，清爽不油膩，減輕搭機疲勞！<a href='https://www.google.com/maps/search/?api=1&query=Nampo+Samgyetang' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 南浦蔘雞湯地圖</a><br>💡【防排隊備案】李재모披薩 (Lee Jae Mo Pizza)<a href='https://www.google.com/maps/search/?api=1&query=Lee+Jae+Mo+Pizza+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 李재모披薩地圖</a>",
-        icon: "🥣",
-        badges: ["清爽暖胃", "老字號參雞湯"],
+        title: "南浦美食大賞 (南浦雪濃湯 / 三煥畜產 / 百花烤腸)",
+        desc: "🥣<b>【方案 A (清爽)】南浦雪濃湯</b> - 長時間熬煮雪白高湯，清爽暖胃 (4.2星)。<a href='https://www.google.com/maps/search/?api=1&query=%EB%82%A8%ED%8F%AC%EC%85%A4%EB%A6%89%ED%83%95' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 南浦雪濃湯地圖</a><br>🥩<b>【方案 B (燒肉)】三煥畜產</b> - 超高 CP 值熟成豬肉與韓牛，肉質紅潤厚實 (4.3星)。<a href='https://www.google.com/maps/search/?api=1&query=%EC%82%BC%ED%99%A1%EC%B6%95%EC%82%B0+%EB%82%A8%ED%8F%AC%EC%A0%90' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 三煥畜產地圖</a><br>🔥<b>【方案 C (烤腸)】百花烤腸</b> - 札嘎其市場旁傳統炭火爐烤牛腸，復古煙火氣 (4.0星)。<a href='https://www.google.com/maps/search/?api=1&query=%EB%B0%B1%ED%99%94%EC%96%91%EA%B3%B1%EC%B0%BD' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 百花烤腸地圖</a>",
+        icon: "🍲",
+        badges: ["南浦雪濃湯", "三煥畜產", "百花烤腸"],
         badgeType: "food",
         transport: "🚶 南浦洞商圈內步行即達",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Nampo+Samgyetang"
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=%EB%82%A8%ED%8F%AC%EC%85%A4%EB%A6%89%ED%83%95"
       },
-      {
+  {
         time: "19:30 - 21:00",
-        title: "龍頭山公園 & 釜山塔觀景台登頂 (🎫 BIG 5 - B區 No.8)",
+        title: "釜山塔觀景台登頂 (🎫 BIG 5 - B區 No. 8)",
         desc: "搭乘光復路手扶梯上山，憑 Pass 免費兌換門票登上釜山塔觀景台，俯瞰 360 度釜山港夜景與璀璨燈火。",
         icon: "🗼",
-        badges: ["🎫 BIG 5 - B區8", "釜山塔觀景台", "360度夜景"],
+        badges: ["龍頭山公園", "釜山塔", "夜景"],
         badgeType: "sight",
         transport: "🚶 光復路手扶梯上山",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Yongdusan+Park"
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Yongdusan+Park+Busan"
       }
     ]
   },
-  {
-    day: 2,
+  { day: 2, 
     date: "8/10（一）",
-    subTitle: "Klook一日遊 · 天空膠囊列車 · 彩虹山城 · 釜山站燒肉",
-    title: "KTX釜山站集合 ➔ 海雲台天空膠囊列車 ➔ 五六島天空步道 ➔ 白淺灘文化村 ➔ 甘川洞文化村 ➔ 18:00釜山站解散回飯店休息與草梁燒肉美食",
+    subTitle: "Klook 專車一日遊 · 膠囊列車 · 白淺灘 · 晚餐",
+    title: "Klook 專車 (天空膠囊列車 ➔ 五六島 ➔ 白淺灘 ➔ 甘川洞) ➔ 晚餐彈性選 ➔ 東橫INN",
     items: [
       {
-        time: "08:40",
-        title: "KTX 釜山站 1 號出口集合出發",
-        desc: "【集合點】於 KTX 釜山站 1號出口集合搭乘 Klook 專車（憑證號：KLK5807654069 / 訂單號：VTR876120），輕鬆出發往海雲台。",
+        time: "08:40 - 09:00",
+        title: "Klook B方案KTX釜山站集合",
+        desc: "於 KTX 釜山站 1 號出口集合搭乘 Klook 專車（憑證號：KLK5807654069 / 訂單號：VTR876120），輕鬆出發往海雲台。",
         icon: "🚌",
-        badges: ["Klook B方案", "KTX釜山站集合"],
+        badges: ["Klook專車", "KTX釜山站"],
         badgeType: "transport",
-        transport: "🚌 Klook 旅遊專車接送",
+        transport: "🚶 步行至釜山站 1號出口",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Busan+Station"
       },
-      {
+  {
         time: "10:00 - 13:00",
-        title: "海雲台藍線公園 (天空膠囊列車 3 小時體驗 & 海邊散步)",
-        desc: "【夢幻搭乘】搭乘彩色天空膠囊列車飽覽海岸線全景！導遊說明後，於海雲台沿岸及藍線公園自由散策並享用海邊午餐。",
+        title: "海雲台藍線公園 (天空膠囊列車3小時體驗)",
+        desc: "搭乘彩色天空膠囊列車飽覽海岸線全景！導遊說明後，於海雲台沿岸及藍線公園自由散策並享用海邊午餐。",
         icon: "🚃",
-        badges: ["天空膠囊列車", "海岸全景", "3小時體驗"],
+        badges: ["天空膠囊列車", "海雲台海岸"],
         badgeType: "sight",
-        transport: "🚌 專車接送 (約 40 分鐘車程)",
+        transport: "🚌 Klook 旅遊專車接送",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Haeundae+Blueline+Park+Mipo"
       },
-      {
+  {
         time: "13:30 - 14:30",
         title: "五六島天空步道 (Oryukdo Skywalk)",
-        desc: "站在 35 公尺高的透明玻璃懸崖步道上俯瞰太平洋浪花，體驗踏空震撼景色。",
+        desc: "站在 35 公尺高的懸崖玻璃步道上，腳下即是波濤洶湧的大海。天氣好時還能遠眺對馬島，感受海天一色的壯闊。",
         icon: "🌊",
-        badges: ["懸崖玻璃步道", "絕美海景"],
+        badges: ["天空步道", "絕美海景"],
         badgeType: "sight",
-        transport: "🚌 專車接駁約 30 分鐘",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Oryukdo+Skywalk"
+        transport: "🚌 Klook 旅遊專車接送",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Oryukdo+Skywalk+Busan"
       },
-      {
+  {
         time: "15:00 - 16:10",
-        title: "影島白淺灘文化村 (Huinnyeoul Culture Village)",
-        desc: "藍白色調的海岸峭壁聚落，被譽為「釜山聖托里尼」，在海岸峭壁文青咖啡廳享受悠閒散策與海景。",
-        icon: "☕",
-        badges: ["海岸小白屋", "海景咖啡廳"],
+        title: "白淺灘文化村 (Huinnamyeol Culture Village)",
+        desc: "被譽為釜山聖托里尼的網美小白屋聚落。沿著絕美海岸線散步，並拍攝彩虹階梯。",
+        icon: "🏠",
+        badges: ["聖托里尼", "海景漫步"],
         badgeType: "sight",
-        transport: "🚌 專車接駁約 25 分鐘",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Huinnyeoul+Culture+Village"
+        transport: "🚌 Klook 旅遊專車接送",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Huinnamyeol+Culture+Village"
       },
-      {
+  {
         time: "16:30 - 17:40",
         title: "甘川洞文化村 (Gamcheon Culture Village)",
-        desc: "階梯狀彩虹房子與小王子雕像，俯瞰夕陽餘暉下的夢幻彩虹山城。",
+        desc: "釜山馬丘比丘！七彩積木彩繪小屋聚落，尋找經典小王子與狐狸合照，俯瞰山城與港灣美景。",
         icon: "🎨",
-        badges: ["彩虹山城", "小王子雕像"],
+        badges: ["小王子", "七彩山城"],
         badgeType: "sight",
-        transport: "🚌 專車接駁約 20 分鐘",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Gamcheon+Culture+Village"
+        transport: "🚌 Klook 旅遊專車接送",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Gamcheon+Culture+Village+Busan"
       },
-      {
-        time: "18:00 - 20:30",
-        title: "18:00 釜山站解散 ➔ 飯店放行李休息 ➔ 草梁燒肉與在地美食盛宴",
-        desc: "【最體貼規劃】專車 18:00 抵達 KTX 釜山站解散，步行 3 分鐘回飯店放下戰利品洗漱休息，隨後輕鬆前往飯店週邊享用美食大餐：<br>🥩<b>【首選】草梁辣炒豬肉包飯街 (초량불백)</b> — 釜山超人氣在地微辣豬肉定食！<a href='https://www.google.com/maps/search/?api=1&query=Choryang+Bulbaek+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 辣炒豬肉地圖</a><br>🍖<b>【老饕】草梁醬燒豬排骨街 (초량갈비)</b> — 老字號甜鹹醬燒豬排骨配冷麵！<a href='https://www.google.com/maps/search/?api=1&query=Choryang+Galbi+Street+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 醬燒豬排骨地圖</a><br>🍲<b>【湯飯】大建名家 / 本錢豬肉湯飯</b><a href='https://www.google.com/maps/search/?api=1&query=Bonjeon+Dwaeji+Gukbap' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 本錢湯飯地圖</a><br>🍗<b>【輕鬆】橋村炸雞 / 醬醬炸雞</b>外帶至飯店享用。",
-        icon: "🥩",
-        badges: ["釜山站18:00解散", "回飯店放行李", "草梁燒肉美食"],
+  {
+        time: "18:00 - 20:00",
+        title: "抵達釜山站 ➔ 晚餐三選一方案 (富慶辣炒豬肉 vs 大建名家 vs BHC炸雞)",
+        desc: "🐷<b>【首選】富慶辣炒豬肉 (Bugyeongbulbaek)</b> ─ 草梁必吃30年老字號辣炒豬肉包飯街，炭香濃郁下飯。評分4.2星。<a href='https://www.google.com/maps/search/?api=1&query=Bugyeongbulbaek' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 富慶辣炒豬肉地圖</a><br>🥣<b>【備案 B】大建名家 豬肉湯飯 (Daegeon Myeongga)</b> ─ 湯頭純淨無腥味，薄切豬肉片鮮嫩無比。評分4.1星。<a href='https://www.google.com/maps/search/?api=1&query=Daegeon+Myeongga' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 大建名家地圖</a><br>🍗<b>【備案 C】BHC Chicken (BHC炸雞 釜山站店)</b> ─ 離飯店極近，外帶經典芝士/蒜香炸雞當宵夜。評分4.6星。<a href='https://www.google.com/maps/search/?api=1&query=BHC+Chicken+Busan+Station' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 BHC炸雞地圖</a>",
+        icon: "🍽️",
+        badges: ["富慶辣炒豬肉", "大建名家", "BHC炸雞"],
         badgeType: "food",
-        transport: "🚶 釜山站下車步行 3 分鐘即達飯店",
+        transport: "🚗 專車行程結束後，前往餐廳",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Bugyeongbulbaek"
+      },
+  {
+        time: "20:30 - 21:30",
+        title: "返程 ➔ 返回東橫INN飯店休息",
+        desc: "步行返回飯店，整理行李並充分休息，準備明天的西面與南浦之旅。",
+        icon: "🏨",
+        badges: ["返回飯店", "休息"],
+        badgeType: "hotel",
+        transport: "🚶 晚餐後步行返回飯店",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Toyoko+Inn+Busan+Station+No.1"
       }
     ]
   },
-  {
-    day: 3,
+  { day: 3, 
     date: "8/11（二）",
-    subTitle: "跨海纜車 · 帝王蟹與烤肉饗宴 · 超市伴手禮",
-    title: "松島海上纜車 ➔ 龍宮雲橋 ➔ 午餐雙方案 (帝王蟹 vs 烤魚) ➔ 樂天百貨露台 ➔ 樂天超市採買 ➔ 味贊王鹽烤肉 富平店",
+    subTitle: "SPA LAND · Snoopy海景咖啡 · Marine City散步 · 晚餐四選一",
+    title: "Centum City SPA LAND ➔ Snoopy Place ➔ Marine City 散步 ➔ 廣安里晚餐四選一",
+    items: [
+      {
+        time: "10:30 - 14:00",
+        title: "SPA LAND 汗蒸幕 (新世界 Centum City 店)",
+        desc: "【六星級放鬆】韓國頂級奢華汗蒸幕！體驗 13 種主題桑拿房、戶外露天足浴與甜米露洗禮。<br><br>🥤<b>【經典汗蒸幕必吃小吃】(1樓 Snack Bar)</b><br>• 甜米露 (식혜 / Sikhye) ─ 冰涼清甜、淡淡米香，剛蒸完桑拿補充水分極為過癮。<br>• 烤雞蛋 (맥반석 계란) ─ 麥飯石烘烤，蛋白Q彈、微帶烘焙香，沾鹽巴吃是經典體驗。<br><br>🍲<b>【午餐正餐首選】(2樓 韓式餐廳)</b><br>• 全州石鍋拌飯 (돌솥비빔밥) ─ 熱騰騰石鍋與豐富蔬菜及特製辣椒醬，焦香鍋巴酥脆。<br>• 韓式海鮮嫩豆腐鍋 (해물순두부찌개) ─ 湯頭鮮辣滾燙，豆腐滑嫩，汗蒸完非常開胃。<br>• 牛肉雪濃湯 / 美味排骨湯 (갈비탕) ─ 不吃辣極佳選擇，牛肉湯清甜濃郁，附泡菜。<br>• 韓式炸豬排 (돈까스) ─ 外皮香酥、肉質厚實，很受大人小孩歡迎。",
+        icon: "♨️",
+        badges: ["頂級汗蒸幕", "天然溫泉"],
+        badgeType: "sight",
+        transport: "🚕 飯店搭計程車約 20 分鐘 (預估車資 ₩12,000 / 台)",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Spa+Land+Centum+City"
+      },
+  {
+        time: "14:30 - 16:30",
+        title: "Snoopy Place Busan (海雲台店)",
+        desc: "位在海雲台海岸沿線，打卡巨大衝浪史努比雕像、享用史努比造型蛋糕與香濃咖啡，享受悠閒時光！",
+        icon: "☕",
+        badges: ["史努比主題", "海景咖啡"],
+        badgeType: "shop",
+        transport: "🚕 Centum City 搭計程車約 12 分鐘 (預估車資 ₩7,500/台)",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Snoopy+Place+Busan"
+      },
+  {
+        time: "17:00 - 18:30",
+        title: "Marine City 摩天大樓海岸步道",
+        desc: "釜山曼哈頓水岸步道，沿海欣賞豪宅摩天大樓與落日餘暉海景。",
+        icon: "🏙️",
+        badges: ["摩天大樓群", "廣安大橋"],
+        badgeType: "sight",
+        transport: "🚕 搭計程車約 10 分鐘 (車資 ₩6,000)",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Gwangalli+Beach+Busan"
+      },
+  {
+        time: "18:45 - 21:00",
+        title: "廣安里晚餐四選一方案 (海景餐酒館 vs 熟成烤肉 vs 韓牛 vs 辣炒章魚)",
+        desc: "🍷<b>【首選】CLAM (廣安里海邊第一排美式/西班牙餐酒館)</b> ─ 戶外及玻璃座直面廣安大橋夜景，享用西班牙Tapas、海鮮燉飯與精釀啤酒。評分4.3星。<a href='https://www.google.com/maps/search/?api=1&query=Clam+Gwangalli+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 CLAM地圖</a><br>🥩<b>【備案 A】Gwanganmok (廣安木 熟成豬肉專賣)</b> ─ 厚切熟成烤肉，火候完美，專人代烤。離海灘幾步之遙。評分4.7星。<a href='https://www.google.com/maps/search/?api=1&query=Gwanganmok' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 廣安木地圖</a><br>🍖<b>【備案 B】廣安里彥陽烤肉 釜山家 (언양불고기 부산집)</b> ─ 嚴選高品質韓牛炭火烘烤，肉嫩多汁有炭香味，專人代烤. 評分4.2星。<a href='https://www.google.com/maps/search/?api=1&query=Gwangan-ri+Eonyang+Bulgogi+Busan+House' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 彥陽烤肉地圖</a><br>🐙<b>【備案 C】윤슬낙지 (尹瑟章魚 / 辣炒章魚鍋)</b> ─ 釜山道地辣炒章魚蝦子牛腸鍋 (낙곱새)，食材鮮美，微辣過癮。評分5.0星。<a href='https://www.google.com/maps/search/?api=1&query=%ec%9c%a4%ec%8a%ac%eb%82%99%ec%a7%80' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 尹瑟章魚地圖</a>",
+        icon: "🌉",
+        badges: ["廣安大橋夜景", "晚餐四選一", "CLAM餐酒館"],
+        badgeType: "food",
+        transport: "🚕 從 Marine City 搭計程車約 10 分鐘 (預估車資 ₩6,000/台)",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Clam+Gwangalli+Busan"
+      }
+    ]
+  },
+  { day: 4, 
+    date: "8/12（三）",
+    subTitle: "海邊古剎 · 斜坡滑車 · 大蟹萬燦松葉蟹 · Outlet 購物",
+    title: "海東龍宮寺 ➔ Skyline Luge 斜坡滑車 ➔ 午餐雙方案 (大蟹萬燦松葉蟹 vs Diomea海景鮑魚粥) ➔ Ananti Cove 廊道 ➔ 樂天 Outlet 購物",
+    items: [
+      {
+        time: "09:00 - 10:30",
+        title: "海東龍宮寺 (Haedong Yonggungsa Temple)",
+        desc: "全韓國唯一建在海邊斷崖上的礁岩古剎，氣氛能讓人慢下來看海、拜佛（免費參觀）。",
+        icon: "🏯",
+        badges: ["海邊古剎", "沉澱心靈"],
+        badgeType: "sight",
+        transport: "🚕 飯店搭計程車直達約 40 分鐘 (約 ₩25,000 / 台)",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Haedong+Yonggungsa+Temple"
+      },
+  {
+        time: "10:45 - 12:45",
+        title: "【高評價強推】釜山斜坡滑車 (Skyline Luge 釜山)",
+        desc: "玩兩次約 30,000 韓元（可用 PASS 兌換）。全長 2.4 公里、高低差 100 公尺，刺激好玩，搭乘纜車上去視野開闊，被評為釜山必玩！",
+        icon: "🏎️",
+        badges: ["斜坡滑車", "必玩景點"],
+        badgeType: "sight",
+        transport: "🚕 龍宮寺搭車 5 分鐘即達 (車資 ₩4,500)",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Skyline+Luge+Busan"
+      },
+  {
+        time: "13:00 - 15:00",
+        title: "午餐雙方案彈性選擇 (大蟹萬燦松葉蟹 vs Diomea海景鮑魚粥)",
+        desc: "🦀<b>【方案 A (豪氣海景松葉蟹大餐)】Daege Manchan (大蟹萬燦 / 대게만찬)</b> ─ 滑車搭計程車5分，現場秤重活松葉蟹現蒸，附靈魂蟹膏炒飯與海景包廂。評分4.2星。<a href='https://www.google.com/maps/search/?api=1&query=Daege+Manchan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 大蟹萬燦地圖</a><br>🥣<b>【方案 B (舒適無負擔)】Diomea (디오메아 / 海景鮑魚料理專賣)</b> ─ 滑車搭計程車7分，位於Ananti步道旁，主打深濃綠色內臟鮑魚粥與澎湃海鮮拉麵。評分4.5星。<a href='https://www.google.com/maps/search/?api=1&query=Diomea' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 Diomea地圖</a>",
+        icon: "🦀",
+        badges: ["大蟹萬燦松葉蟹", "Diomea海景鮑魚粥"],
+        badgeType: "food",
+        transport: "🚕 從滑車處搭計程車約 5-7 分鐘 (大蟹萬燦約 ₩5,000 / Diomea 約 ₩6,000)",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Daege+Manchan"
+      },
+  {
+        time: "15:00 - 16:30",
+        title: "Ananti Cove 奢華海景廊道 & 海景咖啡廳",
+        desc: "釜山頂級度假村沿海廊道，在挑高冷氣海景咖啡廳享用下午茶，拍照極具高級質感（人均約 NT$ 288-432）。",
+        icon: "🌊",
+        badges: ["奢華渡假村", "極美海景"],
+        badgeType: "sight",
+        transport: "🚶 步行前往",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Ananti+Cove+Busan"
+      },
+  {
+        time: "16:45 - 19:00",
+        title: "【露天 Outlet】東釜山樂天 Outlet",
+        desc: "希臘聖托里尼風格超大型 Outlet，運動品牌（Nike, Adidas, NB）與韓國在地休閒品牌常有 3~5 折折扣。",
+        icon: "🏷️",
+        badges: ["露天Outlet", "品牌折扣"],
+        badgeType: "shop",
+        transport: "🚕 搭計程車約 5 分鐘",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Lotte+Premium+Outlets+Dongbusan"
+      },
+  {
+        time: "19:30 - 21:00",
+        title: "晚餐雙彈性方案：奧西利亞直吃 vs 返回市區享用",
+        desc: "🍽️<b>【方案 A (奧西利亞園區直吃)】</b><br>🥩<b>備案 1 (Anmok 奧西利亞店 / 안목)</b> ─ 米其林必比登推薦清爽豬肉湯飯，薄切專利。評分4.5星。<a href='https://www.google.com/maps/search/?api=1&query=Anmok+Osiria' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 Anmok湯飯地圖</a><br>🍖<b>備案 2 (廣安木 機張店 / 광안목 기장점)</b> ─ 桌邊代烤熟成五花肉與梅花肉，大快朵頤。評分4.6星。<a href='https://www.google.com/maps/search/?api=1&query=Gwang-anmok+Gijang' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 廣安木烤肉地圖</a><br><br>🚗<b>【方案 B (返回市區/飯店周邊享用)】</b><br>🍲<b>備案 1 (南浦雪濃湯 / Nampo Seolleongtang)</b> ─ 24小時營業，乳白色牛骨高湯，溫潤舒緩疲勞。評分4.2星。<a href='https://www.google.com/maps/search/?api=1&query=Nampo+Seolleongtang' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 南浦雪濃湯地圖</a><br>🍗<b>備案 2 (BHC炸雞 釜山站店 / BHC치킨 부산역점)</b> ─ 離飯店極近，外帶招牌芝士/蒜香炸雞回房當宵夜。營業至24:00。評分4.6星。<a href='https://www.google.com/maps/search/?api=1&query=BHC+Chicken+Busan+Station' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 BHC炸雞地圖</a>",
+        icon: "🍽️",
+        badges: ["奧西利亞直吃", "回市區宵夜", "晚餐雙方案"],
+        badgeType: "food",
+        transport: "🚗 方案A：搭車 3-5 分鐘即達；方案B：搭計程車約 40 分鐘返回市區",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Anmok+Osiria"
+      },
+  {
+        time: "21:00 - 22:00",
+        title: "返程 ➔ 返回東橫INN飯店休息",
+        desc: "結束東釜山一日遊，搭計程車或於晚餐後返回釜山站東橫INN飯店充分休息。",
+        icon: "🏨",
+        badges: ["返回飯店", "充分休息"],
+        badgeType: "hotel",
+        transport: "🚕 計程車約 40 分鐘 (約 ₩30,000 / 台 / 約 NT$ 720)",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Toyoko+Inn+Busan+Station+No.1"
+      }
+    ]
+  },
+  { day: 5, 
+    date: "8/13（四）",
+    subTitle: "松島纜車 · 午餐三方案 · 影島光影展 · 樂天採買",
+    title: "松島海上纜車 ➔ 帝王蟹/海鮮定食三方案 ➔ ARTE MUSEUM ➔ 樂天超市 ➔ 晚餐四選一",
     items: [
       {
         time: "10:00 - 12:30",
         title: "松島海上纜車 & 松島龍宮雲橋",
         desc: "搭乘水晶透明車廂跨越 1.62 公里汪洋大海，再走上連接無人島的懸崖龍宮雲橋。",
         icon: "🚠",
-        badges: ["🎫 BIG 5 - B區14", "水晶纜車", "龍宮雲橋"],
+        badges: ["水晶纜車", "龍宮雲橋"],
         badgeType: "sight",
-        transport: "🚕 飯店搭計程車約 15 分鐘 (預估車資 ₩12,000/台 / 約 NT$ 288)",
+        transport: "🚕 飯店搭計程車約 15 分鐘 (預估車資 ₩12,000/台)",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Songdo+Marine+Cable+Car"
       },
-      {
+  {
         time: "12:30 - 15:00",
         title: "午餐三方案彈性選擇 (新東亞帝王蟹 vs 札嘎其帝王蟹 vs 避膩海鮮定食)",
-        desc: "🦀【方案 A (新東亞水產市場 - 推薦 8號 華僑攤位)】：新東亞 1F 8號 華僑攤位 (一樓買蟹一樓代蒸享用)，中文溝通親切無障礙！免收人頭費與蒸煮費，大方送蟹膏炒飯與小菜，CP 值最高！<a href='https://www.google.com/maps/search/?api=1&query=Shin+Dong-A+Market+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 新東亞水產地圖</a><br>🦀【方案 B (札嘎其水產大樓 - 推薦 100/101號 渡邊水產)】：札嘎其大樓 1F 100/101號 (渡邊水產) 挑選活體大蟹，至 2F 海景餐廳享用（大方送生魚片海鮮拼盤，需加收蒸煮費 ₩10,000 與開桌費約 ₩4,000-5,000/人）。<a href='https://www.google.com/maps/search/?api=1&query=Jagalchi+Market+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 札嘎其大樓地圖</a><br>🦪【方案 C (清爽避膩/高CP值)】：南浦洞韓式烤魚/石鍋拌飯與鮮蝦海鮮湯（若不吃大蟹時的避膩定食）。<a href='https://www.google.com/maps/search/?api=1&query=Nampo-dong+Gwangbok-ro+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 南浦洞美食街地圖</a>",
+        desc: "🦀<b>【方案 A (首選)】新東亞水產市場 (8號 華僑攤位)</b> ─ 中文溝通親切，免代蒸費與人頭費，大方送蟹膏炒飯與小菜，CP值最高！<a href='https://www.google.com/maps/search/?api=1&query=Shin+Dong-A+Market+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 地圖</a><br>🦀<b>【方案 B (海景)】札嘎其水產大樓 (渡邊水產)</b> ─ 1樓買蟹、2樓海景餐廳享用，送生魚片拼盤 (需加收代蒸/人頭費)。<a href='https://www.google.com/maps/search/?api=1&query=Jagalchi+Market+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 地圖</a><br>🦪<b>【方案 C (清爽)】南浦洞韓式烤魚/海鮮湯</b> ─ 若不吃大蟹時的避膩定食選擇。<a href='https://www.google.com/maps/search/?api=1&query=Nampo-dong+Gwangbok-ro+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 地圖</a>",
         icon: "🦀",
-        badges: ["活體帝王蟹", "三方案美食"],
+        badges: ["新東亞水產", "札嘎其大樓", "韓式烤魚"],
         badgeType: "food",
-        transport: "🚕 松島搭計程車至札嘎其約 10 分鐘 (預估車資 ₩7,000/台 / 約 NT$ 168)",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Jagalchi+Market"
+        transport: "🚕 搭計程車約 10-15 分",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=%EC%8B%A0%EB%8F%99%EC%95%84%EC%88%98%EC%82%B0%EB%AC%BC%EC%A2%85%ED%95%A9%EC%8B%9C%EC%9E%A5"
       },
-      {
+  {
         time: "15:00 - 17:00",
-        title: "ARTE MUSEUM Busan 影島光影展 (🎫 BIG 5 - B區 No.17)",
-        desc: "【2024全新開幕】札嘎其搭計程車約 10-15 分鐘直達，體驗全球最大沉浸式數位自然藝術展，極致絢麗的光影海浪與花海波浪！<a href='https://www.google.com/maps/search/?api=1&query=Arte+Museum+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 Arte Museum 地圖</a>",
+        title: "ARTE MUSEUM Busan 影島光影展",
+        desc: "【2024全新開幕】體驗全球最大沉浸式數位自然藝術展，極致絢麗的光影海浪與花海波浪！",
         icon: "🖼️",
-        badges: ["🎫 BIG 5 - B區17", "沉浸式光影展", "影島熱門景點"],
+        badges: ["沉浸光影", "最新景點"],
         badgeType: "sight",
-        transport: "🚕 札嘎其市場搭計程車約 12 分鐘 (預估車資 ₩7,000/台 / 約 NT$ 168)",
+        transport: "🚕 札嘎其市場搭計程車約 12 分鐘直達 (預估車資 ₩7,000/台)",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Arte+Museum+Busan"
       },
-      {
+  {
         time: "17:00 - 17:30",
-        title: "樂天百貨光復店 13 樓頂樓露台",
-        desc: "免費登上空中庭園露台，360 度俯瞰影島大橋與釜山港港灣夜景全貌。",
+        title: "樂天百貨光復店 13樓 高空露台",
+        desc: "免費登上空中庭園露台，360 度俯瞰影島大橋與釜山港港灣全貌。",
         icon: "🏢",
-        badges: ["免費高空露台", "俯瞰釜山港"],
+        badges: ["高空露台", "港灣美景"],
         badgeType: "sight",
-        transport: "🚶 札嘎其市場沿光復路步行約 8-10 分鐘 (約 600m)",
+        transport: "🚕 從 Arte Museum 搭車返回樂天百貨",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Lotte+Department+Store+Gwangbok"
       },
-      {
+  {
         time: "17:30 - 19:00",
-        title: "樂天超市光復店 (Lotte Mart 伴手禮大採購)",
+        title: "樂天超市 光復店 (Lotte Mart) 大採購",
         desc: "買齊零食、海苔、泡麵與韓國伴手禮，現場提供退稅服務。",
         icon: "🛒",
-        badges: ["樂天超市", "現場退稅"],
+        badges: ["伴手禮採購", "現場退稅"],
         badgeType: "shop",
-        transport: "🏢 樂天百貨 B1 直通超市",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Lotte+Mart+Gwangbok"
+        transport: "🚶 樂天百貨 B1 直通超市",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Lotte+Mart+Gwangbok+Busan"
       },
-      {
+  {
         time: "19:00 - 20:45",
-        title: "晚餐：味贊王鹽烤肉 富平店 (맛찬들왕소금구이 부평점)",
-        desc: "🥩【首選】採買完超市後，步行約 15-18 分鐘 (約 950m 穿越光復路商圈) 至富平新店（札嘎其站 3 號出口新址）。若手提大包小包伴手禮戰利品，強烈建議搭計程車約 3-5 分鐘直達！大口享用專人代烤 3.5cm 厚切熟成豬五花與大醬湯！<a href='https://www.google.com/maps/search/?api=1&query=Matchandeul+Wangso-geum-gu-i+Bupyeong' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 味贊王富平店地圖</a><br>💡【防排隊備案 A】河南豬肉家 南浦店 (하남돼지집)<a href='https://www.google.com/maps/search/?api=1&query=Hanam+Pig+House+Nampo+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 河南豬肉家地圖</a><br>💡【防排隊備案 B】南浦 88 豬肉 (88돼지)<a href='https://www.google.com/maps/search/?api=1&query=88+Pork+Nampo+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 88豬肉地圖</a>",
+        title: "晚餐四選一方案 (味贊王烤肉 vs 熟成到黑豬肉 vs 烤豬肉麵 vs 百花烤腸)",
+        desc: "🥩<b>【首選】Matchandeul Wang Sogeum Gui Bupyeong (味贊王鹽烤肉 富平店)</b> ─ 3.5cm 厚切熟成豬五花與梅花肉，專人桌邊代烤，大醬湯口碑極佳。評分4.2星。<a href='https://www.google.com/maps/search/?api=1&query=Matchandeul+Wang+Sogeum+Gui+Bupyeong' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 味贊王地圖</a><br>🐖<b>【備案 A】숙성도 부산부평점 (熟成到 釜山富平店)</b> ─ 濟州島頂級熟成黑豬肉，香氣與多汁感極佳，專人代烤。評分4.4星。<a href='https://www.google.com/maps/search/?api=1&query=Sukseongdo+Bupyeong' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 熟成到地圖</a><br>🍜<b>【備案 B】도야지면옥 (Doyaji Myeonok 富平店)</b> ─ 切片烤豬肉、熟成五花肉與白湯豬肉麵聞名，出餐迅速。評分4.2星。<a href='https://www.google.com/maps/search/?api=1&query=Doyaji+Myeonok+Bupyeong' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 Doyaji地圖</a><br>🐙<b>【備案 C】백화양곱창 (百花烤腸)</b> ─ 老字號炭烤牛腸與燒肉店，阿姨專人代烤，炭香味濃郁。評分4.0星。<a href='https://www.google.com/maps/search/?api=1&query=Baekhwa+Yanggopchang' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 百花烤腸地圖</a>",
         icon: "🥩",
-        badges: ["3.5cm專人代烤", "熟成豬五花"],
+        badges: ["味贊王鹽烤肉", "熟成到", "Doyaji豬肉麵", "百花烤腸"],
         badgeType: "food",
-        transport: "🚕 建議搭計程車約 3-5 分鐘 (車資 ₩5,000/台 / 約 NT$ 120)；步行約 15-18 分鐘 (約 950m)",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Matchandeul+Wangso-geum-gu-i+Bupyeong"
+        transport: "🚕 建議搭計程車約 3-5 分鐘直達 (車資 ₩5,000/台)；或步行約 15-18 分鐘",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Matchandeul+Wang+Sogeum+Gui+Bupyeong"
       },
-      {
+  {
         time: "20:45 - 21:30",
-        title: "BIFF 廣場元祖堅果黑糖餅甜點",
+        title: "BIFF 廣場 ➔ 散步回飯店",
         desc: "品嚐香酥滿滿堅果餡料的黑糖餅作為最佳晚餐甜點，隨後返回飯店休息。",
         icon: "🥞",
         badges: ["BIFF廣場", "堅果黑糖餅"],
         badgeType: "food",
-        transport: "🚶 燒肉店步行約 3 分鐘",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=BIFF+Square"
+        transport: "🚶 燒肉店步行約 3 分鐘至 BIFF 廣場",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=BIFF+Square+Busan"
       }
     ]
   },
-  {
-    day: 4,
-    date: "8/12（三）",
-    subTitle: "海邊古剎 · 斜坡滑車 · 機張松葉蟹 · Outlet 購物",
-    title: "海東龍宮寺 ➔ Skyline Luge 斜坡滑車 ➔ 午餐雙方案 (機張松葉蟹 vs Ananti海景咖啡) ➔ Ananti Cove 廊道 ➔ 樂天 Outlet 購物",
-    items: [
-      {
-        time: "09:30 - 11:15",
-        title: "海東龍宮寺 (Haedong Yonggungsa Temple)",
-        desc: "全韓國唯一建在海邊斷崖礁岩上的神聖古剎，聽海浪拍岸聲參拜（免費參觀）。",
-        icon: "⛩️",
-        badges: ["海邊斷崖古剎", "免費參觀"],
-        badgeType: "sight",
-        transport: "🚕 釜山站搭計程車約 35 分鐘 (預估車資 ₩22,000/台 / 約 NT$ 528)",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Haedong+Yonggungsa+Temple"
-      },
-      {
-        time: "11:30 - 13:00",
-        title: "Skyline Luge 釜山斜坡滑車",
-        desc: "搭乘纜車上山，體驗 2 次賽道卡丁車疾馳俯瞰海景，刺激又安全。",
-        icon: "🏎️",
-        badges: ["🎫 BIG 5 - A區2", "斜坡滑車", "賽道體驗"],
-        badgeType: "sight",
-        transport: "🚕 海東龍宮寺搭計程車約 5 分鐘 (預估車資 ₩4,500/台 / 約 NT$ 108)",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Skyline+Luge+Busan"
-      },
-      {
-        time: "13:00 - 15:00",
-        title: "午餐雙方案彈性選擇 (機張松葉蟹 vs 輕食鮑魚粥)",
-        desc: "🦀【方案 A (產地松葉蟹大餐)】機張水產市場 (清海王/總角帝王蟹) 享用現蒸鮮甜松葉蟹與蟹膏炒飯。<a href='https://www.google.com/maps/search/?api=1&query=Gijang+Market+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 機張市場地圖</a><br>🥣【方案 B (輕食無負擔)】若 Day 3 已吃帝王蟹，直接前往 Ananti Cove 享用海景鮑魚粥與拉麵。<a href='https://www.google.com/maps/search/?api=1&query=Ananti+Cove+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 Ananti Cove地圖</a>",
-        icon: "🦀",
-        badges: ["機張松葉蟹", "雙方案午餐"],
-        badgeType: "food",
-        transport: "🚕 滑車處搭計程車約 10 分鐘 (預估車資 ₩6,500/台 / 約 NT$ 156)",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Gijang+Market+Busan"
-      },
-      {
-        time: "15:00 - 16:30",
-        title: "Ananti Cove 奢華海景廊道 & 文青書店散步",
-        desc: "停留放慢腳步，在頂級奢華度假海景廊道與 Eternal Journey 書店散步放空。",
-        icon: "☕",
-        badges: ["奢華海景廊道", "景觀咖啡廳"],
-        badgeType: "sight",
-        transport: "🚕 計程車約 5 分鐘 (預估車資 ₩4,500/台 / 約 NT$ 108)",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Ananti+Cove+Busan"
-      },
-      {
-        time: "16:30 - 19:30",
-        title: "東釜山樂天 Premium Outlet 購物狂歡",
-        desc: "韓國規模最大海景 Outlet，採買國際與韓國在地品牌，現場退稅方便。",
-        icon: "🛍️",
-        badges: ["樂天Outlet", "免稅購物"],
-        badgeType: "shop",
-        transport: "🚕 Ananti Cove 搭計程車約 7 分鐘 (預估車資 ₩5,500/台 / 約 NT$ 132)",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Lotte+Premium+Outlets+Dongbusan"
-      },
-      {
-        time: "19:30 - 20:30",
-        title: "返程 ➔ 返回飯店休息",
-        desc: "結束機張東釜山精采一日遊，搭車返抵釜山站飯店充分休息。",
-        icon: "🏨",
-        badges: ["返程飯店", "充分休息"],
-        badgeType: "hotel",
-        transport: "🚕 Outlet 直接叫 2 台大型計程車直達釜山站飯店 (約 40 分鐘 / 預估車資 ₩30,000/台 / 約 NT$ 720)",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Toyoko+Inn+Busan+Station+No.1"
-      }
-    ]
-  },
-  {
-    day: 5,
-    date: "8/13（木）",
-    subTitle: "奢華汗蒸幕 · 100樓觀景台 · 廣安里夜景",
-    title: "SPA LAND 奢華汗蒸幕 ➔ 釜山 X the SKY ➔ Marine City 海岸步道 ➔ 廣安里大橋夜景餐酒館",
-    items: [
-      {
-        time: "10:30 - 14:00",
-        title: "SPA LAND 汗蒸幕 (新世界 Centum City 店)",
-        desc: "【六星級放鬆】韓國頂級奢華汗蒸幕！體驗 13 種主題桑拿房、戶外露天足浴與甜米露洗禮。",
-        icon: "♨️",
-        badges: ["🎫 BIG 5 - A區4", "六星級汗蒸幕", "SPA體驗"],
-        badgeType: "sight",
-        transport: "🚇 釜山站搭地鐵 1 號線至西面轉 2 號線至 Centum City 站 (約 35 分鐘 / 車資 ₩1,600/人)",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Spa+Land+Centum+City"
-      },
-      {
-        time: "14:30 - 16:30",
-        title: "Snoopy Place Busan (海雲台史努比主題海景咖啡館)",
-        desc: "位在海雲台海岸沿線，打卡巨大衝浪史努比雕像、享用史努比造型蛋糕與香濃咖啡，享受悠閒時光！<a href='https://www.google.com/maps/search/?api=1&query=Snoopy+Place+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 Snoopy Place 地圖</a>",
-        icon: "☕",
-        badges: ["海景第一排", "史努比主題", "網美打卡"],
-        badgeType: "food",
-        transport: "🚕 Centum City 搭計程車約 12 分鐘 (預估車資 ₩7,500/台 / 約 NT$ 180)",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Snoopy+Place+Busan"
-      },
-      {
-        time: "17:00 - 18:30",
-        title: "Marine City 摩天大樓海岸散步",
-        desc: "釜山曼哈頓水岸步道，沿海欣賞豪宅摩天大樓與落日餘暉海景。",
-        icon: "🌅",
-        badges: ["海岸散步", "落日餘暉"],
-        badgeType: "sight",
-        transport: "🚶 觀景台沿海岸步道散步約 15 分鐘即可抵達",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Marine+City+Busan"
-      },
-      {
-        time: "18:45 - 21:00",
-        title: "廣安里海水浴場 & 廣安大橋夜景第一排餐酒館",
-        desc: "🍷【首選】廣安里海邊第一排美式/西班牙餐酒館 (Clam)，邊享用美食邊欣賞點亮璀璨燈光的廣安大橋夜景。<a href='https://www.google.com/maps/search/?api=1&query=Clam+Gwangalli+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 廣安里餐酒館地圖</a><br>💡【燒肉備案】彥陽韓牛燒肉 (언양불고기)<a href='https://www.google.com/maps/search/?api=1&query=Eonyang+Bulgogi+Gwangalli+Busan' target='_blank' style='color:var(--primary-glow); font-weight:bold; margin-left:5px;'>📍 彥陽韓牛燒肉地圖</a>",
-        icon: "🌉",
-        badges: ["廣安大橋夜景", "海景餐酒館"],
-        badgeType: "food",
-        transport: "🚕 Marine City 搭計程車約 10 分鐘 (預估車資 ₩6,000/台 / 約 NT$ 144)",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Gwangalli+Beach+Busan"
-      }
-    ]
-  },
-  {
-    day: 6,
+  { day: 6, 
     date: "8/14（五）",
-    subTitle: "退房 · 伴手禮最後補貨 · 依依不捨搭機返回台北",
-    title: "飯店辦理退房 ➔ 金海機場免稅店購物 ➔ 搭乘 BR1193 班機返回桃園",
+    subTitle: "退房 ➔ 專車直達機場 ➔ 免稅店 ➔ 滿載而歸",
+    title: "飯店 Check-out ➔ 金海機場辦理退稅購物 ➔ 搭乘長榮 BR1193 返台",
     items: [
       {
-        time: "09:30",
-        title: "飯店 Check-out 與行李整理",
-        desc: "檢查隨身貴重物品，辦理退房手續並準備包車/搭車至機場。",
-        icon: "🧳",
-        badges: ["辦理退房", "打包行李"],
-        badgeType: "hotel",
-        transport: "🏢 東橫 INN 釜山站 1 號店大廳集合",
+        time: "07:30 - 09:00",
+        title: "飯店辦理退房 & 享用早餐",
+        desc: "東橫 INN 享用免費早餐、完成 8 件大行李打包並辦理退房手續。",
+        icon: "🏨",
+        badges: ["退房", "免費早餐"],
+        badgeType: "sight",
+        transport: "🚶 飯店大廳",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Toyoko+Inn+Busan+Station+No.1"
       },
-      {
-        time: "09:45 - 10:30",
-        title: "飯店 ➔ 金海國際機場 (PUS)",
-        desc: "叫 2 台大型計程車或專車直接開往金海機場國際線航廈。",
+  {
+        time: "09:40 - 10:20",
+        title: "專車接送直達金海機場",
+        desc: "搭乘預約的 Kakao T Venti 或大型包車直達金海國際機場航廈，避開地鐵搬運。建議提早到機場以便辦理退稅。",
         icon: "🚕",
-        badges: ["專車前往機場", "順暢直達"],
-        badgeType: "transport",
-        transport: "🚕 預估車資 ₩25,000-30,000/台 (約 NT$ 600-720)",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Gimhae+International+Airport"
-      },
-      {
-        time: "10:30 - 12:45",
-        title: "辦理報到、托運行李與免稅店購物",
-        desc: "長榮航空櫃檯辦理登機證與 8 件大行李托運，通過安檢後於機場免稅店採買最後伴手禮。",
-        icon: "🛍️",
-        badges: ["長榮櫃檯報到", "免稅店購物"],
+        badges: ["機場接送", "免搬行李"],
         badgeType: "sight",
-        transport: "✈️ 長榮 BR1193 (12:45 起飛)",
+        transport: "🚕 車程約 40 分鐘 (預估車資 ₩25,000-30,000 / 台)",
         mapUrl: "https://www.google.com/maps/search/?api=1&query=Gimhae+International+Airport"
       },
-      {
-        time: "12:45 - 14:10",
-        title: "金海機場 (PUS) ➔ 台北桃園機場 (TPE)",
-        desc: "搭乘長榮 BR1193 班機，14:10 順利返抵桃園國際機場，結束完美無瑕的釜山家族豪華 6 日之旅！",
-        icon: "🛬",
-        badges: ["長榮航空", "平安返台"],
-        badgeType: "transport",
-        transport: "✈️ 長榮 BR1193 (14:10 抵達桃園 T2)",
-        mapUrl: "https://www.google.com/maps/search/?api=1&query=Taiwan+Taoyuan+International+Airport"
+  {
+        time: "10:20 - 12:45",
+        title: "金海機場辦理登機 & 退稅 ➔ 登機返台",
+        desc: "抵達機場後辦理報到與退稅手續，隨後可逛機場免稅店。搭乘長榮 BR1193 班機於 12:45 起飛 (預計 14:10 抵達桃園 T2)，圓滿結束釜山 6 天 5 夜奢華慢遊！",
+        icon: "✈️",
+        badges: ["辦理退稅", "長榮 BR1193"],
+        badgeType: "sight",
+        transport: "✈️ 飛行時間約 2.5 小時",
+        mapUrl: "https://www.google.com/maps/search/?api=1&query=Gimhae+International+Airport"
       }
     ]
   }
 ];
 
-// Olive Young 必買好物資料庫 (基於 olive_young_final_v2.md 精準校正版)
 const oyProductsData = [
   {
     "id": "green_tomato",
@@ -512,7 +515,6 @@ const galleryPhotosData = [
   }
 ];
 
-// 實用韓語與計程車中韓地址卡數據庫
 const koreanLocations = [
   { zh: "金海國際機場 (PUS)", kr: "김해국제공항", addr: "부산 강서구 공항진입로 108", cat: "taxi", pinyin: "Gimhae Gukje Gonghang" },
   { zh: "東橫INN 釜山站1號店", kr: "토요코인 부산역1호점", addr: "부산 동구 중앙대로 196", cat: "hotel", pinyin: "Toyoko Inn Busan Yeok" },
@@ -522,12 +524,10 @@ const koreanLocations = [
   { zh: "釜山 X the SKY 觀景台", kr: "부산 엑스더스카이", addr: "부산 해운대구 달맞이길 30", cat: "sight", pinyin: "Busan X the SKY" },
   { zh: "廣安里海水浴場 (海灘/餐酒館)", kr: "광안리해수욕장", addr: "부산 수영구 광안해변로 219", cat: "sight", pinyin: "Gwangalli Haesuyokjang" },
   { zh: "甘川文化村", kr: "감천문화마을", addr: "부산 사하구 감내2로 203", cat: "sight", pinyin: "Gamcheon Munhwa Maeul" },
-  { zh: "草梁辣炒豬肉包飯街", kr: "초량불백", addr: "부산 동구 초량로 36", cat: "food", pinyin: "Choryang Bulbaek" },
-  { zh: "草梁傳統醬燒豬排骨街", kr: "초량돼지갈비골목", addr: "부산 동구 초량중로 26", cat: "food", pinyin: "Choryang Dwaeji Galbi" },
   { zh: "味贊王鹽烤肉 富平店 (新址)", kr: "맛찬들왕소금구이 부평점", addr: "부산 중구 광복로 3", cat: "food", pinyin: "Matchandeul Bupyeong" },
   { zh: "新東亞水產市場 1樓 華僑攤位", kr: "신동아수산시장 1층", addr: "부산 중구 자갈치로 42", cat: "food", pinyin: "Shindonga Market 1F" },
   { zh: "機張黃海鮮 / 松葉蟹市場", kr: "기장시장 (대게거리)", addr: "부산 기장군 기장읍 읍내로104번길 16", cat: "food", pinyin: "Gijang Sijang Daege" },
-  { zh: "西面 Olive Young 旗艦店", kr: "올리브영 부산서면타운점", addr: "부산 부산진구 中央대로 692번길 15", cat: "shop", pinyin: "Olive Young Seomyeon Town" }
+  { zh: "西面 Olive Young 旗艦店", kr: "올리브영 부산서면타운점", addr: "부산 부산진구 중앙대로 692번길 15", cat: "shop", pinyin: "Olive Young Seomyeon Town" }
 ];
 
 const koreanPhrases = [
@@ -537,13 +537,22 @@ const koreanPhrases = [
   { zh: "請在這裡靠邊停就可以了", kr: "여기서 내려주세요", pron: "Yeogiseo naeryeojuseyo", cat: "taxi" },
   { zh: "請問可以開收據嗎？", kr: "영수증 주세용", pron: "Yeongsujeung juseyo", cat: "taxi" },
   { zh: "請問有提供現場退稅嗎？", kr: "택스 리펀 돼요?", pron: "Taekseu ripeon dwaeyo?", cat: "shop" },
-  { zh: "請給我中文/英文菜單", kr: "메뉴판 좀 주세요", pron: "Menyupan jom juseyo", cat: "food" },
+  { zh: "請給我中文菜單", kr: "중국어 메뉴판 좀 주세요", pron: "Jung-gug-eo me-nyu-pan jom ju-se-yo", cat: "food" },
   { zh: "請給我冰水 (韓國餐廳預設)", kr: "찬물 좀 주세요", pron: "Chanmul jom juseyo", cat: "food" },
   { zh: "請不要做太辣 (微辣即可)", kr: "덜 매운 것으로 해주세요", pron: "Deol maeun geoseuro haejuseyo", cat: "food" },
   { zh: "請問這個總共多少錢？", kr: "얼마예요?", pron: "Eolmayeyo?", cat: "shop" },
-  { zh: "請算便宜一點 (打折小技巧)", kr: "깍아주세요", pron: "Kkagajuseyo", cat: "shop" },
-  { zh: "你好 / 謝謝 / 再見", kr: "안녕하세요 / 감사합니다 / 안녕히 계세요", pron: "Annyeonghaseyo / Kamsahamnida", cat: "common" }
-];
+  { zh: "你好 (早午晚安通用)", kr: "안녕하세요", pron: "An-nyeong-ha-se-yo", cat: "common" },
+  { zh: "謝謝", kr: "감사합니다", pron: "Gam-sa-ham-ni-da", cat: "common" },
+  { zh: "再見 (對留下的人說)", kr: "안녕히 계세요", pron: "An-nyeong-hi gye-se-yo", cat: "common" },
+  { zh: "再見 (對走的人說)", kr: "안녕히 가세요", pron: "An-nyeong-hi ga-se-yo", cat: "common" },
+  { zh: "不好意思 (詢問/借過)", kr: "실례합니다", pron: "Sil-rye-ham-ni-da", cat: "common" },
+  { zh: "對不起", kr: "죄송합니다", pron: "Joe-song-ham-ni-da", cat: "common" },
+  { zh: "沒關係", kr: "괜찮아요", pron: "Gwaen-chan-ha-yo", cat: "common" },
+  { zh: "是的 / 好的", kr: "네", pron: "Ne", cat: "common" },
+  { zh: "不是 / 不用", kr: "아니요", pron: "A-ni-yo", cat: "common" },
+  { zh: "非常好吃", kr: "너무 맛있어요", pron: "Neo-mu mas-is-seo-yo", cat: "common" },
+  { zh: "請幫幫我", kr: "도와주세요", pron: "Do-wa-ju-se-yo", cat: "common" }
+]
 
 // 預設頁面渲染初始化
 document.addEventListener("DOMContentLoaded", () => {
@@ -798,53 +807,58 @@ function renderKoreanCards(catFilter = 'all') {
   container.innerHTML = "";
   let html = "";
   
-  koreanLocations.forEach(loc => {
-    if (catFilter !== 'all' && catFilter !== 'taxi' && catFilter !== loc.cat) return;
-    html += `
-      <div class="korean-card-box" style="background: rgba(15, 23, 42, 0.7); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; height: 100%; min-height: 250px; backdrop-filter: blur(10px); box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
-        <div>
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <span style="font-size: 0.75rem; background: rgba(0, 210, 255, 0.15); color: var(--primary-glow); border: 1px solid rgba(0, 210, 255, 0.3); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 700;">🚖 地點指引</span>
+  // 只有當 catFilter === 'locations' 時才渲染地點指引卡片
+  if (catFilter === 'locations') {
+    koreanLocations.forEach(loc => {
+      html += `
+        <div class="korean-card-box" style="background: rgba(15, 23, 42, 0.7); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; height: 100%; min-height: 250px; backdrop-filter: blur(10px); box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+              <span style="font-size: 0.75rem; background: rgba(0, 210, 255, 0.15); color: var(--primary-glow); border: 1px solid rgba(0, 210, 255, 0.3); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 700;">🚖 地點指引</span>
+            </div>
+            <div style="font-size: 1.1rem; font-weight: 700; color: #fff; min-height: 2.8rem; display: flex; align-items: center;">${loc.zh}</div>
+            <div style="font-size: 1.25rem; font-weight: 800; color: var(--accent-gold); letter-spacing: 0.5px; min-height: 3.2rem; display: flex; align-items: center; word-break: break-all;">${loc.kr}</div>
+            <div style="font-size: 0.85rem; color: var(--text-sub); line-height: 1.4; margin-top: 0.3rem;">📍 ${loc.addr}</div>
           </div>
-          <div style="font-size: 1.1rem; font-weight: 700; color: #fff; min-height: 2.8rem; display: flex; align-items: center;">${loc.zh}</div>
-          <div style="font-size: 1.25rem; font-weight: 800; color: var(--accent-gold); letter-spacing: 0.5px; min-height: 3.2rem; display: flex; align-items: center; word-break: break-all;">${loc.kr}</div>
-          <div style="font-size: 0.85rem; color: var(--text-sub); line-height: 1.4; margin-top: 0.3rem;">📍 ${loc.addr}</div>
+          <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+            <button class="map-link-btn" onclick="copyText('${loc.kr}\\n${loc.addr}')" style="flex: 1; padding: 0.45rem 0.6rem; font-size: 0.8rem; justify-content: center;">
+              <i class="fa-solid fa-copy"></i> 複製地址
+            </button>
+            <button class="map-link-btn" onclick="showBigCard('${loc.kr}', '${loc.zh}', '${loc.addr}')" style="flex: 1.2; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important; color: #fff !important; padding: 0.45rem 0.6rem; font-size: 0.8rem; justify-content: center; font-weight: 700;">
+              <i class="fa-solid fa-expand"></i> 📱 秀給司機看
+            </button>
+          </div>
         </div>
-        <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
-          <button class="map-link-btn" onclick="copyText('${loc.kr}\\n${loc.addr}')" style="flex: 1; padding: 0.45rem 0.6rem; font-size: 0.8rem; justify-content: center;">
-            <i class="fa-solid fa-copy"></i> 複製地址
-          </button>
-          <button class="map-link-btn" onclick="showBigCard('${loc.kr}', '${loc.zh}', '${loc.addr}')" style="flex: 1.2; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important; color: #fff !important; padding: 0.45rem 0.6rem; font-size: 0.8rem; justify-content: center; font-weight: 700;">
-            <i class="fa-solid fa-expand"></i> 📱 秀給司機看
-          </button>
-        </div>
-      </div>
-    `;
-  });
+      `;
+    });
+  }
 
-  koreanPhrases.forEach(p => {
-    if (catFilter !== 'all' && catFilter !== p.cat) return;
-    html += `
-      <div class="korean-card-box" style="background: rgba(15, 23, 42, 0.7); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; height: 100%; min-height: 250px; backdrop-filter: blur(10px); box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
-        <div>
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <span style="font-size: 0.75rem; background: rgba(255, 183, 3, 0.15); color: var(--accent-gold); border: 1px solid rgba(255, 183, 3, 0.3); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 700;">🗣️ 實用對話</span>
+  // 渲染實用對話卡片
+  if (catFilter !== 'locations') {
+    koreanPhrases.forEach(p => {
+      if (catFilter !== 'all' && catFilter !== p.cat) return;
+      html += `
+        <div class="korean-card-box" style="background: rgba(15, 23, 42, 0.7); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; height: 100%; min-height: 250px; backdrop-filter: blur(10px); box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+              <span style="font-size: 0.75rem; background: rgba(255, 183, 3, 0.15); color: var(--accent-gold); border: 1px solid rgba(255, 183, 3, 0.3); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 700;">🗣️ 實用對話</span>
+            </div>
+            <div style="font-size: 1.1rem; font-weight: 700; color: #fff; min-height: 2.8rem; display: flex; align-items: center;">${p.zh}</div>
+            <div style="font-size: 1.25rem; font-weight: 800; color: #4ade80; letter-spacing: 0.5px; min-height: 3.2rem; display: flex; align-items: center; word-break: break-all;">${p.kr}</div>
+            <div style="font-size: 0.85rem; color: var(--text-sub); line-height: 1.4; margin-top: 0.3rem;">🗣️ 發音：${p.pron}</div>
           </div>
-          <div style="font-size: 1.1rem; font-weight: 700; color: #fff; min-height: 2.8rem; display: flex; align-items: center;">${p.zh}</div>
-          <div style="font-size: 1.25rem; font-weight: 800; color: #4ade80; letter-spacing: 0.5px; min-height: 3.2rem; display: flex; align-items: center; word-break: break-all;">${p.kr}</div>
-          <div style="font-size: 0.85rem; color: var(--text-sub); line-height: 1.4; margin-top: 0.3rem;">🗣️ 發音：${p.pron}</div>
+          <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+            <button class="map-link-btn" onclick="copyText('${p.kr}')" style="flex: 1; padding: 0.45rem 0.6rem; font-size: 0.8rem; justify-content: center;">
+              <i class="fa-solid fa-copy"></i> 複製韓文
+            </button>
+            <button class="map-link-btn" onclick="showBigCard('${p.kr}', '${p.zh}', '音譯：${p.pron}')" style="flex: 1.2; background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important; color: #fff !important; padding: 0.45rem 0.6rem; font-size: 0.8rem; justify-content: center; font-weight: 700;">
+              <i class="fa-solid fa-expand"></i> 📱 大字秀給店家
+            </button>
+          </div>
         </div>
-        <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
-          <button class="map-link-btn" onclick="copyText('${p.kr}')" style="flex: 1; padding: 0.45rem 0.6rem; font-size: 0.8rem; justify-content: center;">
-            <i class="fa-solid fa-copy"></i> 複製韓文
-          </button>
-          <button class="map-link-btn" onclick="showBigCard('${p.kr}', '${p.zh}', '音譯：${p.pron}')" style="flex: 1.2; background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important; color: #fff !important; padding: 0.45rem 0.6rem; font-size: 0.8rem; justify-content: center; font-weight: 700;">
-            <i class="fa-solid fa-expand"></i> 📱 大字秀給店家
-          </button>
-        </div>
-      </div>
-    `;
-  });
+      `;
+    });
+  }
 
   container.innerHTML = html;
 }
@@ -889,7 +903,7 @@ window.showBigCard = function(kr, zh, addr) {
       <div style="color: var(--primary-glow); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem;">${zh}</div>
       <div style="color: var(--accent-gold); font-size: 2.2rem; font-weight: 900; margin: 1rem 0; line-height: 1.3; word-break: break-all;">${kr}</div>
       <div style="color: #cbd5e1; font-size: 1.05rem; line-height: 1.5; margin-bottom: 1.5rem; background: rgba(255,255,255,0.05); padding: 0.8rem; border-radius: 10px;">${addr}</div>
-      <button onclick="this.closest('.big-card-modal-overlay').remove()" style="background: linear-gradient(135deg, var(--primary-glow), #3a7bd5); color: #fff; border: none; padding: 0.8rem 2rem; border-radius: 30px; font-weight: 800; font-size: 1rem; cursor: pointer; width: 100%;">關閉關閉</button>
+      <button onclick="this.closest('.big-card-modal-overlay').remove()" style="background: linear-gradient(135deg, var(--primary-glow), #3a7bd5); color: #fff; border: none; padding: 0.8rem 2rem; border-radius: 30px; font-weight: 800; font-size: 1rem; cursor: pointer; width: 100%;">關閉</button>
     </div>
   `;
 
