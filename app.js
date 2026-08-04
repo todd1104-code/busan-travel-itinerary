@@ -415,6 +415,36 @@ const itineraryData = [
 
 const oyProductsData = [
   {
+    "id": "mediheal_mask",
+    "name": "MEDIHEAL 精華面膜 10片組 (+1片 Olive Young 獨家限定版)",
+    "en_name": "MEDIHEAL Essential Mask Sheet 10ea Set (+1ea)",
+    "price_krw": "半價約 $13.5 USD",
+    "price_twd": "約 NT$ 430",
+    "category": "skincare",
+    "category_zh": "面膜保養",
+    "img_url": "./images/oy/oy_mediheal_mask.jpg",
+    "raw_img": "https://global.oliveyoung.com/product/detail?prdtNo=GA240824996",
+    "features": "多款針對不同膚況（積雪草苷/茶樹/膠原蛋白/玻尿酸/神經醯胺/維他命C/玫瑰PDRN）、Olive Young 獨家大容量加贈組合",
+    "skin_type": "各種膚質均有對應款式",
+    "reason": "MEDIHEAL 面膜是韓國國民級護膚必備單品。這款是 Olive Young 獨家的超高 CP 值大容量組合，並針對保濕、修護、提亮、抗痘等不同需求推出多款選擇，非常適合大量囤貨或作為伴手禮。",
+    "tips": "洗臉後敷 10-20 分鐘，將剩餘精華輕拍吸收。"
+  },
+  {
+    "id": "bringgreen_lip",
+    "name": "BRINGGREEN 竹子玻尿酸護唇精華 4入組",
+    "en_name": "BRINGGREEN Bamboo Hyalu Lip Essence 4pcs Set",
+    "price_krw": "依現場活動為準",
+    "price_twd": "依現場活動為準",
+    "category": "makeup",
+    "category_zh": "唇部保養",
+    "img_url": "./images/oy/oy_bringgreen_lip.jpg",
+    "raw_img": "https://global.oliveyoung.com/product/detail?prdtNo=GA260237872",
+    "features": "竹子玻尿酸成分、高保濕修護、4入超值組",
+    "skin_type": "乾燥、易脫皮唇部",
+    "reason": "韓國超高人氣的開架護唇精華，含有竹水與玻尿酸保濕成分，能夠快速舒緩乾燥龜裂的雙唇，四入組合買起來非常划算，也是送禮的好選擇。",
+    "tips": "日常可薄擦作為護唇膏，夜間厚敷可作為唇膜深層修護。"
+  },
+  {
     "id": "green_tomato",
     "name": "SUNGBOON EDITOR 綠番茄緊緻毛孔泥膜",
     "en_name": "SUNGBOON EDITOR Green Tomato Pore Clay Pack",
